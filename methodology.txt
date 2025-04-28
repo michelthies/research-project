@@ -1,0 +1,157 @@
+# Methodology
+
+## System Overview
+
+Our system implements an automated approach for extracting structured booking information from email conversations. The system parses email messages sequentially, maintains a context of previously extracted information, and updates a standardized JSON booking object with new information discovered in each message. This approach simulates real-world information flow where booking details emerge gradually throughout an email thread.
+
+## Data Format
+
+The system structures extracted information according to a predefined JSON schema with the following primary components:
+
+- Booking status: Tracks whether an event is in inquiry, confirmed, or cancelled state
+- Artist details: Information about the performer
+- Promoter information: Contact details for the event organizer
+- Event specifics: Date, venue, capacity, operating times, and performance schedule
+- Invoice and contract status: Tracks financial and legal documentation progress
+
+## Implementation Architecture
+
+The implementation follows a modular architecture with these key components:
+
+- Prompt Generators: Specialized modules that create different types of prompts for the language model
+- Extraction Service: Core logic that processes emails and maintains the booking state
+- Evaluation Framework: Components that assess extraction quality against ground truth data
+
+The system processes each message in a thread sequentially, preserving context from previous messages. When extracting information from a new message, the system:
+
+1. Generates a prompt that includes the new message content and previously extracted data
+2. Submits this prompt to the language model
+3. Processes the model's response to extract a valid JSON object
+4. Evaluates the extraction quality against ground truth data
+5. Uses the extracted data as context for processing the next message
+
+## Prompting Strategies
+
+We implemented and evaluated seven distinct prompting strategies to determine the most effective approach for structured information extraction:
+
+### 1. Zero-Shot
+Provides only the email content and previous context with minimal instructions
+```
+Booking Object:
+{previous_json}
+
+New Message:
+{email_content}
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+```
+
+### 2. One-Shot
+Adds schema definition to guide the extraction process
+```
+{zero_shot_prompt}
+
+Follow this schema exactly:
+{json_schema}
+```
+
+### 3. Few-Shot
+Incorporates examples demonstrating correct extraction for similar messages
+```
+{one_shot_prompt}
+
+Use these examples to guide your extraction:
+EXAMPLE INPUT: [email text]
+EXAMPLE OUTPUT: [structured json]
+```
+
+### 4. Chain-of-Thought
+Explicitly encourages step-by-step reasoning before producing output
+```
+{base_prompt}
+
+I want you to reason through this step-by-step before providing your final answer.
+
+First, analyze the email and identify all relevant information related to:
+1. Artist details
+2. Promoter details 
+3. Event details
+[...]
+```
+
+### 5. Self-Verification
+Implements a two-step process with forward reasoning and backward verification
+```
+{base_prompt}
+
+IMPORTANT: This task requires a self-verification approach with two distinct reasoning steps:
+
+STEP 1 - FORWARD REASONING:
+- Extract all relevant booking information from the email
+[...]
+
+STEP 2 - BACKWARD VERIFICATION:
+- For each extracted field, verify that it is supported by evidence in the original email
+[...]
+```
+
+### 6. Keyword-Action
+Uses explicit extraction directives based on entity types
+```
+{base_prompt}
+
+KEYWORDS
+- BOOKING: Status words like "inquiry", "confirmed", "cancelled"
+[...]
+
+ACTIONS
+IDENTIFY: Find all relevant keywords in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each keyword
+[...]
+```
+
+### 7. Role-Guided
+Frames the task through a domain expert persona
+```
+{base_prompt}
+
+You are a specialized booking agent with years of experience extracting and managing event information. Your expertise is in accurately identifying and categorizing booking details from emails.
+
+Your responsibilities:
+1. Extract structured booking information according to this schema:
+[...]
+```
+
+## Evaluation Framework
+
+The evaluation framework assessed extraction quality along two primary dimensions:
+
+### Schema Conformity
+Measures how well the extracted data adheres to the predefined schema
+
+- Validates data types, formats, and enumeration values
+- Identifies missing required fields
+- Detects constraint violations (e.g., date format errors)
+
+### Contextual Consistency
+Assesses the extraction's alignment with ground truth data
+
+- Identifies missing or additional fields
+- Evaluates value accuracy against known correct values
+- Supports field normalization for accepting equivalent values
+
+The framework calculates scores for each dimension on a 0-1 scale and combines them into an overall score. Additionally, it tracks success rates to identify strategies prone to critical failures.
+
+## Experimental Setup
+
+We tested the system on an email thread containing 11 sequential messages that collectively form a complete booking negotiation. The thread includes initial inquiries, negotiations over fees and requirements, confirmation, contract exchange, and payment processing—representing a realistic booking workflow.
+
+We implemented the system in TypeScript and used a local Ollama instance with the Llama3 model for evaluation. For each message and prompting strategy, we:
+
+1. Generated prompts according to the strategy specification
+2. Submitted prompts to the model with consistent parameters (temperature=0.1, top_p=0.9)
+3. Processed responses to extract valid JSON objects
+4. Evaluated extraction quality against manually annotated ground truth
+5. Generated comprehensive metrics for performance analysis
+
+The evaluation results were stored as structured JSON files for subsequent analysis and comparison.

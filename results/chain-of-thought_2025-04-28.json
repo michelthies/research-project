@@ -1,0 +1,652 @@
+{
+  "strategy": "chain-of-thought",
+  "evaluationResults": [
+    {
+      "messageFile": "message1.txt",
+      "evaluation": {
+        "messageId": "1",
+        "schemaConformity": {
+          "score": 0.7,
+          "errors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T04:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T04:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.711111111111111
+      }
+    },
+    {
+      "messageFile": "message2.txt",
+      "evaluation": {
+        "messageId": "2",
+        "schemaConformity": {
+          "score": 0.7,
+          "errors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.711111111111111
+      }
+    },
+    {
+      "messageFile": "message3.txt",
+      "evaluation": {
+        "messageId": "3",
+        "schemaConformity": {
+          "score": 0.7,
+          "errors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.711111111111111
+      }
+    },
+    {
+      "messageFile": "message4.txt",
+      "evaluation": {
+        "messageId": "4",
+        "schemaConformity": {
+          "score": 0.7,
+          "errors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.711111111111111
+      }
+    },
+    {
+      "messageFile": "message5.txt",
+      "evaluation": {
+        "messageId": "5",
+        "schemaConformity": {
+          "score": 0.7,
+          "errors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.711111111111111
+      }
+    },
+    {
+      "messageFile": "message6.txt",
+      "evaluation": {
+        "messageId": "6",
+        "schemaConformity": {
+          "score": 0.7,
+          "errors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.711111111111111
+      }
+    },
+    {
+      "messageFile": "message7.txt",
+      "evaluation": {
+        "messageId": "7",
+        "schemaConformity": {
+          "score": 0.8,
+          "errors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7777777777777778,
+          "errors": [
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.788888888888889
+      }
+    },
+    {
+      "messageFile": "message8.txt",
+      "evaluation": {
+        "messageId": "8",
+        "schemaConformity": {
+          "score": 0.8,
+          "errors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7777777777777778,
+          "errors": [
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.788888888888889
+      }
+    },
+    {
+      "messageFile": "message9.txt",
+      "evaluation": {
+        "messageId": "9",
+        "schemaConformity": {
+          "score": 0.8,
+          "errors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7777777777777778,
+          "errors": [
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z",
+            "booking.invoice.status: Expected sent, got null",
+            "booking.contract.status: Expected sent, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.788888888888889
+      }
+    },
+    {
+      "messageFile": "message10.txt",
+      "evaluation": {
+        "messageId": "10",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.8888888888888888,
+          "errors": [
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.9444444444444444
+      }
+    },
+    {
+      "messageFile": "message11.txt",
+      "evaluation": {
+        "messageId": "11",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.8888888888888888,
+          "errors": [
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got 2025-11-25T02:00:00Z",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 2025-11-25T04:00:00Z"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "2025-11-25T02:00:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "2025-11-25T04:00:00Z"
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.9444444444444444
+      }
+    }
+  ],
+  "processedResponses": [
+    {
+      "file": "message1.txt",
+      "response": "Here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"2025-11-25T22:00:00Z\",\n      \"closingTime\": \"2025-11-26T06:00:00Z\",\n      \"stageTime\":"
+    },
+    {
+      "file": "message2.txt",
+      "response": "Here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"2025-11-25T22:00:00Z\",\n      \"closingTime\": \"2025-11-26T06:00:00Z\",\n      \"stageTime\":"
+    },
+    {
+      "file": "message3.txt",
+      "response": "Here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"2025-11-25T22:00:00Z\",\n      \"closingTime\": \"2025-11-26T06:00:00Z\",\n      \"stageTime\":"
+    },
+    {
+      "file": "message4.txt",
+      "response": "Based on the analysis of the email and comparison with previous data, here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"2025-11-25T22:00"
+    },
+    {
+      "file": "message5.txt",
+      "response": "Based on the analysis of the email and comparison with previous data, here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"2025-11-25T22:00"
+    },
+    {
+      "file": "message6.txt",
+      "response": "Based on the analysis of the email and comparison with previous data, here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"2025-11-25T22:00"
+    },
+    {
+      "file": "message7.txt",
+      "response": "Based on the analysis of the email and comparison with previous data, here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"2025-11-2"
+    },
+    {
+      "file": "message8.txt",
+      "response": "Based on the analysis of the email and comparison with previous data, here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": "
+    },
+    {
+      "file": "message9.txt",
+      "response": "Based on the analysis of the email and comparison with previous data, here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": "
+    },
+    {
+      "file": "message10.txt",
+      "response": "Based on the analysis of the email and comparison with previous data, here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": "
+    },
+    {
+      "file": "message11.txt",
+      "response": "Based on the analysis of the email and comparison with previous data, here is the updated booking object:\n\n{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": "
+    }
+  ],
+  "averageScores": {
+    "schemaConformity": 0.7818181818181817,
+    "contextualConsistency": 0.7676767676767677,
+    "overallScore": 0.7747474747474747,
+    "successRate": 1
+  }
+}
