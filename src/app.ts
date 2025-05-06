@@ -271,22 +271,22 @@ async function processMessage(
         : { booking: parsedResponse };
 
       // Run evaluation metrics
-      evaluation = evaluator.evaluate(messageNum, formattedResponse);
+      evaluation = await evaluator.evaluate(messageNum, formattedResponse);
 
       // Log evaluation scores
       log(
-        `Scores - Schema: ${evaluation.schemaConformity.score.toFixed(
+        `Scores - Schema: ${(await evaluation).schemaConformity.score.toFixed(
           2
-        )}, Context: ${evaluation.contextualConsistency.score.toFixed(
+        )}, Context: ${(await evaluation).contextualConsistency.score.toFixed(
           2
-        )}, Overall: ${evaluation.overallScore.toFixed(2)}`
+        )}, Overall: ${(await evaluation).overallScore.toFixed(2)}`
       );
 
       // Log schema validation errors if any
-      if (evaluation.schemaConformity.errors.length > 0) {
-        log(`Schema errors: ${evaluation.schemaConformity.errors.length}`);
+      if ((await evaluation).schemaConformity.errors.length > 0) {
+        log(`Schema errors: ${(await evaluation).schemaConformity.errors.length}`);
         // Show sample errors for debugging
-        const sampleErrors = evaluation.schemaConformity.errors.slice(0, 3);
+        const sampleErrors = (await evaluation).schemaConformity.errors.slice(0, 3);
         if (sampleErrors.length > 0) {
           log(`Sample errors: ${sampleErrors.join(", ")}`);
         }

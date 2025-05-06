@@ -201,22 +201,35 @@ EXAMPLE OUTPUT:
 {
   "booking": {
     "status": null,
-    "artist": { "name": "DJ Eclipse" },
-    "promoter": { "name": "Marcus Weber", "company": null, "address": null },
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
     "event": {
       "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
       "venue": "Zenith",
-      "city": "Hamburg",
       "capacity": 450,
+      "ticketPrice": 15,
       "openingTime": "2025-11-25T22:00:00Z",
       "closingTime": "2025-11-26T06:00:00Z",
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
-    "invoice": { "amount": 500, "status": null },
-    "contract": { "status": null }
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
   }
 }
 
@@ -228,22 +241,35 @@ Booking Object:
 {
   "booking": {
     "status": null,
-    "artist": { "name": "DJ Eclipse" },
-    "promoter": { "name": "Marcus Weber", "company": null, "address": null },
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
     "event": {
       "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
       "venue": "Zenith",
-      "city": "Hamburg",
       "capacity": 450,
+      "ticketPrice": 15,
       "openingTime": "2025-11-25T22:00:00Z",
       "closingTime": "2025-11-26T06:00:00Z",
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
-    "invoice": { "amount": 500, "status": null },
-    "contract": { "status": null }
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
   }
 }
 
@@ -397,22 +423,33 @@ EXAMPLE OUTPUT:
 {
   "booking": {
     "status": null,
-    "artist": { "name": "DJ Eclipse" },
-    "promoter": { "name": "Marcus Weber", "company": null, "address": null },
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
-      "openingTime": "2025-11-25T22:00:00Z",
-      "closingTime": "2025-11-26T06:00:00Z",
+      "openingTime": null,
+      "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
-    "invoice": { "amount": 1000, "status": null },
-    "contract": { "status": null }
+    "invoice": {
+      "amount": 1000,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
   }
 }
 
@@ -424,22 +461,33 @@ Booking Object:
 {
   "booking": {
     "status": null,
-    "artist": { "name": "DJ Eclipse" },
-    "promoter": { "name": "Marcus Weber", "company": null, "address": null },
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
-      "openingTime": "2025-11-25T22:00:00Z",
-      "closingTime": "2025-11-26T06:00:00Z",
+      "openingTime": null,
+      "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
-    "invoice": { "amount": 1000, "status": null },
-    "contract": { "status": null }
+    "invoice": {
+      "amount": 1000,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
   }
 }
 
@@ -584,22 +632,34 @@ EXAMPLE OUTPUT:
 {
   "booking": {
     "status": null,
-    "artist": { "name": "DJ Eclipse" },
-    "promoter": { "name": "Marcus Weber", "company": null, "address": null },
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
-    "invoice": { "amount": 1000, "status": null },
-    "contract": { "status": null }
+    "invoice": {
+      "amount": 1000,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
 }
 
 ==================== PROMPT ====================
@@ -610,22 +670,34 @@ Booking Object:
 {
   "booking": {
     "status": null,
-    "artist": { "name": "DJ Eclipse" },
-    "promoter": { "name": "Marcus Weber", "company": null, "address": null },
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
-    "invoice": { "amount": 1000, "status": null },
-    "contract": { "status": null }
+    "invoice": {
+      "amount": 1000,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
 }
 
 New Message:
@@ -773,17 +845,18 @@ EXAMPLE OUTPUT:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
     "contract": { "status": null }
+  }
 }
 
 ==================== PROMPT ====================
@@ -799,17 +872,18 @@ Booking Object:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
     "contract": { "status": null }
+  }
 }
 
 New Message:
@@ -957,13 +1031,13 @@ EXAMPLE OUTPUT:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -983,13 +1057,13 @@ Booking Object:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1144,19 +1218,19 @@ EXAMPLE OUTPUT:
 
 {
   "booking": {
-    "status": "confirmed",
+    "status": "inquiry",
     "artist": { "name": "DJ Eclipse" },
     "promoter": { "name": "Marcus Weber", "company": null, "address": null },
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1170,19 +1244,19 @@ EXAMPLE OUTPUT:
 Booking Object:
 {
   "booking": {
-    "status": "confirmed",
+    "status": "inquiry",
     "artist": { "name": "DJ Eclipse" },
     "promoter": { "name": "Marcus Weber", "company": null, "address": null },
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1331,17 +1405,17 @@ EXAMPLE OUTPUT:
   "booking": {
     "status": "confirmed",
     "artist": { "name": "DJ Eclipse" },
-    "promoter": { "name": "Marcus Weber", "company": null, "address": null },
+    "promoter": { "name": "Mike Muller", "company": null, "address": null },
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1357,17 +1431,17 @@ Booking Object:
   "booking": {
     "status": "confirmed",
     "artist": { "name": "DJ Eclipse" },
-    "promoter": { "name": "Marcus Weber", "company": null, "address": null },
+    "promoter": { "name": "Mike Muller", "company": null, "address": null },
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1528,13 +1602,13 @@ EXAMPLE OUTPUT:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1554,13 +1628,13 @@ Booking Object:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1718,13 +1792,13 @@ EXAMPLE OUTPUT:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1744,13 +1818,13 @@ Booking Object:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": null },
@@ -1905,13 +1979,13 @@ EXAMPLE OUTPUT:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": "paid" },
@@ -1932,13 +2006,13 @@ Booking Object:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": "paid" },
@@ -2091,13 +2165,13 @@ EXAMPLE OUTPUT:
     "event": {
       "date": "2025-11-25",
       "venue": "Zenith",
-      "city": "Hamburg",
+      "city": "hamburg",
       "capacity": 450,
       "openingTime": null,
       "closingTime": null,
       "stageTime": {
-        "start": "2025-11-25T02:00:00Z",
-        "end": "2025-11-25T04:00:00Z"
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-25T24:00:00Z"
       }
     },
     "invoice": { "amount": 1000, "status": "paid" },

@@ -1,5 +1,7 @@
 import { SchemaEvaluator, SchemaConformityResult } from './schemaEvaluator';
 import { ContextEvaluator, ContextConsistencyResult } from './contextEvaluator';
+import fs from 'fs/promises';
+import path from 'path';
 
 export interface EvaluationResult {
   messageId: string;
@@ -11,17 +13,19 @@ export interface EvaluationResult {
 export class Evaluator {
   private schemaEvaluator: SchemaEvaluator;
   private contextEvaluator: ContextEvaluator;
+  private enableDetailedLogs: boolean;
   
-  constructor(schema: any, groundTruth: Record<string, any>) {
+  constructor(schema: any, groundTruth: Record<string, any>, enableLogs: boolean = true) {
     // Initialize with validation schema and reference data for comparisons
     this.schemaEvaluator = new SchemaEvaluator(schema);
-    this.contextEvaluator = new ContextEvaluator(groundTruth);
+    this.contextEvaluator = new ContextEvaluator(groundTruth, enableLogs);
+    this.enableDetailedLogs = enableLogs;
   }
   
-  evaluate(
+  async evaluate(
     messageId: string, 
     extractedData: any
-  ): EvaluationResult {
+  ): Promise<EvaluationResult> {
     // Handle both object and JSON string inputs
     let parsedData;
     try {
@@ -42,6 +46,31 @@ export class Evaluator {
       (schemaResult.score * 0.5) + 
       (contextResult.score * 0.5)
     );
+    
+    // Save detailed evaluation logs if enabled
+    if (this.enableDetailedLogs && contextResult.evaluationLog) {
+      try {
+        const logsDir = path.join(process.cwd(), "results", "evaluation_logs");
+        await fs.mkdir(logsDir, { recursive: true });
+        
+        const logFilePath = path.join(
+          logsDir, 
+          `context_evaluation_message_${messageId}_${Date.now()}.json`
+        );
+        
+        await fs.writeFile(
+          logFilePath,
+          JSON.stringify({
+            messageId,
+            score: contextResult.score,
+            timestamp: new Date().toISOString(),
+            evaluationLog: contextResult.evaluationLog
+          }, null, 2)
+        );
+      } catch (error) {
+        console.error("Failed to save evaluation logs:", error);
+      }
+    }
     
     return {
       messageId,

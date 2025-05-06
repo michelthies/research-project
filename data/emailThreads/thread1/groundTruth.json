@@ -34,133 +34,32 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": [
-          "inquiry"
-        ]
+        "acceptedValues": ["inquiry"]
       },
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning",
-          "6hundredhours"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning",
-          "2hundredhours"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t040000z",
-          "20251126t040000",
-          "20251126t0400",
-          "20251126t4am",
-          "0400",
-          "4am",
-          "040000",
-          "4h",
-          "0400h",
-          "4hours",
-          "4amutc",
-          "4amgmt",
-          "4oclock",
-          "4oclockam",
-          "fouram",
-          "fouraminthemorning",
-          "4hundredhours"
-        ]
+        "acceptedValues": ["0400"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "500",
-          "fivehundred",
-          "500$",
-          "500€",
-          "500eur",
-          "500euros",
-          "five hundred",
-          "fivehundredeuros"
-        ]
+        "acceptedValues": ["500"]
       }
-      
     }
   },
   "2": {
@@ -197,100 +96,30 @@
       }
     },
     "normalizationConfig": {
-      
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       }
-      
     }
   },
   "3": {
@@ -326,101 +155,31 @@
         "status": null
       }
     },
-   "normalizationConfig": {
-      
+    "normalizationConfig": {
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       }
-      
     }
   },
   "4": {
@@ -457,100 +216,30 @@
       }
     },
     "normalizationConfig": {
-      
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       }
-      
     }
   },
   "5": {
@@ -586,99 +275,30 @@
         "status": null
       }
     },
-   "normalizationConfig": {
-      
+    "normalizationConfig": {
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       }
     }
   },
@@ -716,100 +336,30 @@
       }
     },
     "normalizationConfig": {
-      
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       }
-      
     }
   },
   "7": {
@@ -847,116 +397,38 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": [
-          "confirmed"
-        ]
+        "acceptedValues": ["confirmed"]
       },
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       },
-    
       "booking.invoice.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated"
-        ]
+        "acceptedValues": ["notsent", "notcreated"]
       },
       "booking.contract.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated"
-        ]
+        "acceptedValues": ["notsent", "notcreated"]
       }
-      
     }
   },
   "8": {
@@ -992,132 +464,46 @@
         "status": "not sent"
       }
     },
-
-    
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": [
-          "confirmed"
-        ]
+        "acceptedValues": ["confirmed"]
       },
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.promoter.company": {
-        "acceptedValues": [
-          "webergmbh",
-          "weber"
-        ]
+        "acceptedValues": ["weber", "webergmbh"]
       },
       "booking.promoter.address": {
-        "acceptedValues": [
-          "minkstrasse4223462hamburg",
-          "minkstrasse42hamburg",
-          "minkstrasse42"
-        ]
+        "acceptedValues": ["minkstrasse42"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       },
       "booking.invoice.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated"
-        ]
+        "acceptedValues": ["notsent", "notcreated"]
       },
       "booking.contract.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated"
-        ]
+        "acceptedValues": ["notsent", "notcreated"]
       }
-      
     }
   },
   "9": {
@@ -1153,142 +539,45 @@
         "status": "sent"
       }
     },
-   
-
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": [
-          "confirmed"
-        ]
+        "acceptedValues": ["confirmed"]
       },
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.promoter.company": {
-        "acceptedValues": [
-          "webergmbh",
-          "weber"
-        ]
+        "acceptedValues": ["weber", "webergmbh"]
       },
       "booking.promoter.address": {
-        "acceptedValues": [
-          "minkstrasse4223462hamburg",
-          "minkstrasse42hamburg",
-          "minkstrasse42"
-        ]
+        "acceptedValues": ["minkstrasse42"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       },
       "booking.invoice.status": {
-        "acceptedValues": [
-          "sent",
-          "issued",
-          "delivered",
-          "emailed",
-          "invoicesent",
-          "pending",
-          "tobepaid",
-          "outstanding"
-        ]
+        "acceptedValues": ["sent", "pending"]
       },
       "booking.contract.status": {
-        "acceptedValues": [
-          "sent",
-          "issued",
-          "delivered",
-          "emailed",
-          "contractsent",
-          "pending",
-          "tobesigned",
-          "outstanding"
-        ]
+        "acceptedValues": ["sent", "pending"]
       }
     }
   },
@@ -1325,133 +614,45 @@
         "status": "signed"
       }
     },
-   
-
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": [
-          "confirmed"
-        ]
+        "acceptedValues": ["confirmed"]
       },
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.promoter.company": {
-        "acceptedValues": [
-          "webergmbh",
-          "weber"
-        ]
+        "acceptedValues": ["weber", "webergmbh"]
       },
       "booking.promoter.address": {
-        "acceptedValues": [
-          "minkstrasse4223462hamburg",
-          "minkstrasse42hamburg",
-          "minkstrasse42"
-        ]
+        "acceptedValues": ["minkstrasse42"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       },
       "booking.invoice.status": {
-        "acceptedValues": [
-          "paid",
-          "payed",
-          "settled"
-        ]
+        "acceptedValues": ["paid", "payed", "settled"]
       },
       "booking.contract.status": {
-        "acceptedValues": [
-          "signed",
-          "signedcontract",
-          "returned",
-          "contractsigned"
-        ]
+        "acceptedValues": ["signed", "returned"]
       }
     }
   },
@@ -1481,143 +682,51 @@
         }
       },
       "booking.invoice.status": {
-        "acceptedValues": [
-          "paid",
-          "payed",
-          "settled"
-        ]
+        "acceptedValues": ["paid", "payed", "settled"]
       },
       "contract": {
         "status": "cosigned"
       }
     },
-
-
-
-
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": [
-          "confirmed"
-        ]
+        "acceptedValues": ["confirmed"]
       },
       "booking.artist.name": {
-        "acceptedValues": [
-          "djeclipse",
-          "eclipse"
-        ]
+        "acceptedValues": ["eclipse"]
       },
       "booking.promoter.name": {
-        "acceptedValues": [
-          "marcusweber",
-          "marcus",
-          "weber",
-          "mweber",
-          "marcusw",
-          "webermarcus"
-        ]
+        "acceptedValues": ["marcus", "weber"]
       },
       "booking.promoter.company": {
-        "acceptedValues": [
-          "webergmbh",
-          "weber"
-        ]
+        "acceptedValues": ["weber", "webergmbh"]
       },
       "booking.promoter.address": {
-        "acceptedValues": [
-          "minkstrasse4223462hamburg",
-          "minkstrasse42hamburg",
-          "minkstrasse42"
-        ]
+        "acceptedValues": ["minkstrasse42"]
       },
       "booking.event.date": {
-        "acceptedValues": [
-          "20251125",
-          "25112025",
-          "251125",
-          "25112025",
-          "25november2025",
-          "november252025",
-          "nov252025",
-          "25nov2025",
-          "25nov25",
-          "11252025",
-          "112525",
-          "25thofnovember2025",
-          "25thnov2025"
-        ]
+        "acceptedValues": ["20251125", "25nov"]
       },
-      
       "booking.event.openingTime": {
-        "acceptedValues": [
-          "20251125t220000z",
-          "20251125t220000",
-          "20251125t2200",
-          "20251125t10pm",
-          "2200",
-          "10pm",
-          "220000",
-          "22h",
-          "2200h"
-        ]
+        "acceptedValues": ["2200"]
       },
       "booking.event.closingTime": {
-        "acceptedValues": [
-          "20251126t060000z",
-          "20251126t060000",
-          "20251126t0600",
-          "20251126t6am",
-          "0600",
-          "6am",
-          "060000",
-          "6h",
-          "0600h"
-        ]
+        "acceptedValues": ["0600"]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": [
-          "20251126t020000z",
-          "20251126t020000",
-          "20251126t0200",
-          "20251126t2am",
-          "0200",
-          "2am",
-          "020000",
-          "2h",
-          "0200h"
-        ]
+        "acceptedValues": ["0200"]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": [
-          "20251126t030000z",
-          "20251126t030000",
-          "20251126t0300",
-          "20251126t3am",
-          "0300",
-          "3am",
-          "030000",
-          "3h",
-          "0300h"
-        ]
+        "acceptedValues": ["0300"]
       },
       "booking.invoice.amount": {
-        "acceptedValues": [
-          "1000",
-          "1k"
-        ]
+        "acceptedValues": ["1000", "1k"]
       },
-     "booking.invoice.status": {
-        "acceptedValues": [
-          "paid",
-          "payed",
-          "settled"
-        ]
+      "booking.invoice.status": {
+        "acceptedValues": ["paid", "payed", "settled"]
       },
       "booking.contract.status": {
-        "acceptedValues": [
-          "cosigned",
-          "co-signed"
-        ]
+        "acceptedValues": ["cosigned", "co-signed"]
       }
     }
   }
