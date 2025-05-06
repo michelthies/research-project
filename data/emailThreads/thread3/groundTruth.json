@@ -1,0 +1,1095 @@
+{
+  "1": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Leo Nova"
+      },
+      "promoter": {
+        "name": "Sarah Chen",
+        "company": "Lumina Productions",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-18",
+        "name": "Techsphere",
+        "city": "Berlin",
+        "venue": "Orbit Club",
+        "capacity": 600,
+        "ticketPrice": 20,
+        "openingTime": "2025-09-18T21:00:00Z",
+        "closingTime": "2025-09-19T06:00:00Z",
+        "stageTime": {
+          "start": "2025-09-19T01:00:00Z",
+          "end": "2025-09-19T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1200,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "djleonova",
+          "leonova",
+          "leo"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "sarahchen",
+          "sarah",
+          "chen",
+          "schen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250918",
+          "18092025",
+          "189025",
+          "18092025",
+          "18september2025",
+          "september182025",
+          "sep182025",
+          "18sep2025",
+          "18sep25",
+          "09182025",
+          "091825",
+          "18thofseptember2025",
+          "eighteenthofseptember2025",
+          "18thsep2025"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "techsphere",
+          "techsphereevent"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin",
+          "berlingermany"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "orbitclub",
+          "orbitberlin",
+          "orbitclubberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "600",
+          "sixhundred",
+          "600people",
+          "600pax",
+          "sixhundredpeople",
+          "sixhundredpax"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "20",
+          "20€",
+          "20eur",
+          "20euros",
+          "twentyeuros",
+          "twenty"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "20250918t2100",
+          "20250918t9pm",
+          "2100",
+          "9pm",
+          "210000",
+          "21h",
+          "2100h",
+          "21hours",
+          "9pmutc",
+          "9pmgmt",
+          "9oclock",
+          "9oclockpm",
+          "ninepm",
+          "ninepmatnight",
+          "21hundredhours"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "20250919t0600",
+          "20250919t6am",
+          "0600",
+          "6am",
+          "060000",
+          "6h",
+          "0600h",
+          "6hours",
+          "6amutc",
+          "6amgmt",
+          "6oclock",
+          "6oclockam",
+          "sixam",
+          "sixaminthemorning",
+          "6hundredhours"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250919t0100",
+          "20250919t1am",
+          "0100",
+          "1am",
+          "010000",
+          "1h",
+          "0100h",
+          "1hours",
+          "1amutc",
+          "1amgmt",
+          "1oclock",
+          "1oclockam",
+          "oneam",
+          "oneaminthemorning",
+          "1hundredhours"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250919t0300",
+          "20250919t3am",
+          "0300",
+          "3am",
+          "030000",
+          "3h",
+          "0300h",
+          "3hours",
+          "3amutc",
+          "3amgmt",
+          "3oclock",
+          "3oclockam",
+          "threeam",
+          "threeaminthemorning",
+          "3hundredhours"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1200",
+          "1200€",
+          "1200eur",
+          "1200euros",
+          "twelvehundred",
+          "twelvehundredeuros"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      }
+    }
+  },
+  "2": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Leo Nova"
+      },
+      "promoter": {
+        "name": "Sarah Chen",
+        "company": "Lumina Productions",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-18",
+        "name": "Techsphere",
+        "city": "Berlin",
+        "venue": "Orbit Club",
+        "capacity": 600,
+        "ticketPrice": 20,
+        "openingTime": "2025-09-18T21:00:00Z",
+        "closingTime": "2025-09-19T06:00:00Z",
+        "stageTime": {
+          "start": "2025-09-19T01:00:00Z",
+          "end": "2025-09-19T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "djleonova",
+          "leonova",
+          "leo"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "sarahchen",
+          "sarah",
+          "chen",
+          "schen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250918",
+          "18092025",
+          "189025",
+          "18092025",
+          "18september2025",
+          "september182025",
+          "sep182025",
+          "18sep2025",
+          "18sep25",
+          "09182025",
+          "091825",
+          "18thofseptember2025",
+          "eighteenthofseptember2025",
+          "18thsep2025"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "techsphere",
+          "techsphereevent"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin",
+          "berlingermany"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "orbitclub",
+          "orbitberlin",
+          "orbitclubberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "600",
+          "sixhundred",
+          "600people",
+          "600pax",
+          "sixhundredpeople",
+          "sixhundredpax"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "20",
+          "20€",
+          "20eur",
+          "20euros",
+          "twentyeuros",
+          "twenty"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "20250918t2100",
+          "20250918t9pm",
+          "2100",
+          "9pm",
+          "210000",
+          "21h",
+          "2100h",
+          "21hours",
+          "9pmutc",
+          "9pmgmt",
+          "9oclock",
+          "9oclockpm",
+          "ninepm",
+          "ninepmatnight",
+          "21hundredhours"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "20250919t0600",
+          "20250919t6am",
+          "0600",
+          "6am",
+          "060000",
+          "6h",
+          "0600h",
+          "6hours",
+          "6amutc",
+          "6amgmt",
+          "6oclock",
+          "6oclockam",
+          "sixam",
+          "sixaminthemorning",
+          "6hundredhours"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250919t0100",
+          "20250919t1am",
+          "0100",
+          "1am",
+          "010000",
+          "1h",
+          "0100h",
+          "1hours",
+          "1amutc",
+          "1amgmt",
+          "1oclock",
+          "1oclockam",
+          "oneam",
+          "oneaminthemorning",
+          "1hundredhours"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250919t0300",
+          "20250919t3am",
+          "0300",
+          "3am",
+          "030000",
+          "3h",
+          "0300h",
+          "3hours",
+          "3amutc",
+          "3amgmt",
+          "3oclock",
+          "3oclockam",
+          "threeam",
+          "threeaminthemorning",
+          "3hundredhours"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1500€",
+          "1500eur",
+          "1500euros",
+          "fifteenhundred",
+          "fifteenhundredeuros"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      }
+    }
+  },
+  "3": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Leo Nova"
+      },
+      "promoter": {
+        "name": "Sarah Chen",
+        "company": "Lumina Productions",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-18",
+        "name": "Techsphere",
+        "city": "Berlin",
+        "venue": "Orbit Club",
+        "capacity": 600,
+        "ticketPrice": 20,
+        "openingTime": "2025-09-18T21:00:00Z",
+        "closingTime": "2025-09-19T06:00:00Z",
+        "stageTime": {
+          "start": "2025-09-19T01:00:00Z",
+          "end": "2025-09-19T02:30:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "djleonova",
+          "leonova",
+          "leo"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "sarahchen",
+          "sarah",
+          "chen",
+          "schen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250918",
+          "18092025",
+          "189025",
+          "18092025",
+          "18september2025",
+          "september182025",
+          "sep182025",
+          "18sep2025",
+          "18sep25",
+          "09182025",
+          "091825",
+          "18thofseptember2025",
+          "eighteenthofseptember2025",
+          "18thsep2025"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "techsphere",
+          "techsphereevent"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin",
+          "berlingermany"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "orbitclub",
+          "orbitberlin",
+          "orbitclubberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "600",
+          "sixhundred",
+          "600people",
+          "600pax",
+          "sixhundredpeople",
+          "sixhundredpax"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "20",
+          "20€",
+          "20eur",
+          "20euros",
+          "twentyeuros",
+          "twenty"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "20250918t2100",
+          "20250918t9pm",
+          "2100",
+          "9pm",
+          "210000",
+          "21h",
+          "2100h",
+          "21hours",
+          "9pmutc",
+          "9pmgmt",
+          "9oclock",
+          "9oclockpm",
+          "ninepm",
+          "ninepmatnight",
+          "21hundredhours"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "20250919t0600",
+          "20250919t6am",
+          "0600",
+          "6am",
+          "060000",
+          "6h",
+          "0600h",
+          "6hours",
+          "6amutc",
+          "6amgmt",
+          "6oclock",
+          "6oclockam",
+          "sixam",
+          "sixaminthemorning",
+          "6hundredhours"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250919t0100",
+          "20250919t1am",
+          "0100",
+          "1am",
+          "010000",
+          "1h",
+          "0100h",
+          "1hours",
+          "1amutc",
+          "1amgmt",
+          "1oclock",
+          "1oclockam",
+          "oneam",
+          "oneaminthemorning",
+          "1hundredhours"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250919t0230",
+          "20250919t230am",
+          "0230",
+          "230am",
+          "023000",
+          "230h",
+          "0230h",
+          "twohoursthirtyminutes",
+          "230amutc",
+          "230amgmt",
+          "twothirtyam",
+          "halfpasttwointhemorning"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1500€",
+          "1500eur",
+          "1500euros",
+          "fifteenhundred",
+          "fifteenhundredeuros"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      }
+    }
+  },
+  "4": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Leo Nova"
+      },
+      "promoter": {
+        "name": "Sarah Chen",
+        "company": "Lumina Productions",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-18",
+        "name": "Techsphere",
+        "city": "Berlin",
+        "venue": "Orbit Club",
+        "capacity": 600,
+        "ticketPrice": 20,
+        "openingTime": "2025-09-18T21:00:00Z",
+        "closingTime": "2025-09-19T06:00:00Z",
+        "stageTime": {
+          "start": "2025-09-19T01:30:00Z",
+          "end": "2025-09-19T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "djleonova",
+          "leonova",
+          "leo"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "sarahchen",
+          "sarah",
+          "chen",
+          "schen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250918",
+          "18092025",
+          "189025",
+          "18092025",
+          "18september2025",
+          "september182025",
+          "sep182025",
+          "18sep2025",
+          "18sep25",
+          "09182025",
+          "091825",
+          "18thofseptember2025",
+          "eighteenthofseptember2025",
+          "18thsep2025"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "techsphere",
+          "techsphereevent"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin",
+          "berlingermany"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "orbitclub",
+          "orbitberlin",
+          "orbitclubberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "600",
+          "sixhundred",
+          "600people",
+          "600pax",
+          "sixhundredpeople",
+          "sixhundredpax"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "20",
+          "20€",
+          "20eur",
+          "20euros",
+          "twentyeuros",
+          "twenty"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "20250918t2100",
+          "20250918t9pm",
+          "2100",
+          "9pm",
+          "210000",
+          "21h",
+          "2100h",
+          "21hours",
+          "9pmutc",
+          "9pmgmt",
+          "9oclock",
+          "9oclockpm",
+          "ninepm",
+          "ninepmatnight",
+          "21hundredhours"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "20250919t0600",
+          "20250919t6am",
+          "0600",
+          "6am",
+          "060000",
+          "6h",
+          "0600h",
+          "6hours",
+          "6amutc",
+          "6amgmt",
+          "6oclock",
+          "6oclockam",
+          "sixam",
+          "sixaminthemorning",
+          "6hundredhours"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250919t0130",
+          "20250919t130am",
+          "0130",
+          "130am",
+          "013000",
+          "130h",
+          "0130h",
+          "onehoursthirtyminutes",
+          "130amutc",
+          "130amgmt",
+          "onethirtyam",
+          "halfpastoneinthemorning"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250919t0300",
+          "20250919t3am",
+          "0300",
+          "3am",
+          "030000",
+          "3h",
+          "0300h",
+          "3hours",
+          "3amutc",
+          "3amgmt",
+          "3oclock",
+          "3oclockam",
+          "threeam",
+          "threeaminthemorning",
+          "3hundredhours"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1500€",
+          "1500eur",
+          "1500euros",
+          "fifteenhundred",
+          "fifteenhundredeuros"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      }
+    }
+  },
+  "5": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Leo Nova"
+      },
+      "promoter": {
+        "name": "Sarah Chen",
+        "company": "Lumina Productions",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-18",
+        "name": "Techsphere",
+        "city": "Berlin",
+        "venue": "Orbit Club",
+        "capacity": 600,
+        "ticketPrice": 20,
+        "openingTime": "2025-09-18T21:00:00Z",
+        "closingTime": "2025-09-19T06:00:00Z",
+        "stageTime": {
+          "start": "2025-09-19T01:15:00Z",
+          "end": "2025-09-19T02:45:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1900,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "djleonova",
+          "leonova",
+          "leo"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "sarahchen",
+          "sarah",
+          "chen",
+          "schen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250918",
+          "18092025",
+          "189025",
+          "18092025",
+          "18september2025",
+          "september182025",
+          "sep182025",
+          "18sep2025",
+          "18sep25",
+          "09182025",
+          "091825",
+          "18thofseptember2025",
+          "eighteenthofseptember2025",
+          "18thsep2025"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "techsphere",
+          "techsphereevent"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin",
+          "berlingermany"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "orbitclub",
+          "orbitberlin",
+          "orbitclubberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "600",
+          "sixhundred",
+          "600people",
+          "600pax",
+          "sixhundredpeople",
+          "sixhundredpax"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "20",
+          "20€",
+          "20eur",
+          "20euros",
+          "twentyeuros",
+          "twenty"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "20250918t2100",
+          "20250918t9pm",
+          "2100",
+          "9pm",
+          "210000",
+          "21h",
+          "2100h",
+          "21hours",
+          "9pmutc",
+          "9pmgmt",
+          "9oclock",
+          "9oclockpm",
+          "ninepm",
+          "ninepmatnight",
+          "21hundredhours"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "20250919t0600",
+          "20250919t6am",
+          "0600",
+          "6am",
+          "060000",
+          "6h",
+          "0600h",
+          "6hours",
+          "6amutc",
+          "6amgmt",
+          "6oclock",
+          "6oclockam",
+          "sixam",
+          "sixaminthemorning",
+          "6hundredhours"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250919t0115",
+          "20250919t115am",
+          "0115",
+          "115am",
+          "011500",
+          "115h",
+          "0115h",
+          "onehoursfifteenminutes",
+          "115amutc",
+          "115amgmt",
+          "onefifteenaminthemorning",
+          "quarterpastoneinthemorning"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250919t0245",
+          "20250919t245am",
+          "0245",
+          "245am",
+          "024500",
+          "245h",
+          "0245h",
+          "twohoursfortyfiveminutes",
+          "245amutc",
+          "245amgmt",
+          "twofourtyfivedaminthemorning",
+          "quarterthreeinthemorning"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1900",
+          "1900€",
+          "1900eur",
+          "1900euros",
+          "nineteenhundred",
+          "nineteenhundredeuros"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "notcreated",
+          "tobeprepared"
+        ]
+      }
+    }
+  }
+} 

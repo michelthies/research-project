@@ -1,8 +1,15 @@
 export { createPromptBase } from './base';
 export { createZeroShotPrompt } from './zero-shot';
+export { createZeroShotSchemaPrompt } from './zero-shot-schema';
 export { createOneShotPrompt } from './one-shot';
+export {createOneShotSchemaPrompt} from './one-shot-schema';
 export { createFewShotPrompt } from './few-shot';
+export { createFewShotSchemaPrompt } from './few-shot-schema';
 export { createChainOfThoughtPrompt } from './chain-of-thought';
+export { createChainOfThoughtSchemaPrompt } from './chain-of-thought-schema';
 export { createSelfVerificationPrompt } from './self-verification';
+export { createSelfVerificationSchemaPrompt } from './self-verification-schema';
 export { createKeywordActionPrompt } from './keyword-action';
+export { createKeywordActionSchemaPrompt } from './keyword-action-schema';
 export { createRoleGuidedPrompt } from './role-guided';
+export { createRoleGuidedSchemaPrompt } from './role-guided-schema';

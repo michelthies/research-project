@@ -1,0 +1,537 @@
+{
+  "1": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "The Lunar Tides"
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:00:00Z",
+          "end": "2025-09-20T23:30:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1200,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    }
+  },
+  "2": {
+    "booking": {
+      "status": "negotiating",
+      "artist": {
+        "name": "The Lunar Tides"
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:00:00Z",
+          "end": "2025-09-20T23:15:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      },
+      "requirements": {
+        "hotel": "3 rooms",
+        "transportation": "from Hamburg",
+        "backline": "required",
+        "meals": "5 people"
+      }
+    }
+  },
+  "5": {
+    "booking": {
+      "status": "confirming",
+      "artist": {
+        "name": "The Lunar Tides"
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:00:00Z",
+          "end": "2025-09-20T23:15:00Z"
+        },
+        "otherActs": [
+          {
+            "name": "Glass Mirrors",
+            "time": "20:30-21:15"
+          }
+        ]
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      },
+      "requirements": {
+        "hotel": "3 rooms",
+        "transportation": "rental van from Hamburg",
+        "backline": "required",
+        "meals": "5 people"
+      }
+    }
+  },
+  "9": {
+    "booking": {
+      "status": "confirming",
+      "artist": {
+        "name": "The Lunar Tides"
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:00:00Z",
+          "end": "2025-09-20T23:15:00Z"
+        },
+        "otherActs": [
+          {
+            "name": "Glass Mirrors",
+            "time": "20:30-21:15"
+          }
+        ],
+        "soundcheck": "19:00-19:30"
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      },
+      "requirements": {
+        "hotel": "3 rooms",
+        "transportation": "rental van from Hamburg",
+        "backline": "required",
+        "meals": "5 people",
+        "merchandising": {
+          "commission": "15%",
+          "location": "main foyer near entrance"
+        }
+      }
+    }
+  },
+  "12": {
+    "booking": {
+      "status": "confirming",
+      "artist": {
+        "name": "The Lunar Tides"
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:00:00Z",
+          "end": "2025-09-20T23:15:00Z"
+        },
+        "otherActs": [
+          {
+            "name": "Glass Mirrors",
+            "time": "20:30-21:15"
+          }
+        ],
+        "soundcheck": "19:00-19:30"
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      },
+      "requirements": {
+        "hotel": "3 rooms",
+        "transportation": "rental van from Hamburg",
+        "backline": "required",
+        "meals": "5 people with nut allergy consideration",
+        "merchandising": {
+          "commission": "12%",
+          "location": "main foyer near entrance"
+        },
+        "technical": {
+          "soundEngineer": "bringing own FOH"
+        }
+      },
+      "personnel": {
+        "bandMembers": 5,
+        "crew": 2
+      }
+    }
+  },
+  "14": {
+    "booking": {
+      "status": "contract sent",
+      "artist": {
+        "name": "The Lunar Tides"
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:00:00Z",
+          "end": "2025-09-20T23:15:00Z"
+        },
+        "otherActs": [
+          {
+            "name": "Glass Mirrors",
+            "time": "20:30-21:15"
+          }
+        ],
+        "soundcheck": "19:00-19:30"
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent",
+        "deposit": 450
+      },
+      "contract": {
+        "status": "sent"
+      },
+      "requirements": {
+        "hotel": "3 rooms",
+        "transportation": "rental van from Hamburg",
+        "backline": "required",
+        "meals": "5 people with nut allergy consideration",
+        "merchandising": {
+          "commission": "12%",
+          "location": "main foyer near entrance"
+        },
+        "technical": {
+          "soundEngineer": "bringing own FOH"
+        }
+      },
+      "personnel": {
+        "bandMembers": 5,
+        "crew": 2,
+        "totalParty": 7
+      }
+    }
+  },
+  "18": {
+    "booking": {
+      "status": "contract signed",
+      "artist": {
+        "name": "The Lunar Tides"
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:15:00Z",
+          "end": "2025-09-20T23:30:00Z"
+        },
+        "otherActs": [
+          {
+            "name": "Glass Mirrors",
+            "time": "20:30-21:05"
+          },
+          {
+            "name": "The Velvet Echoes",
+            "time": "21:25-22:00"
+          }
+        ],
+        "soundcheck": "19:00-19:30"
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent",
+        "deposit": 450
+      },
+      "contract": {
+        "status": "signed"
+      },
+      "requirements": {
+        "hotel": "3 rooms",
+        "transportation": "rental van from Hamburg",
+        "backline": "required",
+        "meals": "5 people with nut allergy consideration",
+        "merchandising": {
+          "commission": "12%",
+          "location": "main foyer near entrance"
+        },
+        "technical": {
+          "soundEngineer": "bringing own FOH"
+        }
+      },
+      "personnel": {
+        "bandMembers": 5,
+        "crew": 2,
+        "totalParty": 7
+      }
+    }
+  },
+  "20": {
+    "booking": {
+      "status": "deposit paid",
+      "artist": {
+        "name": "The Lunar Tides"
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:15:00Z",
+          "end": "2025-09-20T23:30:00Z"
+        },
+        "otherActs": [
+          {
+            "name": "Glass Mirrors",
+            "time": "20:30-21:05"
+          },
+          {
+            "name": "The Velvet Echoes",
+            "time": "21:25-22:00"
+          }
+        ],
+        "soundcheck": "19:00-19:30"
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "deposit paid",
+        "deposit": 450,
+        "depositDate": "2025-02-20"
+      },
+      "contract": {
+        "status": "signed"
+      },
+      "requirements": {
+        "hotel": "3 rooms",
+        "transportation": "rental van from Hamburg",
+        "backline": "required",
+        "meals": "5 people with nut allergy consideration",
+        "merchandising": {
+          "commission": "12%",
+          "location": "main foyer near entrance"
+        },
+        "technical": {
+          "soundEngineer": "bringing own FOH"
+        }
+      },
+      "personnel": {
+        "bandMembers": 5,
+        "crew": 2,
+        "totalParty": 7
+      },
+      "promotion": {
+        "status": "pending",
+        "materials": "requested"
+      }
+    }
+  },
+  "25": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "The Lunar Tides",
+        "social": {
+          "instagram": "@thelunartides",
+          "twitter": "@lunartides",
+          "facebook": "@thelunartidesofficial"
+        }
+      },
+      "promoter": {
+        "name": "Sarah Taylor",
+        "company": "Vibrant Venues",
+        "email": "sarah@vibrantvenues.com",
+        "phone": "+49 157 8834 2211"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Indie Rock Showcase",
+        "city": "Berlin",
+        "venue": "Echo Club",
+        "capacity": 350,
+        "ticketPrice": 22,
+        "openingTime": "2025-09-20T19:30:00Z",
+        "closingTime": "2025-09-21T01:00:00Z",
+        "stageTime": {
+          "start": "2025-09-20T22:15:00Z",
+          "end": "2025-09-20T23:30:00Z"
+        },
+        "otherActs": [
+          {
+            "name": "Glass Mirrors",
+            "time": "20:30-21:05"
+          },
+          {
+            "name": "The Velvet Echoes",
+            "time": "21:25-22:00"
+          }
+        ],
+        "soundcheck": "19:00-19:30",
+        "interviews": [
+          {
+            "media": "Berlin Underground",
+            "time": "18:30",
+            "participant": "Alex"
+          }
+        ]
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "deposit paid",
+        "deposit": 450,
+        "depositDate": "2025-02-20"
+      },
+      "contract": {
+        "status": "signed"
+      },
+      "requirements": {
+        "hotel": "3 rooms (2 doubles, 1 single)",
+        "transportation": "rental van from Hamburg",
+        "backline": "required",
+        "meals": "5 people with nut allergy consideration",
+        "merchandising": {
+          "commission": "12%",
+          "location": "main foyer near entrance"
+        },
+        "technical": {
+          "soundEngineer": "bringing own FOH",
+          "console": "Midas M32"
+        },
+        "dressing_room": {
+          "amenities": [
+            "comfortable seating",
+            "mirror",
+            "Wi-Fi",
+            "towels",
+            "water",
+            "snacks",
+            "beverages"
+          ]
+        }
+      },
+      "personnel": {
+        "bandMembers": 5,
+        "crew": 2,
+        "totalParty": 7
+      },
+      "promotion": {
+        "status": "approved",
+        "materials": "provided",
+        "posterDesign": "approved",
+        "ticketsOnSale": "March 2025",
+        "upcomingPromotion": "Single release in June"
+      },
+      "payment": {
+        "bankDetails": {
+          "accountName": "Stellar Bookings GmbH",
+          "iban": "DE89 3704 0044 0532 0130 00",
+          "bic": "COBADEFFXXX",
+          "bank": "Commerzbank Berlin"
+        }
+      }
+    }
+  }
+} 

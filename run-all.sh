@@ -8,12 +8,19 @@ npx tsc
 # List of prompting strategies to evaluate
 STRATEGIES=(
   "zero-shot" 
+  "zero-shot-schema"
   "one-shot"
+  "one-shot-schema"
   "few-shot"
+  "few-shot-schema"
   "chain-of-thought"
+  "chain-of-thought-schema"
   "self-verification"
+  "self-verification-schema"
   "keyword-action"
+  "keyword-action-schema"
   "role-guided"
+  "role-guided-schema"
 )
 
 # Create output directory for benchmark results

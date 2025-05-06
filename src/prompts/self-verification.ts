@@ -2,15 +2,13 @@ import { createPromptBase } from "./base";
 
 export function createSelfVerificationPrompt(
   emailContent: string,
-  previousData: string = "{}",
-  schema: any
+  previousData: string = "{}"
 ): string {
   return `
 
 ${createPromptBase(emailContent, previousData)}
   
-Extract booking information from this email according to the schema:
-${JSON.stringify(schema, null, 2)}
+Extract booking information from this email.
 
 IMPORTANT: This task requires a self-verification approach with two distinct reasoning steps:
 

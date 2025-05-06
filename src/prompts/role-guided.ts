@@ -2,8 +2,7 @@ import { createPromptBase } from './base';
 
 export function createRoleGuidedPrompt(
   emailContent: string,
-  previousData: string = "{}",
-  schema: any
+  previousData: string = "{}"
 ): string {
   return `
 
@@ -12,8 +11,7 @@ ${createPromptBase(emailContent, previousData)}
 You are a specialized booking agent with years of experience extracting and managing event information. Your expertise is in accurately identifying and categorizing booking details from emails.
 
 Your responsibilities:
-1. Extract structured booking information according to this schema:
-${JSON.stringify(schema, null, 2)}
+1. Extract structured booking information
 
 2. Apply your expertise with dates and times:
 - Convert all dates to ISO format: YYYY-MM-DD

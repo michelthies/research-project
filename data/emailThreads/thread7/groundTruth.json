@@ -1,0 +1,1465 @@
+{
+  "1": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-07-12T20:30:00Z",
+          "end": "2025-07-12T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 3000,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  },
+  "2": {
+    "booking": {
+      "status": "checking",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": null,
+          "end": null
+        }
+      },
+      "invoice": {
+        "amount": 4500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      },
+      "requirements": {
+        "crewSize": 2,
+        "hotelRooms": 3,
+        "setDuration": 75,
+        "preferences": "perform after sunset"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  },
+  "3": {
+    "booking": {
+      "status": "pending",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-07-12T21:15:00Z",
+          "end": "2025-07-12T22:30:00Z"
+        },
+        "stage": "Main Stage",
+        "otherArtists": ["Orbital", "Nina Kraviz", "Max Cooper"]
+      },
+      "invoice": {
+        "amount": 4500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      },
+      "requirements": {
+        "crewSize": 2,
+        "hotelRooms": 3,
+        "setDuration": 75,
+        "preferences": "perform after sunset",
+        "transportation": "provided from hotel to venue"
+      },
+      "technical": {
+        "soundSystem": "L-Acoustics K2",
+        "personnel": ["dedicated sound engineer", "stage manager"],
+        "other": ["professional lighting rig", "video walls"]
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  },
+  "4": {
+    "booking": {
+      "status": "pending",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-07-12T21:15:00Z",
+          "end": "2025-07-12T22:30:00Z"
+        },
+        "stage": "Main Stage",
+        "otherArtists": ["Orbital", "Nina Kraviz", "Max Cooper"]
+      },
+      "invoice": {
+        "amount": 4500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      },
+      "requirements": {
+        "crewSize": 3,
+        "hotelRooms": 4,
+        "setDuration": 75,
+        "preferences": "perform after sunset",
+        "transportation": "provided from hotel to venue",
+        "backstage": {
+          "refreshments": ["still water", "herbal tea", "fresh fruit"],
+          "facilities": "requested information"
+        },
+        "accommodation": {
+          "blackoutCurtains": "requested"
+        }
+      },
+      "technical": {
+        "soundSystem": "L-Acoustics K2",
+        "personnel": ["dedicated sound engineer", "stage manager"],
+        "other": ["professional lighting rig", "video walls"]
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  },
+  "5": {
+    "booking": {
+      "status": "pending",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-07-12T21:15:00Z",
+          "end": "2025-07-12T22:30:00Z"
+        },
+        "stage": "Main Stage",
+        "otherArtists": ["Orbital", "Nina Kraviz", "Max Cooper"]
+      },
+      "invoice": {
+        "amount": 4500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      },
+      "requirements": {
+        "crewSize": 3,
+        "hotelRooms": 4,
+        "setDuration": 75,
+        "preferences": "perform after sunset",
+        "transportation": "provided from hotel to venue",
+        "backstage": {
+          "refreshments": ["still water", "herbal tea", "fresh fruit"],
+          "facilities": "dedicated artist area with private dressing rooms, comfortable seating, mirrors, lounge area, catering with hot meals"
+        },
+        "accommodation": {
+          "hotel": "Berlin Grand Hotel",
+          "rating": "4-stars",
+          "distance": "15 minutes from venue",
+          "blackoutCurtains": true
+        }
+      },
+      "technical": {
+        "soundSystem": "L-Acoustics K2",
+        "personnel": ["dedicated sound engineer", "stage manager"],
+        "other": ["professional lighting rig", "video walls"]
+      },
+      "promotion": {
+        "nameAndImageUse": "requested permission"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  },
+  "6": {
+    "booking": {
+      "status": "confirming",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-07-12T21:15:00Z",
+          "end": "2025-07-12T22:30:00Z"
+        },
+        "stage": "Main Stage",
+        "otherArtists": ["Orbital", "Nina Kraviz", "Max Cooper"]
+      },
+      "invoice": {
+        "amount": 4500,
+        "status": "not sent",
+        "paymentSchedule": "50% deposit upon signing, 50% on day of show"
+      },
+      "contract": {
+        "status": "requested"
+      },
+      "requirements": {
+        "crewSize": 3,
+        "hotelRooms": 4,
+        "setDuration": 75,
+        "preferences": "perform after sunset",
+        "transportation": "provided from hotel to venue",
+        "backstage": {
+          "refreshments": ["still water", "herbal tea", "fresh fruit"],
+          "facilities": "dedicated artist area with private dressing rooms, comfortable seating, mirrors, lounge area, catering with hot meals"
+        },
+        "accommodation": {
+          "hotel": "Berlin Grand Hotel",
+          "rating": "4-stars",
+          "distance": "15 minutes from venue",
+          "blackoutCurtains": true
+        }
+      },
+      "technical": {
+        "soundSystem": "L-Acoustics K2",
+        "personnel": ["dedicated sound engineer", "stage manager"],
+        "other": ["professional lighting rig", "video walls"]
+      },
+      "promotion": {
+        "nameAndImageUse": "approved",
+        "conditions": "artwork must be approved before publishing",
+        "pressKit": "to be provided"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  },
+  "7": {
+    "booking": {
+      "status": "contracting",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-07-12T21:15:00Z",
+          "end": "2025-07-12T22:30:00Z"
+        },
+        "stage": "Main Stage",
+        "otherArtists": ["Orbital", "Nina Kraviz", "Max Cooper"]
+      },
+      "invoice": {
+        "amount": 4500,
+        "status": "not sent",
+        "paymentSchedule": "30% deposit upon signing, 70% one week before show",
+        "proposedPaymentSchedule": "50% deposit upon signing, 50% on day of show"
+      },
+      "contract": {
+        "status": "sent",
+        "filename": "Contract_LunaRay_SummerVibes2025.pdf"
+      },
+      "requirements": {
+        "crewSize": 3,
+        "hotelRooms": 4,
+        "setDuration": 75,
+        "preferences": "perform after sunset",
+        "transportation": "provided from hotel to venue",
+        "backstage": {
+          "refreshments": ["still water", "herbal tea", "fresh fruit"],
+          "facilities": "dedicated artist area with private dressing rooms, comfortable seating, mirrors, lounge area, catering with hot meals"
+        },
+        "accommodation": {
+          "hotel": "Berlin Grand Hotel",
+          "rating": "4-stars",
+          "distance": "15 minutes from venue",
+          "blackoutCurtains": true
+        },
+        "technical": {
+          "additionalInfo": "requested"
+        }
+      },
+      "technical": {
+        "soundSystem": "L-Acoustics K2",
+        "personnel": ["dedicated sound engineer", "stage manager"],
+        "other": ["professional lighting rig", "video walls"]
+      },
+      "promotion": {
+        "nameAndImageUse": "approved",
+        "conditions": "artwork must be approved before publishing",
+        "pressKit": "pending"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  },
+  "8": {
+    "booking": {
+      "status": "contracting",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-07-12T21:15:00Z",
+          "end": "2025-07-12T22:30:00Z"
+        },
+        "stage": "Main Stage",
+        "otherArtists": ["Orbital", "Nina Kraviz", "Max Cooper"]
+      },
+      "invoice": {
+        "amount": 4500,
+        "status": "not sent",
+        "paymentSchedule": "negotiating",
+        "proposedOptions": ["50/50 split (preferred)", "40/60 split (minimum)"],
+        "festivalProposal": "30/70 split"
+      },
+      "contract": {
+        "status": "reviewing",
+        "filename": "Contract_LunaRay_SummerVibes2025.pdf"
+      },
+      "requirements": {
+        "crewSize": 3,
+        "hotelRooms": 4,
+        "setDuration": 75,
+        "preferences": "perform after sunset",
+        "transportation": "provided from hotel to venue",
+        "backstage": {
+          "refreshments": ["still water", "herbal tea", "fresh fruit"],
+          "facilities": "dedicated artist area with private dressing rooms, comfortable seating, mirrors, lounge area, catering with hot meals"
+        },
+        "accommodation": {
+          "hotel": "Berlin Grand Hotel",
+          "rating": "4-stars",
+          "distance": "15 minutes from venue",
+          "blackoutCurtains": true
+        }
+      },
+      "technical": {
+        "soundSystem": "L-Acoustics K2",
+        "personnel": ["dedicated sound engineer", "stage manager"],
+        "other": ["professional lighting rig", "video walls"],
+        "equipment": [
+          "2 Pioneer CDJ-3000 players",
+          "1 Allen & Heath Xone:96 mixer",
+          "2 Monitor speakers (Yamaha DXR12 or equivalent)",
+          "In-ear monitoring system",
+          "1 wireless microphone (Shure SM58 or better)"
+        ],
+        "setup": [
+          "Small table for laptop (at least 80cm x 60cm)",
+          "Proper lighting on the DJ equipment"
+        ],
+        "rider": {
+          "filename": "LunaRay_TechRider_2025.pdf"
+        }
+      },
+      "promotion": {
+        "nameAndImageUse": "approved",
+        "conditions": "artwork must be approved before publishing",
+        "pressKit": {
+          "status": "provided",
+          "filename": "LunaRay_PressPack_2025.zip"
+        }
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  },
+  "9": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "Luna Ray"
+      },
+      "promoter": {
+        "name": "Alex Chen",
+        "company": "Summer Vibes Festival",
+        "address": null
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Vibes Festival",
+        "city": "Berlin",
+        "venue": "Tempelhof Park",
+        "capacity": 5000,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-07-12T21:15:00Z",
+          "end": "2025-07-12T22:30:00Z"
+        },
+        "stage": "Main Stage",
+        "otherArtists": ["Orbital", "Nina Kraviz", "Max Cooper"]
+      },
+      "invoice": {
+        "amount": 4500,
+        "status": "not sent",
+        "paymentSchedule": "40% upon signing, 60% before the show",
+        "negotiationComplete": true
+      },
+      "contract": {
+        "status": "updating",
+        "updatedVersionDate": "2025-03-11",
+        "filename": "Contract_LunaRay_SummerVibes2025.pdf"
+      },
+      "requirements": {
+        "crewSize": 3,
+        "hotelRooms": 4,
+        "setDuration": 75,
+        "preferences": "perform after sunset",
+        "transportation": {
+          "provided": true,
+          "airportOptions": ["Berlin Brandenburg (BER)", "Berlin Tegel (TXL)"],
+          "preferredAirport": "requested information"
+        },
+        "backstage": {
+          "refreshments": ["still water", "herbal tea", "fresh fruit"],
+          "facilities": "dedicated artist area with private dressing rooms, comfortable seating, mirrors, lounge area, catering with hot meals"
+        },
+        "accommodation": {
+          "hotel": "Berlin Grand Hotel",
+          "rating": "4-stars",
+          "distance": "15 minutes from venue",
+          "blackoutCurtains": true
+        }
+      },
+      "technical": {
+        "soundSystem": "L-Acoustics K2",
+        "personnel": ["dedicated sound engineer", "stage manager"],
+        "other": ["professional lighting rig", "video walls"],
+        "equipment": [
+          "2 Pioneer CDJ-3000 players",
+          "1 Allen & Heath Xone:96 mixer",
+          "2 Monitor speakers (Yamaha DXR12 or equivalent)",
+          "In-ear monitoring system",
+          "1 wireless microphone (Shure SM58 or better)"
+        ],
+        "setup": [
+          "Small table for laptop (at least 80cm x 60cm)",
+          "Proper lighting on the DJ equipment"
+        ],
+        "status": "confirmed",
+        "rider": {
+          "filename": "LunaRay_TechRider_2025.pdf"
+        }
+      },
+      "promotion": {
+        "nameAndImageUse": "approved",
+        "conditions": "artwork must be approved before publishing",
+        "announcementDate": "week of 2025-03-15",
+        "pressKit": {
+          "status": "received",
+          "filename": "LunaRay_PressPack_2025.zip"
+        }
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry",
+          "pending",
+          "request",
+          "newrequest",
+          "requested",
+          "initial",
+          "checking",
+          "new",
+          "open"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "lunaray",
+          "luna",
+          "ray"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "alexchen",
+          "alex",
+          "chen",
+          "achen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250712",
+          "12072025",
+          "120725",
+          "12072025",
+          "12july2025",
+          "july122025",
+          "jul122025",
+          "12jul2025",
+          "12jul25",
+          "7122025",
+          "71225"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "summervibesfestival",
+          "summervibes",
+          "vibesfestival",
+          "vibes"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhof",
+          "tempelhofpark",
+          "tempelhofparkberlin"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "5000",
+          "fivethousand",
+          "5k",
+          "5000people",
+          "5000pax"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "20250712t203000z",
+          "20250712t203000",
+          "20250712t2030",
+          "20250712t830pm",
+          "2030",
+          "830pm",
+          "203000",
+          "2030h",
+          "830pmutc",
+          "eightthirtypm"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "20250712t220000z",
+          "20250712t220000",
+          "20250712t2200",
+          "20250712t10pm",
+          "2200",
+          "10pm",
+          "220000",
+          "2200h",
+          "10pmutc",
+          "tenpm"
+        ]
+      }
+    }
+  }
+} 

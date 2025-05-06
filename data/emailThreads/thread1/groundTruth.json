@@ -26,24 +26,16 @@
       },
       "invoice": {
         "amount": 500,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
       "booking.status": {
         "acceptedValues": [
-          "inquiry",
-          "pending",
-          "request",
-          "newrequest",
-          "requested",
-          "initial",
-          "checking",
-          "new",
-          "open"
+          "inquiry"
         ]
       },
       "booking.artist.name": {
@@ -219,21 +211,8 @@
           "five hundred",
           "fivehundredeuros"
         ]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
-      },
-      "booking.contract.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
       }
+      
     }
   },
   "2": {
@@ -263,10 +242,10 @@
       },
       "invoice": {
         "amount": 1000,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
@@ -457,21 +436,8 @@
           "thousandeuros",
           "onethousandeuros"
         ]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
-      },
-      "booking.contract.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
       }
+      
     }
   },
   "3": {
@@ -501,10 +467,10 @@
       },
       "invoice": {
         "amount": 1000,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
    "normalizationConfig": {
@@ -695,21 +661,8 @@
           "thousandeuros",
           "onethousandeuros"
         ]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
-      },
-      "booking.contract.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
       }
+      
     }
   },
   "4": {
@@ -739,10 +692,10 @@
       },
       "invoice": {
         "amount": 1000,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
@@ -933,21 +886,8 @@
           "thousandeuros",
           "onethousandeuros"
         ]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
-      },
-      "booking.contract.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
       }
+      
     }
   },
   "5": {
@@ -977,10 +917,10 @@
       },
       "invoice": {
         "amount": 1000,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
    "normalizationConfig": {
@@ -1170,20 +1110,6 @@
           "onethousand",
           "thousandeuros",
           "onethousandeuros"
-        ]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
-      },
-      "booking.contract.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
         ]
       }
     }
@@ -1215,10 +1141,10 @@
       },
       "invoice": {
         "amount": 1000,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
@@ -1409,21 +1335,8 @@
           "thousandeuros",
           "onethousandeuros"
         ]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
-      },
-      "booking.contract.status": {
-        "acceptedValues": [
-          "notsent",
-          "notcreated",
-          "tobeprepared"
-        ]
       }
+      
     }
   },
   "7": {
@@ -1653,20 +1566,20 @@
           "onethousandeuros"
         ]
       },
+    
       "booking.invoice.status": {
         "acceptedValues": [
           "notsent",
-          "notcreated",
-          "tobeprepared"
+          "notcreated"
         ]
       },
       "booking.contract.status": {
         "acceptedValues": [
           "notsent",
-          "notcreated",
-          "tobeprepared"
+          "notcreated"
         ]
       }
+      
     }
   },
   "8": {
@@ -1914,17 +1827,16 @@
       "booking.invoice.status": {
         "acceptedValues": [
           "notsent",
-          "notcreated",
-          "tobeprepared"
+          "notcreated"
         ]
       },
       "booking.contract.status": {
         "acceptedValues": [
           "notsent",
-          "notcreated",
-          "tobeprepared"
+          "notcreated"
         ]
       }
+      
     }
   },
   "9": {
@@ -2437,7 +2349,7 @@
           "onethousandeuros"
         ]
       },
-     "booking.invoice.status": {
+      "booking.invoice.status": {
         "acceptedValues": [
           "paid",
           "payed",
@@ -2450,7 +2362,7 @@
       "booking.contract.status": {
         "acceptedValues": [
           "signed",
-          "completed",
+          "signedcontract",
           "returned",
           "contractsigned"
         ]
@@ -2482,9 +2394,15 @@
           "end": "2025-11-26T03:00:00Z"
         }
       },
-      "invoice": {
-        "amount": 1000,
-        "status": "paid"
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "paid",
+          "payed",
+          "paymentreceived",
+          "settled",
+          "completed",
+          "completedpayment"
+        ]
       },
       "contract": {
         "status": "cosigned"

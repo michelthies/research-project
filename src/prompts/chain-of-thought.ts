@@ -3,7 +3,6 @@ import { createPromptBase } from './base';
 export function createChainOfThoughtPrompt(
   emailContent: string,
   previousData: string = "{}",
-  schema: any
 ): string {
   return `
 
@@ -35,9 +34,6 @@ For conflicting or missing information:
 - When new information contradicts existing data, I will use the new information
 - When information is not mentioned in the new email, I will preserve data from the previous extraction
 - I will update status fields when mentioned (booking status, invoice status, contract status)
-
-Schema definition:
-${JSON.stringify(schema, null, 2)}
 
 Before finalizing, I will verify:
 1. All required fields are present

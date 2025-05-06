@@ -1,0 +1,325 @@
+{
+  "1": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "Lunar Drift"
+      },
+      "promoter": {
+        "name": "Julia Chen",
+        "company": "Vibrant Events",
+        "email": "julia@vibrantevents.com",
+        "phone": "+1 (415) 555-8762"
+      },
+      "event": {
+        "date": "2025-07-12",
+        "name": "Summer Series",
+        "city": "San Francisco",
+        "venue": "The Horizon",
+        "capacity": 800,
+        "ticketPrice": 35,
+        "openingTime": "2025-07-12T20:00:00Z",
+        "closingTime": "2025-07-13T02:00:00Z",
+        "stageTime": {
+          "start": "2025-07-12T23:30:00Z",
+          "end": "2025-07-13T01:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 4000,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    }
+  },
+  "2": {
+    "booking": {
+      "status": "negotiation",
+      "artist": {
+        "name": "Lunar Drift",
+        "setLength": 75,
+        "crew": ["sound engineer", "lighting tech"]
+      },
+      "event": {
+        "stageTime": {
+          "start": "2025-07-12T23:30:00Z",
+          "end": "2025-07-13T00:45:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 5500,
+        "status": "not sent"
+      }
+    }
+  },
+  "3": {
+    "booking": {
+      "status": "negotiation",
+      "event": {
+        "additionalDetails": {
+          "meetAndGreet": true
+        }
+      },
+      "invoice": {
+        "amount": 4800,
+        "status": "not sent"
+      }
+    }
+  },
+  "4": {
+    "booking": {
+      "status": "negotiation",
+      "artist": {
+        "members": {
+          "drummer": "Alex",
+          "equipment": "hybrid electronic kit"
+        },
+        "rider": {
+          "meetAndGreet": {
+            "duration": 20,
+            "maxAttendees": 15,
+            "requirements": ["refreshments", "quiet space"]
+          }
+        }
+      },
+      "invoice": {
+        "amount": 5000,
+        "status": "not sent"
+      }
+    }
+  },
+  "5": {
+    "booking": {
+      "status": "negotiation",
+      "venue": {
+        "address": null,
+        "stage": {
+          "dimensions": "10m x 6m",
+          "technical": {
+            "dedicatedPowerLines": true
+          }
+        }
+      },
+      "event": {
+        "loadIn": "2025-07-12T14:00:00Z",
+        "crew": {
+          "stagehands": 3,
+          "soundEngineer": true
+        }
+      }
+    }
+  },
+  "6": {
+    "booking": {
+      "status": "negotiation",
+      "venue": {
+        "merchandise": {
+          "allowed": true,
+          "venuePercentage": 0,
+          "dedicated": true
+        }
+      },
+      "invoice": {
+        "deposit": "50%",
+        "paymentMethod": "bank transfer"
+      }
+    }
+  },
+  "7": {
+    "booking": {
+      "status": "negotiation",
+      "venue": {
+        "address": "580 Valencia Street, San Francisco, CA 94110"
+      },
+      "contacts": {
+        "production": {
+          "name": "David Reyes",
+          "email": "david@thehorizon.com",
+          "phone": "+1 415-555-3982"
+        }
+      },
+      "promotion": {
+        "announcementDate": "2025-03-26",
+        "ticketSalesStart": "2025-04-01"
+      }
+    }
+  },
+  "8": {
+    "booking": {
+      "status": "contract sent",
+      "artist": {
+        "newRelease": {
+          "type": "single",
+          "date": "early July"
+        },
+        "pressPhotos": {
+          "source": "www.lunardriftmusic.com/press",
+          "preference": "black and white series"
+        }
+      },
+      "accommodation": {
+        "preference": "near venue"
+      }
+    }
+  },
+  "9": {
+    "booking": {
+      "status": "contract review",
+      "contract": {
+        "issue": "incorrect date"
+      },
+      "accommodation": {
+        "options": [
+          {
+            "name": "Hotel Valencia",
+            "distance": "0.2 miles",
+            "notes": "boutique hotel, very quiet"
+          },
+          {
+            "name": "The Mission Inn",
+            "distance": "0.5 miles",
+            "notes": "recently renovated, great restaurant"
+          }
+        ]
+      }
+    }
+  },
+  "10": {
+    "booking": {
+      "status": "contract revised",
+      "accommodation": {
+        "selected": "Hotel Valencia",
+        "rooms": 4
+      },
+      "artist": {
+        "members": {
+          "singer": {"name": "Maya", "dietary": "vegetarian"},
+          "bassist": {"name": "Tom", "dietary": "no seafood (allergic)"},
+          "guitarist": {"name": "Sasha", "dietary": "vegetarian"},
+          "drummer": {"name": "Alex", "dietary": "no restrictions"}
+        },
+        "catering": {
+          "requirements": ["vegetarian options", "no seafood", "still water", "coffee", "herbal teas", "fresh fruit", "light snacks"]
+        }
+      }
+    }
+  },
+  "11": {
+    "booking": {
+      "status": "contract signed by promoter",
+      "accommodation": {
+        "dates": "2025-07-11 to 2025-07-13",
+        "nights": 2
+      },
+      "promotion": {
+        "materials": "pending approval"
+      }
+    }
+  },
+  "12": {
+    "booking": {
+      "status": "contract signed by both parties",
+      "artist": {
+        "arrival": {
+          "city": "2025-07-11T12:00:00Z",
+          "venue": "2025-07-12T15:00:00Z"
+        },
+        "crew": {
+          "arrival": "2025-07-12T14:30:00Z"
+        }
+      },
+      "invoice": {
+        "deposit": "pending"
+      }
+    }
+  },
+  "13": {
+    "booking": {
+      "status": "confirmed",
+      "promotion": {
+        "materials": "draft sent for approval",
+        "using": ["black and white photos"]
+      },
+      "localActivities": {
+        "studios": ["Noise Kitchen Studios", "Different Fur Studios"],
+        "other": ["Amoeba Music", "The Fillmore district"]
+      }
+    }
+  },
+  "14": {
+    "booking": {
+      "status": "confirmed",
+      "promotion": {
+        "feedback": {
+          "photoChange": true,
+          "singleName": "Midnight Echo",
+          "nameCorrection": "Maya Krishnan"
+        }
+      },
+      "localActivities": {
+        "confirmed": {
+          "venue": "Noise Kitchen Studios",
+          "date": "2025-07-11T15:00:00Z"
+        }
+      },
+      "invoice": {
+        "sent": true
+      }
+    }
+  },
+  "15": {
+    "booking": {
+      "status": "confirmed",
+      "promotion": {
+        "updated": true,
+        "publishDate": "2025-03-26"
+      },
+      "invoice": {
+        "deposit": "processing"
+      },
+      "press": {
+        "interview": {
+          "requested": true,
+          "duration": "10-15 min",
+          "type": "phone"
+        }
+      }
+    }
+  },
+  "16": {
+    "booking": {
+      "status": "confirmed",
+      "promotion": {
+        "approved": true
+      },
+      "press": {
+        "interview": {
+          "confirmed": true,
+          "spokesperson": "Maya",
+          "preferredDates": ["2025-07-07", "2025-07-08"],
+          "preferredTime": "afternoon"
+        }
+      },
+      "invoice": {
+        "deposit": "received"
+      }
+    }
+  },
+  "17": {
+    "booking": {
+      "status": "confirmed",
+      "press": {
+        "interview": {
+          "scheduled": "2025-07-08T14:00:00-07:00"
+        }
+      },
+      "promotion": {
+        "materials": "scheduled",
+        "ticketSalesStart": "2025-04-01"
+      },
+      "nextContact": "June 2025"
+    }
+  }
+} 

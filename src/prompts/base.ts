@@ -1,3 +1,16 @@
+export function addSchemaToPrompt(prompt: string, schema: any): string {
+  return `
+${prompt}
+
+Schema:
+${JSON.stringify(schema, null, 2)}
+
+`;
+
+}
+
+
+
 export function createPromptBase(
   emailContent: string,
   previousData: string = "{}"

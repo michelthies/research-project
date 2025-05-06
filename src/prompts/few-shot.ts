@@ -2,8 +2,7 @@ import { createPromptBase } from './base';
 
 export function createFewShotPrompt(
   emailContent: string,
-  previousData: string = "{}",
-  schema: any
+  previousData: string = "{}"
 ): string {
   const basePrompt = createPromptBase(emailContent, previousData);
   
@@ -32,10 +31,40 @@ EXAMPLE OUTPUT:
         "end": "2025-07-16T03:00:00Z"
       }
     },
+    "invoice": { "amount": 800, "status": null },
+    "contract": { "status": null }
+  }
+}
+
+EXAMPLE INPUT:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Booking Request for DJ Eclipse
+confirmed!
+please send me the invoice/contract details.
+
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "John Smith", "company": null, "address": null },
+    "event": {
+      "date": "2025-07-15",
+      "venue": "Skyline Club",
+      "city": "Berlin",
+      "capacity": 300,
+      "openingTime": null,
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-07-15T23:30:00Z",
+        "end": "2025-07-16T03:00:00Z"
+      }
+    },
     "invoice": { "amount": 800, "status": "not sent" },
     "contract": { "status": "not sent" }
   }
 }
+
 
 EXAMPLE INPUT:
 From: Sarah Johnson <sarah@events.com>
@@ -91,9 +120,6 @@ EXAMPLE OUTPUT:
 
   return `
 ${basePrompt}
-
-Follow this schema exactly:
-${JSON.stringify(schema, null, 2)}
 
 Use these examples to guide your extraction:
 ${examples}

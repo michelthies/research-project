@@ -1,0 +1,615 @@
+{
+  "strategy": "keyword-action",
+  "evaluationResults": [
+    {
+      "messageFile": "message1.txt",
+      "evaluation": {
+        "messageId": "1",
+        "schemaConformity": {
+          "score": 0.6,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.8333333333333334,
+          "errors": [
+            "booking.promoter.name: Expected Marcus Weber, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got null",
+            "booking.event.stageTime.end: Expected 2025-11-26T04:00:00Z, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T04:00:00Z",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.7166666666666667
+      }
+    },
+    {
+      "messageFile": "message2.txt",
+      "evaluation": {
+        "messageId": "2",
+        "schemaConformity": {
+          "score": 0.8,
+          "errors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.promoter.name: Expected Marcus Weber, got null",
+            "booking.event.openingTime: Expected 2025-11-25T22:00:00Z, got null",
+            "booking.event.closingTime: Expected 2025-11-26T06:00:00Z, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got null",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": null
+            },
+            {
+              "field": "booking.event.openingTime",
+              "expected": "2025-11-25T22:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.closingTime",
+              "expected": "2025-11-26T06:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.7611111111111111
+      }
+    },
+    {
+      "messageFile": "message3.txt",
+      "evaluation": {
+        "messageId": "3",
+        "schemaConformity": {
+          "score": 0.8,
+          "errors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.promoter.name: Expected Marcus Weber, got null",
+            "booking.event.openingTime: Expected 2025-11-25T22:00:00Z, got null",
+            "booking.event.closingTime: Expected 2025-11-26T06:00:00Z, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got null",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": null
+            },
+            {
+              "field": "booking.event.openingTime",
+              "expected": "2025-11-25T22:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.closingTime",
+              "expected": "2025-11-26T06:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.7611111111111111
+      }
+    },
+    {
+      "messageFile": "message4.txt",
+      "evaluation": {
+        "messageId": "4",
+        "schemaConformity": {
+          "score": 0.8,
+          "errors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.6666666666666666,
+          "errors": [
+            "booking.promoter.name: Expected Marcus Weber, got null",
+            "booking.promoter.company: Expected null, got stellarbookings.com",
+            "booking.event.openingTime: Expected 2025-11-25T22:00:00Z, got null",
+            "booking.event.closingTime: Expected 2025-11-26T06:00:00Z, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got null",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got null"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": null,
+              "actual": "stellarbookings.com"
+            },
+            {
+              "field": "booking.event.openingTime",
+              "expected": "2025-11-25T22:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.closingTime",
+              "expected": "2025-11-26T06:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null
+            }
+          ],
+          "additionalFields": []
+        },
+        "overallScore": 0.7333333333333334
+      }
+    },
+    {
+      "messageFile": "message5.txt",
+      "evaluation": {
+        "messageId": "5",
+        "schemaConformity": {
+          "score": 0.8,
+          "errors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7058823529411765,
+          "errors": [
+            "booking.promoter.contact: Additional field not in ground truth",
+            "booking.promoter.company: Expected null, got stellarbookings.com",
+            "booking.event.openingTime: Missing field",
+            "booking.event.closingTime: Missing field",
+            "booking.event.stageTime: Missing field",
+            "booking.invoice.amount: Expected 1000, got null"
+          ],
+          "missingFields": [
+            "booking.event.openingTime",
+            "booking.event.closingTime",
+            "booking.event.stageTime"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.promoter.company",
+              "expected": null,
+              "actual": "stellarbookings.com"
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 1000,
+              "actual": null
+            }
+          ],
+          "additionalFields": [
+            "booking.promoter.contact"
+          ]
+        },
+        "overallScore": 0.7529411764705882
+      }
+    },
+    {
+      "messageFile": "message6.txt",
+      "evaluation": {
+        "messageId": "6",
+        "schemaConformity": {
+          "score": 0.8,
+          "errors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.6470588235294118,
+          "errors": [
+            "booking.status: Expected inquiry, got confirmed",
+            "booking.promoter.address: Missing field",
+            "booking.promoter.contact: Additional field not in ground truth",
+            "booking.promoter.company: Expected null, got stellarbookings.com",
+            "booking.event.openingTime: Missing field",
+            "booking.event.closingTime: Missing field",
+            "booking.event.stageTime: Missing field"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.openingTime",
+            "booking.event.closingTime",
+            "booking.event.stageTime"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": "confirmed"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": null,
+              "actual": "stellarbookings.com"
+            }
+          ],
+          "additionalFields": [
+            "booking.promoter.contact"
+          ]
+        },
+        "overallScore": 0.723529411764706
+      }
+    },
+    {
+      "messageFile": "message7.txt",
+      "evaluation": {
+        "messageId": "7",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.5882352941176471,
+          "errors": [
+            "booking.promoter.address: Missing field",
+            "booking.promoter.contact: Additional field not in ground truth",
+            "booking.promoter.company: Expected null, got stellarbookings.com",
+            "booking.event.openingTime: Missing field",
+            "booking.event.closingTime: Missing field",
+            "booking.event.stageTime: Missing field",
+            "booking.invoice.status: Expected not sent, got sent",
+            "booking.contract.status: Expected not sent, got sent"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.openingTime",
+            "booking.event.closingTime",
+            "booking.event.stageTime"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.promoter.company",
+              "expected": null,
+              "actual": "stellarbookings.com"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "sent"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "sent"
+            }
+          ],
+          "additionalFields": [
+            "booking.promoter.contact"
+          ]
+        },
+        "overallScore": 0.7941176470588236
+      }
+    },
+    {
+      "messageFile": "message8.txt",
+      "evaluation": {
+        "messageId": "8",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.6470588235294118,
+          "errors": [
+            "booking.promoter.address: Missing field",
+            "booking.promoter.contact: Additional field not in ground truth",
+            "booking.event.openingTime: Missing field",
+            "booking.event.closingTime: Missing field",
+            "booking.event.stageTime: Missing field",
+            "booking.invoice.status: Expected not sent, got sent",
+            "booking.contract.status: Expected not sent, got sent"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.openingTime",
+            "booking.event.closingTime",
+            "booking.event.stageTime"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "sent"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "sent"
+            }
+          ],
+          "additionalFields": [
+            "booking.promoter.contact"
+          ]
+        },
+        "overallScore": 0.8235294117647058
+      }
+    },
+    {
+      "messageFile": "message9.txt",
+      "evaluation": {
+        "messageId": "9",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7647058823529411,
+          "errors": [
+            "booking.promoter.address: Missing field",
+            "booking.promoter.contact: Additional field not in ground truth",
+            "booking.event.openingTime: Missing field",
+            "booking.event.closingTime: Missing field",
+            "booking.event.stageTime: Missing field"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.openingTime",
+            "booking.event.closingTime",
+            "booking.event.stageTime"
+          ],
+          "incorrectValues": [],
+          "additionalFields": [
+            "booking.promoter.contact"
+          ]
+        },
+        "overallScore": 0.8823529411764706
+      }
+    },
+    {
+      "messageFile": "message10.txt",
+      "evaluation": {
+        "messageId": "10",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7058823529411765,
+          "errors": [
+            "booking.promoter.address: Missing field",
+            "booking.promoter.contact: Additional field not in ground truth",
+            "booking.event.openingTime: Missing field",
+            "booking.event.closingTime: Missing field",
+            "booking.event.stageTime: Missing field",
+            "booking.invoice.status: Expected paid, got sent"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.openingTime",
+            "booking.event.closingTime",
+            "booking.event.stageTime"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.invoice.status",
+              "expected": "paid",
+              "actual": "sent"
+            }
+          ],
+          "additionalFields": [
+            "booking.promoter.contact"
+          ]
+        },
+        "overallScore": 0.8529411764705883
+      }
+    },
+    {
+      "messageFile": "message11.txt",
+      "evaluation": {
+        "messageId": "11",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.625,
+          "errors": [
+            "booking.booking.invoice.status: Missing field",
+            "booking.invoice: Additional field not in ground truth",
+            "booking.promoter.address: Missing field",
+            "booking.promoter.contact: Additional field not in ground truth",
+            "booking.event.openingTime: Missing field",
+            "booking.event.closingTime: Missing field",
+            "booking.event.stageTime: Missing field",
+            "booking.contract.status: Expected cosigned, got signed"
+          ],
+          "missingFields": [
+            "booking.booking.invoice.status",
+            "booking.promoter.address",
+            "booking.event.openingTime",
+            "booking.event.closingTime",
+            "booking.event.stageTime"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed"
+            }
+          ],
+          "additionalFields": [
+            "booking.invoice",
+            "booking.promoter.contact"
+          ]
+        },
+        "overallScore": 0.8125
+      }
+    }
+  ],
+  "processedResponses": [
+    {
+      "file": "message1.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoic"
+    },
+    {
+      "file": "message2.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": {\n"
+    },
+    {
+      "file": "message3.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": {\n"
+    },
+    {
+      "file": "message4.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": \"stellarbookings.com\",\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n"
+    },
+    {
+      "file": "message5.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"stellarbookings.com\",\n      \"address\": null,\n      \"contact\": {\n        \"phone\": \"+4912045980455\",\n        \"email\": \"mw@gmail.com\"\n      }\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15\n    },\n    \"invoice\": {\n     "
+    },
+    {
+      "file": "message6.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"stellarbookings.com\",\n      \"contact\": {\n        \"phone\": \"+4912045980455\",\n        \"email\": \"mw@gmail.com\"\n      }\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n    "
+    },
+    {
+      "file": "message7.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"stellarbookings.com\",\n      \"contact\": {\n        \"phone\": \"+4912045980455\",\n        \"email\": \"mw@gmail.com\"\n      }\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n    "
+    },
+    {
+      "file": "message8.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"contact\": {\n        \"phone\": \"+4912045980455\",\n        \"email\": \"mw@gmail.com\"\n      }\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status"
+    },
+    {
+      "file": "message9.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"contact\": {\n        \"phone\": \"+4912045980455\",\n        \"email\": \"mw@gmail.com\"\n      }\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status"
+    },
+    {
+      "file": "message10.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"contact\": {\n        \"phone\": \"+4912045980455\",\n        \"email\": \"mw@gmail.com\"\n      }\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status"
+    },
+    {
+      "file": "message11.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"contact\": {\n        \"phone\": \"+4912045980455\",\n        \"email\": \"mw@gmail.com\"\n      }\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status"
+    }
+  ],
+  "averageScores": {
+    "schemaConformity": 0.8727272727272727,
+    "contextualConsistency": 0.6934789067142009,
+    "overallScore": 0.7831030897207367,
+    "successRate": 1
+  }
+}

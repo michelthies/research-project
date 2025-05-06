@@ -1,0 +1,244 @@
+{
+  "thread": "thread5",
+  "entities": {
+    "promoter": {
+      "name": "Lisa Chen",
+      "email": "lisa.chen@crescendoevents.com",
+      "phone": "+49 176 8342 9517",
+      "company": "Crescendo Events",
+      "role": "Event Coordinator"
+    },
+    "agent": {
+      "name": "Mike Muller",
+      "email": "mike@stellarbookings.com",
+      "phone": "+491634523464",
+      "company": "Stellar Bookings",
+      "role": "Booking Agent"
+    },
+    "artist": {
+      "name": "The Echomakers",
+      "members": 4,
+      "crew": 3,
+      "total_personnel": 7,
+      "special_songs": ["Echoes In Time"]
+    },
+    "event": {
+      "name": "Summer Solstice Festival",
+      "theme": "Renewal and Connection",
+      "date": "2025-06-21",
+      "venue": "Urban Garden Arena",
+      "city": "Berlin",
+      "country": "Germany",
+      "doors_open": "16:00",
+      "doors_close": "02:00"
+    },
+    "performance": {
+      "start_time": "22:00",
+      "end_time": "23:15",
+      "duration_minutes": 75,
+      "stage": "Main Stage",
+      "stage_size": "12m x 8m"
+    },
+    "venue": {
+      "name": "Urban Garden Arena",
+      "total_capacity": 2000,
+      "stages": 3,
+      "stage_names": ["Main Stage", "Electronic Dome", "Acoustic Garden"]
+    },
+    "financial": {
+      "currency": "EUR",
+      "fee": 4250,
+      "initial_offer": 3500,
+      "countered_fee": 4500,
+      "final_fee": 4250
+    },
+    "logistics": {
+      "soundcheck_time": "17:00-17:45",
+      "setup_time": "16:30",
+      "arrival_date": "2025-06-20",
+      "accommodations": {
+        "rooms": 3,
+        "room_type": "twin",
+        "check_in": "2025-06-20",
+        "check_out": "2025-06-22"
+      },
+      "transport": "ground transport included",
+      "meals": "provided"
+    },
+    "technical": {
+      "backline_provided": true,
+      "tech_rider": "TheEchomakers_TechRider2025.pdf",
+      "requirements": [
+        "Minimum stage size: 8m x 6m",
+        "Full drum kit",
+        "3 guitar amps (1 bass, 2 electric)",
+        "5 vocal mics + 2 spare",
+        "Minimum 6 monitor wedges",
+        "In-ear monitoring system"
+      ]
+    },
+    "contract": {
+      "sent_date": "2025-03-17",
+      "updated_date": "2025-03-18",
+      "signed_date": "2025-03-19",
+      "special_clauses": [
+        "75-minute set time",
+        "In-ear monitoring system provided",
+        "Two nights accommodation"
+      ]
+    },
+    "marketing": {
+      "promo_materials": "Echomakers_PromoPack2025.zip",
+      "bio_file": "Echomakers_Bio_Short.docx",
+      "special_performance_notes": "Acoustic arrangement of 'Echoes In Time'"
+    }
+  },
+  "messageHistory": [
+    {
+      "id": "message1",
+      "sender": "Lisa Chen",
+      "recipient": "Mike Muller",
+      "date": "2025-03-14T10:23:15+02:00",
+      "subject": "Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "venue_name": "Urban Garden Arena",
+        "city": "Berlin",
+        "date": "2025-06-21",
+        "event_timing": "4pm - 2am",
+        "desired_slot": "9:30pm - 11pm",
+        "stages": 3,
+        "requested_stage": "Main Stage",
+        "venue_capacity": 2000,
+        "initial_offer": "€3,500 + accommodation/transport"
+      }
+    },
+    {
+      "id": "message2",
+      "sender": "Mike Muller",
+      "recipient": "Lisa Chen",
+      "date": "2025-03-14T14:37:22+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "set_time": "75 minutes",
+        "proposed_slot": "9:30pm - 10:45pm",
+        "personnel": "5-piece band plus 2 crew",
+        "fee_request": "€4,500 plus accommodations",
+        "accommodation_needs": "3 twin rooms",
+        "tech_rider_mentioned": true
+      }
+    },
+    {
+      "id": "message3",
+      "sender": "Lisa Chen",
+      "recipient": "Mike Muller",
+      "date": "2025-03-15T09:16:44+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "slot_acceptance": "9:30-10:45pm",
+        "counter_offer": "€4,000 + accommodations/transport/meals",
+        "tech_rider_requested": true
+      }
+    },
+    {
+      "id": "message4",
+      "sender": "Mike Muller",
+      "recipient": "Lisa Chen",
+      "date": "2025-03-15T16:45:09+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "counter_offer": "€4,250",
+        "preferred_time": "10pm-11:15pm",
+        "tech_requirements": [
+          "Minimum stage size: 8m x 6m",
+          "Full drum kit",
+          "3 guitar amps",
+          "5 vocal mics + 2 spare",
+          "Minimum 6 monitor wedges",
+          "In-ear monitoring system"
+        ],
+        "theme_inquiry": true
+      }
+    },
+    {
+      "id": "message5",
+      "sender": "Lisa Chen",
+      "recipient": "Mike Muller",
+      "date": "2025-03-16T11:28:31+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "fee_acceptance": "€4,250",
+        "time_slot_acceptance": "10:00pm - 11:15pm",
+        "stage_size": "12m x 8m",
+        "festival_theme": "Renewal and Connection",
+        "contract_preparation": true
+      }
+    },
+    {
+      "id": "message6",
+      "sender": "Mike Muller",
+      "recipient": "Lisa Chen",
+      "date": "2025-03-16T15:12:58+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "personnel_correction": "4 band members plus 3 crew",
+        "acoustic_elements_mentioned": true,
+        "soundcheck_inquiry": true
+      }
+    },
+    {
+      "id": "message7",
+      "sender": "Lisa Chen",
+      "recipient": "Mike Muller",
+      "date": "2025-03-17T09:47:13+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "contract_sent": true,
+        "arrival_time": "4:30pm",
+        "soundcheck_slot": "5:00-5:45pm",
+        "promo_materials_requested": true
+      }
+    },
+    {
+      "id": "message8",
+      "sender": "Mike Muller",
+      "recipient": "Lisa Chen",
+      "date": "2025-03-17T16:33:27+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "contract_issues": [
+          "60-minute set incorrectly stated",
+          "In-ear monitoring system not specified"
+        ],
+        "soundcheck_extension_request": "5:00-6:00pm",
+        "promo_pack_sent": true,
+        "early_arrival_request": "June 20th"
+      }
+    },
+    {
+      "id": "message9",
+      "sender": "Lisa Chen",
+      "recipient": "Mike Muller",
+      "date": "2025-03-18T10:21:05+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "contract_updated": true,
+        "soundcheck_solution": "Official slot 5:00-5:45pm, setup from 4:30pm",
+        "early_accommodation_approved": true,
+        "signing_deadline": "March 25th"
+      }
+    },
+    {
+      "id": "message10",
+      "sender": "Mike Muller",
+      "recipient": "Lisa Chen",
+      "date": "2025-03-19T09:08:33+02:00",
+      "subject": "Re: Booking Inquiry - The Echomakers for Summer Solstice Festival",
+      "key_info": {
+        "contract_signed": true,
+        "soundcheck_arrangement_accepted": true,
+        "day_of_show_contact_requested": true,
+        "special_performance_note": "Acoustic arrangement of 'Echoes In Time'"
+      }
+    }
+  ]
+} 

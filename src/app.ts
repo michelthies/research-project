@@ -9,17 +9,31 @@ import {
   createSelfVerificationPrompt,
   createKeywordActionPrompt,
   createRoleGuidedPrompt,
+  createChainOfThoughtSchemaPrompt,
+  createSelfVerificationSchemaPrompt,
+  createKeywordActionSchemaPrompt,
+  createRoleGuidedSchemaPrompt,
+  createFewShotSchemaPrompt,
+  createOneShotSchemaPrompt,
+  createZeroShotSchemaPrompt,
 } from "./prompts";
 
 // Available prompting strategies
 export type PromptingStrategy =
   | "zero-shot"
+  | "zero-shot-schema"
   | "one-shot"
+  | "one-shot-schema"
   | "few-shot"
+  | "few-shot-schema"
   | "chain-of-thought"
+  | "chain-of-thought-schema"
   | "self-verification"
+  | "self-verification-schema"
   | "keyword-action"
-  | "role-guided";
+  | "keyword-action-schema"
+  | "role-guided"
+  | "role-guided-schema";
 
 // Runtime logs for current execution
 let runLog: string = "";
@@ -76,18 +90,44 @@ function createPrompt(
   switch (strategy) {
     case "zero-shot":
       return createZeroShotPrompt(emailContent, previousData);
+    case "zero-shot-schema":
+      return createZeroShotSchemaPrompt(emailContent, previousData, schema);
     case "one-shot":
-      return createOneShotPrompt(emailContent, previousData, schema);
+      return createOneShotPrompt(emailContent, previousData);
+    case "one-shot-schema":
+      return createOneShotSchemaPrompt(emailContent, previousData, schema);
     case "few-shot":
-      return createFewShotPrompt(emailContent, previousData, schema);
+      return createFewShotPrompt(emailContent, previousData);
+    case "few-shot-schema":
+      return createFewShotSchemaPrompt(emailContent, previousData, schema);
     case "chain-of-thought":
-      return createChainOfThoughtPrompt(emailContent, previousData, schema);
+      return createChainOfThoughtPrompt(emailContent, previousData);
+    case "chain-of-thought-schema":
+      return createChainOfThoughtSchemaPrompt(
+        emailContent,
+        previousData,
+        schema
+      );
     case "self-verification":
-      return createSelfVerificationPrompt(emailContent, previousData, schema);
+      return createSelfVerificationPrompt(emailContent, previousData);
+    case "self-verification-schema":
+      return createSelfVerificationSchemaPrompt(
+        emailContent,
+        previousData,
+        schema
+      );
     case "keyword-action":
-      return createKeywordActionPrompt(emailContent, previousData, schema);
+      return createKeywordActionPrompt(emailContent, previousData);
+    case "keyword-action-schema":
+      return createKeywordActionSchemaPrompt(
+        emailContent,
+        previousData,
+        schema
+      );
     case "role-guided":
-      return createRoleGuidedPrompt(emailContent, previousData, schema);
+      return createRoleGuidedPrompt(emailContent, previousData);
+    case "role-guided-schema":
+      return createRoleGuidedSchemaPrompt(emailContent, previousData, schema);
     default:
       return createZeroShotPrompt(emailContent, previousData);
   }
@@ -424,12 +464,19 @@ async function main() {
   const strategyArg = process.argv[2];
   const validStrategies: PromptingStrategy[] = [
     "zero-shot",
+    "zero-shot-schema",
     "one-shot",
+    "one-shot-schema",
     "few-shot",
+    "few-shot-schema",
     "chain-of-thought",
+    "chain-of-thought-schema",
     "self-verification",
+    "self-verification-schema",
     "keyword-action",
+    "keyword-action-schema",
     "role-guided",
+    "role-guided-schema",
   ];
 
   // Validate input strategy

@@ -1,0 +1,497 @@
+{
+  "strategy": "zero-shot",
+  "evaluationResults": [
+    {
+      "messageFile": "message1.txt",
+      "evaluation": {
+        "messageId": "1",
+        "schemaConformity": {
+          "score": 0.19999999999999996,
+          "errors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/status must be equal to one of the allowed values",
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.8333333333333334,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.promoter.name: Expected Marcus Weber, got null",
+            "booking.promoter.address: Expected null, got Hamburg",
+            "booking.event.stageCapacity: Additional field not in ground truth"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": null,
+              "actual": "Hamburg"
+            }
+          ],
+          "additionalFields": [
+            "booking.event.stageCapacity"
+          ]
+        },
+        "overallScore": 0.5166666666666666
+      }
+    },
+    {
+      "messageFile": "message2.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 558"
+      }
+    },
+    {
+      "messageFile": "message3.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 568"
+      }
+    },
+    {
+      "messageFile": "message4.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 568"
+      }
+    },
+    {
+      "messageFile": "message5.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 568"
+      }
+    },
+    {
+      "messageFile": "message6.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 575"
+      }
+    },
+    {
+      "messageFile": "message7.txt",
+      "evaluation": {
+        "messageId": "7",
+        "schemaConformity": {
+          "score": 0.29999999999999993,
+          "errors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.6111111111111112,
+          "errors": [
+            "booking.promoter.company: Missing field",
+            "booking.promoter.address: Expected null, got Hamburg",
+            "booking.event.name: Missing field",
+            "booking.event.stageCapacity: Additional field not in ground truth",
+            "booking.event.date: Expected 2025-11-25, got 25 Nov",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 04:00",
+            "booking.invoice.status: Expected not sent, got pending",
+            "booking.contract.status: Expected not sent, got confirmed"
+          ],
+          "missingFields": [
+            "booking.promoter.company",
+            "booking.event.name"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.promoter.address",
+              "expected": null,
+              "actual": "Hamburg"
+            },
+            {
+              "field": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "25 Nov"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "04:00"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "pending"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "confirmed"
+            }
+          ],
+          "additionalFields": [
+            "booking.event.stageCapacity"
+          ]
+        },
+        "overallScore": 0.45555555555555555
+      }
+    },
+    {
+      "messageFile": "message8.txt",
+      "evaluation": {
+        "messageId": "8",
+        "schemaConformity": {
+          "score": 0.29999999999999993,
+          "errors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.6666666666666666,
+          "errors": [
+            "booking.promoter.company: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.stageCapacity: Additional field not in ground truth",
+            "booking.event.date: Expected 2025-11-25, got 25 Nov",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 04:00",
+            "booking.invoice.status: Expected not sent, got pending",
+            "booking.contract.status: Expected not sent, got confirmed"
+          ],
+          "missingFields": [
+            "booking.promoter.company",
+            "booking.event.name"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "25 Nov"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "04:00"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "pending"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "confirmed"
+            }
+          ],
+          "additionalFields": [
+            "booking.event.stageCapacity"
+          ]
+        },
+        "overallScore": 0.4833333333333333
+      }
+    },
+    {
+      "messageFile": "message9.txt",
+      "evaluation": {
+        "messageId": "9",
+        "schemaConformity": {
+          "score": 0.29999999999999993,
+          "errors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/invoice/status must be equal to one of the allowed values",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.promoter.company: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.stageCapacity: Additional field not in ground truth",
+            "booking.event.date: Expected 2025-11-25, got 25 Nov",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 04:00",
+            "booking.contract.status: Expected sent, got confirmed"
+          ],
+          "missingFields": [
+            "booking.promoter.company",
+            "booking.event.name"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "25 Nov"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "04:00"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "sent",
+              "actual": "confirmed"
+            }
+          ],
+          "additionalFields": [
+            "booking.event.stageCapacity"
+          ]
+        },
+        "overallScore": 0.5111111111111111
+      }
+    },
+    {
+      "messageFile": "message10.txt",
+      "evaluation": {
+        "messageId": "10",
+        "schemaConformity": {
+          "score": 0.3999999999999999,
+          "errors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.promoter.company: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.stageCapacity: Additional field not in ground truth",
+            "booking.event.date: Expected 2025-11-25, got 25 Nov",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 04:00",
+            "booking.contract.status: Expected signed, got confirmed"
+          ],
+          "missingFields": [
+            "booking.promoter.company",
+            "booking.event.name"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "25 Nov"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "04:00"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "signed",
+              "actual": "confirmed"
+            }
+          ],
+          "additionalFields": [
+            "booking.event.stageCapacity"
+          ]
+        },
+        "overallScore": 0.5611111111111111
+      }
+    },
+    {
+      "messageFile": "message11.txt",
+      "evaluation": {
+        "messageId": "11",
+        "schemaConformity": {
+          "score": 0.3999999999999999,
+          "errors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/event/date must match format \"date\"",
+            "/booking/event/openingTime must match format \"date-time\"",
+            "/booking/event/closingTime must match format \"date-time\"",
+            "/booking/event/stageTime/start must match format \"date-time\"",
+            "/booking/event/stageTime/end must match format \"date-time\"",
+            "/booking/contract/status must be equal to one of the allowed values"
+          ],
+          "missingRequiredFields": []
+        },
+        "contextualConsistency": {
+          "score": 0.6470588235294118,
+          "errors": [
+            "booking.booking.invoice.status: Missing field",
+            "booking.invoice: Additional field not in ground truth",
+            "booking.promoter.company: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.stageCapacity: Additional field not in ground truth",
+            "booking.event.date: Expected 2025-11-25, got 25 Nov",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got 04:00",
+            "booking.contract.status: Expected cosigned, got confirmed"
+          ],
+          "missingFields": [
+            "booking.booking.invoice.status",
+            "booking.promoter.company",
+            "booking.event.name"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "25 Nov"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": "04:00"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "confirmed"
+            }
+          ],
+          "additionalFields": [
+            "booking.invoice",
+            "booking.event.stageCapacity"
+          ]
+        },
+        "overallScore": 0.5235294117647058
+      }
+    }
+  ],
+  "processedResponses": [
+    {
+      "file": "message1.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": null,\n      \"address\": \"Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov 25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \"end\": \""
+    },
+    {
+      "file": "message2.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": null,\n      \"address\": \"Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \"end\": \"04:"
+    },
+    {
+      "file": "message3.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": \"Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \""
+    },
+    {
+      "file": "message4.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": \"Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \""
+    },
+    {
+      "file": "message5.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": \"Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \""
+    },
+    {
+      "file": "message6.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": \"Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n  "
+    },
+    {
+      "file": "message7.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"address\": \"Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \"end\": \"04:00\"\n      }\n    },\n    \"invoice\":"
+    },
+    {
+      "file": "message8.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \"end\": \"04:00\"\n      }"
+    },
+    {
+      "file": "message9.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \"end\": \"04:00\"\n      }"
+    },
+    {
+      "file": "message10.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \"end\": \"04:00\"\n      }"
+    },
+    {
+      "file": "message11.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \"end\": \"04:00\"\n      }"
+    }
+  ],
+  "averageScores": {
+    "schemaConformity": 0.17272727272727267,
+    "contextualConsistency": 0.382055852644088,
+    "overallScore": 0.2773915626856803,
+    "successRate": 0.5454545454545454
+  }
+}

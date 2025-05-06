@@ -2,14 +2,10 @@ import { createPromptBase } from "./base";
 
 export function createKeywordActionPrompt(
   emailContent: string,
-  previousData: string = "{}",
-  schema: any
+  previousData: string = "{}"
 ): string {
   return `
 ${createPromptBase(emailContent, previousData)}
-
-SCHEMA
-${JSON.stringify(schema, null, 2)}
 
 KEYWORDS
 - BOOKING: Status words like "inquiry", "confirmed", "cancelled"
