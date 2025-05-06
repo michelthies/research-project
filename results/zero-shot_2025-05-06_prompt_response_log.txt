@@ -94,7 +94,7 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     "promoter": {
       "name": null,
       "company": null,
-      "address": "Zenith Hamburg"
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov 25",
@@ -135,7 +135,7 @@ Booking Object:
     "promoter": {
       "name": null,
       "company": null,
-      "address": "Zenith Hamburg"
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov 25",
@@ -205,7 +205,7 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     "promoter": {
       "name": null,
       "company": null,
-      "address": "Zenith Hamburg"
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -228,10 +228,11 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     },
     "contract": {
       "status": null,
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "travel": {
+        "accommodation": {
+          "rooms": 1,
+          "beds": 2
+        }
       }
     }
   }
@@ -251,7 +252,7 @@ Booking Object:
     "promoter": {
       "name": null,
       "company": null,
-      "address": "Zenith Hamburg"
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -274,10 +275,11 @@ Booking Object:
     },
     "contract": {
       "status": null,
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "travel": {
+        "accommodation": {
+          "rooms": 1,
+          "beds": 2
+        }
       }
     }
   }
@@ -316,8 +318,8 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -340,10 +342,11 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     },
     "contract": {
       "status": null,
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "travel": {
+        "accommodation": {
+          "rooms": 1,
+          "beds": 2
+        }
       }
     }
   }
@@ -362,8 +365,8 @@ Booking Object:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -386,10 +389,11 @@ Booking Object:
     },
     "contract": {
       "status": null,
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "travel": {
+        "accommodation": {
+          "rooms": 1,
+          "beds": 2
+        }
       }
     }
   }
@@ -427,8 +431,8 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -446,15 +450,13 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
       }
     },
     "invoice": {
-      "amount": null, // artist fee is 1000+++
+      "amount": 1500, // artist fee is 1000+++
       "status": null
     },
     "contract": {
       "status": null,
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "travel": {
+        "accommodation": {}
       }
     }
   }
@@ -473,8 +475,8 @@ Booking Object:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -492,15 +494,13 @@ Booking Object:
       }
     },
     "invoice": {
-      "amount": null, // artist fee is 1000+++
+      "amount": 1500, // artist fee is 1000+++
       "status": null
     },
     "contract": {
       "status": null,
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "travel": {
+        "accommodation": {}
       }
     }
   }
@@ -538,8 +538,8 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -562,10 +562,8 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     },
     "contract": {
       "status": null,
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "travel": {
+        "accommodation": {}
       }
     }
   }
@@ -584,8 +582,8 @@ Booking Object:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -608,10 +606,8 @@ Booking Object:
     },
     "contract": {
       "status": null,
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "travel": {
+        "accommodation": {}
       }
     }
   }
@@ -658,8 +654,8 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -681,11 +677,9 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
       "status": "pending"
     },
     "contract": {
-      "status": "pending",
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "status": "confirmed",
+      "travel": {
+        "accommodation": {}
       }
     }
   }
@@ -704,8 +698,8 @@ Booking Object:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -727,11 +721,9 @@ Booking Object:
       "status": "pending"
     },
     "contract": {
-      "status": "pending",
-      "travelRequirements": {
-        "hotelRooms": [
-          {"bedType": "double", "quantity": 1}
-        ]
+      "status": "confirmed",
+      "travel": {
+        "accommodation": {}
       }
     }
   }
@@ -770,8 +762,8 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -793,8 +785,10 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
       "status": "pending"
     },
     "contract": {
-      "status": "pending",
-      "travelRequirements": {}
+      "status": "confirmed",
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }
@@ -812,8 +806,8 @@ Booking Object:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "stellarbookings.com",
-      "address": "Zenith Hamburg"
+      "company": null,
+      "address": "Hamburg"
     },
     "event": {
       "date": "25 Nov",
@@ -835,8 +829,10 @@ Booking Object:
       "status": "pending"
     },
     "contract": {
-      "status": "pending",
-      "travelRequirements": {}
+      "status": "confirmed",
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }
@@ -901,12 +897,14 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
       }
     },
     "invoice": {
-      "amount": 1000, // artist fee is 1000+++
+      "amount": 1000, 
       "status": "pending"
     },
     "contract": {
-      "status": "pending",
-      "travelRequirements": {}
+      "status": "confirmed",
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }
@@ -943,12 +941,14 @@ Booking Object:
       }
     },
     "invoice": {
-      "amount": 1000, // artist fee is 1000+++
+      "amount": 1000, 
       "status": "pending"
     },
     "contract": {
-      "status": "pending",
-      "travelRequirements": {}
+      "status": "confirmed",
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }
@@ -1010,12 +1010,14 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
       }
     },
     "invoice": {
-      "amount": 1000, // artist fee is 1000+++
+      "amount": 1000, 
       "status": "pending"
     },
     "contract": {
-      "status": "pending",
-      "travelRequirements": {}
+      "status": "confirmed",
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }
@@ -1052,12 +1054,14 @@ Booking Object:
       }
     },
     "invoice": {
-      "amount": 1000, // artist fee is 1000+++
+      "amount": 1000, 
       "status": "pending"
     },
     "contract": {
-      "status": "pending",
-      "travelRequirements": {}
+      "status": "confirmed",
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }
@@ -1115,12 +1119,14 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
       }
     },
     "invoice": {
-      "amount": 1000, // artist fee is 1000+++
+      "amount": 1000, 
       "status": "paid"
     },
     "contract": {
       "status": "confirmed",
-      "travelRequirements": {}
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }
@@ -1156,12 +1162,14 @@ Booking Object:
       }
     },
     "invoice": {
-      "amount": 1000, // artist fee is 1000+++
+      "amount": 1000, 
       "status": "paid"
     },
     "contract": {
       "status": "confirmed",
-      "travelRequirements": {}
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }
@@ -1216,12 +1224,14 @@ DO NOT include any comments, explanations, introductions, conclusions, prefix, s
       }
     },
     "invoice": {
-      "amount": 1000, // artist fee is 1000+++
+      "amount": 1000, 
       "status": "paid"
     },
     "contract": {
       "status": "confirmed",
-      "travelRequirements": {}
+      "travel": {
+        "accommodation": {}
+      }
     }
   }
 }

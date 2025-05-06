@@ -6,36 +6,18 @@
       "evaluation": {
         "messageId": "1",
         "schemaConformity": {
-          "score": 0.8076923076923077,
+          "score": 0.9230769230769231,
           "errors": [
-            "/booking/status must be equal to one of the allowed values (actual: null)",
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
-            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
-            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
           ],
           "typeErrors": [],
           "constraintErrors": [
-            "/booking/status must be equal to one of the allowed values (actual: null)",
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
-            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
-            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
           ],
           "missingRequiredFields": [],
           "evaluationLog": [
-            {
-              "path": "/booking/status",
-              "expected": [
-                "inquiry",
-                "confirmed",
-                "cancelled",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
             {
               "path": "/booking/event/openingTime",
               "actual": "22:00",
@@ -49,31 +31,6 @@
               "reason": "Value not in allowed format"
             },
             {
-              "path": "/booking/invoice/status",
-              "expected": [
-                "not sent",
-                "sent",
-                "paid",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
-            {
-              "path": "/booking/contract/status",
-              "expected": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
-            {
               "path": "root",
               "expected": {
                 "type": "object",
@@ -82,15 +39,18 @@
                     "type": "object",
                     "properties": {
                       "status": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "enum": [
-                          "inquiry",
-                          "confirmed",
-                          "cancelled",
-                          "null"
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "artist": {
@@ -212,15 +172,18 @@
                             ]
                           },
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "paid",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -229,16 +192,19 @@
                         "type": "object",
                         "properties": {
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "signed",
-                              "cosigned",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -324,10 +290,21 @@
             },
             {
               "path": "booking.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -544,10 +521,21 @@
             },
             {
               "path": "booking.invoice.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -563,10 +551,22 @@
             },
             {
               "path": "booking.contract.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -574,8 +574,8 @@
           ],
           "summary": {
             "totalFields": 26,
-            "validFields": 21,
-            "score": 0.8076923076923077
+            "validFields": 24,
+            "score": 0.9230769230769231
           }
         },
         "contextualConsistency": {
@@ -652,35 +652,35 @@
               "expected": "Countdown",
               "actual": "Countdown",
               "matched": true,
-              "reason": "'Countdown' → 'countdown' equals 'Countdown' → 'countdown'"
+              "reason": "'Countdown' → 'countdown' matches 'Countdown' → 'countdown'"
             },
             {
               "path": "booking.event.city",
               "expected": "Hamburg",
               "actual": "Hamburg",
               "matched": true,
-              "reason": "'Hamburg' → 'hamburg' equals 'Hamburg' → 'hamburg'"
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
             },
             {
               "path": "booking.event.venue",
               "expected": "Zenith",
               "actual": "Zenith",
               "matched": true,
-              "reason": "'Zenith' → 'zenith' equals 'Zenith' → 'zenith'"
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
             },
             {
               "path": "booking.event.capacity",
               "expected": 450,
               "actual": 450,
               "matched": true,
-              "reason": "'450' → '450' equals '450' → '450'"
+              "reason": "'450' → '450' matches '450' → '450'"
             },
             {
               "path": "booking.event.ticketPrice",
               "expected": 15,
               "actual": 15,
               "matched": true,
-              "reason": "'15' → '15' equals '15' → '15'"
+              "reason": "'15' → '15' matches '15' → '15'"
             },
             {
               "path": "booking.event.openingTime",
@@ -738,7 +738,7 @@
             "score": 0.8333333333333334
           }
         },
-        "overallScore": 0.8205128205128205,
+        "overallScore": 0.8782051282051282,
         "parsingIssues": []
       }
     },
@@ -747,36 +747,18 @@
       "evaluation": {
         "messageId": "2",
         "schemaConformity": {
-          "score": 0.8076923076923077,
+          "score": 0.9230769230769231,
           "errors": [
-            "/booking/status must be equal to one of the allowed values (actual: null)",
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
-            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
-            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
           ],
           "typeErrors": [],
           "constraintErrors": [
-            "/booking/status must be equal to one of the allowed values (actual: null)",
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
-            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
-            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
           ],
           "missingRequiredFields": [],
           "evaluationLog": [
-            {
-              "path": "/booking/status",
-              "expected": [
-                "inquiry",
-                "confirmed",
-                "cancelled",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
             {
               "path": "/booking/event/openingTime",
               "actual": "22:00",
@@ -790,31 +772,6 @@
               "reason": "Value not in allowed format"
             },
             {
-              "path": "/booking/invoice/status",
-              "expected": [
-                "not sent",
-                "sent",
-                "paid",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
-            {
-              "path": "/booking/contract/status",
-              "expected": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
-            {
               "path": "root",
               "expected": {
                 "type": "object",
@@ -823,15 +780,18 @@
                     "type": "object",
                     "properties": {
                       "status": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "enum": [
-                          "inquiry",
-                          "confirmed",
-                          "cancelled",
-                          "null"
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "artist": {
@@ -953,15 +913,18 @@
                             ]
                           },
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "paid",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -970,16 +933,19 @@
                         "type": "object",
                         "properties": {
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "signed",
-                              "cosigned",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -1061,10 +1027,21 @@
             },
             {
               "path": "booking.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -1277,10 +1254,21 @@
             },
             {
               "path": "booking.invoice.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -1296,10 +1284,22 @@
             },
             {
               "path": "booking.contract.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -1307,8 +1307,8 @@
           ],
           "summary": {
             "totalFields": 26,
-            "validFields": 21,
-            "score": 0.8076923076923077
+            "validFields": 24,
+            "score": 0.9230769230769231
           }
         },
         "contextualConsistency": {
@@ -1402,21 +1402,21 @@
               "expected": "Hamburg",
               "actual": "Hamburg",
               "matched": true,
-              "reason": "'Hamburg' → 'hamburg' equals 'Hamburg' → 'hamburg'"
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
             },
             {
               "path": "booking.event.venue",
               "expected": "Zenith",
               "actual": "Zenith",
               "matched": true,
-              "reason": "'Zenith' → 'zenith' equals 'Zenith' → 'zenith'"
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
             },
             {
               "path": "booking.event.capacity",
               "expected": 450,
               "actual": 450,
               "matched": true,
-              "reason": "'450' → '450' equals '450' → '450'"
+              "reason": "'450' → '450' matches '450' → '450'"
             },
             {
               "path": "booking.event.openingTime",
@@ -1474,7 +1474,7 @@
             "score": 0.7222222222222222
           }
         },
-        "overallScore": 0.7649572649572649,
+        "overallScore": 0.8226495726495726,
         "parsingIssues": []
       }
     },
@@ -1482,7 +1482,7 @@
       "messageFile": "message3.txt",
       "evaluation": {
         "error": "Failed to evaluate",
-        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 497"
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 519"
       }
     },
     {
@@ -1497,36 +1497,18 @@
       "evaluation": {
         "messageId": "5",
         "schemaConformity": {
-          "score": 0.8076923076923077,
+          "score": 0.9230769230769231,
           "errors": [
-            "/booking/status must be equal to one of the allowed values (actual: null)",
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
-            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
-            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
           ],
           "typeErrors": [],
           "constraintErrors": [
-            "/booking/status must be equal to one of the allowed values (actual: null)",
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
-            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
-            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
           ],
           "missingRequiredFields": [],
           "evaluationLog": [
-            {
-              "path": "/booking/status",
-              "expected": [
-                "inquiry",
-                "confirmed",
-                "cancelled",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
             {
               "path": "/booking/event/openingTime",
               "actual": "22:00",
@@ -1540,31 +1522,6 @@
               "reason": "Value not in allowed format"
             },
             {
-              "path": "/booking/invoice/status",
-              "expected": [
-                "not sent",
-                "sent",
-                "paid",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
-            {
-              "path": "/booking/contract/status",
-              "expected": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
-            {
               "path": "root",
               "expected": {
                 "type": "object",
@@ -1573,15 +1530,18 @@
                     "type": "object",
                     "properties": {
                       "status": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "enum": [
-                          "inquiry",
-                          "confirmed",
-                          "cancelled",
-                          "null"
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "artist": {
@@ -1703,15 +1663,18 @@
                             ]
                           },
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "paid",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -1720,16 +1683,19 @@
                         "type": "object",
                         "properties": {
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "signed",
-                              "cosigned",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -1811,10 +1777,21 @@
             },
             {
               "path": "booking.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -2027,10 +2004,21 @@
             },
             {
               "path": "booking.invoice.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -2046,10 +2034,22 @@
             },
             {
               "path": "booking.contract.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -2057,8 +2057,8 @@
           ],
           "summary": {
             "totalFields": 26,
-            "validFields": 21,
-            "score": 0.8076923076923077
+            "validFields": 24,
+            "score": 0.9230769230769231
           }
         },
         "contextualConsistency": {
@@ -2176,14 +2176,14 @@
               "expected": "Hamburg",
               "actual": "Hamburg",
               "matched": true,
-              "reason": "'Hamburg' → 'hamburg' equals 'Hamburg' → 'hamburg'"
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
             },
             {
               "path": "booking.event.venue",
               "expected": "Zenith",
               "actual": "Zenith",
               "matched": true,
-              "reason": "'Zenith' → 'zenith' equals 'Zenith' → 'zenith'"
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
             },
             {
               "path": "booking.event.capacity",
@@ -2248,7 +2248,7 @@
             "score": 0.5
           }
         },
-        "overallScore": 0.6538461538461539,
+        "overallScore": 0.7115384615384616,
         "parsingIssues": []
       }
     },
@@ -2257,36 +2257,18 @@
       "evaluation": {
         "messageId": "6",
         "schemaConformity": {
-          "score": 0.8076923076923077,
+          "score": 0.9230769230769231,
           "errors": [
-            "/booking/status must be equal to one of the allowed values (actual: null)",
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
-            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
-            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
           ],
           "typeErrors": [],
           "constraintErrors": [
-            "/booking/status must be equal to one of the allowed values (actual: null)",
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
-            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
-            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
           ],
           "missingRequiredFields": [],
           "evaluationLog": [
-            {
-              "path": "/booking/status",
-              "expected": [
-                "inquiry",
-                "confirmed",
-                "cancelled",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
             {
               "path": "/booking/event/openingTime",
               "actual": "22:00",
@@ -2300,31 +2282,6 @@
               "reason": "Value not in allowed format"
             },
             {
-              "path": "/booking/invoice/status",
-              "expected": [
-                "not sent",
-                "sent",
-                "paid",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
-            {
-              "path": "/booking/contract/status",
-              "expected": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                "null"
-              ],
-              "actual": null,
-              "valid": false,
-              "reason": "Value not in allowed enum"
-            },
-            {
               "path": "root",
               "expected": {
                 "type": "object",
@@ -2333,15 +2290,18 @@
                     "type": "object",
                     "properties": {
                       "status": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "enum": [
-                          "inquiry",
-                          "confirmed",
-                          "cancelled",
-                          "null"
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "artist": {
@@ -2463,15 +2423,18 @@
                             ]
                           },
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "paid",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -2480,16 +2443,19 @@
                         "type": "object",
                         "properties": {
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "signed",
-                              "cosigned",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -2500,7 +2466,7 @@
               },
               "actual": {
                 "booking": {
-                  "status": null,
+                  "status": "inquiry",
                   "artist": {
                     "name": "DJ Eclipse"
                   },
@@ -2537,7 +2503,7 @@
               "path": "booking",
               "expected": "object",
               "actual": {
-                "status": null,
+                "status": "inquiry",
                 "artist": {
                   "name": "DJ Eclipse"
                 },
@@ -2571,11 +2537,22 @@
             },
             {
               "path": "booking.status",
-              "expected": [
-                "string",
-                "null"
-              ],
-              "actual": null,
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
               "valid": true,
               "reason": "Valid value"
             },
@@ -2787,10 +2764,21 @@
             },
             {
               "path": "booking.invoice.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -2806,10 +2794,22 @@
             },
             {
               "path": "booking.contract.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": null,
               "valid": true,
               "reason": "Valid value"
@@ -2817,14 +2817,13 @@
           ],
           "summary": {
             "totalFields": 26,
-            "validFields": 21,
-            "score": 0.8076923076923077
+            "validFields": 24,
+            "score": 0.9230769230769231
           }
         },
         "contextualConsistency": {
-          "score": 0.5555555555555556,
+          "score": 0.6111111111111112,
           "errors": [
-            "booking.status: Expected inquiry, got null",
             "booking.promoter.company: Expected null, got mw@gmail.com",
             "booking.promoter.address: Expected null, got +4912045980455",
             "booking.event.name: Missing field",
@@ -2838,11 +2837,6 @@
             "booking.event.ticketPrice"
           ],
           "incorrectValues": [
-            {
-              "field": "booking.status",
-              "expected": "inquiry",
-              "actual": null
-            },
             {
               "field": "booking.promoter.company",
               "expected": null,
@@ -2874,9 +2868,9 @@
             {
               "path": "booking.status",
               "expected": "inquiry",
-              "actual": null,
-              "matched": false,
-              "reason": "Expected value but got null"
+              "actual": "inquiry",
+              "matched": true,
+              "reason": "'inquiry' → 'inquiry' matches 'inquiry' → 'inquiry'"
             },
             {
               "path": "booking.artist.name",
@@ -2930,14 +2924,14 @@
               "expected": "Hamburg",
               "actual": "Hamburg",
               "matched": true,
-              "reason": "'Hamburg' → 'hamburg' equals 'Hamburg' → 'hamburg'"
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
             },
             {
               "path": "booking.event.venue",
               "expected": "Zenith",
               "actual": "Zenith",
               "matched": true,
-              "reason": "'Zenith' → 'zenith' equals 'Zenith' → 'zenith'"
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
             },
             {
               "path": "booking.event.capacity",
@@ -2998,11 +2992,11 @@
           ],
           "summary": {
             "totalFields": 18,
-            "correctFields": 10,
-            "score": 0.5555555555555556
+            "correctFields": 11,
+            "score": 0.6111111111111112
           }
         },
-        "overallScore": 0.6816239316239316,
+        "overallScore": 0.7670940170940171,
         "parsingIssues": []
       }
     },
@@ -3011,19 +3005,28 @@
       "evaluation": {
         "messageId": "7",
         "schemaConformity": {
-          "score": 0.8461538461538461,
+          "score": 0.6923076923076923,
           "errors": [
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
             "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
             "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: pending)"
+            "/booking/invoice/status must be null (actual: pending)",
+            "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/contract/status must be null (actual: pending)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
           ],
-          "typeErrors": [],
+          "typeErrors": [
+            "/booking/invoice/status must be null (actual: pending)",
+            "/booking/contract/status must be null (actual: pending)"
+          ],
           "constraintErrors": [
             "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
             "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
             "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
-            "/booking/contract/status must be equal to one of the allowed values (actual: pending)"
+            "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
           ],
           "missingRequiredFields": [],
           "evaluationLog": [
@@ -3044,12 +3047,23 @@
               "expected": [
                 "not sent",
                 "sent",
-                "paid",
-                "null"
+                "paid"
               ],
               "actual": "pending",
               "valid": false,
               "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
             },
             {
               "path": "/booking/contract/status",
@@ -3057,12 +3071,23 @@
                 "not sent",
                 "sent",
                 "signed",
-                "cosigned",
-                "null"
+                "cosigned"
               ],
               "actual": "pending",
               "valid": false,
               "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
             },
             {
               "path": "root",
@@ -3073,15 +3098,18 @@
                     "type": "object",
                     "properties": {
                       "status": {
-                        "type": [
-                          "string",
-                          "null"
-                        ],
-                        "enum": [
-                          "inquiry",
-                          "confirmed",
-                          "cancelled",
-                          "null"
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "artist": {
@@ -3203,15 +3231,18 @@
                             ]
                           },
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "paid",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -3220,16 +3251,19 @@
                         "type": "object",
                         "properties": {
                           "status": {
-                            "type": [
-                              "string",
-                              "null"
-                            ],
-                            "enum": [
-                              "not sent",
-                              "sent",
-                              "signed",
-                              "cosigned",
-                              "null"
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
                             ]
                           }
                         }
@@ -3240,13 +3274,845 @@
               },
               "actual": {
                 "booking": {
-                  "status": "confirmed",
+                  "status": "inquiry",
+                  "artist": {
+                    "name": "DJ Eclipse"
+                  },
+                  "promoter": {
+                    "name": "Mike Muller",
+                    "company": "stellarbookings.com",
+                    "address": "+491634523464"
+                  },
+                  "event": {
+                    "date": "2025-11-25",
+                    "venue": "Zenith",
+                    "city": "Hamburg",
+                    "capacity": null,
+                    "openingTime": "22:00",
+                    "closingTime": "06:00",
+                    "stageTime": {
+                      "start": null,
+                      "end": null
+                    }
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "pending"
+                  },
+                  "contract": {
+                    "status": "pending"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "inquiry",
+                "artist": {
+                  "name": "DJ Eclipse"
+                },
+                "promoter": {
+                  "name": "Mike Muller",
+                  "company": "stellarbookings.com",
+                  "address": "+491634523464"
+                },
+                "event": {
+                  "date": "2025-11-25",
+                  "venue": "Zenith",
+                  "city": "Hamburg",
+                  "capacity": null,
+                  "openingTime": "22:00",
+                  "closingTime": "06:00",
+                  "stageTime": {
+                    "start": null,
+                    "end": null
+                  }
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "pending"
+                },
+                "contract": {
+                  "status": "pending"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Eclipse"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Eclipse",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Mike Muller",
+                "company": "stellarbookings.com",
+                "address": "+491634523464"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Mike Muller",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "stellarbookings.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+491634523464",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-11-25",
+                "venue": "Zenith",
+                "city": "Hamburg",
+                "capacity": null,
+                "openingTime": "22:00",
+                "closingTime": "06:00",
+                "stageTime": {
+                  "start": null,
+                  "end": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-11-25",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Hamburg",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Zenith",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "22:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "06:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": null,
+                "end": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "pending"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "pending",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "pending"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "pending",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 18,
+            "score": 0.6923076923076923
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.3888888888888889,
+          "errors": [
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.name: Expected Marcus Weber, got Mike Muller",
+            "booking.promoter.company: Expected null, got stellarbookings.com",
+            "booking.promoter.address: Expected null, got +491634523464",
+            "booking.event.name: Missing field",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.capacity: Expected 450, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got null",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got null",
+            "booking.invoice.status: Expected not sent, got pending",
+            "booking.contract.status: Expected not sent, got pending"
+          ],
+          "missingFields": [
+            "booking.event.name",
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": "Mike Muller"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": null,
+              "actual": "stellarbookings.com"
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": null,
+              "actual": "+491634523464"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 450,
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "pending"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "pending"
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry",
+              "matched": false,
+              "reason": "'inquiry' → 'inquiry' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Eclipse",
+              "actual": "DJ Eclipse",
+              "matched": true,
+              "reason": "'DJ Eclipse' → 'djeclipse' matches eclipse"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": "Mike Muller",
+              "matched": false,
+              "reason": "'Mike Muller' → 'mikemuller' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": null,
+              "actual": "stellarbookings.com",
+              "matched": false,
+              "reason": "Expected null but got value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": null,
+              "actual": "+491634523464",
+              "matched": false,
+              "reason": "Expected null but got value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Countdown",
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "2025-11-25",
+              "matched": true,
+              "reason": "'2025-11-25' → '20251125' matches 20251125"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Hamburg",
+              "actual": "Hamburg",
+              "matched": true,
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Zenith",
+              "actual": "Zenith",
+              "matched": true,
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 450,
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2025-11-25T22:00:00Z",
+              "actual": "22:00",
+              "matched": true,
+              "reason": "'22:00' → '2200' matches 2200"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2025-11-26T06:00:00Z",
+              "actual": "06:00",
+              "matched": true,
+              "reason": "'06:00' → '0600' matches 0600"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1000,
+              "actual": 1000,
+              "matched": true,
+              "reason": "'1000' → '1000' matches 1000"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "pending",
+              "matched": false,
+              "reason": "'pending' → 'pending' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "pending",
+              "matched": false,
+              "reason": "'pending' → 'pending' doesn't match any accepted values"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 7,
+            "score": 0.3888888888888889
+          }
+        },
+        "overallScore": 0.5405982905982906,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message8.txt",
+      "evaluation": {
+        "messageId": "8",
+        "schemaConformity": {
+          "score": 0.6923076923076923,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+            "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/invoice/status must be null (actual: pending)",
+            "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/contract/status must be null (actual: pending)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
+          ],
+          "typeErrors": [
+            "/booking/invoice/status must be null (actual: pending)",
+            "/booking/contract/status must be null (actual: pending)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+            "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "22:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "06:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "paid"
+              ],
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "/booking/contract/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "signed",
+                "cosigned"
+              ],
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "inquiry",
                   "artist": {
                     "name": "DJ Eclipse"
                   },
                   "promoter": {
                     "name": "Marcus Weber",
-                    "company": "mw@gmail.com",
+                    "company": "Weber GmbH",
                     "address": "+4912045980455"
                   },
                   "event": {
@@ -3277,13 +4143,13 @@
               "path": "booking",
               "expected": "object",
               "actual": {
-                "status": "confirmed",
+                "status": "inquiry",
                 "artist": {
                   "name": "DJ Eclipse"
                 },
                 "promoter": {
                   "name": "Marcus Weber",
-                  "company": "mw@gmail.com",
+                  "company": "Weber GmbH",
                   "address": "+4912045980455"
                 },
                 "event": {
@@ -3311,11 +4177,22 @@
             },
             {
               "path": "booking.status",
-              "expected": [
-                "string",
-                "null"
-              ],
-              "actual": "confirmed",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
               "valid": true,
               "reason": "Valid value"
             },
@@ -3343,7 +4220,7 @@
               "expected": "object",
               "actual": {
                 "name": "Marcus Weber",
-                "company": "mw@gmail.com",
+                "company": "Weber GmbH",
                 "address": "+4912045980455"
               },
               "valid": true,
@@ -3365,7 +4242,7 @@
                 "string",
                 "null"
               ],
-              "actual": "mw@gmail.com",
+              "actual": "Weber GmbH",
               "valid": true,
               "reason": "Valid value"
             },
@@ -3527,10 +4404,21 @@
             },
             {
               "path": "booking.invoice.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": "pending",
               "valid": true,
               "reason": "Valid value"
@@ -3546,10 +4434,22 @@
             },
             {
               "path": "booking.contract.status",
-              "expected": [
-                "string",
-                "null"
-              ],
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "actual": "pending",
               "valid": true,
               "reason": "Valid value"
@@ -3557,15 +4457,15 @@
           ],
           "summary": {
             "totalFields": 26,
-            "validFields": 22,
-            "score": 0.8461538461538461
+            "validFields": 18,
+            "score": 0.6923076923076923
           }
         },
         "contextualConsistency": {
           "score": 0.5,
           "errors": [
-            "booking.promoter.company: Expected null, got mw@gmail.com",
-            "booking.promoter.address: Expected null, got +4912045980455",
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.address: Expected Minkstrasse 42, 23462 Hamburg, got +4912045980455",
             "booking.event.name: Missing field",
             "booking.event.ticketPrice: Missing field",
             "booking.event.capacity: Expected 450, got null",
@@ -3580,13 +4480,13 @@
           ],
           "incorrectValues": [
             {
-              "field": "booking.promoter.company",
-              "expected": null,
-              "actual": "mw@gmail.com"
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
             },
             {
               "field": "booking.promoter.address",
-              "expected": null,
+              "expected": "Minkstrasse 42, 23462 Hamburg",
               "actual": "+4912045980455"
             },
             {
@@ -3620,9 +4520,9 @@
             {
               "path": "booking.status",
               "expected": "confirmed",
-              "actual": "confirmed",
-              "matched": true,
-              "reason": "'confirmed' → 'confirmed' matches confirmed"
+              "actual": "inquiry",
+              "matched": false,
+              "reason": "'inquiry' → 'inquiry' doesn't match any accepted values"
             },
             {
               "path": "booking.artist.name",
@@ -3640,17 +4540,17 @@
             },
             {
               "path": "booking.promoter.company",
-              "expected": null,
-              "actual": "mw@gmail.com",
-              "matched": false,
-              "reason": "Expected null but got value"
+              "expected": "Weber GmbH",
+              "actual": "Weber GmbH",
+              "matched": true,
+              "reason": "'Weber GmbH' → 'webergmbh' matches weber"
             },
             {
               "path": "booking.promoter.address",
-              "expected": null,
+              "expected": "Minkstrasse 42, 23462 Hamburg",
               "actual": "+4912045980455",
               "matched": false,
-              "reason": "Expected null but got value"
+              "reason": "'+4912045980455' → '4912045980455' doesn't match any accepted values"
             },
             {
               "path": "booking.event.name",
@@ -3676,14 +4576,14 @@
               "expected": "Hamburg",
               "actual": "Hamburg",
               "matched": true,
-              "reason": "'Hamburg' → 'hamburg' equals 'Hamburg' → 'hamburg'"
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
             },
             {
               "path": "booking.event.venue",
               "expected": "Zenith",
               "actual": "Zenith",
               "matched": true,
-              "reason": "'Zenith' → 'zenith' equals 'Zenith' → 'zenith'"
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
             },
             {
               "path": "booking.event.capacity",
@@ -3748,36 +4648,2432 @@
             "score": 0.5
           }
         },
-        "overallScore": 0.6730769230769231,
+        "overallScore": 0.5961538461538461,
         "parsingIssues": []
-      }
-    },
-    {
-      "messageFile": "message8.txt",
-      "evaluation": {
-        "error": "Failed to evaluate",
-        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 515"
       }
     },
     {
       "messageFile": "message9.txt",
       "evaluation": {
-        "error": "Failed to evaluate",
-        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 515"
+        "messageId": "9",
+        "schemaConformity": {
+          "score": 0.6923076923076923,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+            "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/invoice/status must be null (actual: pending)",
+            "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/contract/status must be null (actual: pending)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
+          ],
+          "typeErrors": [
+            "/booking/invoice/status must be null (actual: pending)",
+            "/booking/contract/status must be null (actual: pending)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+            "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "22:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "06:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "paid"
+              ],
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "/booking/contract/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "signed",
+                "cosigned"
+              ],
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "inquiry",
+                  "artist": {
+                    "name": "DJ Eclipse"
+                  },
+                  "promoter": {
+                    "name": "Mike Muller",
+                    "company": "stellarbookings.com",
+                    "address": "+491634523464"
+                  },
+                  "event": {
+                    "date": "2025-11-25",
+                    "venue": "Zenith",
+                    "city": "Hamburg",
+                    "capacity": null,
+                    "openingTime": "22:00",
+                    "closingTime": "06:00",
+                    "stageTime": {
+                      "start": null,
+                      "end": null
+                    }
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "pending"
+                  },
+                  "contract": {
+                    "status": "pending"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "inquiry",
+                "artist": {
+                  "name": "DJ Eclipse"
+                },
+                "promoter": {
+                  "name": "Mike Muller",
+                  "company": "stellarbookings.com",
+                  "address": "+491634523464"
+                },
+                "event": {
+                  "date": "2025-11-25",
+                  "venue": "Zenith",
+                  "city": "Hamburg",
+                  "capacity": null,
+                  "openingTime": "22:00",
+                  "closingTime": "06:00",
+                  "stageTime": {
+                    "start": null,
+                    "end": null
+                  }
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "pending"
+                },
+                "contract": {
+                  "status": "pending"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Eclipse"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Eclipse",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Mike Muller",
+                "company": "stellarbookings.com",
+                "address": "+491634523464"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Mike Muller",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "stellarbookings.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+491634523464",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-11-25",
+                "venue": "Zenith",
+                "city": "Hamburg",
+                "capacity": null,
+                "openingTime": "22:00",
+                "closingTime": "06:00",
+                "stageTime": {
+                  "start": null,
+                  "end": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-11-25",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Hamburg",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Zenith",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "22:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "06:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": null,
+                "end": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "pending"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "pending",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "pending"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "pending",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 18,
+            "score": 0.6923076923076923
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.5,
+          "errors": [
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.name: Expected Marcus Weber, got Mike Muller",
+            "booking.promoter.company: Expected Weber GmbH, got stellarbookings.com",
+            "booking.promoter.address: Expected Minkstrasse 42, 23462 Hamburg, got +491634523464",
+            "booking.event.name: Missing field",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.capacity: Expected 450, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got null",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got null"
+          ],
+          "missingFields": [
+            "booking.event.name",
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": "Mike Muller"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": "Weber GmbH",
+              "actual": "stellarbookings.com"
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": "Minkstrasse 42, 23462 Hamburg",
+              "actual": "+491634523464"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 450,
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry",
+              "matched": false,
+              "reason": "'inquiry' → 'inquiry' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Eclipse",
+              "actual": "DJ Eclipse",
+              "matched": true,
+              "reason": "'DJ Eclipse' → 'djeclipse' matches eclipse"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": "Mike Muller",
+              "matched": false,
+              "reason": "'Mike Muller' → 'mikemuller' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Weber GmbH",
+              "actual": "stellarbookings.com",
+              "matched": false,
+              "reason": "'stellarbookings.com' → 'stellarbookingscom' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Minkstrasse 42, 23462 Hamburg",
+              "actual": "+491634523464",
+              "matched": false,
+              "reason": "'+491634523464' → '491634523464' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Countdown",
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "2025-11-25",
+              "matched": true,
+              "reason": "'2025-11-25' → '20251125' matches 20251125"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Hamburg",
+              "actual": "Hamburg",
+              "matched": true,
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Zenith",
+              "actual": "Zenith",
+              "matched": true,
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 450,
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2025-11-25T22:00:00Z",
+              "actual": "22:00",
+              "matched": true,
+              "reason": "'22:00' → '2200' matches 2200"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2025-11-26T06:00:00Z",
+              "actual": "06:00",
+              "matched": true,
+              "reason": "'06:00' → '0600' matches 0600"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1000,
+              "actual": 1000,
+              "matched": true,
+              "reason": "'1000' → '1000' matches 1000"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "sent",
+              "actual": "pending",
+              "matched": true,
+              "reason": "'pending' → 'pending' matches pending"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "sent",
+              "actual": "pending",
+              "matched": true,
+              "reason": "'pending' → 'pending' matches pending"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 9,
+            "score": 0.5
+          }
+        },
+        "overallScore": 0.5961538461538461,
+        "parsingIssues": []
       }
     },
     {
       "messageFile": "message10.txt",
       "evaluation": {
-        "error": "Failed to evaluate",
-        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 515"
+        "messageId": "10",
+        "schemaConformity": {
+          "score": 0.6923076923076923,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+            "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/invoice/status must be null (actual: pending)",
+            "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/contract/status must be null (actual: pending)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
+          ],
+          "typeErrors": [
+            "/booking/invoice/status must be null (actual: pending)",
+            "/booking/contract/status must be null (actual: pending)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+            "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "22:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "06:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "paid"
+              ],
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "/booking/contract/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "signed",
+                "cosigned"
+              ],
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "pending",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "inquiry",
+                  "artist": {
+                    "name": "DJ Eclipse"
+                  },
+                  "promoter": {
+                    "name": "Marcus Weber",
+                    "company": null,
+                    "address": "+4912045980455"
+                  },
+                  "event": {
+                    "date": "2025-11-25",
+                    "venue": "Zenith",
+                    "city": "Hamburg",
+                    "capacity": null,
+                    "openingTime": "22:00",
+                    "closingTime": "06:00",
+                    "stageTime": {
+                      "start": null,
+                      "end": null
+                    }
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "pending"
+                  },
+                  "contract": {
+                    "status": "pending"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "inquiry",
+                "artist": {
+                  "name": "DJ Eclipse"
+                },
+                "promoter": {
+                  "name": "Marcus Weber",
+                  "company": null,
+                  "address": "+4912045980455"
+                },
+                "event": {
+                  "date": "2025-11-25",
+                  "venue": "Zenith",
+                  "city": "Hamburg",
+                  "capacity": null,
+                  "openingTime": "22:00",
+                  "closingTime": "06:00",
+                  "stageTime": {
+                    "start": null,
+                    "end": null
+                  }
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "pending"
+                },
+                "contract": {
+                  "status": "pending"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Eclipse"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Eclipse",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Marcus Weber",
+                "company": null,
+                "address": "+4912045980455"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Marcus Weber",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+4912045980455",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-11-25",
+                "venue": "Zenith",
+                "city": "Hamburg",
+                "capacity": null,
+                "openingTime": "22:00",
+                "closingTime": "06:00",
+                "stageTime": {
+                  "start": null,
+                  "end": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-11-25",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Hamburg",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Zenith",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "22:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "06:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": null,
+                "end": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "pending"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "pending",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "pending"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "pending",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 18,
+            "score": 0.6923076923076923
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.4444444444444444,
+          "errors": [
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.company: Expected Weber GmbH, got null",
+            "booking.promoter.address: Expected Minkstrasse 42, 23462 Hamburg, got +4912045980455",
+            "booking.event.name: Missing field",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.capacity: Expected 450, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got null",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got null",
+            "booking.invoice.status: Expected paid, got pending",
+            "booking.contract.status: Expected signed, got pending"
+          ],
+          "missingFields": [
+            "booking.event.name",
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": "Weber GmbH",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": "Minkstrasse 42, 23462 Hamburg",
+              "actual": "+4912045980455"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 450,
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "paid",
+              "actual": "pending"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "signed",
+              "actual": "pending"
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry",
+              "matched": false,
+              "reason": "'inquiry' → 'inquiry' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Eclipse",
+              "actual": "DJ Eclipse",
+              "matched": true,
+              "reason": "'DJ Eclipse' → 'djeclipse' matches eclipse"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": "Marcus Weber",
+              "matched": true,
+              "reason": "'Marcus Weber' → 'marcusweber' matches marcus"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Weber GmbH",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Minkstrasse 42, 23462 Hamburg",
+              "actual": "+4912045980455",
+              "matched": false,
+              "reason": "'+4912045980455' → '4912045980455' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Countdown",
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "2025-11-25",
+              "matched": true,
+              "reason": "'2025-11-25' → '20251125' matches 20251125"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Hamburg",
+              "actual": "Hamburg",
+              "matched": true,
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Zenith",
+              "actual": "Zenith",
+              "matched": true,
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 450,
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2025-11-25T22:00:00Z",
+              "actual": "22:00",
+              "matched": true,
+              "reason": "'22:00' → '2200' matches 2200"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2025-11-26T06:00:00Z",
+              "actual": "06:00",
+              "matched": true,
+              "reason": "'06:00' → '0600' matches 0600"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1000,
+              "actual": 1000,
+              "matched": true,
+              "reason": "'1000' → '1000' matches 1000"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "paid",
+              "actual": "pending",
+              "matched": false,
+              "reason": "'pending' → 'pending' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "signed",
+              "actual": "pending",
+              "matched": false,
+              "reason": "'pending' → 'pending' doesn't match any accepted values"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 8,
+            "score": 0.4444444444444444
+          }
+        },
+        "overallScore": 0.5683760683760684,
+        "parsingIssues": []
       }
     },
     {
       "messageFile": "message11.txt",
       "evaluation": {
-        "error": "Failed to evaluate",
-        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 515"
+        "messageId": "11",
+        "schemaConformity": {
+          "score": 0.9230769230769231,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "22:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "06:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "inquiry",
+                  "artist": {
+                    "name": "DJ Eclipse"
+                  },
+                  "promoter": {
+                    "name": "Mike Muller",
+                    "company": null,
+                    "address": "+491634523464"
+                  },
+                  "event": {
+                    "date": "2025-11-25",
+                    "venue": "Zenith",
+                    "city": "Hamburg",
+                    "capacity": null,
+                    "openingTime": "22:00",
+                    "closingTime": "06:00",
+                    "stageTime": {
+                      "start": null,
+                      "end": null
+                    }
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "paid"
+                  },
+                  "contract": {
+                    "status": "signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "inquiry",
+                "artist": {
+                  "name": "DJ Eclipse"
+                },
+                "promoter": {
+                  "name": "Mike Muller",
+                  "company": null,
+                  "address": "+491634523464"
+                },
+                "event": {
+                  "date": "2025-11-25",
+                  "venue": "Zenith",
+                  "city": "Hamburg",
+                  "capacity": null,
+                  "openingTime": "22:00",
+                  "closingTime": "06:00",
+                  "stageTime": {
+                    "start": null,
+                    "end": null
+                  }
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "paid"
+                },
+                "contract": {
+                  "status": "signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Eclipse"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Eclipse",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Mike Muller",
+                "company": null,
+                "address": "+491634523464"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Mike Muller",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+491634523464",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-11-25",
+                "venue": "Zenith",
+                "city": "Hamburg",
+                "capacity": null,
+                "openingTime": "22:00",
+                "closingTime": "06:00",
+                "stageTime": {
+                  "start": null,
+                  "end": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-11-25",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Hamburg",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Zenith",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "22:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "06:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": null,
+                "end": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "paid"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "paid",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 24,
+            "score": 0.9230769230769231
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.35294117647058826,
+          "errors": [
+            "booking.booking.invoice.status: Missing field",
+            "booking.invoice: Additional field",
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.name: Expected Marcus Weber, got Mike Muller",
+            "booking.promoter.company: Expected Weber GmbH, got null",
+            "booking.promoter.address: Expected Minkstrasse 42, 23462 Hamburg, got +491634523464",
+            "booking.event.name: Missing field",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.capacity: Expected 450, got null",
+            "booking.event.stageTime.start: Expected 2025-11-26T02:00:00Z, got null",
+            "booking.event.stageTime.end: Expected 2025-11-26T03:00:00Z, got null",
+            "booking.contract.status: Expected cosigned, got signed"
+          ],
+          "missingFields": [
+            "booking.booking.invoice.status",
+            "booking.event.name",
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": "Mike Muller"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": "Weber GmbH",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": "Minkstrasse 42, 23462 Hamburg",
+              "actual": "+491634523464"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 450,
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed"
+            }
+          ],
+          "additionalFields": [
+            "booking.invoice"
+          ],
+          "evaluationLog": [
+            {
+              "path": "booking.booking.invoice.status",
+              "expected": {
+                "acceptedValues": [
+                  "paid",
+                  "payed",
+                  "settled"
+                ]
+              },
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.invoice",
+              "actual": {
+                "amount": 1000,
+                "status": "paid"
+              },
+              "matched": false,
+              "reason": "Additional field"
+            },
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry",
+              "matched": false,
+              "reason": "'inquiry' → 'inquiry' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Eclipse",
+              "actual": "DJ Eclipse",
+              "matched": true,
+              "reason": "'DJ Eclipse' → 'djeclipse' matches eclipse"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": "Mike Muller",
+              "matched": false,
+              "reason": "'Mike Muller' → 'mikemuller' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Weber GmbH",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Minkstrasse 42, 23462 Hamburg",
+              "actual": "+491634523464",
+              "matched": false,
+              "reason": "'+491634523464' → '491634523464' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Countdown",
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "2025-11-25",
+              "matched": true,
+              "reason": "'2025-11-25' → '20251125' matches 20251125"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Hamburg",
+              "actual": "Hamburg",
+              "matched": true,
+              "reason": "'Hamburg' → 'hamburg' matches 'Hamburg' → 'hamburg'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Zenith",
+              "actual": "Zenith",
+              "matched": true,
+              "reason": "'Zenith' → 'zenith' matches 'Zenith' → 'zenith'"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 450,
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2025-11-25T22:00:00Z",
+              "actual": "22:00",
+              "matched": true,
+              "reason": "'22:00' → '2200' matches 2200"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2025-11-26T06:00:00Z",
+              "actual": "06:00",
+              "matched": true,
+              "reason": "'06:00' → '0600' matches 0600"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-11-26T03:00:00Z",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed",
+              "matched": false,
+              "reason": "'signed' → 'signed' doesn't match any accepted values"
+            }
+          ],
+          "summary": {
+            "totalFields": 17,
+            "correctFields": 6,
+            "score": 0.35294117647058826
+          }
+        },
+        "overallScore": 0.6380090497737557,
+        "parsingIssues": []
       }
     }
   ],
@@ -3792,7 +7088,7 @@
     },
     {
       "file": "message3.txt",
-      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": 450,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": null },\n    \"contract\": { \"status\": null }\n}"
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": 450,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": null },\n    \"contract\": {"
     },
     {
       "file": "message4.txt",
@@ -3804,33 +7100,33 @@
     },
     {
       "file": "message6.txt",
-      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": \"mw@gmail.com\", \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": null },\n    \"contract\": { \"status\": null }\n  }"
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": \"mw@gmail.com\", \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": null },\n    \"contract\": { \"status\": null "
     },
     {
       "file": "message7.txt",
-      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": \"mw@gmail.com\", \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"status\""
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Mike Muller\", \"company\": \"stellarbookings.com\", \"address\": \"+491634523464\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"stat"
     },
     {
       "file": "message8.txt",
-      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": \"mw@gmail.com\", \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"status\""
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": \"Weber GmbH\", \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"status\": \"p"
     },
     {
       "file": "message9.txt",
-      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": \"mw@gmail.com\", \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"status\""
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Mike Muller\", \"company\": \"stellarbookings.com\", \"address\": \"+491634523464\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"stat"
     },
     {
       "file": "message10.txt",
-      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": \"mw@gmail.com\", \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"status\""
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": null, \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"status\": \"pending\" "
     },
     {
       "file": "message11.txt",
-      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Marcus Weber\", \"company\": \"mw@gmail.com\", \"address\": \"+4912045980455\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"pending\" },\n    \"contract\": { \"status\""
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Eclipse\" },\n    \"promoter\": { \"name\": \"Mike Muller\", \"company\": null, \"address\": \"+491634523464\" },\n    \"event\": {\n      \"date\": \"2025-11-25\",\n      \"venue\": \"Zenith\",\n      \"city\": \"Hamburg\",\n      \"capacity\": null,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": { \"start\": null, \"end\": null }\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"paid\" },\n    \"contract\": { \"status\": \"signed\" }\n  }\n"
     }
   ],
   "averageScores": {
-    "schemaConformity": 0.3706293706293706,
-    "contextualConsistency": 0.2828282828282828,
-    "overallScore": 0.3267288267288268,
-    "successRate": 0.45454545454545453
+    "schemaConformity": 0.6713286713286715,
+    "contextualConsistency": 0.4411764705882353,
+    "overallScore": 0.5562525709584533,
+    "successRate": 0.8181818181818182
   }
 }

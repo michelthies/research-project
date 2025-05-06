@@ -1,8 +1,0 @@
-{
-  "messageId": "11",
-  "score": 0.9615384615384616,
-  "timestamp": "2025-05-06T16:33:01.587Z",
-  "errors": [
-    "/booking/promoter/address must be string,null (actual: {\"street\":null,\"city\":\"Hamburg\",\"state\":null,\"zip\":\"23462\"})"
-  ]
-}

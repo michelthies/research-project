@@ -92,15 +92,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -109,7 +112,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -120,19 +123,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -143,51 +146,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -197,14 +200,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -218,19 +221,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -239,16 +245,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -264,7 +273,7 @@ Schema:
 
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
@@ -274,7 +283,7 @@ Schema:
       "address": null
     },
     "event": {
-      "date": "25 Nov 2025",
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
@@ -305,7 +314,7 @@ Schema:
 Booking Object:
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
@@ -315,7 +324,7 @@ Booking Object:
       "address": null
     },
     "event": {
-      "date": "25 Nov 2025",
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
@@ -378,15 +387,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -395,7 +407,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -406,19 +418,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -429,51 +441,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -483,14 +495,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -504,19 +516,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -525,16 +540,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -550,24 +568,24 @@ Schema:
 
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller",
+      "name": null,
       "company": null,
       "address": null
     },
     "event": {
-      "date": "25 Nov 2025",
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
-      "capacity": null,
-      "ticketPrice": null,
-      "openingTime": null,
-      "closingTime": null,
+      "capacity": 450,
+      "ticketPrice": 15,
+      "openingTime": "22:00",
+      "closingTime": "06:00",
       "stageTime": {
         "start": null,
         "end": null
@@ -591,24 +609,24 @@ Schema:
 Booking Object:
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller",
+      "name": null,
       "company": null,
       "address": null
     },
     "event": {
-      "date": "25 Nov 2025",
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
-      "capacity": null,
-      "ticketPrice": null,
-      "openingTime": null,
-      "closingTime": null,
+      "capacity": 450,
+      "ticketPrice": 15,
+      "openingTime": "22:00",
+      "closingTime": "06:00",
       "stageTime": {
         "start": null,
         "end": null
@@ -655,15 +673,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -672,7 +693,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -683,19 +704,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -706,51 +727,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -760,14 +781,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -781,19 +802,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -802,16 +826,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -827,22 +854,24 @@ Schema:
 
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
-      "capacity": null,
-      "ticketPrice": null,
-      "openingTime": null,
-      "closingTime": null,
+      "capacity": 450,
+      "ticketPrice": 15,
+      "openingTime": "22:00",
+      "closingTime": "06:00",
       "stageTime": {
         "start": null,
         "end": null
@@ -866,22 +895,24 @@ Schema:
 Booking Object:
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
-      "capacity": null,
-      "ticketPrice": null,
-      "openingTime": null,
-      "closingTime": null,
+      "capacity": 450,
+      "ticketPrice": 15,
+      "openingTime": "22:00",
+      "closingTime": "06:00",
       "stageTime": {
         "start": null,
         "end": null
@@ -927,15 +958,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -944,7 +978,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -955,19 +989,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -978,51 +1012,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -1032,14 +1066,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -1053,19 +1087,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -1074,16 +1111,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -1099,22 +1139,24 @@ Schema:
 
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
-      "capacity": null,
-      "ticketPrice": null,
-      "openingTime": null,
-      "closingTime": null,
+      "capacity": 450,
+      "ticketPrice": 15,
+      "openingTime": "22:00",
+      "closingTime": "06:00",
       "stageTime": {
         "start": null,
         "end": null
@@ -1138,22 +1180,24 @@ Schema:
 Booking Object:
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
-      "capacity": null,
-      "ticketPrice": null,
-      "openingTime": null,
-      "closingTime": null,
+      "capacity": 450,
+      "ticketPrice": 15,
+      "openingTime": "22:00",
+      "closingTime": "06:00",
       "stageTime": {
         "start": null,
         "end": null
@@ -1199,15 +1243,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -1216,7 +1263,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -1227,19 +1274,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -1250,51 +1297,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -1304,14 +1351,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -1325,19 +1372,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -1346,16 +1396,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -1371,15 +1424,17 @@ Schema:
 
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
@@ -1393,7 +1448,7 @@ Schema:
       }
     },
     "invoice": {
-      "amount": 1000,
+      "amount": null,
       "status": null
     },
     "contract": {
@@ -1410,15 +1465,17 @@ Schema:
 Booking Object:
 {
   "booking": {
-    "status": "inquiry",
+    "status": null,
     "artist": {
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
@@ -1432,7 +1489,7 @@ Booking Object:
       }
     },
     "invoice": {
-      "amount": 1000,
+      "amount": null,
       "status": null
     },
     "contract": {
@@ -1480,15 +1537,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -1497,7 +1557,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -1508,19 +1568,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -1531,51 +1591,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -1585,14 +1645,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -1606,19 +1666,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -1627,16 +1690,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -1657,10 +1723,12 @@ Schema:
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
@@ -1696,10 +1764,12 @@ Booking Object:
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
@@ -1753,15 +1823,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -1770,7 +1843,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -1781,19 +1854,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -1804,51 +1877,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -1858,14 +1931,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -1879,19 +1952,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -1900,16 +1976,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -1930,10 +2009,12 @@ Schema:
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
@@ -1969,10 +2050,12 @@ Booking Object:
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": "Mike Muller"
+      "name": null,
+      "company": null,
+      "address": null
     },
     "event": {
-      "date": null,
+      "date": "25Nov25",
       "name": "Countdown",
       "city": "Hamburg",
       "venue": "Zenith",
@@ -2034,15 +2117,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -2051,7 +2137,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -2062,19 +2148,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -2085,51 +2171,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -2139,14 +2225,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -2160,19 +2246,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -2181,16 +2270,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -2211,7 +2303,7 @@ Schema:
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": null,
+      "name": "Weber GmbH",
       "company": "Weber GmbH",
       "address": "Minkstrasse 42, 23462 Hamburg"
     },
@@ -2252,7 +2344,7 @@ Booking Object:
       "name": "DJ Eclipse"
     },
     "promoter": {
-      "name": null,
+      "name": "Weber GmbH",
       "company": "Weber GmbH",
       "address": "Minkstrasse 42, 23462 Hamburg"
     },
@@ -2316,15 +2408,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -2333,7 +2428,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -2344,19 +2439,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -2367,51 +2462,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -2421,14 +2516,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -2442,19 +2537,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -2463,16 +2561,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -2494,8 +2595,8 @@ Schema:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "Weber GmbH",
-      "address": "Minkstrasse 42, 23462 Hamburg"
+      "company": null,
+      "address": null
     },
     "event": {
       "date": null,
@@ -2535,8 +2636,8 @@ Booking Object:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "Weber GmbH",
-      "address": "Minkstrasse 42, 23462 Hamburg"
+      "company": null,
+      "address": null
     },
     "event": {
       "date": null,
@@ -2595,15 +2696,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -2612,7 +2716,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -2623,19 +2727,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -2646,51 +2750,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -2700,14 +2804,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -2721,19 +2825,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -2742,16 +2849,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -2773,8 +2883,8 @@ Schema:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "Weber GmbH",
-      "address": "Minkstrasse 42, 23462 Hamburg"
+      "company": null,
+      "address": null
     },
     "event": {
       "date": null,
@@ -2814,8 +2924,8 @@ Booking Object:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "Weber GmbH",
-      "address": "Minkstrasse 42, 23462 Hamburg"
+      "company": null,
+      "address": null
     },
     "event": {
       "date": null,
@@ -2871,15 +2981,18 @@ Schema:
       "type": "object",
       "properties": {
         "status": {
-          "type": [
-            "string",
-            null
-          ],
-          "enum": [
-            "inquiry",
-            "confirmed",
-            "cancelled",
-            null
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "artist": {
@@ -2888,7 +3001,7 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -2899,19 +3012,19 @@ Schema:
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "company": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "address": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             }
           }
@@ -2922,51 +3035,51 @@ Schema:
             "date": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date"
             },
             "name": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "city": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "venue": {
               "type": [
                 "string",
-                null
+                "null"
               ]
             },
             "capacity": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "ticketPrice": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "openingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
             "closingTime": {
               "type": [
                 "string",
-                null
+                "null"
               ],
               "format": "date-time"
             },
@@ -2976,14 +3089,14 @@ Schema:
                 "start": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 },
                 "end": {
                   "type": [
                     "string",
-                    null
+                    "null"
                   ],
                   "format": "date-time"
                 }
@@ -2997,19 +3110,22 @@ Schema:
             "amount": {
               "type": [
                 "number",
-                null
+                "null"
               ]
             },
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "paid",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -3018,16 +3134,19 @@ Schema:
           "type": "object",
           "properties": {
             "status": {
-              "type": [
-                "string",
-                null
-              ],
-              "enum": [
-                "not sent",
-                "sent",
-                "signed",
-                "cosigned",
-                null
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
               ]
             }
           }
@@ -3049,8 +3168,8 @@ Schema:
     },
     "promoter": {
       "name": "Marcus Weber",
-      "company": "Weber GmbH",
-      "address": "Minkstrasse 42, 23462 Hamburg"
+      "company": null,
+      "address": null
     },
     "event": {
       "date": null,
