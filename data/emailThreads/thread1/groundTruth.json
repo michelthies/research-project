@@ -68,54 +68,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -126,15 +82,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -249,19 +197,7 @@
       }
     },
     "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": [
-          "inquiry",
-          "pending",
-          "request",
-          "newrequest",
-          "requested",
-          "initial",
-          "checking",
-          "new",
-          "open"
-        ]
-      },
+      
       "booking.artist.name": {
         "acceptedValues": [
           "djeclipse",
@@ -292,54 +228,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -350,15 +242,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -371,14 +255,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -391,14 +268,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -411,30 +281,13 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       }
       
@@ -474,19 +327,7 @@
       }
     },
    "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": [
-          "inquiry",
-          "pending",
-          "request",
-          "newrequest",
-          "requested",
-          "initial",
-          "checking",
-          "new",
-          "open"
-        ]
-      },
+      
       "booking.artist.name": {
         "acceptedValues": [
           "djeclipse",
@@ -517,54 +358,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -575,15 +372,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -596,14 +385,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -616,14 +398,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -636,30 +411,13 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       }
       
@@ -699,19 +457,7 @@
       }
     },
     "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": [
-          "inquiry",
-          "pending",
-          "request",
-          "newrequest",
-          "requested",
-          "initial",
-          "checking",
-          "new",
-          "open"
-        ]
-      },
+      
       "booking.artist.name": {
         "acceptedValues": [
           "djeclipse",
@@ -742,54 +488,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -800,15 +502,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -821,14 +515,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -841,14 +528,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -861,30 +541,13 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       }
       
@@ -924,19 +587,7 @@
       }
     },
    "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": [
-          "inquiry",
-          "pending",
-          "request",
-          "newrequest",
-          "requested",
-          "initial",
-          "checking",
-          "new",
-          "open"
-        ]
-      },
+      
       "booking.artist.name": {
         "acceptedValues": [
           "djeclipse",
@@ -967,54 +618,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -1025,15 +632,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -1046,14 +645,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -1066,14 +658,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -1086,30 +671,13 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       }
     }
@@ -1148,19 +716,7 @@
       }
     },
     "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": [
-          "inquiry",
-          "pending",
-          "request",
-          "newrequest",
-          "requested",
-          "initial",
-          "checking",
-          "new",
-          "open"
-        ]
-      },
+      
       "booking.artist.name": {
         "acceptedValues": [
           "djeclipse",
@@ -1191,54 +747,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -1249,15 +761,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -1270,14 +774,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -1290,14 +787,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -1310,30 +800,13 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       }
       
@@ -1375,20 +848,7 @@
     "normalizationConfig": {
       "booking.status": {
         "acceptedValues": [
-          "confirmed",
-          "confirmedbooking",
-          "approved",
-          "booked",
-          "locked",
-          "secured",
-          "definite",
-          "fixed",
-          "finalized",
-          "greenlight",
-          "agreed",
-          "goodtogo",
-          "set",
-          "donedeal"
+          "confirmed"
         ]
       },
       "booking.artist.name": {
@@ -1421,54 +881,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -1479,15 +895,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -1500,14 +908,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -1520,14 +921,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -1540,30 +934,13 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       },
     
@@ -1620,20 +997,7 @@
     "normalizationConfig": {
       "booking.status": {
         "acceptedValues": [
-          "confirmed",
-          "confirmedbooking",
-          "approved",
-          "booked",
-          "locked",
-          "secured",
-          "definite",
-          "fixed",
-          "finalized",
-          "greenlight",
-          "agreed",
-          "goodtogo",
-          "set",
-          "donedeal"
+          "confirmed"
         ]
       },
       "booking.artist.name": {
@@ -1679,54 +1043,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -1737,15 +1057,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -1758,14 +1070,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -1778,14 +1083,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -1798,30 +1096,13 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       },
       "booking.invoice.status": {
@@ -1877,20 +1158,7 @@
     "normalizationConfig": {
       "booking.status": {
         "acceptedValues": [
-          "confirmed",
-          "confirmedbooking",
-          "approved",
-          "booked",
-          "locked",
-          "secured",
-          "definite",
-          "fixed",
-          "finalized",
-          "greenlight",
-          "agreed",
-          "goodtogo",
-          "set",
-          "donedeal"
+          "confirmed"
         ]
       },
       "booking.artist.name": {
@@ -1936,54 +1204,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -1994,15 +1218,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -2015,14 +1231,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -2035,14 +1244,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -2055,30 +1257,13 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       },
       "booking.invoice.status": {
@@ -2145,20 +1330,7 @@
     "normalizationConfig": {
       "booking.status": {
         "acceptedValues": [
-          "confirmed",
-          "confirmedbooking",
-          "approved",
-          "booked",
-          "locked",
-          "secured",
-          "definite",
-          "fixed",
-          "finalized",
-          "greenlight",
-          "agreed",
-          "goodtogo",
-          "set",
-          "donedeal"
+          "confirmed"
         ]
       },
       "booking.artist.name": {
@@ -2204,54 +1376,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -2262,15 +1390,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -2283,14 +1403,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -2303,14 +1416,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -2323,40 +1429,20 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       },
       "booking.invoice.status": {
         "acceptedValues": [
           "paid",
           "payed",
-          "paymentreceived",
-          "settled",
-          "completed",
-          "completedpayment"
+          "settled"
         ]
       },
       "booking.contract.status": {
@@ -2398,10 +1484,7 @@
         "acceptedValues": [
           "paid",
           "payed",
-          "paymentreceived",
-          "settled",
-          "completed",
-          "completedpayment"
+          "settled"
         ]
       },
       "contract": {
@@ -2415,20 +1498,7 @@
     "normalizationConfig": {
       "booking.status": {
         "acceptedValues": [
-          "confirmed",
-          "confirmedbooking",
-          "approved",
-          "booked",
-          "locked",
-          "secured",
-          "definite",
-          "fixed",
-          "finalized",
-          "greenlight",
-          "agreed",
-          "goodtogo",
-          "set",
-          "donedeal"
+          "confirmed"
         ]
       },
       "booking.artist.name": {
@@ -2474,54 +1544,10 @@
           "11252025",
           "112525",
           "25thofnovember2025",
-          "twentyfifthofnovember2025",
           "25thnov2025"
         ]
       },
-      "booking.event.name": {
-        "acceptedValues": [
-          "countdown",
-          "countdownevent"
-        ]
-      },
-      "booking.event.city": {
-        "acceptedValues": [
-          "hamburg",
-          "hamburgo",
-          "hh"
-        ]
-      },
-      "booking.event.venue": {
-        "acceptedValues": [
-          "zenith",
-          "zenithhamburg",
-          "zenithclubhamburg",
-          "zenithvenue"
-        ]
-      },
-      "booking.event.capacity": {
-        "acceptedValues": [
-          "450",
-          "fourhundredandfifty",
-          "fourhundredfifty",
-          "450people",
-          "450pax",
-          "fourhundredfiftypeople",
-          "fourhundredfiftypax",
-          "fourhundredandfiftypeople",
-          "fourhundredandfiftypax"
-        ]
-      },
-      "booking.event.ticketPrice": {
-        "acceptedValues": [
-          "15",
-          "15€",
-          "15eur",
-          "15euros",
-          "fifteeneuros",
-          "fifteen"
-        ]
-      },
+      
       "booking.event.openingTime": {
         "acceptedValues": [
           "20251125t220000z",
@@ -2532,15 +1558,7 @@
           "10pm",
           "220000",
           "22h",
-          "2200h",
-          "22hours",
-          "10pmutc",
-          "10pmgmt",
-          "10oclock",
-          "10oclockpm",
-          "tenpm",
-          "tenpmatnight",
-          "22hundredhours"
+          "2200h"
         ]
       },
       "booking.event.closingTime": {
@@ -2553,14 +1571,7 @@
           "6am",
           "060000",
           "6h",
-          "0600h",
-          "6hours",
-          "6amutc",
-          "6amgmt",
-          "6oclock",
-          "6oclockam",
-          "sixam",
-          "sixaminthemorning"
+          "0600h"
         ]
       },
       "booking.event.stageTime.start": {
@@ -2573,14 +1584,7 @@
           "2am",
           "020000",
           "2h",
-          "0200h",
-          "2hours",
-          "2amutc",
-          "2amgmt",
-          "2oclock",
-          "2oclockam",
-          "twoam",
-          "twoaminthemorning"
+          "0200h"
         ]
       },
       "booking.event.stageTime.end": {
@@ -2593,51 +1597,26 @@
           "3am",
           "030000",
           "3h",
-          "0300h",
-          "3hours",
-          "3amutc",
-          "3amgmt",
-          "3oclock",
-          "3oclockam",
-          "threeam",
-          "threeaminthemorning"
+          "0300h"
         ]
       },
       "booking.invoice.amount": {
         "acceptedValues": [
           "1000",
-          "1k",
-          "1k€",
-          "1keur",
-          "1keuros",
-          "1000€",
-          "1000eur",
-          "1000euros",
-          "thousand",
-          "onethousand",
-          "thousandeuros",
-          "onethousandeuros"
+          "1k"
         ]
       },
      "booking.invoice.status": {
         "acceptedValues": [
           "paid",
           "payed",
-          "paymentreceived",
-          "settled",
-          "completed",
-          "completedpayment"
+          "settled"
         ]
       },
       "booking.contract.status": {
         "acceptedValues": [
           "cosigned",
-          "co-signed",
-          "countersigned",
-          "fullysigned",
-          "completed",
-          "contractcosigned",
-          "fullyexecuted"
+          "co-signed"
         ]
       }
     }
