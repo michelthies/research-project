@@ -1,0 +1,134 @@
+{
+  "strategy": "zero-shot-schema",
+  "evaluationResults": [
+    {
+      "messageFile": "message1.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: schema is invalid: data/properties/booking/properties/status/type must be equal to one of the allowed values, data/properties/booking/properties/status/type/1 must be equal to one of the allowed values, data/properties/booking/properties/status/type must match a schema in anyOf, data/properties/booking/properties/artist/properties/name/type must be equal to one of the allowed values, data/properties/booking/properties/artist/properties/name/type/1 must be equal to one of the allowed values, data/properties/booking/properties/artist/properties/name/type must match a schema in anyOf, data/properties/booking/properties/promoter/properties/name/type must be equal to one of the allowed values, data/properties/booking/properties/promoter/properties/name/type/1 must be equal to one of the allowed values, data/properties/booking/properties/promoter/properties/name/type must match a schema in anyOf, data/properties/booking/properties/promoter/properties/company/type must be equal to one of the allowed values, data/properties/booking/properties/promoter/properties/company/type/1 must be equal to one of the allowed values, data/properties/booking/properties/promoter/properties/company/type must match a schema in anyOf, data/properties/booking/properties/promoter/properties/address/type must be equal to one of the allowed values, data/properties/booking/properties/promoter/properties/address/type/1 must be equal to one of the allowed values, data/properties/booking/properties/promoter/properties/address/type must match a schema in anyOf, data/properties/booking/properties/event/properties/date/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/date/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/date/type must match a schema in anyOf, data/properties/booking/properties/event/properties/name/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/name/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/name/type must match a schema in anyOf, data/properties/booking/properties/event/properties/city/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/city/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/city/type must match a schema in anyOf, data/properties/booking/properties/event/properties/venue/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/venue/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/venue/type must match a schema in anyOf, data/properties/booking/properties/event/properties/capacity/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/capacity/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/capacity/type must match a schema in anyOf, data/properties/booking/properties/event/properties/ticketPrice/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/ticketPrice/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/ticketPrice/type must match a schema in anyOf, data/properties/booking/properties/event/properties/openingTime/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/openingTime/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/openingTime/type must match a schema in anyOf, data/properties/booking/properties/event/properties/closingTime/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/closingTime/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/closingTime/type must match a schema in anyOf, data/properties/booking/properties/event/properties/stageTime/properties/start/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/stageTime/properties/start/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/stageTime/properties/start/type must match a schema in anyOf, data/properties/booking/properties/event/properties/stageTime/properties/end/type must be equal to one of the allowed values, data/properties/booking/properties/event/properties/stageTime/properties/end/type/1 must be equal to one of the allowed values, data/properties/booking/properties/event/properties/stageTime/properties/end/type must match a schema in anyOf, data/properties/booking/properties/invoice/properties/amount/type must be equal to one of the allowed values, data/properties/booking/properties/invoice/properties/amount/type/1 must be equal to one of the allowed values, data/properties/booking/properties/invoice/properties/amount/type must match a schema in anyOf, data/properties/booking/properties/invoice/properties/status/type must be equal to one of the allowed values, data/properties/booking/properties/invoice/properties/status/type/1 must be equal to one of the allowed values, data/properties/booking/properties/invoice/properties/status/type must match a schema in anyOf, data/properties/booking/properties/contract/properties/status/type must be equal to one of the allowed values, data/properties/booking/properties/contract/properties/status/type/1 must be equal to one of the allowed values, data/properties/booking/properties/contract/properties/status/type must match a schema in anyOf"
+      }
+    },
+    {
+      "messageFile": "message2.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message3.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message4.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message5.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message6.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message7.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message8.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message9.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message10.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    },
+    {
+      "messageFile": "message11.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "Error: type must be JSONType or JSONType[]: string,"
+      }
+    }
+  ],
+  "processedResponses": [
+    {
+      "file": "message1.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"25 Nov 2025\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoi"
+    },
+    {
+      "file": "message2.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Mike Muller\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"25 Nov 2025\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    "
+    },
+    {
+      "file": "message3.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Mike Muller\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status\": null"
+    },
+    {
+      "file": "message4.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Mike Muller\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status\": null"
+    },
+    {
+      "file": "message5.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Mike Muller\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status\": null"
+    },
+    {
+      "file": "message6.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Mike Muller\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status\": nu"
+    },
+    {
+      "file": "message7.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Mike Muller\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status\": nu"
+    },
+    {
+      "file": "message8.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n"
+    },
+    {
+      "file": "message9.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"e"
+    },
+    {
+      "file": "message10.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"e"
+    },
+    {
+      "file": "message11.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"e"
+    }
+  ],
+  "averageScores": {
+    "schemaConformity": 0,
+    "contextualConsistency": 0,
+    "overallScore": 0,
+    "successRate": 0
+  }
+}

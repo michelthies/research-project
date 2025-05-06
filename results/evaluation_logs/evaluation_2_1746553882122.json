@@ -1,0 +1,10 @@
+{
+  "messageId": "2",
+  "timestamp": "2025-05-06T17:51:22.122Z",
+  "status": "not-parseable",
+  "overallScore": 0,
+  "parsingIssues": [
+    "Evaluation error: Error: type must be JSONType or JSONType[]: string,"
+  ],
+  "originalContent": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Mike Muller\",\n      \"company\": null,\n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"25 Nov 2025\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": {\n      \"amount\": 1000,\n      \"status\": null\n    },\n    \"contract\": {\n      \"status\": null\n    }\n  }\n}"
+}

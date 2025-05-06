@@ -1,0 +1,12 @@
+{
+  "messageId": "2",
+  "score": 0.8076923076923077,
+  "timestamp": "2025-05-06T16:23:49.068Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: null)",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 22:00:00Z)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 06:00:00Z)",
+    "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
+    "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+  ]
+}

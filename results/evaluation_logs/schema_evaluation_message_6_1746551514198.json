@@ -1,0 +1,8 @@
+{
+  "messageId": "6",
+  "score": 0.9615384615384616,
+  "timestamp": "2025-05-06T17:11:54.198Z",
+  "errors": [
+    "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+  ]
+}

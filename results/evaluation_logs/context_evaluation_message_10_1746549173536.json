@@ -1,0 +1,131 @@
+{
+  "messageId": "10",
+  "score": 0.5294117647058824,
+  "timestamp": "2025-05-06T16:32:53.536Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "confirmed",
+      "matched": true,
+      "reason": "'confirmed' → 'confirmed' matches confirmed"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Eclipse",
+      "actual": "DJ Eclipse",
+      "matched": true,
+      "reason": "'DJ Eclipse' → 'djeclipse' matches eclipse"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Marcus Weber",
+      "actual": "Mike Muller",
+      "matched": false,
+      "reason": "'Mike Muller' → 'mikemuller' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Weber GmbH",
+      "actual": "stellarbookings.com",
+      "matched": false,
+      "reason": "'stellarbookings.com' → 'stellarbookingscom' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Minkstrasse 42, 23462 Hamburg",
+      "actual": {
+        "street": null,
+        "city": "Hamburg",
+        "state": null,
+        "zip": "23462"
+      },
+      "matched": false,
+      "reason": "'[object Object]' → 'objectobject' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2025-11-25T22:00:00Z",
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2025-11-26T06:00:00Z",
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.stageTime",
+      "expected": {
+        "start": "2025-11-26T02:00:00Z",
+        "end": "2025-11-26T03:00:00Z"
+      },
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2025-11-25",
+      "actual": "2025-11-25",
+      "matched": true,
+      "reason": "'2025-11-25' → '20251125' matches 20251125"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Countdown",
+      "actual": "Countdown",
+      "matched": true,
+      "reason": "'Countdown' → 'countdown' equals 'Countdown' → 'countdown'"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Hamburg",
+      "actual": "Hamburg",
+      "matched": true,
+      "reason": "'Hamburg' → 'hamburg' equals 'Hamburg' → 'hamburg'"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Zenith",
+      "actual": "Zenith",
+      "matched": true,
+      "reason": "'Zenith' → 'zenith' equals 'Zenith' → 'zenith'"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 450,
+      "actual": 450,
+      "matched": true,
+      "reason": "'450' → '450' equals '450' → '450'"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": 15,
+      "matched": true,
+      "reason": "'15' → '15' equals '15' → '15'"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 1000,
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.invoice.status",
+      "expected": "paid",
+      "actual": "not sent",
+      "matched": false,
+      "reason": "'not sent' → 'notsent' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.contract.status",
+      "expected": "signed",
+      "actual": "signed",
+      "matched": true,
+      "reason": "'signed' → 'signed' matches signed"
+    }
+  ]
+}

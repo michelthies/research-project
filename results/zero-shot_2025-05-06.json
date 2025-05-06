@@ -1,0 +1,904 @@
+{
+  "strategy": "zero-shot",
+  "evaluationResults": [
+    {
+      "messageFile": "message1.txt",
+      "evaluation": {
+        "messageId": "1",
+        "schemaConformity": {
+          "score": 0.6923076923076923,
+          "errors": [
+            "/booking/status must be equal to one of the allowed values (actual: null)",
+            "/booking/event/date must match format \"date\" (actual: 25 Nov 25)",
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+            "/booking/event/stageTime/start must match format \"date-time\" (actual: 02:00)",
+            "/booking/event/stageTime/end must match format \"date-time\" (actual: 04:00)",
+            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+          ],
+          "typeErrors": [],
+          "constraintErrors": [
+            "/booking/status must be equal to one of the allowed values (actual: null)",
+            "/booking/event/date must match format \"date\" (actual: 25 Nov 25)",
+            "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+            "/booking/event/stageTime/start must match format \"date-time\" (actual: 02:00)",
+            "/booking/event/stageTime/end must match format \"date-time\" (actual: 04:00)",
+            "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/status",
+              "expected": [
+                "inquiry",
+                "confirmed",
+                "cancelled",
+                "null"
+              ],
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/event/date",
+              "actual": "25 Nov 25",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "22:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "06:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/stageTime/start",
+              "actual": "02:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/stageTime/end",
+              "actual": "04:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/invoice/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "paid",
+                "null"
+              ],
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/contract/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "signed",
+                "cosigned",
+                "null"
+              ],
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "enum": [
+                          "inquiry",
+                          "confirmed",
+                          "cancelled",
+                          "null"
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "enum": [
+                              "not sent",
+                              "sent",
+                              "paid",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "enum": [
+                              "not sent",
+                              "sent",
+                              "signed",
+                              "cosigned",
+                              "null"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Eclipse"
+                  },
+                  "promoter": {
+                    "name": null,
+                    "company": null,
+                    "address": "Zenith Hamburg"
+                  },
+                  "event": {
+                    "date": "25 Nov 25",
+                    "name": "Countdown",
+                    "city": "Hamburg",
+                    "venue": "Zenith",
+                    "capacity": 450,
+                    "stageCapacity": 150,
+                    "ticketPrice": 15,
+                    "openingTime": "22:00",
+                    "closingTime": "06:00",
+                    "stageTime": {
+                      "start": "02:00",
+                      "end": "04:00"
+                    }
+                  },
+                  "invoice": {
+                    "amount": 500,
+                    "status": null
+                  },
+                  "contract": {
+                    "status": null
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Eclipse"
+                },
+                "promoter": {
+                  "name": null,
+                  "company": null,
+                  "address": "Zenith Hamburg"
+                },
+                "event": {
+                  "date": "25 Nov 25",
+                  "name": "Countdown",
+                  "city": "Hamburg",
+                  "venue": "Zenith",
+                  "capacity": 450,
+                  "stageCapacity": 150,
+                  "ticketPrice": 15,
+                  "openingTime": "22:00",
+                  "closingTime": "06:00",
+                  "stageTime": {
+                    "start": "02:00",
+                    "end": "04:00"
+                  }
+                },
+                "invoice": {
+                  "amount": 500,
+                  "status": null
+                },
+                "contract": {
+                  "status": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Eclipse"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Eclipse",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": null,
+                "company": null,
+                "address": "Zenith Hamburg"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Zenith Hamburg",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "25 Nov 25",
+                "name": "Countdown",
+                "city": "Hamburg",
+                "venue": "Zenith",
+                "capacity": 450,
+                "stageCapacity": 150,
+                "ticketPrice": 15,
+                "openingTime": "22:00",
+                "closingTime": "06:00",
+                "stageTime": {
+                  "start": "02:00",
+                  "end": "04:00"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "25 Nov 25",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Countdown",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Hamburg",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Zenith",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 450,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 15,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "22:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "06:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": "02:00",
+                "end": "04:00"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "02:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "04:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 500,
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 18,
+            "score": 0.6923076923076923
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.8333333333333334,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.promoter.name: Expected Marcus Weber, got null",
+            "booking.promoter.address: Expected null, got Zenith Hamburg",
+            "booking.event.stageCapacity: Additional field"
+          ],
+          "missingFields": [],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": null,
+              "actual": "Zenith Hamburg"
+            }
+          ],
+          "additionalFields": [
+            "booking.event.stageCapacity"
+          ],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "inquiry",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Eclipse",
+              "actual": "DJ Eclipse",
+              "matched": true,
+              "reason": "'DJ Eclipse' → 'djeclipse' matches eclipse"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Marcus Weber",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": null,
+              "actual": "Zenith Hamburg",
+              "matched": false,
+              "reason": "Expected null but got value"
+            },
+            {
+              "path": "booking.event.stageCapacity",
+              "actual": 150,
+              "matched": false,
+              "reason": "Additional field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-11-25",
+              "actual": "25 Nov 25",
+              "matched": true,
+              "reason": "'25 Nov 25' → '25nov25' matches 25nov"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Countdown",
+              "actual": "Countdown",
+              "matched": true,
+              "reason": "'Countdown' → 'countdown' equals 'Countdown' → 'countdown'"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Hamburg",
+              "actual": "Hamburg",
+              "matched": true,
+              "reason": "'Hamburg' → 'hamburg' equals 'Hamburg' → 'hamburg'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Zenith",
+              "actual": "Zenith",
+              "matched": true,
+              "reason": "'Zenith' → 'zenith' equals 'Zenith' → 'zenith'"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 450,
+              "actual": 450,
+              "matched": true,
+              "reason": "'450' → '450' equals '450' → '450'"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "actual": 15,
+              "matched": true,
+              "reason": "'15' → '15' equals '15' → '15'"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2025-11-25T22:00:00Z",
+              "actual": "22:00",
+              "matched": true,
+              "reason": "'22:00' → '2200' matches 2200"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2025-11-26T06:00:00Z",
+              "actual": "06:00",
+              "matched": true,
+              "reason": "'06:00' → '0600' matches 0600"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-11-26T02:00:00Z",
+              "actual": "02:00",
+              "matched": true,
+              "reason": "'02:00' → '0200' matches 0200"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-11-26T04:00:00Z",
+              "actual": "04:00",
+              "matched": true,
+              "reason": "'04:00' → '0400' matches 0400"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 500,
+              "actual": 500,
+              "matched": true,
+              "reason": "'500' → '500' matches 500"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 15,
+            "score": 0.8333333333333334
+          }
+        },
+        "overallScore": 0.7628205128205128,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message2.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 565"
+      }
+    },
+    {
+      "messageFile": "message3.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 592"
+      }
+    },
+    {
+      "messageFile": "message4.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 592"
+      }
+    },
+    {
+      "messageFile": "message5.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 592"
+      }
+    },
+    {
+      "messageFile": "message6.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 599"
+      }
+    },
+    {
+      "messageFile": "message7.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 599"
+      }
+    },
+    {
+      "messageFile": "message8.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 605"
+      }
+    },
+    {
+      "messageFile": "message9.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 596"
+      }
+    },
+    {
+      "messageFile": "message10.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 578"
+      }
+    },
+    {
+      "messageFile": "message11.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected double-quoted property name in JSON at position 578"
+      }
+    }
+  ],
+  "processedResponses": [
+    {
+      "file": "message1.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": null,\n      \"address\": \"Zenith Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov 25\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \""
+    },
+    {
+      "file": "message2.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": null,\n      \"company\": null,\n      \"address\": \"Zenith Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\",\n        \"end"
+    },
+    {
+      "file": "message3.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"stellarbookings.com\",\n      \"address\": \"Zenith Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"st"
+    },
+    {
+      "file": "message4.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"stellarbookings.com\",\n      \"address\": \"Zenith Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"st"
+    },
+    {
+      "file": "message5.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"stellarbookings.com\",\n      \"address\": \"Zenith Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"st"
+    },
+    {
+      "file": "message6.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"stellarbookings.com\",\n      \"address\": \"Zenith Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n    "
+    },
+    {
+      "file": "message7.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"stellarbookings.com\",\n      \"address\": \"Zenith Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n    "
+    },
+    {
+      "file": "message8.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"Countdown\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": "
+    },
+    {
+      "file": "message9.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"name\": \"\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n       "
+    },
+    {
+      "file": "message10.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\","
+    },
+    {
+      "file": "message11.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": {\n      \"name\": \"DJ Eclipse\"\n    },\n    \"promoter\": {\n      \"name\": \"Marcus Weber\",\n      \"company\": \"Weber GmbH\",\n      \"address\": \"Minkstrasse 42, 23462 Hamburg\"\n    },\n    \"event\": {\n      \"date\": \"25 Nov\",\n      \"city\": \"Hamburg\",\n      \"venue\": \"Zenith\",\n      \"capacity\": 450,\n      \"stageCapacity\": 150,\n      \"ticketPrice\": 15,\n      \"openingTime\": \"22:00\",\n      \"closingTime\": \"06:00\",\n      \"stageTime\": {\n        \"start\": \"02:00\","
+    }
+  ],
+  "averageScores": {
+    "schemaConformity": 0.06293706293706293,
+    "contextualConsistency": 0.07575757575757576,
+    "overallScore": 0.06934731934731934,
+    "successRate": 0.09090909090909091
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "messageId": "3",
+  "score": 0.8846153846153846,
+  "timestamp": "2025-05-06T16:09:17.163Z",
+  "errors": [
+    "/booking/event/date must match format \"date\" (actual: 25 Nov 2025)",
+    "/booking/invoice/status must be equal to one of the allowed values (actual: null)",
+    "/booking/contract/status must be equal to one of the allowed values (actual: null)"
+  ]
+}
