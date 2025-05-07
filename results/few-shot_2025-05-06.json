@@ -1,0 +1,5314 @@
+{
+  "strategy": "few-shot",
+  "evaluationResults": [
+    {
+      "messageFile": "message1.txt",
+      "evaluation": {
+        "messageId": "1",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Horizon"
+                  },
+                  "promoter": {
+                    "name": "Stacey Summer",
+                    "company": "Vibrancy Events",
+                    "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                  },
+                  "event": {
+                    "date": "2025-09-20",
+                    "name": "Equinox Festival",
+                    "city": "Berlin",
+                    "venue": "Tempelhof Field",
+                    "capacity": 3500,
+                    "openingTime": null,
+                    "closingTime": null,
+                    "stageTime": {
+                      "start": "2025-09-20T22:30:00Z",
+                      "end": "2025-09-21T00:30:00Z"
+                    }
+                  },
+                  "invoice": {
+                    "amount": 1500,
+                    "status": null
+                  },
+                  "contract": {
+                    "status": null
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Horizon"
+                },
+                "promoter": {
+                  "name": "Stacey Summer",
+                  "company": "Vibrancy Events",
+                  "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                },
+                "event": {
+                  "date": "2025-09-20",
+                  "name": "Equinox Festival",
+                  "city": "Berlin",
+                  "venue": "Tempelhof Field",
+                  "capacity": 3500,
+                  "openingTime": null,
+                  "closingTime": null,
+                  "stageTime": {
+                    "start": "2025-09-20T22:30:00Z",
+                    "end": "2025-09-21T00:30:00Z"
+                  }
+                },
+                "invoice": {
+                  "amount": 1500,
+                  "status": null
+                },
+                "contract": {
+                  "status": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Horizon"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Horizon",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Stacey Summer",
+                "company": "Vibrancy Events",
+                "address": "+49 176 55443322, stacey@vibrancyevents.com"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stacey Summer",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Vibrancy Events",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-09-20",
+                "name": "Equinox Festival",
+                "city": "Berlin",
+                "venue": "Tempelhof Field",
+                "capacity": 3500,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "start": "2025-09-20T22:30:00Z",
+                  "end": "2025-09-21T00:30:00Z"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Equinox Festival",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Berlin",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Tempelhof Field",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 3500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": "2025-09-20T22:30:00Z",
+                "end": "2025-09-21T00:30:00Z"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20T22:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-21T00:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1500,
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 26,
+            "score": 1
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.7222222222222222,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.promoter.address: Expected null, got +49 176 55443322, stacey@vibrancyevents.com",
+            "booking.event.ticketPrice: Missing field",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": null,
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "inquiry",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Horizon",
+              "actual": "DJ Horizon",
+              "matched": true,
+              "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Stacey Summer",
+              "actual": "Stacey Summer",
+              "matched": true,
+              "reason": "'Stacey Summer' → 'staceysummer' matches staceysummer"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Vibrancy Events",
+              "actual": "Vibrancy Events",
+              "matched": true,
+              "reason": "'Vibrancy Events' → 'vibrancyevents' matches vibrancyevents"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": null,
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "matched": false,
+              "reason": "Expected null but got value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": null,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-09-20",
+              "actual": "2025-09-20",
+              "matched": true,
+              "reason": "'2025-09-20' → '20250920' matches 20250920"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Equinox",
+              "actual": "Equinox Festival",
+              "matched": true,
+              "reason": "'Equinox Festival' → 'equinoxfestival' matches equinox"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Berlin",
+              "actual": "Berlin",
+              "matched": true,
+              "reason": "'Berlin' → 'berlin' matches 'Berlin' → 'berlin'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Tempelhof Field",
+              "actual": "Tempelhof Field",
+              "matched": true,
+              "reason": "'Tempelhof Field' → 'tempelhoffield' matches tempelhoffield"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 3500,
+              "actual": 3500,
+              "matched": true,
+              "reason": "'3500' → '3500' matches 3500"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:30:00Z",
+              "actual": "2025-09-20T22:30:00Z",
+              "matched": true,
+              "reason": "'2025-09-20T22:30:00Z' → '20250920t223000z' matches 2230"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-09-21T00:30:00Z",
+              "actual": "2025-09-21T00:30:00Z",
+              "matched": true,
+              "reason": "'2025-09-21T00:30:00Z' → '20250921t003000z' matches 0030"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1500,
+              "matched": true,
+              "reason": "'1500' → '1500' matches 1500"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 13,
+            "score": 0.7222222222222222
+          }
+        },
+        "overallScore": 0.8611111111111112,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message2.txt",
+      "evaluation": {
+        "messageId": "2",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Horizon"
+                  },
+                  "promoter": {
+                    "name": "Stacey Summer",
+                    "company": "Vibrancy Events",
+                    "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                  },
+                  "event": {
+                    "date": "2025-09-20",
+                    "name": "Equinox Festival",
+                    "city": "Berlin",
+                    "venue": "Tempelhof Field",
+                    "capacity": 3500,
+                    "openingTime": null,
+                    "closingTime": null,
+                    "stageTime": {
+                      "start": "2025-09-20T22:30:00Z",
+                      "end": "2025-09-21T00:30:00Z"
+                    }
+                  },
+                  "invoice": {
+                    "amount": 2500,
+                    "status": null
+                  },
+                  "contract": {
+                    "status": null
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Horizon"
+                },
+                "promoter": {
+                  "name": "Stacey Summer",
+                  "company": "Vibrancy Events",
+                  "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                },
+                "event": {
+                  "date": "2025-09-20",
+                  "name": "Equinox Festival",
+                  "city": "Berlin",
+                  "venue": "Tempelhof Field",
+                  "capacity": 3500,
+                  "openingTime": null,
+                  "closingTime": null,
+                  "stageTime": {
+                    "start": "2025-09-20T22:30:00Z",
+                    "end": "2025-09-21T00:30:00Z"
+                  }
+                },
+                "invoice": {
+                  "amount": 2500,
+                  "status": null
+                },
+                "contract": {
+                  "status": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Horizon"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Horizon",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Stacey Summer",
+                "company": "Vibrancy Events",
+                "address": "+49 176 55443322, stacey@vibrancyevents.com"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stacey Summer",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Vibrancy Events",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-09-20",
+                "name": "Equinox Festival",
+                "city": "Berlin",
+                "venue": "Tempelhof Field",
+                "capacity": 3500,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "start": "2025-09-20T22:30:00Z",
+                  "end": "2025-09-21T00:30:00Z"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Equinox Festival",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Berlin",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Tempelhof Field",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 3500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": "2025-09-20T22:30:00Z",
+                "end": "2025-09-21T00:30:00Z"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20T22:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-21T00:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 2500,
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 2500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 26,
+            "score": 1
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.6111111111111112,
+          "errors": [
+            "booking.status: Expected inquiry, got null",
+            "booking.promoter.address: Expected null, got +49 176 55443322, stacey@vibrancyevents.com",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Expected null, got 2025-09-20T22:30:00Z",
+            "booking.event.stageTime.end: Expected null, got 2025-09-21T00:30:00Z",
+            "booking.invoice.status: Expected not sent, got null",
+            "booking.contract.status: Expected not sent, got null"
+          ],
+          "missingFields": [
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "inquiry",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": null,
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com"
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": null,
+              "actual": "2025-09-20T22:30:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": null,
+              "actual": "2025-09-21T00:30:00Z"
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "inquiry",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Horizon",
+              "actual": "DJ Horizon",
+              "matched": true,
+              "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Stacey Summer",
+              "actual": "Stacey Summer",
+              "matched": true,
+              "reason": "'Stacey Summer' → 'staceysummer' matches staceysummer"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Vibrancy Events",
+              "actual": "Vibrancy Events",
+              "matched": true,
+              "reason": "'Vibrancy Events' → 'vibrancyevents' matches vibrancyevents"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": null,
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "matched": false,
+              "reason": "Expected null but got value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": null,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-09-20",
+              "actual": "2025-09-20",
+              "matched": true,
+              "reason": "'2025-09-20' → '20250920' matches 20250920"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Equinox",
+              "actual": "Equinox Festival",
+              "matched": true,
+              "reason": "'Equinox Festival' → 'equinoxfestival' matches equinox"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Berlin",
+              "actual": "Berlin",
+              "matched": true,
+              "reason": "'Berlin' → 'berlin' matches 'Berlin' → 'berlin'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Tempelhof Field",
+              "actual": "Tempelhof Field",
+              "matched": true,
+              "reason": "'Tempelhof Field' → 'tempelhoffield' matches tempelhoffield"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 3500,
+              "actual": 3500,
+              "matched": true,
+              "reason": "'3500' → '3500' matches 3500"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": null,
+              "actual": "2025-09-20T22:30:00Z",
+              "matched": false,
+              "reason": "Expected null but got value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": null,
+              "actual": "2025-09-21T00:30:00Z",
+              "matched": false,
+              "reason": "Expected null but got value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 2500,
+              "actual": 2500,
+              "matched": true,
+              "reason": "'2500' → '2500' matches 2500"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "not sent",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 11,
+            "score": 0.6111111111111112
+          }
+        },
+        "overallScore": 0.8055555555555556,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message3.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 625"
+      }
+    },
+    {
+      "messageFile": "message4.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 625"
+      }
+    },
+    {
+      "messageFile": "message5.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 625"
+      }
+    },
+    {
+      "messageFile": "message6.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 625"
+      }
+    },
+    {
+      "messageFile": "message7.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 630"
+      }
+    },
+    {
+      "messageFile": "message8.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 630"
+      }
+    },
+    {
+      "messageFile": "message9.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 630"
+      }
+    },
+    {
+      "messageFile": "message10.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 630"
+      }
+    },
+    {
+      "messageFile": "message11.txt",
+      "evaluation": {
+        "messageId": "11",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Horizon"
+                  },
+                  "promoter": {
+                    "name": "Stacey Summer",
+                    "company": "Vibrancy Events GmbH",
+                    "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                  },
+                  "event": {
+                    "date": "2025-09-20",
+                    "name": "Equinox Festival",
+                    "city": "Berlin",
+                    "venue": "Tempelhof Field",
+                    "capacity": 3500,
+                    "openingTime": null,
+                    "closingTime": null,
+                    "stageTime": {
+                      "start": "2025-09-20T22:30:00Z",
+                      "end": "2025-09-21T00:30:00Z"
+                    }
+                  },
+                  "invoice": {
+                    "amount": 2900,
+                    "status": "paid"
+                  },
+                  "contract": {
+                    "status": "signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Horizon"
+                },
+                "promoter": {
+                  "name": "Stacey Summer",
+                  "company": "Vibrancy Events GmbH",
+                  "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                },
+                "event": {
+                  "date": "2025-09-20",
+                  "name": "Equinox Festival",
+                  "city": "Berlin",
+                  "venue": "Tempelhof Field",
+                  "capacity": 3500,
+                  "openingTime": null,
+                  "closingTime": null,
+                  "stageTime": {
+                    "start": "2025-09-20T22:30:00Z",
+                    "end": "2025-09-21T00:30:00Z"
+                  }
+                },
+                "invoice": {
+                  "amount": 2900,
+                  "status": "paid"
+                },
+                "contract": {
+                  "status": "signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Horizon"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Horizon",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Stacey Summer",
+                "company": "Vibrancy Events GmbH",
+                "address": "+49 176 55443322, stacey@vibrancyevents.com"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stacey Summer",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Vibrancy Events GmbH",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-09-20",
+                "name": "Equinox Festival",
+                "city": "Berlin",
+                "venue": "Tempelhof Field",
+                "capacity": 3500,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "start": "2025-09-20T22:30:00Z",
+                  "end": "2025-09-21T00:30:00Z"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Equinox Festival",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Berlin",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Tempelhof Field",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 3500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": "2025-09-20T22:30:00Z",
+                "end": "2025-09-21T00:30:00Z"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20T22:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-21T00:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 2900,
+                "status": "paid"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 2900,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "paid",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 26,
+            "score": 1
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.6111111111111112,
+          "errors": [
+            "booking.status: Expected confirmed, got null",
+            "booking.promoter.address: Expected Frankfurter Allee 77, 10247 Berlin, Germany, got +49 176 55443322, stacey@vibrancyevents.com",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Expected 2025-09-20T22:00:00Z, got 2025-09-20T22:30:00Z",
+            "booking.event.stageTime.end: Expected 2025-09-20T23:30:00Z, got 2025-09-21T00:30:00Z",
+            "booking.invoice.amount: Expected 2200, got 2900",
+            "booking.invoice.status: Expected deposit paid, got paid"
+          ],
+          "missingFields": [
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com"
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z"
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid"
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Horizon",
+              "actual": "DJ Horizon",
+              "matched": true,
+              "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Stacey Summer",
+              "actual": "Stacey Summer",
+              "matched": true,
+              "reason": "'Stacey Summer' → 'staceysummer' matches staceysummer"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Vibrancy Events GmbH",
+              "actual": "Vibrancy Events GmbH",
+              "matched": true,
+              "reason": "'Vibrancy Events GmbH' → 'vibrancyeventsgmbh' matches vibrancyeventsgmbh"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "matched": false,
+              "reason": "'+49 176 55443322, stacey@vibrancyevents.com' → '4917655443322staceyvibrancyeventscom' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": null,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-09-20",
+              "actual": "2025-09-20",
+              "matched": true,
+              "reason": "'2025-09-20' → '20250920' matches 20250920"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Equinox",
+              "actual": "Equinox Festival",
+              "matched": true,
+              "reason": "'Equinox Festival' → 'equinoxfestival' matches equinox"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Berlin",
+              "actual": "Berlin",
+              "matched": true,
+              "reason": "'Berlin' → 'berlin' matches 'Berlin' → 'berlin'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Tempelhof Field",
+              "actual": "Tempelhof Field",
+              "matched": true,
+              "reason": "'Tempelhof Field' → 'tempelhoffield' matches tempelhoffield"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 3500,
+              "actual": 3500,
+              "matched": true,
+              "reason": "'3500' → '3500' matches 3500"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-20T22:30:00Z' → '20250920t223000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-21T00:30:00Z' → '20250921t003000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900,
+              "matched": false,
+              "reason": "'2900' → '2900' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid",
+              "matched": false,
+              "reason": "'paid' → 'paid' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "signed",
+              "actual": "signed",
+              "matched": true,
+              "reason": "'signed' → 'signed' matches signed"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 11,
+            "score": 0.6111111111111112
+          }
+        },
+        "overallScore": 0.8055555555555556,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message12.txt",
+      "evaluation": {
+        "messageId": "12",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Horizon"
+                  },
+                  "promoter": {
+                    "name": "Stacey Summer",
+                    "company": "Vibrancy Events GmbH",
+                    "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                  },
+                  "event": {
+                    "date": "2025-09-20",
+                    "name": "Equinox Festival",
+                    "city": "Berlin",
+                    "venue": "Tempelhof Field",
+                    "capacity": 3500,
+                    "openingTime": null,
+                    "closingTime": null,
+                    "stageTime": {
+                      "start": "2025-09-20T22:30:00Z",
+                      "end": "2025-09-21T00:30:00Z"
+                    }
+                  },
+                  "invoice": {
+                    "amount": 2900,
+                    "status": "paid"
+                  },
+                  "contract": {
+                    "status": "signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Horizon"
+                },
+                "promoter": {
+                  "name": "Stacey Summer",
+                  "company": "Vibrancy Events GmbH",
+                  "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                },
+                "event": {
+                  "date": "2025-09-20",
+                  "name": "Equinox Festival",
+                  "city": "Berlin",
+                  "venue": "Tempelhof Field",
+                  "capacity": 3500,
+                  "openingTime": null,
+                  "closingTime": null,
+                  "stageTime": {
+                    "start": "2025-09-20T22:30:00Z",
+                    "end": "2025-09-21T00:30:00Z"
+                  }
+                },
+                "invoice": {
+                  "amount": 2900,
+                  "status": "paid"
+                },
+                "contract": {
+                  "status": "signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Horizon"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Horizon",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Stacey Summer",
+                "company": "Vibrancy Events GmbH",
+                "address": "+49 176 55443322, stacey@vibrancyevents.com"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stacey Summer",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Vibrancy Events GmbH",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-09-20",
+                "name": "Equinox Festival",
+                "city": "Berlin",
+                "venue": "Tempelhof Field",
+                "capacity": 3500,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "start": "2025-09-20T22:30:00Z",
+                  "end": "2025-09-21T00:30:00Z"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Equinox Festival",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Berlin",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Tempelhof Field",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 3500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": "2025-09-20T22:30:00Z",
+                "end": "2025-09-21T00:30:00Z"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20T22:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-21T00:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 2900,
+                "status": "paid"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 2900,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "paid",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 26,
+            "score": 1
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.5555555555555556,
+          "errors": [
+            "booking.status: Expected confirmed, got null",
+            "booking.promoter.address: Expected Frankfurter Allee 77, 10247 Berlin, Germany, got +49 176 55443322, stacey@vibrancyevents.com",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Expected 2025-09-20T22:00:00Z, got 2025-09-20T22:30:00Z",
+            "booking.event.stageTime.end: Expected 2025-09-20T23:30:00Z, got 2025-09-21T00:30:00Z",
+            "booking.invoice.amount: Expected 2200, got 2900",
+            "booking.invoice.status: Expected deposit paid, got paid",
+            "booking.contract.status: Expected cosigned, got signed"
+          ],
+          "missingFields": [
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com"
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z"
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed"
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Horizon",
+              "actual": "DJ Horizon",
+              "matched": true,
+              "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Stacey Summer",
+              "actual": "Stacey Summer",
+              "matched": true,
+              "reason": "'Stacey Summer' → 'staceysummer' matches staceysummer"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Vibrancy Events GmbH",
+              "actual": "Vibrancy Events GmbH",
+              "matched": true,
+              "reason": "'Vibrancy Events GmbH' → 'vibrancyeventsgmbh' matches vibrancyeventsgmbh"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "matched": false,
+              "reason": "'+49 176 55443322, stacey@vibrancyevents.com' → '4917655443322staceyvibrancyeventscom' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": null,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-09-20",
+              "actual": "2025-09-20",
+              "matched": true,
+              "reason": "'2025-09-20' → '20250920' matches 20250920"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Equinox",
+              "actual": "Equinox Festival",
+              "matched": true,
+              "reason": "'Equinox Festival' → 'equinoxfestival' matches equinox"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Berlin",
+              "actual": "Berlin",
+              "matched": true,
+              "reason": "'Berlin' → 'berlin' matches 'Berlin' → 'berlin'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Tempelhof Field",
+              "actual": "Tempelhof Field",
+              "matched": true,
+              "reason": "'Tempelhof Field' → 'tempelhoffield' matches tempelhoffield"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 3500,
+              "actual": 3500,
+              "matched": true,
+              "reason": "'3500' → '3500' matches 3500"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-20T22:30:00Z' → '20250920t223000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-21T00:30:00Z' → '20250921t003000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900,
+              "matched": false,
+              "reason": "'2900' → '2900' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid",
+              "matched": false,
+              "reason": "'paid' → 'paid' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed",
+              "matched": false,
+              "reason": "'signed' → 'signed' doesn't match any accepted values"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 10,
+            "score": 0.5555555555555556
+          }
+        },
+        "overallScore": 0.7777777777777778,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message13.txt",
+      "evaluation": {
+        "messageId": "13",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Horizon"
+                  },
+                  "promoter": {
+                    "name": "Stacey Summer",
+                    "company": "Vibrancy Events GmbH",
+                    "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                  },
+                  "event": {
+                    "date": "2025-09-20",
+                    "name": "Equinox Festival",
+                    "city": "Berlin",
+                    "venue": "Tempelhof Field",
+                    "capacity": 3500,
+                    "openingTime": null,
+                    "closingTime": null,
+                    "stageTime": {
+                      "start": "2025-09-20T22:30:00Z",
+                      "end": "2025-09-21T00:30:00Z"
+                    }
+                  },
+                  "invoice": {
+                    "amount": 2900,
+                    "status": "paid"
+                  },
+                  "contract": {
+                    "status": "signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Horizon"
+                },
+                "promoter": {
+                  "name": "Stacey Summer",
+                  "company": "Vibrancy Events GmbH",
+                  "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                },
+                "event": {
+                  "date": "2025-09-20",
+                  "name": "Equinox Festival",
+                  "city": "Berlin",
+                  "venue": "Tempelhof Field",
+                  "capacity": 3500,
+                  "openingTime": null,
+                  "closingTime": null,
+                  "stageTime": {
+                    "start": "2025-09-20T22:30:00Z",
+                    "end": "2025-09-21T00:30:00Z"
+                  }
+                },
+                "invoice": {
+                  "amount": 2900,
+                  "status": "paid"
+                },
+                "contract": {
+                  "status": "signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Horizon"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Horizon",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Stacey Summer",
+                "company": "Vibrancy Events GmbH",
+                "address": "+49 176 55443322, stacey@vibrancyevents.com"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stacey Summer",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Vibrancy Events GmbH",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-09-20",
+                "name": "Equinox Festival",
+                "city": "Berlin",
+                "venue": "Tempelhof Field",
+                "capacity": 3500,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "start": "2025-09-20T22:30:00Z",
+                  "end": "2025-09-21T00:30:00Z"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Equinox Festival",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Berlin",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Tempelhof Field",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 3500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": "2025-09-20T22:30:00Z",
+                "end": "2025-09-21T00:30:00Z"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20T22:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-21T00:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 2900,
+                "status": "paid"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 2900,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "paid",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 26,
+            "score": 1
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.5555555555555556,
+          "errors": [
+            "booking.status: Expected confirmed, got null",
+            "booking.promoter.address: Expected Frankfurter Allee 77, 10247 Berlin, Germany, got +49 176 55443322, stacey@vibrancyevents.com",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Expected 2025-09-20T22:00:00Z, got 2025-09-20T22:30:00Z",
+            "booking.event.stageTime.end: Expected 2025-09-20T23:30:00Z, got 2025-09-21T00:30:00Z",
+            "booking.invoice.amount: Expected 2200, got 2900",
+            "booking.invoice.status: Expected deposit paid, got paid",
+            "booking.contract.status: Expected cosigned, got signed"
+          ],
+          "missingFields": [
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com"
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z"
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed"
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Horizon",
+              "actual": "DJ Horizon",
+              "matched": true,
+              "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Stacey Summer",
+              "actual": "Stacey Summer",
+              "matched": true,
+              "reason": "'Stacey Summer' → 'staceysummer' matches staceysummer"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Vibrancy Events GmbH",
+              "actual": "Vibrancy Events GmbH",
+              "matched": true,
+              "reason": "'Vibrancy Events GmbH' → 'vibrancyeventsgmbh' matches vibrancyeventsgmbh"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "matched": false,
+              "reason": "'+49 176 55443322, stacey@vibrancyevents.com' → '4917655443322staceyvibrancyeventscom' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": null,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-09-20",
+              "actual": "2025-09-20",
+              "matched": true,
+              "reason": "'2025-09-20' → '20250920' matches 20250920"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Equinox",
+              "actual": "Equinox Festival",
+              "matched": true,
+              "reason": "'Equinox Festival' → 'equinoxfestival' matches equinox"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Berlin",
+              "actual": "Berlin",
+              "matched": true,
+              "reason": "'Berlin' → 'berlin' matches 'Berlin' → 'berlin'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Tempelhof Field",
+              "actual": "Tempelhof Field",
+              "matched": true,
+              "reason": "'Tempelhof Field' → 'tempelhoffield' matches tempelhoffield"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 3500,
+              "actual": 3500,
+              "matched": true,
+              "reason": "'3500' → '3500' matches 3500"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-20T22:30:00Z' → '20250920t223000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-21T00:30:00Z' → '20250921t003000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900,
+              "matched": false,
+              "reason": "'2900' → '2900' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid",
+              "matched": false,
+              "reason": "'paid' → 'paid' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed",
+              "matched": false,
+              "reason": "'signed' → 'signed' doesn't match any accepted values"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 10,
+            "score": 0.5555555555555556
+          }
+        },
+        "overallScore": 0.7777777777777778,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message14.txt",
+      "evaluation": {
+        "messageId": "14",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Horizon"
+                  },
+                  "promoter": {
+                    "name": "Stacey Summer",
+                    "company": "Vibrancy Events GmbH",
+                    "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                  },
+                  "event": {
+                    "date": "2025-09-20",
+                    "name": "Equinox Festival",
+                    "city": "Berlin",
+                    "venue": "Tempelhof Field",
+                    "capacity": 3500,
+                    "openingTime": null,
+                    "closingTime": null,
+                    "stageTime": {
+                      "start": "2025-09-20T22:30:00Z",
+                      "end": "2025-09-21T00:30:00Z"
+                    }
+                  },
+                  "invoice": {
+                    "amount": 2900,
+                    "status": "paid"
+                  },
+                  "contract": {
+                    "status": "signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Horizon"
+                },
+                "promoter": {
+                  "name": "Stacey Summer",
+                  "company": "Vibrancy Events GmbH",
+                  "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                },
+                "event": {
+                  "date": "2025-09-20",
+                  "name": "Equinox Festival",
+                  "city": "Berlin",
+                  "venue": "Tempelhof Field",
+                  "capacity": 3500,
+                  "openingTime": null,
+                  "closingTime": null,
+                  "stageTime": {
+                    "start": "2025-09-20T22:30:00Z",
+                    "end": "2025-09-21T00:30:00Z"
+                  }
+                },
+                "invoice": {
+                  "amount": 2900,
+                  "status": "paid"
+                },
+                "contract": {
+                  "status": "signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Horizon"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Horizon",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Stacey Summer",
+                "company": "Vibrancy Events GmbH",
+                "address": "+49 176 55443322, stacey@vibrancyevents.com"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stacey Summer",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Vibrancy Events GmbH",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-09-20",
+                "name": "Equinox Festival",
+                "city": "Berlin",
+                "venue": "Tempelhof Field",
+                "capacity": 3500,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "start": "2025-09-20T22:30:00Z",
+                  "end": "2025-09-21T00:30:00Z"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Equinox Festival",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Berlin",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Tempelhof Field",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 3500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": "2025-09-20T22:30:00Z",
+                "end": "2025-09-21T00:30:00Z"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20T22:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-21T00:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 2900,
+                "status": "paid"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 2900,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "paid",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 26,
+            "score": 1
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.5555555555555556,
+          "errors": [
+            "booking.status: Expected confirmed, got null",
+            "booking.promoter.address: Expected Frankfurter Allee 77, 10247 Berlin, Germany, got +49 176 55443322, stacey@vibrancyevents.com",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Expected 2025-09-20T22:00:00Z, got 2025-09-20T22:30:00Z",
+            "booking.event.stageTime.end: Expected 2025-09-20T23:30:00Z, got 2025-09-21T00:30:00Z",
+            "booking.invoice.amount: Expected 2200, got 2900",
+            "booking.invoice.status: Expected deposit paid, got paid",
+            "booking.contract.status: Expected cosigned, got signed"
+          ],
+          "missingFields": [
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com"
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z"
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed"
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Horizon",
+              "actual": "DJ Horizon",
+              "matched": true,
+              "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Stacey Summer",
+              "actual": "Stacey Summer",
+              "matched": true,
+              "reason": "'Stacey Summer' → 'staceysummer' matches staceysummer"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Vibrancy Events GmbH",
+              "actual": "Vibrancy Events GmbH",
+              "matched": true,
+              "reason": "'Vibrancy Events GmbH' → 'vibrancyeventsgmbh' matches vibrancyeventsgmbh"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "matched": false,
+              "reason": "'+49 176 55443322, stacey@vibrancyevents.com' → '4917655443322staceyvibrancyeventscom' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": null,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-09-20",
+              "actual": "2025-09-20",
+              "matched": true,
+              "reason": "'2025-09-20' → '20250920' matches 20250920"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Equinox",
+              "actual": "Equinox Festival",
+              "matched": true,
+              "reason": "'Equinox Festival' → 'equinoxfestival' matches equinox"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Berlin",
+              "actual": "Berlin",
+              "matched": true,
+              "reason": "'Berlin' → 'berlin' matches 'Berlin' → 'berlin'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Tempelhof Field",
+              "actual": "Tempelhof Field",
+              "matched": true,
+              "reason": "'Tempelhof Field' → 'tempelhoffield' matches tempelhoffield"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 3500,
+              "actual": 3500,
+              "matched": true,
+              "reason": "'3500' → '3500' matches 3500"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-20T22:30:00Z' → '20250920t223000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-21T00:30:00Z' → '20250921t003000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900,
+              "matched": false,
+              "reason": "'2900' → '2900' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid",
+              "matched": false,
+              "reason": "'paid' → 'paid' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed",
+              "matched": false,
+              "reason": "'signed' → 'signed' doesn't match any accepted values"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 10,
+            "score": 0.5555555555555556
+          }
+        },
+        "overallScore": 0.7777777777777778,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message15.txt",
+      "evaluation": {
+        "messageId": "15",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Horizon"
+                  },
+                  "promoter": {
+                    "name": "Stacey Summer",
+                    "company": "Vibrancy Events GmbH",
+                    "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                  },
+                  "event": {
+                    "date": "2025-09-20",
+                    "name": "Equinox Festival",
+                    "city": "Berlin",
+                    "venue": "Tempelhof Field",
+                    "capacity": 3500,
+                    "openingTime": null,
+                    "closingTime": null,
+                    "stageTime": {
+                      "start": "2025-09-20T22:30:00Z",
+                      "end": "2025-09-21T00:30:00Z"
+                    }
+                  },
+                  "invoice": {
+                    "amount": 2900,
+                    "status": "paid"
+                  },
+                  "contract": {
+                    "status": "signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Horizon"
+                },
+                "promoter": {
+                  "name": "Stacey Summer",
+                  "company": "Vibrancy Events GmbH",
+                  "address": "+49 176 55443322, stacey@vibrancyevents.com"
+                },
+                "event": {
+                  "date": "2025-09-20",
+                  "name": "Equinox Festival",
+                  "city": "Berlin",
+                  "venue": "Tempelhof Field",
+                  "capacity": 3500,
+                  "openingTime": null,
+                  "closingTime": null,
+                  "stageTime": {
+                    "start": "2025-09-20T22:30:00Z",
+                    "end": "2025-09-21T00:30:00Z"
+                  }
+                },
+                "invoice": {
+                  "amount": 2900,
+                  "status": "paid"
+                },
+                "contract": {
+                  "status": "signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Horizon"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Horizon",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Stacey Summer",
+                "company": "Vibrancy Events GmbH",
+                "address": "+49 176 55443322, stacey@vibrancyevents.com"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stacey Summer",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Vibrancy Events GmbH",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2025-09-20",
+                "name": "Equinox Festival",
+                "city": "Berlin",
+                "venue": "Tempelhof Field",
+                "capacity": 3500,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "start": "2025-09-20T22:30:00Z",
+                  "end": "2025-09-21T00:30:00Z"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Equinox Festival",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Berlin",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Tempelhof Field",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 3500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": "2025-09-20T22:30:00Z",
+                "end": "2025-09-21T00:30:00Z"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-20T22:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2025-09-21T00:30:00Z",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 2900,
+                "status": "paid"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 2900,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "paid",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 26,
+            "score": 1
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.5555555555555556,
+          "errors": [
+            "booking.status: Expected confirmed, got null",
+            "booking.promoter.address: Expected Frankfurter Allee 77, 10247 Berlin, Germany, got +49 176 55443322, stacey@vibrancyevents.com",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Expected 2025-09-20T22:00:00Z, got 2025-09-20T22:30:00Z",
+            "booking.event.stageTime.end: Expected 2025-09-20T23:30:00Z, got 2025-09-21T00:30:00Z",
+            "booking.invoice.amount: Expected 2200, got 2900",
+            "booking.invoice.status: Expected deposit paid, got paid",
+            "booking.contract.status: Expected cosigned, got signed"
+          ],
+          "missingFields": [
+            "booking.event.ticketPrice"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": null
+            },
+            {
+              "field": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com"
+            },
+            {
+              "field": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z"
+            },
+            {
+              "field": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z"
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed"
+            }
+          ],
+          "additionalFields": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": null,
+              "matched": false,
+              "reason": "Expected value but got null"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Horizon",
+              "actual": "DJ Horizon",
+              "matched": true,
+              "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Stacey Summer",
+              "actual": "Stacey Summer",
+              "matched": true,
+              "reason": "'Stacey Summer' → 'staceysummer' matches staceysummer"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Vibrancy Events GmbH",
+              "actual": "Vibrancy Events GmbH",
+              "matched": true,
+              "reason": "'Vibrancy Events GmbH' → 'vibrancyeventsgmbh' matches vibrancyeventsgmbh"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+              "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+              "matched": false,
+              "reason": "'+49 176 55443322, stacey@vibrancyevents.com' → '4917655443322staceyvibrancyeventscom' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": null,
+              "matched": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2025-09-20",
+              "actual": "2025-09-20",
+              "matched": true,
+              "reason": "'2025-09-20' → '20250920' matches 20250920"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Equinox",
+              "actual": "Equinox Festival",
+              "matched": true,
+              "reason": "'Equinox Festival' → 'equinoxfestival' matches equinox"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Berlin",
+              "actual": "Berlin",
+              "matched": true,
+              "reason": "'Berlin' → 'berlin' matches 'Berlin' → 'berlin'"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Tempelhof Field",
+              "actual": "Tempelhof Field",
+              "matched": true,
+              "reason": "'Tempelhof Field' → 'tempelhoffield' matches tempelhoffield"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 3500,
+              "actual": 3500,
+              "matched": true,
+              "reason": "'3500' → '3500' matches 3500"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": null,
+              "actual": null,
+              "matched": true,
+              "reason": "Both values are null"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2025-09-20T22:00:00Z",
+              "actual": "2025-09-20T22:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-20T22:30:00Z' → '20250920t223000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2025-09-20T23:30:00Z",
+              "actual": "2025-09-21T00:30:00Z",
+              "matched": false,
+              "reason": "'2025-09-21T00:30:00Z' → '20250921t003000z' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 2200,
+              "actual": 2900,
+              "matched": false,
+              "reason": "'2900' → '2900' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "deposit paid",
+              "actual": "paid",
+              "matched": false,
+              "reason": "'paid' → 'paid' doesn't match any accepted values"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "cosigned",
+              "actual": "signed",
+              "matched": false,
+              "reason": "'signed' → 'signed' doesn't match any accepted values"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 10,
+            "score": 0.5555555555555556
+          }
+        },
+        "overallScore": 0.7777777777777778,
+        "parsingIssues": []
+      }
+    }
+  ],
+  "processedResponses": [
+    {
+      "file": "message1.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"end\": "
+    },
+    {
+      "file": "message2.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"end\": "
+    },
+    {
+      "file": "message3.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"end\": "
+    },
+    {
+      "file": "message4.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"end\": "
+    },
+    {
+      "file": "message5.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"end\": "
+    },
+    {
+      "file": "message6.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"end\": "
+    },
+    {
+      "file": "message7.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    },
+    {
+      "file": "message8.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    },
+    {
+      "file": "message9.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    },
+    {
+      "file": "message10.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    },
+    {
+      "file": "message11.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    },
+    {
+      "file": "message12.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    },
+    {
+      "file": "message13.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    },
+    {
+      "file": "message14.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    },
+    {
+      "file": "message15.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Horizon\" },\n    \"promoter\": { \"name\": \"Stacey Summer\", \"company\": \"Vibrancy Events GmbH\", \"address\": \"+49 176 55443322, stacey@vibrancyevents.com\" },\n    \"event\": {\n      \"date\": \"2025-09-20\",\n      \"name\": \"Equinox Festival\",\n      \"city\": \"Berlin\",\n      \"venue\": \"Tempelhof Field\",\n      \"capacity\": 3500,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": \"2025-09-20T22:30:00Z\",\n        \"e"
+    }
+  ],
+  "averageScores": {
+    "schemaConformity": 0.4666666666666667,
+    "contextualConsistency": 0.27777777777777773,
+    "overallScore": 0.3722222222222222,
+    "successRate": 0.4666666666666667
+  }
+}

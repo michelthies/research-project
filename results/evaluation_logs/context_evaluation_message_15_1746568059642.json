@@ -1,0 +1,181 @@
+{
+  "messageId": "15",
+  "score": 0.3125,
+  "timestamp": "2025-05-06T21:47:39.642Z",
+  "evaluationLog": [
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 2200,
+        "status": "deposit paid"
+      },
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.interview",
+      "actual": {
+        "type": "Zoom",
+        "duration": 15,
+        "schedule": {
+          "start": null,
+          "end": null
+        }
+      },
+      "matched": false,
+      "reason": "Additional field"
+    },
+    {
+      "path": "booking.logistics",
+      "actual": {
+        "travelArrangements": true,
+        "otherLogisticalDetails": true
+      },
+      "matched": false,
+      "reason": "Additional field"
+    },
+    {
+      "path": "booking.contractChanges",
+      "actual": [
+        {
+          "request": "Please use the attached updated artist photo, which is from their recent press kit"
+        },
+        {
+          "request": "Could you adjust the font size of DJ Horizon's name to match the other headliners?"
+        }
+      ],
+      "matched": false,
+      "reason": "Additional field"
+    },
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "confirmed",
+      "matched": true,
+      "reason": "'confirmed' → 'confirmed' matches confirmed"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Horizon",
+      "actual": "DJ Horizon",
+      "matched": true,
+      "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+    },
+    {
+      "path": "booking.promoter.vatNumber",
+      "actual": "DE287651088",
+      "matched": false,
+      "reason": "Additional field"
+    },
+    {
+      "path": "booking.promoter.signatoryName",
+      "actual": "Stacey Summer",
+      "matched": false,
+      "reason": "Additional field"
+    },
+    {
+      "path": "booking.promoter.signatoryPosition",
+      "actual": "Managing Director",
+      "matched": false,
+      "reason": "Additional field"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Stacey Summer",
+      "actual": "Stacey Summer",
+      "matched": true,
+      "reason": "'Stacey Summer' → 'staceysummer' matches staceysummer"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Vibrancy Events GmbH",
+      "actual": "Vibrancy Events GmbH",
+      "matched": true,
+      "reason": "'Vibrancy Events GmbH' → 'vibrancyeventsgmbh' matches vibrancyeventsgmbh"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+      "actual": "+49 176 55443322, stacey@vibrancyevents.com",
+      "matched": false,
+      "reason": "'+49 176 55443322, stacey@vibrancyevents.com' → '4917655443322staceyvibrancyeventscom' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2025-09-20",
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Berlin",
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Tempelhof Field",
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 3500,
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": null,
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": null,
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": null,
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.stageTime",
+      "expected": {
+        "start": "2025-09-20T22:00:00Z",
+        "end": "2025-09-20T23:30:00Z"
+      },
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Equinox",
+      "actual": "Equinox Festival",
+      "matched": true,
+      "reason": "'Equinox Festival' → 'equinoxfestival' matches equinox"
+    },
+    {
+      "path": "booking.contract.dedicatedSoundEngineerRequired",
+      "actual": false,
+      "matched": false,
+      "reason": "Additional field"
+    },
+    {
+      "path": "booking.contract.technicalRider",
+      "actual": {},
+      "matched": false,
+      "reason": "Additional field"
+    },
+    {
+      "path": "booking.contract.status",
+      "expected": "cosigned",
+      "actual": "confirmed",
+      "matched": false,
+      "reason": "'confirmed' → 'confirmed' doesn't match any accepted values"
+    }
+  ]
+}

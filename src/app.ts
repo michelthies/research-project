@@ -304,14 +304,14 @@ async function processMessage(
 // Process entire email thread with given strategy and evaluate results
 async function runCompleteThread(strategy: PromptingStrategy): Promise<any> {
   // Set data paths
-  const threadPath = path.join(process.cwd(), "data/emailThreads/thread1");
+  const threadPath = path.join(process.cwd(), "data/emailThreads/thread2");
   const schemaPath = path.join(
     process.cwd(),
     "data/schema/booking_schema.json"
   );
   const groundTruthPath = path.join(
     process.cwd(),
-    "data/emailThreads/thread1/groundTruth.json"
+    "data/emailThreads/thread2/groundTruth.json"
   );
 
   // Initialize schema and evaluator

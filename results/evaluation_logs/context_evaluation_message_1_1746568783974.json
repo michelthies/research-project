@@ -1,0 +1,121 @@
+{
+  "messageId": "1",
+  "score": 0.1875,
+  "timestamp": "2025-05-06T21:59:43.974Z",
+  "evaluationLog": [
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events",
+        "address": null
+      },
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Horizon",
+      "actual": "DJ Khaled",
+      "matched": false,
+      "reason": "'DJ Khaled' → 'djkhaled' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Equinox",
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2025-09-20",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Berlin",
+      "actual": "Miami",
+      "matched": false,
+      "reason": "'Miami' → 'miami' doesn't match 'Berlin' → 'berlin'"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Tempelhof Field",
+      "actual": "American Airlines Arena",
+      "matched": false,
+      "reason": "'American Airlines Arena' → 'americanairlinesarena' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 3500,
+      "actual": 20000,
+      "matched": false,
+      "reason": "'20000' → '20000' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": null,
+      "actual": 50,
+      "matched": false,
+      "reason": "Expected null but got value"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": null,
+      "actual": null,
+      "matched": true,
+      "reason": "Both values are null"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": null,
+      "actual": null,
+      "matched": true,
+      "reason": "Both values are null"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2025-09-20T22:30:00Z",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2025-09-21T00:30:00Z",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 1500,
+      "actual": 5000,
+      "matched": false,
+      "reason": "'5000' → '5000' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.invoice.status",
+      "expected": "not sent",
+      "actual": "not sent",
+      "matched": true,
+      "reason": "'not sent' → 'notsent' matches notsent"
+    },
+    {
+      "path": "booking.contract.status",
+      "expected": "not sent",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    }
+  ]
+}

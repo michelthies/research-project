@@ -1,0 +1,131 @@
+{
+  "messageId": "4",
+  "score": 0.3888888888888889,
+  "timestamp": "2025-05-06T21:51:18.590Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Horizon",
+      "actual": "DJ Horizon",
+      "matched": true,
+      "reason": "'DJ Horizon' → 'djhorizon' matches djhorizon"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Stacey Summer",
+      "actual": "Mike Muller",
+      "matched": false,
+      "reason": "'Mike Muller' → 'mikemuller' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Vibrancy Events",
+      "actual": "Stellar Bookings",
+      "matched": false,
+      "reason": "'Stellar Bookings' → 'stellarbookings' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": null,
+      "actual": "+49 163 4546464",
+      "matched": false,
+      "reason": "Expected null but got value"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Equinox",
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": null,
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2025-09-20",
+      "actual": "2025-09-20",
+      "matched": true,
+      "reason": "'2025-09-20' → '20250920' matches 20250920"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Berlin",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Tempelhof Field",
+      "actual": "Moxy Berlin",
+      "matched": false,
+      "reason": "'Moxy Berlin' → 'moxyberlin' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 3500,
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": null,
+      "actual": null,
+      "matched": true,
+      "reason": "Both values are null"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": null,
+      "actual": null,
+      "matched": true,
+      "reason": "Both values are null"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2025-09-20T22:00:00Z",
+      "actual": "2025-09-20T22:00:00Z",
+      "matched": true,
+      "reason": "'2025-09-20T22:00:00Z' → '20250920t220000z' matches 2200"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2025-09-20T23:30:00Z",
+      "actual": "2025-09-21T23:30:00Z",
+      "matched": true,
+      "reason": "'2025-09-21T23:30:00Z' → '20250921t233000z' matches 2330"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 2200,
+      "actual": 2200,
+      "matched": true,
+      "reason": "'2200' → '2200' matches 2200"
+    },
+    {
+      "path": "booking.invoice.status",
+      "expected": "not sent",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.contract.status",
+      "expected": "not sent",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    }
+  ]
+}

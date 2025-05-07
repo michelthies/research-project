@@ -1,0 +1,132 @@
+{
+  "messageId": "4",
+  "score": 0.2222222222222222,
+  "timestamp": "2025-05-06T22:00:32.180Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": "confirmed",
+      "matched": false,
+      "reason": "'confirmed' → 'confirmed' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Horizon",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Stacey Summer",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Vibrancy Events",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": null,
+      "actual": null,
+      "matched": true,
+      "reason": "Both values are null"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Equinox",
+      "matched": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2025-09-20",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Berlin",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Tempelhof Field",
+      "actual": "Mohegan Sun",
+      "matched": false,
+      "reason": "'Mohegan Sun' → 'mohegansun' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 3500,
+      "actual": 5000,
+      "matched": false,
+      "reason": "'5000' → '5000' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": null,
+      "actual": 100,
+      "matched": false,
+      "reason": "Expected null but got value"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": null,
+      "actual": null,
+      "matched": true,
+      "reason": "Both values are null"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": null,
+      "actual": null,
+      "matched": true,
+      "reason": "Both values are null"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2025-09-20T22:00:00Z",
+      "actual": "2023-03-17T19:00:00Z",
+      "matched": false,
+      "reason": "'2023-03-17T19:00:00Z' → '20230317t190000z' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2025-09-20T23:30:00Z",
+      "actual": "2023-03-17T21:00:00Z",
+      "matched": false,
+      "reason": "'2023-03-17T21:00:00Z' → '20230317t210000z' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 2200,
+      "actual": 5000,
+      "matched": false,
+      "reason": "'5000' → '5000' doesn't match any accepted values"
+    },
+    {
+      "path": "booking.invoice.status",
+      "expected": "not sent",
+      "actual": "not sent",
+      "matched": true,
+      "reason": "'not sent' → 'notsent' matches notsent"
+    },
+    {
+      "path": "booking.contract.status",
+      "expected": "not sent",
+      "actual": null,
+      "matched": false,
+      "reason": "Expected value but got null"
+    }
+  ]
+}
