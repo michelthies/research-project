@@ -295,7 +295,24 @@ async function processMessage(
     } catch (e: any) {
       log(`Evaluation failed: ${e}`);
       evaluation = { error: "Failed to evaluate", details: e.toString() };
+  
+      // Increment the parsing failure counter in the evaluator
+      if (evaluator) {
+        // We need to explicitly increment the counter in the evaluator
+        evaluator.evaluate(messageNum, response); // This will increment the counter
+      }
+      
+      // Increment the parsing failure counter in the evaluator
+      // This should be handled by the evaluate method, but we'll also handle it here
+      // for the case where the parsing fails before reaching the evaluator
     }
+    
+    // Move this AFTER the try/catch block so it reports the current state
+    const parsingFailures = evaluator.getParsingFailures();
+    const totalProcessed = parseInt(messageNum); // Or track a running count
+    const parsingFailureRate = evaluator.getParsingFailureRate(totalProcessed);
+    
+    log(`Parsing failures: ${parsingFailures} out of ${totalProcessed} messages (${(parsingFailureRate * 100).toFixed(1)}%)`);
   }
 
   return { response, evaluation };
@@ -304,14 +321,14 @@ async function processMessage(
 // Process entire email thread with given strategy and evaluate results
 async function runCompleteThread(strategy: PromptingStrategy): Promise<any> {
   // Set data paths
-  const threadPath = path.join(process.cwd(), "data/emailThreads/thread2");
+  const threadPath = path.join(process.cwd(), "data/emailThreads/thread1");
   const schemaPath = path.join(
     process.cwd(),
     "data/schema/booking_schema.json"
   );
   const groundTruthPath = path.join(
     process.cwd(),
-    "data/emailThreads/thread2/groundTruth.json"
+    "data/emailThreads/thread1/groundTruth.json"
   );
 
   // Initialize schema and evaluator

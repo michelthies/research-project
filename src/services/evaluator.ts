@@ -1,7 +1,7 @@
+// Service that evaluates extracted data against schema structure and contextual truth
 import { SchemaEvaluator, SchemaConformityResult } from './schemaEvaluator';
 import { ContextEvaluator, ContextConsistencyResult } from './contextEvaluator';
-import fs from 'fs/promises';
-import path from 'path';
+import { Logger } from './logger';
 
 export interface EvaluationResult {
   messageId: string;
@@ -9,12 +9,15 @@ export interface EvaluationResult {
   contextualConsistency: ContextConsistencyResult;  // Results from contextual data validation
   overallScore: number;  // Weighted average of schema and context scores
   parsingIssues?: string[]; // Optional array to track JSON parsing issues
+  error?: string; // For error message when evaluation fails
+  details?: string; // For detailed error information
 }
 
 export class Evaluator {
   private schemaEvaluator: SchemaEvaluator;
   private contextEvaluator: ContextEvaluator;
   private enableDetailedLogs: boolean;
+  private parsingFailures: number = 0; // Counter for parsing failures
   
   constructor(schema: any, groundTruth: Record<string, any>, enableLogs: boolean = true) {
     this.schemaEvaluator = new SchemaEvaluator(schema);
@@ -23,6 +26,8 @@ export class Evaluator {
   }
   
   async evaluate(messageId: string, extractedData: any): Promise<EvaluationResult> {
+    
+    // Initialize result object with default values
     const result: EvaluationResult = {
       messageId,
       schemaConformity: {} as SchemaConformityResult,
@@ -33,85 +38,69 @@ export class Evaluator {
     
     let parsedData = extractedData;
     
-    // Simple parsing for string inputs, no special normalization
+    // Convert string input to JSON object if needed
     if (typeof extractedData === 'string') {
       try {
         parsedData = JSON.parse(extractedData);
       } catch (e) {
-        result.parsingIssues?.push(`JSON parsing failed: ${e}`);
-        return result; // Return early if parsing fails
+        this.parsingFailures++; 
+        result.parsingIssues?.push(`JSON parsing failed: ${e instanceof Error ? e.message : String(e)}`);
+        result.error = "Failed to evaluate";
+        result.details = e instanceof Error ? e.toString() : String(e);
+        
+        // Log parsing failures when logging is enabled
+        if (this.enableDetailedLogs) {
+          const logger = new Logger();
+          await logger.saveLogs(messageId, extractedData, null, 
+            { 
+              score: 0, 
+              errors: [],
+              typeErrors: [],
+              constraintErrors: [],
+              missingRequiredFields: [],
+              evaluationLog: [],
+              summary: {
+                totalFields: 0,
+                validFields: 0,
+                score: 0
+              }
+            } as SchemaConformityResult,
+            { score: 0 } as ContextConsistencyResult, 
+            result);
+        }
+        
+        return result; // Exit early on parsing failure
       }
     }
     
-    // Evaluate data against schema and contextual requirements
+    // Run both schema and contextual evaluations
     const schemaResult = this.schemaEvaluator.evaluate(parsedData);
     const contextResult = this.contextEvaluator.evaluate(parsedData, messageId);
     
-    // Calculate final score with equal weighting
+    // Calculate overall score as average of schema and context scores
     const overallScore = (schemaResult.score * 0.5) + (contextResult.score * 0.5);
     
-    // Update result object
+    // Populate result with evaluation data
     result.schemaConformity = schemaResult;
     result.contextualConsistency = contextResult;
     result.overallScore = overallScore;
     
-    // Save logs if enabled
+    // Record evaluation details when logging is enabled
     if (this.enableDetailedLogs) {
-      await this.saveLogs(messageId, extractedData, parsedData, schemaResult, contextResult, result);
+      const logger = new Logger();
+      await logger.saveLogs(messageId, extractedData, parsedData, schemaResult, contextResult, result);
     }
     
     return result;
   }
   
-  private async saveLogs(
-    messageId: string, 
-    originalData: any, 
-    parsedData: any, 
-    schemaResult: SchemaConformityResult, 
-    contextResult: ContextConsistencyResult, 
-    result: EvaluationResult
-  ): Promise<void> {
-    try {
-      const logsDir = path.join(process.cwd(), "results", "evaluation_logs");
-      await fs.mkdir(logsDir, { recursive: true });
-      
-      // Log evaluation results
-      if (contextResult.evaluationLog) {
-        await fs.writeFile(
-          path.join(logsDir, `context_evaluation_message_${messageId}_${Date.now()}.json`),
-          JSON.stringify({
-            messageId,
-            score: contextResult.score,
-            timestamp: new Date().toISOString(),
-            evaluationLog: contextResult.evaluationLog
-          }, null, 2)
-        );
-      }
-      
-      await fs.writeFile(
-        path.join(logsDir, `schema_evaluation_message_${messageId}_${Date.now()}.json`),
-        JSON.stringify({
-          messageId,
-          score: schemaResult.score,
-          timestamp: new Date().toISOString(),
-          errors: schemaResult.errors
-        }, null, 2)
-      );
-      
-      // Log parsing issues if any
-      if (result.parsingIssues && result.parsingIssues.length > 0) {
-        await fs.writeFile(
-          path.join(logsDir, `parsing_issues_message_${messageId}_${Date.now()}.json`),
-          JSON.stringify({
-            messageId,
-            timestamp: new Date().toISOString(),
-            originalData: typeof originalData === 'string' ? originalData : JSON.stringify(originalData),
-            issues: result.parsingIssues
-          }, null, 2)
-        );
-      }
-    } catch (error) {
-      console.error("Failed to save evaluation logs:", error);
-    }
+  // Returns the total number of JSON parsing failures
+  getParsingFailures(): number {
+    return this.parsingFailures;
+  }
+  
+  // Calculates the percentage of messages that failed JSON parsing
+  getParsingFailureRate(totalMessages: number): number {
+    return totalMessages > 0 ? this.parsingFailures / totalMessages : 0;
   }
 }

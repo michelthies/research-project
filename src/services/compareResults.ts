@@ -1,92 +1,79 @@
-import fs from 'fs/promises';
-import path from 'path';
+import * as fs from 'fs/promises';
+import * as path from 'path';
 
 async function compareResults(resultsDir: string) {
-  // Identify JSON metric files in the results directory
+  // Get all JSON result files
   const files = await fs.readdir(resultsDir);
   const metricFiles = files.filter(f => f.endsWith('.json'));
   
   if (metricFiles.length === 0) {
-    console.error('No JSON result files found in the results directory');
+    console.error('No JSON result files found');
     return;
   }
   
-  // Storage for consolidated metrics from all strategies
+  // Collect metrics from all strategies
   const allResults: Record<string, any> = {};
   
-  // Extract metrics from each result file
   for (const file of metricFiles) {
     try {
-      console.log(`Processing ${file}...`);
+      
       const fileContent = await fs.readFile(path.join(resultsDir, file), 'utf-8');
       const data = JSON.parse(fileContent);
-      // Extract strategy name from file name if not specified in data
       const strategy = data.strategy || path.basename(file, '.json').split('_')[0];
       
-      // Collect key metrics with fallbacks for missing data
-      const schemaScore = data.averageScores?.schemaConformity || 0;
-      const contextScore = data.averageScores?.contextualConsistency || 0;
-      const successRate = data.averageScores?.successRate || 0;
-      const avgTime = 0; // Default if not available
-      const totalTokens = 0; // Default if not available
+      // Extract key metrics
+      const parsingFailures = data.evaluationResults?.filter((r: any) => 
+        r.evaluation.error === "Failed to evaluate").length || 0;
+      const totalMessages = data.evaluationResults?.length || 0;
       
       allResults[strategy] = {
-        schemaScore,
-        contextScore,
-        successRate,
-        avgTime,
-        totalTokens
+        schemaScore: data.averageScores?.schemaConformity || 0,
+        contextScore: data.averageScores?.contextualConsistency || 0,
+        successRate: data.averageScores?.successRate || 0,
+        parsingFailures,
+        parsingFailureRate: totalMessages > 0 ? parsingFailures / totalMessages : 0,
+        totalMessages
       };
     } catch (err) {
-      console.error(`Error processing file ${file}:`, err);
+      console.error(`Error processing ${file}:`, err);
     }
   }
   
-  // Generate markdown comparison report
+  // Generate report
   let report = '# Prompting Strategy Comparison Results\n\n';
-  report += '## Overall Performance\n\n';
-  report += '| Strategy | Schema Conformity | Contextual Consistency | Success Rate |\n';
-  report += '|----------|-------------------|------------------------|-------------|\n';
+  report += '| Strategy | Schema | Context | Success | Parsing Failures |\n';
+  report += '|----------|--------|---------|---------|------------------|\n';
   
-  // Add data rows to comparison table
   for (const [strategy, results] of Object.entries(allResults)) {
-    report += `| ${strategy} | ${results.schemaScore.toFixed(2)} | ${results.contextScore.toFixed(2)} | ${(results.successRate * 100).toFixed(0)}% |\n`;
+    report += `| ${strategy} | ${results.schemaScore.toFixed(2)} | ${results.contextScore.toFixed(2)} | ${(results.successRate * 100).toFixed(0)}% | ${results.parsingFailures}/${results.totalMessages} (${(results.parsingFailureRate * 100).toFixed(1)}%) |\n`;
   }
   
-  // Add analysis section to the report
-  report += '\n## Summary and Insights\n\n';
-  
-  // Identify and highlight best performing strategies
+  // Find best performers
   if (Object.keys(allResults).length > 0) {
-    const bestSchemaStrategy = findBestStrategy(allResults, 'schemaScore');
-    const bestContextStrategy = findBestStrategy(allResults, 'contextScore');
+    report += '\n## Key Insights\n\n';
     
-    if (bestSchemaStrategy) {
-      report += `- Best Schema Conformity: **${bestSchemaStrategy}** (${allResults[bestSchemaStrategy].schemaScore.toFixed(2)})\n`;
-    }
-    if (bestContextStrategy) {
-      report += `- Best Contextual Consistency: **${bestContextStrategy}** (${allResults[bestContextStrategy].contextScore.toFixed(2)})\n`;
-    }
-  } else {
-    report += "No strategies could be compared - insufficient data.\n";
+    const bestSchema = findBestStrategy(allResults, 'schemaScore');
+    const bestContext = findBestStrategy(allResults, 'contextScore');
+    const bestSuccess = findBestStrategy(allResults, 'successRate');
+    const lowestParsingFailure = findBestStrategy(allResults, 'parsingFailureRate', true);
+    
+    if (bestSchema) report += `- Best Schema: **${bestSchema}** (${allResults[bestSchema].schemaScore.toFixed(2)})\n`;
+    if (bestContext) report += `- Best Context: **${bestContext}** (${allResults[bestContext].contextScore.toFixed(2)})\n`;
+    if (bestSuccess) report += `- Best Success Rate: **${bestSuccess}** (${(allResults[bestSuccess].successRate * 100).toFixed(0)}%)\n`;
+    if (lowestParsingFailure) report += `- Lowest Parsing Failures: **${lowestParsingFailure}** (${(allResults[lowestParsingFailure].parsingFailureRate * 100).toFixed(1)}%)\n`;
   }
   
-  // Save report to the results directory
+  // Save the report
   await fs.writeFile(path.join(resultsDir, 'comparison.md'), report);
-  console.log(`Comparison report written to ${path.join(resultsDir, 'comparison.md')}`);
+  console.log(`Report saved to ${path.join(resultsDir, 'comparison.md')}`);
 }
 
-// Finds the top performing strategy for a specific metric
+// Find the best strategy for a given metric
 function findBestStrategy(results: Record<string, any>, metric: string, lowerIsBetter: boolean = false): string | null {
-  if (!results || Object.keys(results).length === 0) return null;
-  
   let bestStrategy = '';
   let bestValue = lowerIsBetter ? Infinity : -Infinity;
   
-  // Compare all strategies to find the best performer
   for (const [strategy, data] of Object.entries(results)) {
-    if (!data || typeof data !== 'object') continue;
-    
     const value = data[metric];
     if (value === undefined || value === null) continue;
     
@@ -99,11 +86,10 @@ function findBestStrategy(results: Record<string, any>, metric: string, lowerIsB
   return bestStrategy || null;
 }
 
-// Entry point - require results directory path as command line argument
+// Run the function if called directly
 const resultsDir = process.argv[2];
-if (!resultsDir) {
+if (resultsDir) {
+  compareResults(resultsDir).catch(console.error);
+} else {
   console.error('Please provide the results directory path');
-  process.exit(1);
 }
-
-compareResults(resultsDir).catch(console.error);

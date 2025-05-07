@@ -1,32 +1,32 @@
-// Represents the result of comparing extracted data against ground truth
+// Stores the outcome of comparing extracted data with reference data
 export interface ContextConsistencyResult {
-  score: number;
-  errors: string[];
-  missingFields: string[];
-  incorrectValues: Array<{
+  score: number;                // Overall accuracy score (0-1)
+  errors: string[];             // List of all detected errors
+  missingFields: string[];      // Fields present in ground truth but missing in extracted data
+  incorrectValues: Array<{      // Fields with mismatched values
     field: string;
     expected: any;
     actual: any;
   }>;
-  additionalFields: string[];
-  evaluationLog: Array<{
+  additionalFields: string[];   // Fields present in extracted data but not in ground truth
+  evaluationLog: Array<{        // Detailed log of all field evaluations
     path: string;
     expected?: any;
     actual?: any;
     matched: boolean;
     reason: string;
   }>;
-  summary: {
+  summary: {                    // Statistical summary of evaluation
     totalFields: number;
     correctFields: number;
     score: number;
   };
 }
 
-// Defines accepted normalized values for specific fields
+// Defines acceptable alternative values for specific fields to handle variations
 export interface FieldNormalizationConfig {
   [fieldPath: string]: {
-    acceptedValues: string[]; // Normalized values for matching
+    acceptedValues: string[]; // Normalized values considered equivalent
   };
 }
 
@@ -39,7 +39,7 @@ export class ContextEvaluator {
     this.logEnabled = enableLogging;
   }
   
-  // Evaluates extracted data against known ground truth for a specific message
+  // Compares extracted data against ground truth for a specific message
   evaluate(extractedData: any, messageId: string): ContextConsistencyResult {
     const result: ContextConsistencyResult = {
       score: 0,
@@ -55,30 +55,30 @@ export class ContextEvaluator {
       }
     };
     
-    // Get ground truth for this message
+    // Get the reference data for this message
     const messageTruth = this.groundTruthMessages[messageId];
     if (!messageTruth) {
       result.errors.push(`No ground truth available for message ${messageId}`);
       return result;
     }
     
-    // Extract normalization config
+    // Get any field-specific normalization rules
     const normalizationConfig = messageTruth.normalizationConfig || {};
     
-    // Stats for tracking evaluation metrics
+    // Stats for tracking overall accuracy
     const stats = {
       correctFields: 0,
       totalFields: 0
     };
     
-    // Check if booking property exists in extracted data
+    // Validate booking object exists before comparing
     if (!extractedData || !extractedData.booking) {
       result.errors.push('Missing booking object in extracted data');
       result.missingFields.push('booking');
       return result;
     }
     
-    // Compare objects
+    // Recursively compare booking objects
     this.compareObjects(
       extractedData.booking,
       messageTruth.booking,
@@ -88,10 +88,10 @@ export class ContextEvaluator {
       normalizationConfig
     );
     
-    // Calculate score
+    // Calculate final accuracy score
     result.score = stats.totalFields > 0 ? stats.correctFields / stats.totalFields : 0;
     
-    // Update summary
+    // Update summary with final metrics
     result.summary = {
       totalFields: stats.totalFields,
       correctFields: stats.correctFields,
@@ -101,7 +101,7 @@ export class ContextEvaluator {
     return result;
   }
   
-  // Add entry to evaluation log
+  // Records evaluation details for a single field comparison
   private addLogEntry(
     result: ContextConsistencyResult,
     path: string,
@@ -121,7 +121,7 @@ export class ContextEvaluator {
     });
   }
   
-  // Compare objects recursively, simplified version
+  // Recursively compares objects and their nested properties
   private compareObjects(
     actual: any,
     expected: any,
@@ -133,15 +133,21 @@ export class ContextEvaluator {
     },
     normalizationConfig: FieldNormalizationConfig
   ): void {
-    // Handle null cases simply
+    
+    // Debug logging at the start of compareObjects
+    console.log(`Comparing objects at path ${path}:`);
+    console.log(`Actual: ${JSON.stringify(actual)}`);
+    console.log(`Expected: ${JSON.stringify(expected)}`);
+    
+    // Handle null value scenarios
     if (!actual) {
       if (!expected) {
-        // Both null - match
+        // Both null - considered a match
         stats.correctFields++;
         stats.totalFields++;
         this.addLogEntry(result, path, null, null, true, "Both values are null");
       } else if (typeof expected === 'object' && expected !== null && !Array.isArray(expected)) {
-        // ADDED: If expected is an object, recursively check each property instead of the whole object
+        // Expected an object but got null - report each expected property as missing
         for (const key of Object.keys(expected)) {
           const childPath = path ? `${path}.${key}` : key;
           stats.totalFields++;
@@ -150,7 +156,7 @@ export class ContextEvaluator {
           this.addLogEntry(result, childPath, expected[key], null, false, "Missing field");
         }
       } else {
-        // Missing primitive value
+        // Expected a primitive value but got null
         stats.totalFields++;
         result.missingFields.push(path);
         result.errors.push(`${path}: Missing field`);
@@ -159,7 +165,7 @@ export class ContextEvaluator {
       return;
     }
     
-    // Expected null but got value
+    // Handle unexpected fields (actual value exists but expected doesn't)
     if (!expected) {
       stats.totalFields++;
       result.additionalFields.push(path);
@@ -168,8 +174,33 @@ export class ContextEvaluator {
       return;
     }
     
-    // Handle primitive types with simple matching
-    if (typeof actual !== 'object' || typeof expected !== 'object') {
+    // Detect type mismatches between objects and primitives
+    const actualIsObject = typeof actual === 'object' && actual !== null && !Array.isArray(actual);
+    const expectedIsObject = typeof expected === 'object' && expected !== null && !Array.isArray(expected);
+    
+    if (expectedIsObject && !actualIsObject) {
+      // Expected an object but got a primitive - report each expected property as missing
+      for (const key of Object.keys(expected)) {
+        const childPath = path ? `${path}.${key}` : key;
+        stats.totalFields++;
+        result.missingFields.push(childPath);
+        result.errors.push(`${childPath}: Missing field - parent is not an object`);
+        this.addLogEntry(result, childPath, expected[key], null, false, "Missing field - parent is not an object");
+      }
+      return;
+    }
+    
+    if (actualIsObject && !expectedIsObject) {
+      // Got an object but expected a primitive - type mismatch
+      stats.totalFields++;
+      result.additionalFields.push(path);
+      result.errors.push(`${path}: Expected primitive but got object`);
+      this.addLogEntry(result, path, expected, "[Object]", false, "Expected primitive but got object");
+      return;
+    }
+    
+    // Compare primitive values directly
+    if (!actualIsObject && !expectedIsObject) {
       stats.totalFields++;
       
       const matches = this.valuesMatch(actual, expected, path, normalizationConfig, result);
@@ -186,7 +217,7 @@ export class ContextEvaluator {
       return;
     }
     
-    // Simple handling for arrays - just check if they exist
+    // Simple array handling - just verify both are arrays without comparing contents
     if (Array.isArray(actual) && Array.isArray(expected)) {
       stats.totalFields++;
       stats.correctFields++; // Simplified: just count as correct if both are arrays
@@ -194,11 +225,11 @@ export class ContextEvaluator {
       return;
     }
     
-    // Compare object properties - simplified approach
+    // Compare nested object properties
     const expectedKeys = Object.keys(expected);
     const actualKeys = Object.keys(actual);
     
-    // Check for missing fields
+    // Identify missing fields
     for (const key of expectedKeys) {
       if (!actualKeys.includes(key)) {
         const childPath = path ? `${path}.${key}` : key;
@@ -209,7 +240,7 @@ export class ContextEvaluator {
       }
     }
     
-    // Check for additional fields
+    // Identify additional fields
     for (const key of actualKeys) {
       if (!expectedKeys.includes(key)) {
         const childPath = path ? `${path}.${key}` : key;
@@ -219,13 +250,13 @@ export class ContextEvaluator {
       }
     }
     
-    // Compare common fields
+    // Recursively compare fields that exist in both objects
     for (const key of expectedKeys.filter(k => actualKeys.includes(k))) {
       const childPath = path ? `${path}.${key}` : key;
       const actualValue = actual[key];
       const expectedValue = expected[key];
       
-      // Recursive comparison for nested objects
+      // Handle nested objects recursively
       if (
         expectedValue !== null && 
         typeof expectedValue === 'object' && 
@@ -236,7 +267,7 @@ export class ContextEvaluator {
       ) {
         this.compareObjects(actualValue, expectedValue, childPath, result, stats, normalizationConfig);
       } else {
-        // Compare values using substring matching
+        // Compare non-object values
         stats.totalFields++;
         
         const matches = this.valuesMatch(actualValue, expectedValue, childPath, normalizationConfig, result);
@@ -254,7 +285,7 @@ export class ContextEvaluator {
     }
   }
   
-  // Check if values match using normalization and substring matching
+  // Determines if values match using normalization and substring matching
   private valuesMatch(
     actual: any, 
     expected: any, 
@@ -262,7 +293,7 @@ export class ContextEvaluator {
     normalizationConfig: FieldNormalizationConfig,
     result: ContextConsistencyResult
   ): boolean {
-    // Handle null values simply
+    // Handle null values
     if (!actual) {
       const matches = !expected;
       this.addLogEntry(result, path, expected, actual, matches, 
@@ -275,16 +306,16 @@ export class ContextEvaluator {
       return false;
     }
     
-    // Check against normalization config if available
+    // Apply field-specific normalization rules if available
     if (path in normalizationConfig) {
       const normalizedActual = this.normalizeValue(actual);
       const acceptedValues = normalizationConfig[path].acceptedValues;
       
-      // Check if any accepted value is a substring of the normalized actual value
+      // Check if normalized value matches any accepted variant
       const matchingValue = acceptedValues.find(value => normalizedActual.includes(value));
       const matches = !!matchingValue;
       
-      // Add log entry
+      // Record match result
       this.addLogEntry(
         result, 
         path, 
@@ -299,11 +330,11 @@ export class ContextEvaluator {
       return matches;
     }
     
-    // Simple substring matching for fields without normalization config
+    // Default comparison using substring matching
     const normalizedActual = this.normalizeValue(actual);
     const normalizedExpected = this.normalizeValue(expected);
     
-    // Check if either string contains the other
+    // Match if either string contains the other
     const matches = normalizedActual.includes(normalizedExpected) || 
                    normalizedExpected.includes(normalizedActual);
     
@@ -321,7 +352,7 @@ export class ContextEvaluator {
     return matches;
   }
   
-  // Simple normalization function - convert to lowercase and remove non-alphanumeric characters
+  // Standardizes values for comparison by removing non-alphanumeric characters and lowercase
   private normalizeValue(value: any): string {
     if (value === null || value === undefined) {
       return '';

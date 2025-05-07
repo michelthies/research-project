@@ -15,7 +15,7 @@ package-lock.json
 
 # Build output
 dist/
-
+results/
 
 # Environment variables
 .env

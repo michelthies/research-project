@@ -12,9 +12,9 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
@@ -26,52 +26,73 @@
       },
       "invoice": {
         "amount": 1500,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": ["inquiry", "request", "booking request"]
-      },
+    
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2230", "10:30pm"]
+        "acceptedValues": [
+          "2230"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["0030", "12:30am"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["1500", "€1,500", "1.5k"]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
-      },
-      "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "1500"
+        ]
       }
     }
   },
@@ -88,60 +109,87 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": null,
-          "end": null
+          "start": "2025-09-20T22:30:00Z",
+          "end": "2025-09-21T00:30:00Z"
         }
       },
       "invoice": {
         "amount": 2500,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": ["inquiry", "request", "booking request"]
-      },
+    
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2230"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2500", "€2,500", "2.5k"]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
-      },
-      "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "2500", "2.5k", "2,5k"
+        ]
       }
     }
   },
@@ -158,66 +206,87 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2500,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": ["inquiry", "request", "booking request"]
-      },
+    
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2500", "€2,500", "2.5k"]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
-      },
-      "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "2500", "2.5k", "2,5k"
+        ]
       }
     }
   },
@@ -234,66 +303,87 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": ["inquiry", "request", "booking request"]
-      },
+    
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
-      },
-      "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "2200"
+        ]
       }
     }
   },
@@ -310,72 +400,93 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "not sent"
+        "status": null
       },
       "contract": {
-        "status": "not sent"
+        "status": null
       }
     },
     "normalizationConfig": {
-      "booking.status": {
-        "acceptedValues": ["inquiry", "request", "booking request"]
-      },
+    
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
-      },
-      "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
-      },
-      "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "2200"
+        ]
       }
     }
   },
   "6": {
     "booking": {
-      "status": "pending",
+      "status": "confirmed",
       "artist": {
         "name": "DJ Horizon"
       },
@@ -386,16 +497,16 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
@@ -408,50 +519,87 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["pending", "verbalagreement", "preconfirmation"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "notsent",
+          "notcreated"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "notsent",
+          "notcreated"
+        ]
       }
     }
   },
   "7": {
     "booking": {
-      "status": "pending",
+      "status": "confirmed",
       "artist": {
         "name": "DJ Horizon"
       },
@@ -462,16 +610,16 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
@@ -484,53 +632,92 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["pending", "verbalagreement", "preconfirmation"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "notsent",
+          "notcreated"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": [
+          "notsent",
+          "notcreated"
+        ]
       }
     }
   },
   "8": {
     "booking": {
-      "status": "pending",
+      "status": "confirmed",
       "artist": {
         "name": "DJ Horizon"
       },
@@ -541,75 +728,114 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "prepared"
+        "status": "sent"
       },
       "contract": {
-        "status": "prepared"
+        "status": "sent"
       }
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["pending", "verbalagreement", "preconfirmation"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["prepared", "ready", "created"]
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["prepared", "ready", "created"]
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
       }
     }
   },
   "9": {
     "booking": {
-      "status": "pending",
+      "status": "confirmed",
       "artist": {
         "name": "DJ Horizon"
       },
@@ -620,75 +846,114 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "prepared"
+        "status": "sent"
       },
       "contract": {
-        "status": "prepared"
+        "status": "sent"
       }
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["pending", "verbalagreement", "preconfirmation"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["prepared", "ready", "created"]
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["prepared", "ready", "created"]
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
       }
     }
   },
   "10": {
     "booking": {
-      "status": "pending",
+      "status": "confirmed",
       "artist": {
         "name": "DJ Horizon"
       },
@@ -699,69 +964,108 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "prepared"
+        "status": "sent"
       },
       "contract": {
-        "status": "revised"
+        "status": "sent"
       }
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["pending", "verbalagreement", "preconfirmation"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["prepared", "ready", "created"]
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["revised", "amended", "updated"]
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
       }
     }
   },
@@ -778,21 +1082,21 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "deposit paid"
+        "status": "paid"
       },
       "contract": {
         "status": "signed"
@@ -800,47 +1104,85 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["confirmed", "booked", "secured"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["depositpaid", "partiallypaid", "depositreceived"]
+        "acceptedValues": [
+          "paid"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["signed", "returned", "completed"]
+        "acceptedValues": [
+          "signed",
+          "returned"
+        ]
       }
     }
   },
@@ -857,21 +1199,21 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "deposit paid"
+        "status": "paid"
       },
       "contract": {
         "status": "cosigned"
@@ -879,47 +1221,85 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["confirmed", "booked", "secured"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["depositpaid", "partiallypaid", "depositreceived"]
+        "acceptedValues": [
+          "paid"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["cosigned", "countersigned", "fullysigned"]
+        "acceptedValues": [
+          "cosigned",
+          "co-signed"
+        ]
       }
     }
   },
@@ -936,21 +1316,21 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "deposit paid"
+        "status": "paid"
       },
       "contract": {
         "status": "cosigned"
@@ -958,47 +1338,85 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["confirmed", "booked", "secured"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["depositpaid", "partiallypaid", "depositreceived"]
+        "acceptedValues": [
+          "paid"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["cosigned", "countersigned", "fullysigned"]
+        "acceptedValues": [
+          "cosigned",
+          "co-signed"
+        ]
       }
     }
   },
@@ -1015,21 +1433,21 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "deposit paid"
+        "status": "paid"
       },
       "contract": {
         "status": "cosigned"
@@ -1037,47 +1455,85 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["confirmed", "booked", "secured"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["depositpaid", "partiallypaid", "depositreceived"]
+        "acceptedValues": [
+          "paid"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["cosigned", "countersigned", "fullysigned"]
+        "acceptedValues": [
+          "cosigned",
+          "co-signed"
+        ]
       }
     }
   },
@@ -1094,21 +1550,21 @@
       },
       "event": {
         "date": "2025-09-20",
-        "name": "Equinox",
+        "name": "Equinox Festival",
         "city": "Berlin",
-        "venue": "Tempelhof Field",
+        "venue": "Tempelhofer Feld",
         "capacity": 3500,
         "ticketPrice": null,
         "openingTime": null,
         "closingTime": null,
         "stageTime": {
-          "start": "2025-09-20T22:00:00Z",
-          "end": "2025-09-20T23:30:00Z"
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
         }
       },
       "invoice": {
         "amount": 2200,
-        "status": "deposit paid"
+        "status": "paid"
       },
       "contract": {
         "status": "cosigned"
@@ -1116,48 +1572,86 @@
     },
     "normalizationConfig": {
       "booking.status": {
-        "acceptedValues": ["confirmed", "booked", "secured"]
+        "acceptedValues": [
+          "confirmed"
+        ]
       },
       "booking.artist.name": {
-        "acceptedValues": ["djhorizon", "horizon"]
+        "acceptedValues": [
+          "horizon"
+        ]
       },
       "booking.promoter.name": {
-        "acceptedValues": ["staceysummer", "stacey"]
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
       },
       "booking.promoter.company": {
-        "acceptedValues": ["vibrancyeventsgmbh", "vibrancyevents", "vibrancy"]
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
       },
       "booking.promoter.address": {
-        "acceptedValues": ["frankfurterallee7710247berlin", "frankfurterallee77"]
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
       },
       "booking.event.date": {
-        "acceptedValues": ["20250920", "september202025", "sep202025"]
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
       },
       "booking.event.name": {
-        "acceptedValues": ["equinox", "equinoxfestival"]
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
       },
-
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
       "booking.event.venue": {
-        "acceptedValues": ["tempelhoffield", "tempelhof"]
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
       },
-      "booking.event.capacity": {
-        "acceptedValues": ["3500", "3,500"]
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
       },
       "booking.event.stageTime.start": {
-        "acceptedValues": ["2200", "10:00pm"]
+        "acceptedValues": [
+          "0030"
+        ]
       },
       "booking.event.stageTime.end": {
-        "acceptedValues": ["2330", "11:30pm"]
+        "acceptedValues": [
+          "0200"
+        ]
       },
       "booking.invoice.amount": {
-        "acceptedValues": ["2200", "€2,200", "2.2k"]
+        "acceptedValues": [
+          "2200"
+        ]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["depositpaid", "partiallypaid", "depositreceived"]
+        "acceptedValues": [
+          "paid"
+        ]
       },
       "booking.contract.status": {
-        "acceptedValues": ["cosigned", "countersigned", "fullysigned"]
+        "acceptedValues": [
+          "cosigned",
+          "co-signed"
+        ]
       }
     }
   }
-} 
+}

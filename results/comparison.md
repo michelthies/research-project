@@ -1,25 +1,25 @@
 # Prompting Strategy Comparison Results
 
-## Overall Performance
+| Strategy | Schema | Context | Success | Parsing Failures |
+|----------|--------|---------|---------|------------------|
+| chain-of-thought-schema | 0.98 | 0.39 | 100% | 0/11 (0.0%) |
+| chain-of-thought | 0.86 | 0.70 | 100% | 0/11 (0.0%) |
+| few-shot-schema | 1.00 | 0.29 | 100% | 0/11 (0.0%) |
+| few-shot | 0.36 | 0.27 | 36% | 7/11 (63.6%) |
+| keyword-action-schema | 1.00 | 0.59 | 100% | 0/11 (0.0%) |
+| keyword-action | 0.99 | 0.70 | 100% | 0/11 (0.0%) |
+| one-shot-schema | 0.17 | 0.15 | 18% | 9/11 (81.8%) |
+| one-shot | 0.40 | 0.28 | 45% | 6/11 (54.5%) |
+| role-guided-schema | 1.00 | 0.72 | 100% | 0/11 (0.0%) |
+| role-guided | 1.00 | 0.64 | 100% | 0/11 (0.0%) |
+| self-verification-schema | 1.00 | 0.69 | 100% | 0/11 (0.0%) |
+| self-verification | 0.87 | 0.79 | 100% | 0/11 (0.0%) |
+| zero-shot-schema | 0.97 | 0.55 | 100% | 0/11 (0.0%) |
+| zero-shot | 0.91 | 0.56 | 100% | 0/11 (0.0%) |
 
-| Strategy | Schema Conformity | Contextual Consistency | Success Rate |
-|----------|-------------------|------------------------|-------------|
-| chain-of-thought-schema | 0.33 | 0.29 | 33% |
-| chain-of-thought | 1.00 | 0.73 | 100% |
-| few-shot-schema | 0.94 | 0.19 | 100% |
-| few-shot | 0.47 | 0.28 | 47% |
-| keyword-action-schema | 1.00 | 0.51 | 100% |
-| keyword-action | 0.07 | 0.06 | 7% |
-| one-shot-schema | 0.47 | 0.26 | 47% |
-| one-shot | 0.67 | 0.33 | 67% |
-| role-guided-schema | 1.00 | 0.89 | 100% |
-| role-guided | 0.53 | 0.46 | 53% |
-| self-verification-schema | 1.00 | 0.81 | 100% |
-| self-verification | 0.81 | 0.76 | 100% |
-| zero-shot-schema | 0.92 | 0.74 | 100% |
-| zero-shot | 0.41 | 0.25 | 47% |
+## Key Insights
 
-## Summary and Insights
-
-- Best Schema Conformity: **chain-of-thought** (1.00)
-- Best Contextual Consistency: **role-guided-schema** (0.89)
+- Best Schema: **keyword-action-schema** (1.00)
+- Best Context: **self-verification** (0.79)
+- Best Success Rate: **chain-of-thought-schema** (100%)
+- Lowest Parsing Failures: **chain-of-thought-schema** (0.0%)

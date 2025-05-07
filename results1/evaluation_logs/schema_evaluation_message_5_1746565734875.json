@@ -1,8 +1,0 @@
-{
-  "messageId": "5",
-  "score": 0.9615384615384616,
-  "timestamp": "2025-05-06T21:08:54.875Z",
-  "errors": [
-    "/booking/event/date must match format \"date\" (actual: 25Nov25)"
-  ]
-}

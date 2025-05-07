@@ -7,26 +7,48 @@ export function createKeywordActionPrompt(
   return `
 ${createPromptBase(emailContent, previousData)}
 
-KEYWORDS
-- BOOKING: Status words like "inquiry", "confirmed", "cancelled"
-- ARTIST: Names, DJ names, performer references
-- PROMOTER: Company names, organizer names, contact details
-- EVENT: Venue, city, event name, date, capacity, ticket price
-- TIME: Opening/closing times, stage times, performance slots
-- FINANCIAL: Fee amounts, currency, payment terms
-- CONTRACT: Document status terms like "sent", "signed", "cosigned"
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
 - INVOICE: Payment status terms like "not sent", "sent", "paid"
 
-ACTIONS
-IDENTIFY: Find all relevant keywords in the email that match schema properties
-EXTRACT: Pull out the associated values and context for each keyword
-PRESERVE: Keep existing data from previous extraction when not contradicted by new information
-UPDATE: Replace outdated information with new details, prioritizing latest information
-INFER: Use context clues to determine missing information when reasonable
-FORMAT: Convert extracted information to schema-compliant JSON
-  - All dates must be in ISO format: YYYY-MM-DD (example: 2025-11-25)
-  - All date-times must be in ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T00:00:00Z)
-VALIDATE: Ensure all dates, enums, and data types match schema requirements
-FILTER: Focus only on information represented in the schema
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
 `;
 }
