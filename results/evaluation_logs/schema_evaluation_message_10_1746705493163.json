@@ -1,0 +1,11 @@
+{
+  "messageId": "10",
+  "score": 0.8461538461538461,
+  "timestamp": "2025-05-08T11:58:13.163Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: works for her, lets confirm :))",
+    "/booking/status must be null (actual: works for her, lets confirm :))",
+    "/booking/status must match exactly one schema in oneOf (actual: works for her, lets confirm :))",
+    "/booking/promoter/address must be string,null (actual: {\"street\":\"Hammarby Slussväg 2\",\"phone\":\"+46 (0) 8 644 20 23\",\"email\":\"olivia@clubstellar.se\"})"
+  ]
+}

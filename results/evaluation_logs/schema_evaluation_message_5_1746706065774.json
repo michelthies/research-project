@@ -1,0 +1,19 @@
+{
+  "messageId": "5",
+  "score": 0.5384615384615384,
+  "timestamp": "2025-05-08T12:07:45.774Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: booked)",
+    "/booking/status must be null (actual: booked)",
+    "/booking/status must match exactly one schema in oneOf (actual: booked)",
+    "/booking/event/venue must be string,null (actual: {\"name\":\"Cosmic Garden\",\"fullAddress\":\"Hammarby Slussväg 2\",\"phone\":\"0046 (0) 8 644 20 23\",\"email\":\"info@clubstellar.se\"})",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+    "/booking/invoice/status must be equal to one of the allowed values (actual: pending)",
+    "/booking/invoice/status must be null (actual: pending)",
+    "/booking/invoice/status must match exactly one schema in oneOf (actual: pending)",
+    "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+    "/booking/contract/status must be null (actual: pending)",
+    "/booking/contract/status must match exactly one schema in oneOf (actual: pending)"
+  ]
+}

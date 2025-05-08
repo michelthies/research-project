@@ -1,0 +1,13 @@
+{
+  "messageId": "13",
+  "score": 0.7692307692307693,
+  "timestamp": "2025-05-08T11:49:36.337Z",
+  "errors": [
+    "/booking/promoter/company must be string,null (actual: {\"name\":\"Nova Entertainment\",\"address\":\"Hammarby Slussväg 2, Stockholm\"})",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+    "/booking/invoice/status must be equal to one of the allowed values (actual: Set for payment)",
+    "/booking/invoice/status must be null (actual: Set for payment)",
+    "/booking/invoice/status must match exactly one schema in oneOf (actual: Set for payment)"
+  ]
+}

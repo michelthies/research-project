@@ -1,0 +1,5167 @@
+{
+  "strategy": "few-shot",
+  "evaluationResults": [
+    {
+      "messageFile": "message1.txt",
+      "evaluation": {
+        "messageId": "1",
+        "schemaConformity": {
+          "score": 1,
+          "errors": [],
+          "typeErrors": [],
+          "constraintErrors": [],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Meteor"
+                  },
+                  "promoter": {
+                    "name": "Olivia Chen",
+                    "company": null,
+                    "address": null
+                  },
+                  "event": {
+                    "date": "2022-08-06",
+                    "venue": null,
+                    "city": "Stockholm",
+                    "capacity": null,
+                    "ticketPrice": null,
+                    "openingTime": null,
+                    "closingTime": null,
+                    "stageTime": {
+                      "start": null,
+                      "end": null
+                    }
+                  },
+                  "invoice": {
+                    "amount": null,
+                    "status": null
+                  },
+                  "contract": {
+                    "status": null
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Meteor"
+                },
+                "promoter": {
+                  "name": "Olivia Chen",
+                  "company": null,
+                  "address": null
+                },
+                "event": {
+                  "date": "2022-08-06",
+                  "venue": null,
+                  "city": "Stockholm",
+                  "capacity": null,
+                  "ticketPrice": null,
+                  "openingTime": null,
+                  "closingTime": null,
+                  "stageTime": {
+                    "start": null,
+                    "end": null
+                  }
+                },
+                "invoice": {
+                  "amount": null,
+                  "status": null
+                },
+                "contract": {
+                  "status": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Meteor"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Olivia Chen",
+                "company": null,
+                "address": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Olivia Chen",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2022-08-06",
+                "venue": null,
+                "city": "Stockholm",
+                "capacity": null,
+                "ticketPrice": null,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "start": null,
+                  "end": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2022-08-06",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": {
+                "start": null,
+                "end": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": null,
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 26,
+            "score": 1
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.6666666666666666,
+          "errors": [
+            "booking.status: Missing field",
+            "booking.event.name: Missing field"
+          ],
+          "missingFields": [
+            "booking.status",
+            "booking.event.name"
+          ],
+          "incorrectValues": [],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "inquiry",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Meteor",
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Olivia Chen",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2022-08-06",
+              "actual": "2022-08-06",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": null,
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Stockholm",
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            }
+          ],
+          "summary": {
+            "totalFields": 6,
+            "correctFields": 4,
+            "score": 0.6666666666666666
+          }
+        },
+        "overallScore": 0.8333333333333333,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message2.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 488"
+      }
+    },
+    {
+      "messageFile": "message3.txt",
+      "evaluation": {
+        "messageId": "3",
+        "schemaConformity": {
+          "score": 0.8846153846153846,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/event/stageTime must be object (actual: null)"
+          ],
+          "typeErrors": [
+            "/booking/event/stageTime must be object (actual: null)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "17:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "03:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/stageTime",
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": null,
+                  "artist": {
+                    "name": "DJ Meteor"
+                  },
+                  "promoter": {
+                    "name": "Olivia Chen",
+                    "company": "clubstellar.se",
+                    "address": "Hammarby Slussväg 2, Stockholm"
+                  },
+                  "event": {
+                    "date": "2022-08-06",
+                    "venue": "Cosmic Garden",
+                    "city": "Stockholm",
+                    "capacity": 500,
+                    "openingTime": "17:00",
+                    "closingTime": "03:00",
+                    "stageTime": null
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": null
+                  },
+                  "contract": {
+                    "status": null
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": null,
+                "artist": {
+                  "name": "DJ Meteor"
+                },
+                "promoter": {
+                  "name": "Olivia Chen",
+                  "company": "clubstellar.se",
+                  "address": "Hammarby Slussväg 2, Stockholm"
+                },
+                "event": {
+                  "date": "2022-08-06",
+                  "venue": "Cosmic Garden",
+                  "city": "Stockholm",
+                  "capacity": 500,
+                  "openingTime": "17:00",
+                  "closingTime": "03:00",
+                  "stageTime": null
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": null
+                },
+                "contract": {
+                  "status": null
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Meteor"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Olivia Chen",
+                "company": "clubstellar.se",
+                "address": "Hammarby Slussväg 2, Stockholm"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Olivia Chen",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "clubstellar.se",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Hammarby Slussväg 2, Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2022-08-06",
+                "venue": "Cosmic Garden",
+                "city": "Stockholm",
+                "capacity": 500,
+                "openingTime": "17:00",
+                "closingTime": "03:00",
+                "stageTime": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2022-08-06",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 23,
+            "score": 0.8846153846153846
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.5714285714285714,
+          "errors": [
+            "booking.status: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.capacity: Expected 1800, got 500",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Missing field",
+            "booking.event.stageTime.end: Missing field"
+          ],
+          "missingFields": [
+            "booking.status",
+            "booking.event.name",
+            "booking.event.ticketPrice",
+            "booking.event.stageTime.start",
+            "booking.event.stageTime.end"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500
+            }
+          ],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "inquiry",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Meteor",
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Olivia Chen",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2022-08-06",
+              "actual": "2022-08-06",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Cosmic Garden",
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Stockholm",
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Cosmic Garden",
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500,
+              "valid": false,
+              "reason": "Expected 1800, got 500"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2022-08-06T17:00:00Z",
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2022-08-07T03:00:00Z",
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2022-08-06T20:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2022-08-06T22:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1000,
+              "actual": 1000,
+              "valid": true,
+              "reason": "Field value matches expected value"
+            }
+          ],
+          "summary": {
+            "totalFields": 14,
+            "correctFields": 8,
+            "score": 0.5714285714285714
+          }
+        },
+        "overallScore": 0.728021978021978,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message4.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 496"
+      }
+    },
+    {
+      "messageFile": "message5.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 496"
+      }
+    },
+    {
+      "messageFile": "message6.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 517"
+      }
+    },
+    {
+      "messageFile": "message7.txt",
+      "evaluation": {
+        "messageId": "7",
+        "schemaConformity": {
+          "score": 0.7692307692307693,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/event/stageTime must be object (actual: null)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: not signed)",
+            "/booking/contract/status must be null (actual: not signed)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: not signed)"
+          ],
+          "typeErrors": [
+            "/booking/event/stageTime must be object (actual: null)",
+            "/booking/contract/status must be null (actual: not signed)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: not signed)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: not signed)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "17:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "03:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/stageTime",
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "signed",
+                "cosigned"
+              ],
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "confirmed",
+                  "artist": {
+                    "name": "DJ Meteor"
+                  },
+                  "promoter": {
+                    "name": "Olivia Chen",
+                    "company": "Nova Entertainment",
+                    "address": "Hammarby Slussväg 2, Stockholm"
+                  },
+                  "event": {
+                    "date": null,
+                    "venue": "Cosmic Garden",
+                    "city": "Stockholm",
+                    "capacity": 500,
+                    "openingTime": "17:00",
+                    "closingTime": "03:00",
+                    "stageTime": null
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "not sent"
+                  },
+                  "contract": {
+                    "status": "not signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "confirmed",
+                "artist": {
+                  "name": "DJ Meteor"
+                },
+                "promoter": {
+                  "name": "Olivia Chen",
+                  "company": "Nova Entertainment",
+                  "address": "Hammarby Slussväg 2, Stockholm"
+                },
+                "event": {
+                  "date": null,
+                  "venue": "Cosmic Garden",
+                  "city": "Stockholm",
+                  "capacity": 500,
+                  "openingTime": "17:00",
+                  "closingTime": "03:00",
+                  "stageTime": null
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "not sent"
+                },
+                "contract": {
+                  "status": "not signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "confirmed",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Meteor"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Olivia Chen",
+                "company": "Nova Entertainment",
+                "address": "Hammarby Slussväg 2, Stockholm"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Olivia Chen",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Nova Entertainment",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Hammarby Slussväg 2, Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": null,
+                "venue": "Cosmic Garden",
+                "city": "Stockholm",
+                "capacity": 500,
+                "openingTime": "17:00",
+                "closingTime": "03:00",
+                "stageTime": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "not sent"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "not sent",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "not signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "not signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 20,
+            "score": 0.7692307692307693
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.5555555555555556,
+          "errors": [
+            "booking.promoter.address: Expected Hammarby Slussväg 2, got Hammarby Slussväg 2, Stockholm",
+            "booking.event.date: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.capacity: Expected 1800, got 500",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Missing field",
+            "booking.event.stageTime.end: Missing field",
+            "booking.invoice.amount: Expected 1500, got 1000"
+          ],
+          "missingFields": [
+            "booking.event.date",
+            "booking.event.name",
+            "booking.event.ticketPrice",
+            "booking.event.stageTime.start",
+            "booking.event.stageTime.end"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.promoter.address",
+              "expected": "Hammarby Slussväg 2",
+              "actual": "Hammarby Slussväg 2, Stockholm"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000
+            }
+          ],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "confirmed",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Meteor",
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Olivia Chen",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Nova Entertainment",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Hammarby Slussväg 2",
+              "actual": "Hammarby Slussväg 2, Stockholm",
+              "valid": false,
+              "reason": "Expected Hammarby Slussväg 2, got Hammarby Slussväg 2, Stockholm"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2022-08-06",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Cosmic Garden",
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Stockholm",
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Cosmic Garden",
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500,
+              "valid": false,
+              "reason": "Expected 1800, got 500"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2022-08-06T17:00:00Z",
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2022-08-07T03:00:00Z",
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2022-08-06T20:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2022-08-06T22:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000,
+              "valid": false,
+              "reason": "Expected 1500, got 1000"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "not sent",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "not signed",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 10,
+            "score": 0.5555555555555556
+          }
+        },
+        "overallScore": 0.6623931623931625,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message8.txt",
+      "evaluation": {
+        "messageId": "8",
+        "schemaConformity": {
+          "score": 0.7692307692307693,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/event/stageTime must be object (actual: null)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: not signed)",
+            "/booking/contract/status must be null (actual: not signed)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: not signed)"
+          ],
+          "typeErrors": [
+            "/booking/event/stageTime must be object (actual: null)",
+            "/booking/contract/status must be null (actual: not signed)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: not signed)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: not signed)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "17:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "03:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/stageTime",
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "signed",
+                "cosigned"
+              ],
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "inquiry",
+                  "artist": {
+                    "name": "DJ Meteor"
+                  },
+                  "promoter": {
+                    "name": "Luna Garcia",
+                    "company": "Club Stellar",
+                    "address": null
+                  },
+                  "event": {
+                    "date": null,
+                    "venue": "Cosmic Garden",
+                    "city": "Stockholm",
+                    "capacity": 500,
+                    "openingTime": "17:00",
+                    "closingTime": "03:00",
+                    "stageTime": null
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "not sent"
+                  },
+                  "contract": {
+                    "status": "not signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "inquiry",
+                "artist": {
+                  "name": "DJ Meteor"
+                },
+                "promoter": {
+                  "name": "Luna Garcia",
+                  "company": "Club Stellar",
+                  "address": null
+                },
+                "event": {
+                  "date": null,
+                  "venue": "Cosmic Garden",
+                  "city": "Stockholm",
+                  "capacity": 500,
+                  "openingTime": "17:00",
+                  "closingTime": "03:00",
+                  "stageTime": null
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "not sent"
+                },
+                "contract": {
+                  "status": "not signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Meteor"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Luna Garcia",
+                "company": "Club Stellar",
+                "address": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Luna Garcia",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Club Stellar",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": null,
+                "venue": "Cosmic Garden",
+                "city": "Stockholm",
+                "capacity": 500,
+                "openingTime": "17:00",
+                "closingTime": "03:00",
+                "stageTime": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "not sent"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "not sent",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "not signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "not signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 20,
+            "score": 0.7692307692307693
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.3888888888888889,
+          "errors": [
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.name: Expected Olivia Chen, got Luna Garcia",
+            "booking.promoter.company: Expected Nova Entertainment, got Club Stellar",
+            "booking.promoter.address: Missing field",
+            "booking.event.date: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.capacity: Expected 1800, got 500",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Missing field",
+            "booking.event.stageTime.end: Missing field",
+            "booking.invoice.amount: Expected 1500, got 1000"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.date",
+            "booking.event.name",
+            "booking.event.ticketPrice",
+            "booking.event.stageTime.start",
+            "booking.event.stageTime.end"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Luna Garcia"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Club Stellar"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000
+            }
+          ],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry",
+              "valid": false,
+              "reason": "Expected confirmed, got inquiry"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Meteor",
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Luna Garcia",
+              "valid": false,
+              "reason": "Expected Olivia Chen, got Luna Garcia"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Club Stellar",
+              "valid": false,
+              "reason": "Expected Nova Entertainment, got Club Stellar"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Hammarby Slussväg 2",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2022-08-06",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Cosmic Garden",
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Stockholm",
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Cosmic Garden",
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500,
+              "valid": false,
+              "reason": "Expected 1800, got 500"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2022-08-06T17:00:00Z",
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2022-08-07T03:00:00Z",
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2022-08-06T20:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2022-08-06T22:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000,
+              "valid": false,
+              "reason": "Expected 1500, got 1000"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "not sent",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "not signed",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 7,
+            "score": 0.3888888888888889
+          }
+        },
+        "overallScore": 0.5790598290598291,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message9.txt",
+      "evaluation": {
+        "messageId": "9",
+        "schemaConformity": {
+          "score": 0.7692307692307693,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/event/stageTime must be object (actual: null)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: not signed)",
+            "/booking/contract/status must be null (actual: not signed)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: not signed)"
+          ],
+          "typeErrors": [
+            "/booking/event/stageTime must be object (actual: null)",
+            "/booking/contract/status must be null (actual: not signed)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/contract/status must be equal to one of the allowed values (actual: not signed)",
+            "/booking/contract/status must match exactly one schema in oneOf (actual: not signed)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "17:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "03:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/stageTime",
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "expected": [
+                "not sent",
+                "sent",
+                "signed",
+                "cosigned"
+              ],
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed enum"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "/booking/contract/status",
+              "actual": "not signed",
+              "valid": false,
+              "reason": "Value not in allowed oneOf"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "inquiry",
+                  "artist": {
+                    "name": "DJ Meteor"
+                  },
+                  "promoter": {
+                    "name": "Luna Garcia",
+                    "company": "Club Stellar",
+                    "address": null
+                  },
+                  "event": {
+                    "date": null,
+                    "venue": "Cosmic Garden",
+                    "city": "Stockholm",
+                    "capacity": 500,
+                    "openingTime": "17:00",
+                    "closingTime": "03:00",
+                    "stageTime": null
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "not sent"
+                  },
+                  "contract": {
+                    "status": "not signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "inquiry",
+                "artist": {
+                  "name": "DJ Meteor"
+                },
+                "promoter": {
+                  "name": "Luna Garcia",
+                  "company": "Club Stellar",
+                  "address": null
+                },
+                "event": {
+                  "date": null,
+                  "venue": "Cosmic Garden",
+                  "city": "Stockholm",
+                  "capacity": 500,
+                  "openingTime": "17:00",
+                  "closingTime": "03:00",
+                  "stageTime": null
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "not sent"
+                },
+                "contract": {
+                  "status": "not signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Meteor"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Luna Garcia",
+                "company": "Club Stellar",
+                "address": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Luna Garcia",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Club Stellar",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": null,
+                "venue": "Cosmic Garden",
+                "city": "Stockholm",
+                "capacity": 500,
+                "openingTime": "17:00",
+                "closingTime": "03:00",
+                "stageTime": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "not sent"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "not sent",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "not signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "not signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 20,
+            "score": 0.7692307692307693
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.3888888888888889,
+          "errors": [
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.name: Expected Olivia Chen, got Luna Garcia",
+            "booking.promoter.company: Expected Nova Entertainment, got Club Stellar",
+            "booking.promoter.address: Missing field",
+            "booking.event.date: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.capacity: Expected 1800, got 500",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Missing field",
+            "booking.event.stageTime.end: Missing field",
+            "booking.invoice.amount: Expected 1500, got 1000"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.date",
+            "booking.event.name",
+            "booking.event.ticketPrice",
+            "booking.event.stageTime.start",
+            "booking.event.stageTime.end"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Luna Garcia"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Club Stellar"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000
+            }
+          ],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry",
+              "valid": false,
+              "reason": "Expected confirmed, got inquiry"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Meteor",
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Luna Garcia",
+              "valid": false,
+              "reason": "Expected Olivia Chen, got Luna Garcia"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Club Stellar",
+              "valid": false,
+              "reason": "Expected Nova Entertainment, got Club Stellar"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Hammarby Slussväg 2",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2022-08-06",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Cosmic Garden",
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Stockholm",
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Cosmic Garden",
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500,
+              "valid": false,
+              "reason": "Expected 1800, got 500"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2022-08-06T17:00:00Z",
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2022-08-07T03:00:00Z",
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2022-08-06T20:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2022-08-06T22:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000,
+              "valid": false,
+              "reason": "Expected 1500, got 1000"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "not sent",
+              "actual": "not sent",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "not signed",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 7,
+            "score": 0.3888888888888889
+          }
+        },
+        "overallScore": 0.5790598290598291,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message10.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 510"
+      }
+    },
+    {
+      "messageFile": "message11.txt",
+      "evaluation": {
+        "error": "Failed to evaluate",
+        "details": "SyntaxError: Expected ',' or '}' after property value in JSON at position 510"
+      }
+    },
+    {
+      "messageFile": "message12.txt",
+      "evaluation": {
+        "messageId": "12",
+        "schemaConformity": {
+          "score": 0.8846153846153846,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/event/stageTime must be object (actual: null)"
+          ],
+          "typeErrors": [
+            "/booking/event/stageTime must be object (actual: null)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "17:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "03:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/stageTime",
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "inquiry",
+                  "artist": {
+                    "name": "DJ Meteor"
+                  },
+                  "promoter": {
+                    "name": "Luna Garcia",
+                    "company": "Club Stellar",
+                    "address": null
+                  },
+                  "event": {
+                    "date": "2022-08-06",
+                    "venue": "Cosmic Garden",
+                    "city": "Stockholm",
+                    "capacity": 500,
+                    "openingTime": "17:00",
+                    "closingTime": "03:00",
+                    "stageTime": null
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "paid"
+                  },
+                  "contract": {
+                    "status": "signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "inquiry",
+                "artist": {
+                  "name": "DJ Meteor"
+                },
+                "promoter": {
+                  "name": "Luna Garcia",
+                  "company": "Club Stellar",
+                  "address": null
+                },
+                "event": {
+                  "date": "2022-08-06",
+                  "venue": "Cosmic Garden",
+                  "city": "Stockholm",
+                  "capacity": 500,
+                  "openingTime": "17:00",
+                  "closingTime": "03:00",
+                  "stageTime": null
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "paid"
+                },
+                "contract": {
+                  "status": "signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Meteor"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Luna Garcia",
+                "company": "Club Stellar",
+                "address": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Luna Garcia",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Club Stellar",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2022-08-06",
+                "venue": "Cosmic Garden",
+                "city": "Stockholm",
+                "capacity": 500,
+                "openingTime": "17:00",
+                "closingTime": "03:00",
+                "stageTime": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2022-08-06",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "paid"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "paid",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 23,
+            "score": 0.8846153846153846
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.3333333333333333,
+          "errors": [
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.name: Expected Olivia Chen, got Luna Garcia",
+            "booking.promoter.company: Expected Nova Entertainment, got Club Stellar",
+            "booking.promoter.address: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.capacity: Expected 1800, got 500",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Missing field",
+            "booking.event.stageTime.end: Missing field",
+            "booking.invoice.amount: Expected 1500, got 1000",
+            "booking.invoice.status: Expected sent, got paid",
+            "booking.contract.status: Expected not sent, got signed"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.name",
+            "booking.event.ticketPrice",
+            "booking.event.stageTime.start",
+            "booking.event.stageTime.end"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Luna Garcia"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Club Stellar"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000
+            },
+            {
+              "field": "booking.invoice.status",
+              "expected": "sent",
+              "actual": "paid"
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "signed"
+            }
+          ],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry",
+              "valid": false,
+              "reason": "Expected confirmed, got inquiry"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Meteor",
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Luna Garcia",
+              "valid": false,
+              "reason": "Expected Olivia Chen, got Luna Garcia"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Club Stellar",
+              "valid": false,
+              "reason": "Expected Nova Entertainment, got Club Stellar"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Hammarby Slussväg 2",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2022-08-06",
+              "actual": "2022-08-06",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Cosmic Garden",
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Stockholm",
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Cosmic Garden",
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500,
+              "valid": false,
+              "reason": "Expected 1800, got 500"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2022-08-06T17:00:00Z",
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2022-08-07T03:00:00Z",
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2022-08-06T20:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2022-08-06T22:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000,
+              "valid": false,
+              "reason": "Expected 1500, got 1000"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "sent",
+              "actual": "paid",
+              "valid": false,
+              "reason": "Expected sent, got paid"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "signed",
+              "valid": false,
+              "reason": "Expected not sent, got signed"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 6,
+            "score": 0.3333333333333333
+          }
+        },
+        "overallScore": 0.6089743589743589,
+        "parsingIssues": []
+      }
+    },
+    {
+      "messageFile": "message13.txt",
+      "evaluation": {
+        "messageId": "13",
+        "schemaConformity": {
+          "score": 0.8846153846153846,
+          "errors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+            "/booking/event/stageTime must be object (actual: null)"
+          ],
+          "typeErrors": [
+            "/booking/event/stageTime must be object (actual: null)"
+          ],
+          "constraintErrors": [
+            "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+            "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)"
+          ],
+          "missingRequiredFields": [],
+          "evaluationLog": [
+            {
+              "path": "/booking/event/openingTime",
+              "actual": "17:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/closingTime",
+              "actual": "03:00",
+              "valid": false,
+              "reason": "Value not in allowed format"
+            },
+            {
+              "path": "/booking/event/stageTime",
+              "actual": null,
+              "valid": false,
+              "reason": "Value not in allowed type"
+            },
+            {
+              "path": "root",
+              "expected": {
+                "type": "object",
+                "properties": {
+                  "booking": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "oneOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "inquiry",
+                              "confirmed",
+                              "cancelled"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "artist": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "promoter": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "company": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "address": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        }
+                      },
+                      "event": {
+                        "type": "object",
+                        "properties": {
+                          "date": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date"
+                          },
+                          "name": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "city": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "venue": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "capacity": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "ticketPrice": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "openingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "closingTime": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "format": "date-time"
+                          },
+                          "stageTime": {
+                            "type": "object",
+                            "properties": {
+                              "start": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              },
+                              "end": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "format": "date-time"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "invoice": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "paid"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "contract": {
+                        "type": "object",
+                        "properties": {
+                          "status": {
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "not sent",
+                                  "sent",
+                                  "signed",
+                                  "cosigned"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "actual": {
+                "booking": {
+                  "status": "inquiry",
+                  "artist": {
+                    "name": "DJ Meteor"
+                  },
+                  "promoter": {
+                    "name": "Luna Garcia",
+                    "company": "Club Stellar",
+                    "address": null
+                  },
+                  "event": {
+                    "date": "2022-08-06",
+                    "venue": "Cosmic Garden",
+                    "city": "Stockholm",
+                    "capacity": 500,
+                    "openingTime": "17:00",
+                    "closingTime": "03:00",
+                    "stageTime": null
+                  },
+                  "invoice": {
+                    "amount": 1000,
+                    "status": "paid"
+                  },
+                  "contract": {
+                    "status": "signed"
+                  }
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking",
+              "expected": "object",
+              "actual": {
+                "status": "inquiry",
+                "artist": {
+                  "name": "DJ Meteor"
+                },
+                "promoter": {
+                  "name": "Luna Garcia",
+                  "company": "Club Stellar",
+                  "address": null
+                },
+                "event": {
+                  "date": "2022-08-06",
+                  "venue": "Cosmic Garden",
+                  "city": "Stockholm",
+                  "capacity": 500,
+                  "openingTime": "17:00",
+                  "closingTime": "03:00",
+                  "stageTime": null
+                },
+                "invoice": {
+                  "amount": 1000,
+                  "status": "paid"
+                },
+                "contract": {
+                  "status": "signed"
+                }
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "inquiry",
+                      "confirmed",
+                      "cancelled"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "inquiry",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist",
+              "expected": "object",
+              "actual": {
+                "name": "DJ Meteor"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter",
+              "expected": "object",
+              "actual": {
+                "name": "Luna Garcia",
+                "company": "Club Stellar",
+                "address": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Luna Garcia",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Club Stellar",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event",
+              "expected": "object",
+              "actual": {
+                "date": "2022-08-06",
+                "venue": "Cosmic Garden",
+                "city": "Stockholm",
+                "capacity": 500,
+                "openingTime": "17:00",
+                "closingTime": "03:00",
+                "stageTime": null
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "2022-08-06",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 500,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": [
+                "string",
+                "null"
+              ],
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.event.stageTime",
+              "expected": "object",
+              "actual": null,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice",
+              "expected": "object",
+              "actual": {
+                "amount": 1000,
+                "status": "paid"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": [
+                "number",
+                "null"
+              ],
+              "actual": 1000,
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "paid"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "paid",
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract",
+              "expected": "object",
+              "actual": {
+                "status": "signed"
+              },
+              "valid": true,
+              "reason": "Valid value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "not sent",
+                      "sent",
+                      "signed",
+                      "cosigned"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": "signed",
+              "valid": true,
+              "reason": "Valid value"
+            }
+          ],
+          "summary": {
+            "totalFields": 26,
+            "validFields": 23,
+            "score": 0.8846153846153846
+          }
+        },
+        "contextualConsistency": {
+          "score": 0.3888888888888889,
+          "errors": [
+            "booking.status: Expected confirmed, got inquiry",
+            "booking.promoter.name: Expected Olivia Chen, got Luna Garcia",
+            "booking.promoter.company: Expected Nova Entertainment, got Club Stellar",
+            "booking.promoter.address: Missing field",
+            "booking.event.name: Missing field",
+            "booking.event.capacity: Expected 1800, got 500",
+            "booking.event.ticketPrice: Missing field",
+            "booking.event.stageTime.start: Missing field",
+            "booking.event.stageTime.end: Missing field",
+            "booking.invoice.amount: Expected 1500, got 1000",
+            "booking.contract.status: Expected not sent, got signed"
+          ],
+          "missingFields": [
+            "booking.promoter.address",
+            "booking.event.name",
+            "booking.event.ticketPrice",
+            "booking.event.stageTime.start",
+            "booking.event.stageTime.end"
+          ],
+          "incorrectValues": [
+            {
+              "field": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry"
+            },
+            {
+              "field": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Luna Garcia"
+            },
+            {
+              "field": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Club Stellar"
+            },
+            {
+              "field": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500
+            },
+            {
+              "field": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000
+            },
+            {
+              "field": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "signed"
+            }
+          ],
+          "evaluationLog": [
+            {
+              "path": "booking.status",
+              "expected": "confirmed",
+              "actual": "inquiry",
+              "valid": false,
+              "reason": "Expected confirmed, got inquiry"
+            },
+            {
+              "path": "booking.artist.name",
+              "expected": "DJ Meteor",
+              "actual": "DJ Meteor",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.promoter.name",
+              "expected": "Olivia Chen",
+              "actual": "Luna Garcia",
+              "valid": false,
+              "reason": "Expected Olivia Chen, got Luna Garcia"
+            },
+            {
+              "path": "booking.promoter.company",
+              "expected": "Nova Entertainment",
+              "actual": "Club Stellar",
+              "valid": false,
+              "reason": "Expected Nova Entertainment, got Club Stellar"
+            },
+            {
+              "path": "booking.promoter.address",
+              "expected": "Hammarby Slussväg 2",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.date",
+              "expected": "2022-08-06",
+              "actual": "2022-08-06",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.name",
+              "expected": "Cosmic Garden",
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.city",
+              "expected": "Stockholm",
+              "actual": "Stockholm",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.venue",
+              "expected": "Cosmic Garden",
+              "actual": "Cosmic Garden",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.capacity",
+              "expected": 1800,
+              "actual": 500,
+              "valid": false,
+              "reason": "Expected 1800, got 500"
+            },
+            {
+              "path": "booking.event.ticketPrice",
+              "expected": 15,
+              "actual": "Missing",
+              "valid": false,
+              "reason": "Field is missing"
+            },
+            {
+              "path": "booking.event.openingTime",
+              "expected": "2022-08-06T17:00:00Z",
+              "actual": "17:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.closingTime",
+              "expected": "2022-08-07T03:00:00Z",
+              "actual": "03:00",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.event.stageTime.start",
+              "expected": "2022-08-06T20:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.event.stageTime.end",
+              "expected": "2022-08-06T22:00:00Z",
+              "actual": null,
+              "valid": false,
+              "reason": "Missing field"
+            },
+            {
+              "path": "booking.invoice.amount",
+              "expected": 1500,
+              "actual": 1000,
+              "valid": false,
+              "reason": "Expected 1500, got 1000"
+            },
+            {
+              "path": "booking.invoice.status",
+              "expected": "paid",
+              "actual": "paid",
+              "valid": true,
+              "reason": "Field value matches expected value"
+            },
+            {
+              "path": "booking.contract.status",
+              "expected": "not sent",
+              "actual": "signed",
+              "valid": false,
+              "reason": "Expected not sent, got signed"
+            }
+          ],
+          "summary": {
+            "totalFields": 18,
+            "correctFields": 7,
+            "score": 0.3888888888888889
+          }
+        },
+        "overallScore": 0.6367521367521367,
+        "parsingIssues": []
+      }
+    }
+  ],
+  "processedResponses": [
+    {
+      "file": "message1.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \"name\": \"Olivia Chen\", \"company\": null, \"address\": null },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": null,\n      \"city\": \"Stockholm\",\n      \"capacity\": null,\n      \"ticketPrice\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": { \"amount\": null, \"status\": null },\n    \"contract\": { \"st"
+    },
+    {
+      "file": "message2.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \"name\": \"Olivia Chen\", \"company\": null, \"address\": null },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": null,\n      \"city\": \"Stockholm\",\n      \"capacity\": null,\n      \"openingTime\": null,\n      \"closingTime\": null,\n      \"stageTime\": {\n        \"start\": null,\n        \"end\": null\n      }\n    },\n    \"invoice\": { \"amount\": null, \"status\": null },\n    \"contract\": { \"status\": null }\n}"
+    },
+    {
+      "file": "message3.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \"name\": \"Olivia Chen\", \"company\": \"clubstellar.se\", \"address\": \"Hammarby Slussväg 2, Stockholm\" },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": null },\n    \"contract\": { \"status\": null }\n  }\n}"
+    },
+    {
+      "file": "message4.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \"name\": \"Olivia Chen\", \"company\": \"clubstellar.se\", \"address\": \"Hammarby Slussväg 2, Stockholm\" },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": null },\n    \"contract\": { \"status\": null }\n}"
+    },
+    {
+      "file": "message5.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \"name\": \"Olivia Chen\", \"company\": \"clubstellar.se\", \"address\": \"Hammarby Slussväg 2, Stockholm\" },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": null },\n    \"contract\": { \"status\": null }\n}"
+    },
+    {
+      "file": "message6.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": null,\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \n      \"name\": \"Olivia Chen\", \n      \"company\": \"Nova Entertainment\", \n      \"address\": \"Hammarby Slussväg 2, Stockholm\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": null },\n    \"contract\": { \""
+    },
+    {
+      "file": "message7.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"confirmed\",\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \n      \"name\": \"Olivia Chen\", \n      \"company\": \"Nova Entertainment\", \n      \"address\": \"Hammarby Slussväg 2, Stockholm\"\n    },\n    \"event\": {\n      \"date\": null,\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"not sent\" },\n    \"c"
+    },
+    {
+      "file": "message8.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \n      \"name\": \"Luna Garcia\", \n      \"company\": \"Club Stellar\", \n      \"address\": null\n    },\n    \"event\": {\n      \"date\": null,\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"not sent\" },\n    \"contract\": { \"status\": \"not signed\" }"
+    },
+    {
+      "file": "message9.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \n      \"name\": \"Luna Garcia\", \n      \"company\": \"Club Stellar\", \n      \"address\": null\n    },\n    \"event\": {\n      \"date\": null,\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"not sent\" },\n    \"contract\": { \"status\": \"not signed\" }"
+    },
+    {
+      "file": "message10.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \n      \"name\": \"Luna Garcia\", \n      \"company\": \"Club Stellar\", \n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"not sent\" },\n    \"contract\": { \"status\": \"not s"
+    },
+    {
+      "file": "message11.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \n      \"name\": \"Luna Garcia\", \n      \"company\": \"Club Stellar\", \n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"not sent\" },\n    \"contract\": { \"status\": \"not s"
+    },
+    {
+      "file": "message12.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \n      \"name\": \"Luna Garcia\", \n      \"company\": \"Club Stellar\", \n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"paid\" },\n    \"contract\": { \"status\": \"signed\" }"
+    },
+    {
+      "file": "message13.txt",
+      "response": "{\n  \"booking\": {\n    \"status\": \"inquiry\",\n    \"artist\": { \"name\": \"DJ Meteor\" },\n    \"promoter\": { \n      \"name\": \"Luna Garcia\", \n      \"company\": \"Club Stellar\", \n      \"address\": null\n    },\n    \"event\": {\n      \"date\": \"2022-08-06\",\n      \"venue\": \"Cosmic Garden\",\n      \"city\": \"Stockholm\",\n      \"capacity\": 500,\n      \"openingTime\": \"17:00\",\n      \"closingTime\": \"03:00\",\n      \"stageTime\": null\n    },\n    \"invoice\": { \"amount\": 1000, \"status\": \"paid\" },\n    \"contract\": { \"status\": \"signed\" }"
+    }
+  ],
+  "averageScores": {
+    "schemaConformity": 0.45857988165680474,
+    "contextualConsistency": 0.2533577533577534,
+    "overallScore": 0.3559688175072791,
+    "successRate": 0.5384615384615384
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "messageId": "6",
+  "score": 0.9615384615384616,
+  "timestamp": "2025-05-08T11:57:14.404Z",
+  "errors": [
+    "/booking/promoter/address must be string,null (actual: {\"street\":\"Hammarby Slussväg 2\",\"phone\":\"+46 (0) 8 644 20 23\",\"email\":\"olivia@clubstellar.se\"})"
+  ]
+}

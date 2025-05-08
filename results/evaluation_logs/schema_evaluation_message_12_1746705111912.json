@@ -1,0 +1,10 @@
+{
+  "messageId": "12",
+  "score": 0.8846153846153846,
+  "timestamp": "2025-05-08T11:51:51.912Z",
+  "errors": [
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+    "/booking/event/stageTime must be object (actual: null)"
+  ]
+}

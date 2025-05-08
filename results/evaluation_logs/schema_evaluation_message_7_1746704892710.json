@@ -1,0 +1,10 @@
+{
+  "messageId": "7",
+  "score": 0.8846153846153846,
+  "timestamp": "2025-05-08T11:48:12.710Z",
+  "errors": [
+    "/booking/promoter/company must be string,null (actual: {\"name\":\"Nova Entertainment\",\"address\":\"Hammarby Slussväg 2, Stockholm\"})",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)"
+  ]
+}

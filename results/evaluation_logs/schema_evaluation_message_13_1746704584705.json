@@ -1,0 +1,8 @@
+{
+  "messageId": "13",
+  "score": 0.9615384615384616,
+  "timestamp": "2025-05-08T11:43:04.705Z",
+  "errors": [
+    "/booking/event/stageTime must be object (actual: null)"
+  ]
+}

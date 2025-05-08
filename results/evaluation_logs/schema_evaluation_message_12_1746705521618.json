@@ -1,0 +1,14 @@
+{
+  "messageId": "12",
+  "score": 0.7307692307692307,
+  "timestamp": "2025-05-08T11:58:41.618Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: set for payment)",
+    "/booking/status must be null (actual: set for payment)",
+    "/booking/status must match exactly one schema in oneOf (actual: set for payment)",
+    "/booking/promoter/address must be string,null (actual: {\"street\":\"Hammarby Slussväg 2\",\"phone\":\"+46 (0) 8 644 20 23\",\"email\":\"olivia@clubstellar.se\"})",
+    "/booking/invoice/status must be equal to one of the allowed values (actual: attached)",
+    "/booking/invoice/status must be null (actual: attached)",
+    "/booking/invoice/status must match exactly one schema in oneOf (actual: attached)"
+  ]
+}
