@@ -586,13 +586,13 @@
       "booking.invoice.status": {
         "acceptedValues": [
           "notsent",
-          "notcreated"
+          "not"
         ]
       },
       "booking.contract.status": {
         "acceptedValues": [
           "notsent",
-          "notcreated"
+          "not"
         ]
       }
     }
@@ -704,13 +704,13 @@
       "booking.invoice.status": {
         "acceptedValues": [
           "notsent",
-          "notcreated"
+          "not"
         ]
       },
       "booking.contract.status": {
         "acceptedValues": [
           "notsent",
-          "notcreated"
+          "not"
         ]
       }
     }

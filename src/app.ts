@@ -1,4 +1,3 @@
-
 import fs from "fs/promises";
 import path from "path";
 import { Evaluator } from "./services/evaluator";
@@ -36,41 +35,58 @@ export type PromptingStrategy =
   | "role-guided"
   | "role-guided-schema";
 
-// Runtime logs for current execution
-let runLog: string = "";
+// Constants
+const DEFAULT_MODEL = "llama3";
+const DEFAULT_STRATEGY = "zero-shot";
+const VALID_STRATEGIES: PromptingStrategy[] = [
+  "zero-shot",
+  "zero-shot-schema",
+  "one-shot",
+  "one-shot-schema",
+  "few-shot",
+  "few-shot-schema",
+  "chain-of-thought",
+  "chain-of-thought-schema",
+  "self-verification",
+  "self-verification-schema",
+  "keyword-action",
+  "keyword-action-schema",
+  "role-guided",
+  "role-guided-schema",
+];
 
-// Archive of all prompts and responses for analysis
+// Runtime state
+let runLog: string = "";
 let promptResponseLog: string = "";
 
-// Logs to both console and internal buffer for later analysis
+/**
+ * Logs message to console and internal buffer
+ */
 function log(message: string): void {
   console.log(message);
   runLog += message + "\n";
 }
 
-// Loads email message content from file
-async function loadMessageContent(filePath: string): Promise<string> {
+/**
+ * Loads file content with given path
+ */
+async function loadFile(filePath: string): Promise<string> {
   return fs.readFile(filePath, "utf-8");
 }
 
-// Loads the JSON schema used to validate LLM outputs
-async function loadSchema(schemaPath: string): Promise<any> {
-  const content = await fs.readFile(schemaPath, "utf-8");
+/**
+ * Loads and parses JSON file
+ */
+async function loadJsonFile(filePath: string): Promise<any> {
+  const content = await loadFile(filePath);
   return JSON.parse(content);
 }
 
-// Loads correct expected answers for scoring LLM responses
-async function loadGroundTruth(
-  groundTruthPath: string
-): Promise<Record<string, any>> {
-  const content = await fs.readFile(groundTruthPath, "utf-8");
-  return JSON.parse(content);
-}
-
-// Returns sorted list of message files by their sequence number
+/**
+ * Returns sorted list of message files by their sequence number
+ */
 async function getMessageFiles(threadPath: string): Promise<string[]> {
   const files = await fs.readdir(threadPath);
-  // Filter for message files and sort by number
   return files
     .filter((file) => file.match(/message\d+\.txt/))
     .sort((a, b) => {
@@ -80,12 +96,14 @@ async function getMessageFiles(threadPath: string): Promise<string[]> {
     });
 }
 
-// Creates appropriate prompt based on selected strategy
+/**
+ * Creates appropriate prompt based on selected strategy
+ */
 function createPrompt(
   emailContent: string,
   strategy: PromptingStrategy,
   previousData: string = "{}",
-  schema: any,
+  schema: any = null,
   conversationHistory: string = ""
 ): string {
   switch (strategy) {
@@ -104,27 +122,15 @@ function createPrompt(
     case "chain-of-thought":
       return createChainOfThoughtPrompt(emailContent, previousData);
     case "chain-of-thought-schema":
-      return createChainOfThoughtSchemaPrompt(
-        emailContent,
-        previousData,
-        schema
-      );
+      return createChainOfThoughtSchemaPrompt(emailContent, previousData, schema);
     case "self-verification":
       return createSelfVerificationPrompt(emailContent, previousData);
     case "self-verification-schema":
-      return createSelfVerificationSchemaPrompt(
-        emailContent,
-        previousData,
-        schema
-      );
+      return createSelfVerificationSchemaPrompt(emailContent, previousData, schema);
     case "keyword-action":
       return createKeywordActionPrompt(emailContent, previousData);
     case "keyword-action-schema":
-      return createKeywordActionSchemaPrompt(
-        emailContent,
-        previousData,
-        schema
-      );
+      return createKeywordActionSchemaPrompt(emailContent, previousData, schema);
     case "role-guided":
       return createRoleGuidedPrompt(emailContent, previousData);
     case "role-guided-schema":
@@ -134,18 +140,19 @@ function createPrompt(
   }
 }
 
-// Sends prompt to local Ollama LLM and returns response
+/**
+ * Sends prompt to local Ollama LLM and returns response
+ */
 async function queryModel(
   prompt: string,
-  modelName: string = "llama3"
+  modelName: string = DEFAULT_MODEL
 ): Promise<string> {
   try {
     // Log prompt for later analysis
-    promptResponseLog +=
-      "\n\n==================== PROMPT ====================\n\n";
+    promptResponseLog += "\n\n==================== PROMPT ====================\n\n";
     promptResponseLog += prompt;
 
-    // Call Ollama API with optimized parameters
+    // Call Ollama API
     const response = await fetch("http://localhost:11434/api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -154,9 +161,9 @@ async function queryModel(
         prompt: prompt,
         stream: false,
         options: {
-          temperature: 0.1, // Low temperature for more deterministic outputs
-          top_p: 0.9, // Balance between focused and diverse token selection
-          num_predict: 2048, // Maximum token length for generated response
+          temperature: 0.1,
+          top_p: 0.9,
+          num_predict: 2048,
         },
       }),
     });
@@ -168,8 +175,7 @@ async function queryModel(
     const data = (await response.json()) as { response: string };
 
     // Log response for later analysis
-    promptResponseLog +=
-      "\n\n==================== RESPONSE ====================\n\n";
+    promptResponseLog += "\n\n==================== RESPONSE ====================\n\n";
     promptResponseLog += data.response;
 
     return data.response;
@@ -179,7 +185,9 @@ async function queryModel(
   }
 }
 
-// Extracts valid JSON from potentially messy LLM responses
+/**
+ * Extracts valid JSON from potentially messy LLM responses
+ */
 function extractJsonFromResponse(response: string): string {
   try {
     const jsonStartIndex = response.indexOf("{");
@@ -198,25 +206,21 @@ function extractJsonFromResponse(response: string): string {
         continue;
       }
 
-      // Handle escape sequences within strings
       if (char === "\\" && inString) {
         escapeNext = true;
         continue;
       }
 
-      // Toggle string mode
       if (char === '"') {
         inString = !inString;
         continue;
       }
 
-      // Only count braces outside of string literals
       if (!inString) {
         if (char === "{") openBraces++;
         if (char === "}") {
           openBraces--;
           if (openBraces === 0) {
-            // Found complete JSON object
             return response.substring(jsonStartIndex, i + 1);
           }
         }
@@ -230,7 +234,9 @@ function extractJsonFromResponse(response: string): string {
   }
 }
 
-// Processes a single email and evaluates LLM response
+/**
+ * Processes a single email and evaluates LLM response
+ */
 async function processMessage(
   filePath: string,
   strategy: PromptingStrategy,
@@ -239,103 +245,82 @@ async function processMessage(
   evaluator: Evaluator | null
 ): Promise<{ response: string; evaluation: any | null }> {
   // Extract message number for tracking
-  const messageNum =
-    path.basename(filePath).match(/message(\d+)\.txt/)?.[1] || "unknown";
-  const emailContent = await loadMessageContent(filePath);
+  const messageNum = path.basename(filePath).match(/message(\d+)\.txt/)?.[1] || "unknown";
+  const emailContent = await loadFile(filePath);
 
+  // Create prompt using selected strategy
   const prompt = createPrompt(emailContent, strategy, previousData, schema);
   log(`Processing Message ${messageNum} with ${strategy} strategy`);
 
-  // Track processing time for performance analysis
+  // Query LLM
   const startTime = Date.now();
   const response = await queryModel(prompt);
   const processingTime = Date.now() - startTime;
 
-  // Log preview and timing info
+  // Log preview
   log(
-    `RAW RESPONSE (first 150 chars): ${response.substring(0, 150)}${
+    `Response preview: ${response.substring(0, 150)}${
       response.length > 150 ? "..." : ""
-    }; ProcessingTime: ${processingTime}ms`
+    }; Time: ${processingTime}ms`
   );
 
-  // Evaluate response quality if evaluator is available
+  // Evaluate response if evaluator exists
   let evaluation = null;
   if (evaluator) {
     try {
-      // Extract and normalize JSON from response
       const jsonStr = extractJsonFromResponse(response);
       const parsedResponse = JSON.parse(jsonStr);
-
-      // Ensure response has expected structure
       const formattedResponse = parsedResponse.booking
         ? parsedResponse
         : { booking: parsedResponse };
 
-      // Run evaluation metrics
       evaluation = await evaluator.evaluate(messageNum, formattedResponse);
-
+      
       // Log evaluation scores
+      const evalResult = await evaluation;
       log(
-        `Scores - Schema: ${(await evaluation).schemaConformity.score.toFixed(
-          2
-        )}, Context: ${(await evaluation).contextualConsistency.score.toFixed(
-          2
-        )}, Overall: ${(await evaluation).overallScore.toFixed(2)}`
+        `Scores - Schema: ${evalResult.schemaConformity.score.toFixed(2)}, ` +
+        `Context: ${evalResult.contextualConsistency.score.toFixed(2)}, ` +
+        `Overall: ${evalResult.overallScore.toFixed(2)}`
       );
 
-      // Log schema validation errors if any
-      if ((await evaluation).schemaConformity.errors.length > 0) {
-        log(`Schema errors: ${(await evaluation).schemaConformity.errors.length}`);
-        // Show sample errors for debugging
-        const sampleErrors = (await evaluation).schemaConformity.errors.slice(0, 3);
-        if (sampleErrors.length > 0) {
+      // Log schema validation errors if present
+      if (evalResult.schemaConformity.errors.length > 0) {
+        log(`Schema errors: ${evalResult.schemaConformity.errors.length}`);
+        if (evalResult.schemaConformity.errors.length > 0) {
+          const sampleErrors = evalResult.schemaConformity.errors.slice(0, 3);
           log(`Sample errors: ${sampleErrors.join(", ")}`);
         }
       }
     } catch (e: any) {
       log(`Evaluation failed: ${e}`);
       evaluation = { error: "Failed to evaluate", details: e.toString() };
-  
-      // Increment the parsing failure counter in the evaluator
-      if (evaluator) {
-        // We need to explicitly increment the counter in the evaluator
-        evaluator.evaluate(messageNum, response); // This will increment the counter
-      }
-      
-      // Increment the parsing failure counter in the evaluator
-      // This should be handled by the evaluate method, but we'll also handle it here
-      // for the case where the parsing fails before reaching the evaluator
     }
     
-    // Move this AFTER the try/catch block so it reports the current state
+    // Report parsing failures
     const parsingFailures = evaluator.getParsingFailures();
-    const totalProcessed = parseInt(messageNum); // Or track a running count
-    const parsingFailureRate = evaluator.getParsingFailureRate(totalProcessed);
-    
-    log(`Parsing failures: ${parsingFailures} out of ${totalProcessed} messages (${(parsingFailureRate * 100).toFixed(1)}%)`);
+    const totalProcessed = parseInt(messageNum); 
+    const failureRate = evaluator.getParsingFailureRate(totalProcessed);
+    log(`Parsing failures: ${parsingFailures}/${totalProcessed} (${(failureRate * 100).toFixed(1)}%)`);
   }
 
   return { response, evaluation };
 }
 
-// Process entire email thread with given strategy and evaluate results
+/**
+ * Process entire email thread with given strategy and evaluate results
+ */
 async function runCompleteThread(strategy: PromptingStrategy): Promise<any> {
   // Set data paths
-  const threadPath = path.join(process.cwd(), "data/emailThreads/thread1");
-  const schemaPath = path.join(
-    process.cwd(),
-    "data/schema/booking_schema.json"
-  );
-  const groundTruthPath = path.join(
-    process.cwd(),
-    "data/emailThreads/thread1/groundTruth.json"
-  );
+  const threadPath = path.join(process.cwd(), "data/emailThreads/thread4");
+  const schemaPath = path.join(process.cwd(), "data/schema/booking_schema.json");
+  const groundTruthPath = path.join(process.cwd(), "data/emailThreads/thread4/groundTruth.json");
 
   // Initialize schema and evaluator
-  const schemaObj = await loadSchema(schemaPath);
+  const schemaObj = await loadJsonFile(schemaPath);
   let evaluator = null;
   try {
-    const groundTruth = await loadGroundTruth(groundTruthPath);
+    const groundTruth = await loadJsonFile(groundTruthPath);
     evaluator = new Evaluator(schemaObj, groundTruth);
   } catch (e) {
     log(`Failed to setup evaluator: ${e}`);
@@ -343,14 +328,14 @@ async function runCompleteThread(strategy: PromptingStrategy): Promise<any> {
 
   // Load all messages in thread
   const messageFiles = await getMessageFiles(threadPath);
-  log(`Found ${messageFiles.length} messages`);
+  log(`Found ${messageFiles.length} messages to process`);
 
-  // State maintained between messages
+  // State and results
   let previousData = "{}";
   const evaluationResults = [];
   const processedResponses = [];
 
-  // Process each message in sequence
+  // Process each message sequentially
   for (const file of messageFiles) {
     const filePath = path.join(threadPath, file);
     const { response, evaluation } = await processMessage(
@@ -361,7 +346,7 @@ async function runCompleteThread(strategy: PromptingStrategy): Promise<any> {
       evaluator
     );
 
-    // Store truncated response to save memory
+    // Store response (truncated to save memory)
     processedResponses.push({
       file,
       response: response.substring(0, 500),
@@ -379,63 +364,30 @@ async function runCompleteThread(strategy: PromptingStrategy): Promise<any> {
     }
   }
 
-  // Calculate aggregate metrics if evaluations exist
+  // Calculate aggregate metrics
   if (evaluationResults.length > 0) {
-    // Calculate average scores across all messages
-    const avgSchemaScore =
-      evaluationResults.reduce(
-        (sum, result) => sum + (result.evaluation.schemaConformity?.score || 0),
-        0
-      ) / evaluationResults.length;
+    // Calculate average scores
+    const avgSchemaScore = evaluationResults.reduce(
+      (sum, result) => sum + (result.evaluation.schemaConformity?.score || 0),
+      0
+    ) / evaluationResults.length;
 
-    const avgContextScore =
-      evaluationResults.reduce(
-        (sum, result) =>
-          sum + (result.evaluation.contextualConsistency?.score || 0),
-        0
-      ) / evaluationResults.length;
+    const avgContextScore = evaluationResults.reduce(
+      (sum, result) => sum + (result.evaluation.contextualConsistency?.score || 0),
+      0
+    ) / evaluationResults.length;
 
-    const avgOverallScore =
-      evaluationResults.reduce(
-        (sum, result) => sum + (result.evaluation.overallScore || 0),
-        0
-      ) / evaluationResults.length;
+    const avgOverallScore = evaluationResults.reduce(
+      (sum, result) => sum + (result.evaluation.overallScore || 0), 
+      0
+    ) / evaluationResults.length;
 
     // Calculate success rate
-    const successfulEvals = evaluationResults.filter(
-      (r) => !r.evaluation.error
-    ).length;
+    const successfulEvals = evaluationResults.filter(r => !r.evaluation.error).length;
     const successRate = successfulEvals / messageFiles.length;
 
-    log(
-      `AVERAGE SCORES - Schema: ${avgSchemaScore.toFixed(
-        2
-      )}, Context: ${avgContextScore.toFixed(
-        2
-      )}, Overall: ${avgOverallScore.toFixed(2)}`
-    );
-    log(
-      `Evaluation success rate: ${(successRate * 100).toFixed(
-        2
-      )}% (${successfulEvals}/${messageFiles.length})`
-    );
-
-    // Analyze common error patterns
-    const allErrors = evaluationResults
-      .filter((r) => r.evaluation.schemaConformity?.errors)
-      .flatMap((r) => r.evaluation.schemaConformity.errors);
-
-    if (allErrors.length > 0) {
-      // Categorize error types for analysis
-      const dateFormatErrors = allErrors.filter(
-        (e) => e.includes("date") && e.includes("format")
-      ).length;
-      const typeErrors = allErrors.filter((e) => e.includes("must be")).length;
-
-      log(
-        `Common error types - Date format: ${dateFormatErrors}, Type mismatches: ${typeErrors}`
-      );
-    }
+    log(`AVERAGE SCORES - Schema: ${avgSchemaScore.toFixed(2)}, Context: ${avgContextScore.toFixed(2)}, Overall: ${avgOverallScore.toFixed(2)}`);
+    log(`Success rate: ${(successRate * 100).toFixed(2)}% (${successfulEvals}/${messageFiles.length})`);
 
     return {
       strategy,
@@ -453,65 +405,39 @@ async function runCompleteThread(strategy: PromptingStrategy): Promise<any> {
   return { strategy, evaluationResults, processedResponses };
 }
 
-// Save results and logs to timestamped files
-async function saveResults(
-  strategy: PromptingStrategy,
-  results: any
-): Promise<void> {
+/**
+ * Save results and logs to timestamped files
+ */
+async function saveResults(strategy: PromptingStrategy, results: any): Promise<void> {
   const logsDir = path.join(process.cwd(), "results");
   await fs.mkdir(logsDir, { recursive: true });
 
-  // Create timestamped filenames for versioning
   const timestamp = new Date().toISOString().slice(0, 10);
   const resultsPath = path.join(logsDir, `${strategy}_${timestamp}.json`);
-  const promptResponseLogPath = path.join(
-    logsDir,
-    `${strategy}_${timestamp}_prompt_response_log.txt`
-  );
+  const logPath = path.join(logsDir, `${strategy}_${timestamp}_prompt_response_log.txt`);
 
   await fs.writeFile(resultsPath, JSON.stringify(results, null, 2));
-  await fs.writeFile(promptResponseLogPath, promptResponseLog);
+  await fs.writeFile(logPath, promptResponseLog);
 
   console.log(`Results saved to: ${resultsPath}`);
-  console.log(`Prompt-response log saved to: ${promptResponseLogPath}`);
+  console.log(`Prompt-response log saved to: ${logPath}`);
 }
 
-// Main entry point - parse args and run experiment
+/**
+ * Main entry point - parse args and run experiment
+ */
 async function main() {
   // Get strategy from command line or use default
   const strategyArg = process.argv[2];
-  const validStrategies: PromptingStrategy[] = [
-    "zero-shot",
-    "zero-shot-schema",
-    "one-shot",
-    "one-shot-schema",
-    "few-shot",
-    "few-shot-schema",
-    "chain-of-thought",
-    "chain-of-thought-schema",
-    "self-verification",
-    "self-verification-schema",
-    "keyword-action",
-    "keyword-action-schema",
-    "role-guided",
-    "role-guided-schema",
-  ];
-
+  
   // Validate input strategy
-  if (
-    strategyArg &&
-    !validStrategies.includes(strategyArg as PromptingStrategy)
-  ) {
-    console.error(
-      `Invalid strategy: ${strategyArg}. Valid options: ${validStrategies.join(
-        ", "
-      )}`
-    );
+  if (strategyArg && !VALID_STRATEGIES.includes(strategyArg as PromptingStrategy)) {
+    console.error(`Invalid strategy: ${strategyArg}. Valid options: ${VALID_STRATEGIES.join(", ")}`);
     process.exit(1);
   }
 
-  // Use provided strategy or default to zero-shot
-  const strategy = (strategyArg as PromptingStrategy) || "zero-shot";
+  // Use provided strategy or default
+  const strategy = (strategyArg as PromptingStrategy) || DEFAULT_STRATEGY;
   runLog = "";
   promptResponseLog = "";
 

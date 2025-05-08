@@ -21,12 +21,12 @@ export class Evaluator {
   
   constructor(schema: any, groundTruth: Record<string, any>, enableLogs: boolean = true) {
     this.schemaEvaluator = new SchemaEvaluator(schema);
-    this.contextEvaluator = new ContextEvaluator(groundTruth, enableLogs);
+    this.contextEvaluator = new ContextEvaluator(groundTruth);
     this.enableDetailedLogs = enableLogs;
   }
   
   async evaluate(messageId: string, extractedData: any): Promise<EvaluationResult> {
-    
+
     // Initialize result object with default values
     const result: EvaluationResult = {
       messageId,

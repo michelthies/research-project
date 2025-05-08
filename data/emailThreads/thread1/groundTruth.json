@@ -424,10 +424,10 @@
         "acceptedValues": ["1000", "1k"]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": ["notsent", "not"]
       },
       "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": ["notsent", "not"]
       }
     }
   },
@@ -499,10 +499,10 @@
         "acceptedValues": ["1000", "1k"]
       },
       "booking.invoice.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": ["notsent", "not"]
       },
       "booking.contract.status": {
-        "acceptedValues": ["notsent", "notcreated"]
+        "acceptedValues": ["notsent", "not"]
       }
     }
   },
