@@ -1,0 +1,14 @@
+{
+  "messageId": "5",
+  "score": 0.8653846153846154,
+  "timestamp": "2025-05-14T17:47:30.182Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: pending)",
+    "/booking/status must be null (actual: pending)",
+    "/booking/status must match exactly one schema in oneOf (actual: pending)",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 22:00:00+00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 06:00:00+00)",
+    "/booking/event/stageTime/start must match format \"date-time\" (actual: 02:00:00+00)",
+    "/booking/event/stageTime/end must match format \"date-time\" (actual: 03:00:00+00)"
+  ]
+}

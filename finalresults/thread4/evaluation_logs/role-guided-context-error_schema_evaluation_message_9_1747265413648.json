@@ -1,0 +1,16 @@
+{
+  "messageId": "9",
+  "score": 0.9134615384615384,
+  "timestamp": "2025-05-14T23:30:13.648Z",
+  "errors": [
+    "booking.promoter.cell phone: Field not defined in schema",
+    "booking.promoter.email: Field not defined in schema",
+    "booking.promoter.website: Field not defined in schema",
+    "booking.promoter.VAT Number: Field not defined in schema",
+    "booking.promoter.ORG NUMMER.: Field not defined in schema",
+    "booking.event.ticket price: Field not defined in schema",
+    "booking.event.opening time: Field not defined in schema",
+    "booking.event.closing time: Field not defined in schema",
+    "booking.stage time: Field not defined in schema"
+  ]
+}

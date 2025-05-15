@@ -1,0 +1,78 @@
+{
+  "strategy": "zero-shot",
+  "schemaMetrics": {
+    "score": 0.6923076923076923,
+    "rawScore": 0.9440559440559441,
+    "effectiveScore": 0.6923076923076923,
+    "parseSuccessRate": 0.7333333333333333,
+    "typeErrorRate": 0.04895104895104896,
+    "constraintViolationRate": 0.031468531468531465,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.18939393939393936
+  },
+  "contextMetrics": {
+    "score": 0.6315909090909091,
+    "fieldAccuracy": 0.4090909090909091,
+    "contextLossRate": 0.3181818181818182,
+    "unexpectedFieldRate": 0.18939393939393936
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9440559440559441,
+    "contextualConsistency": 0.6315909090909091,
+    "overallScore": 0.7878234265734264,
+    "successRate": 0.7333333333333333,
+    "jsonAdherenceRate": 0.7333333333333333
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 23,
+    "UNEXPECTED_FIELD": 36,
+    "_unexpectedFieldDetails": {
+      "accommodation": {
+        "count": 2,
+        "fields": [
+          "booking.contract.accommodation"
+        ]
+      },
+      "travel": {
+        "count": 2,
+        "fields": [
+          "booking.contract.travel"
+        ]
+      },
+      "engineer": {
+        "count": 6,
+        "fields": [
+          "booking.engineer"
+        ]
+      },
+      "press_interview": {
+        "count": 5,
+        "fields": [
+          "booking.press_interview"
+        ]
+      },
+      "artist_photo": {
+        "count": 2,
+        "fields": [
+          "booking.artist_photo"
+        ]
+      },
+      "revised_artwork": {
+        "count": 1,
+        "fields": [
+          "booking.revised_artwork"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 18,
+      "uniqueFields": 6
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 294.3333333333333,
+    "avgResponseTokens": 88.66666666666667,
+    "totalTokens": 5745
+  }
+}

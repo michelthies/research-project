@@ -1,0 +1,69 @@
+{
+  "strategy": "self-verification-schema-error",
+  "schemaMetrics": {
+    "score": 0.9955621301775148,
+    "rawScore": 0.9955621301775148,
+    "effectiveScore": 0.9955621301775148,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.00591715976331361,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.01987179487179487
+  },
+  "contextMetrics": {
+    "score": 0.6522273665876607,
+    "fieldAccuracy": 0.40163398692810454,
+    "contextLossRate": 0.4174863535157653,
+    "unexpectedFieldRate": 0.01987179487179487
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.05217236467236467,
+    "avgFeedbackEffectivenessScore": 0.024740767450142448
+  },
+  "averageScores": {
+    "schemaConformity": 0.9955621301775148,
+    "contextualConsistency": 0.6522273665876607,
+    "overallScore": 0.8238947483825878,
+    "successRate": 1,
+    "jsonAdherenceRate": 1
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 2,
+    "UNEXPECTED_FIELD": 6,
+    "_unexpectedFieldDetails": {
+      "VAT Number": {
+        "count": 1,
+        "fields": [
+          "booking.promoter.VAT Number"
+        ]
+      },
+      "": {
+        "count": 1,
+        "fields": [
+          "booking.promoter.ORG NUMMER."
+        ]
+      },
+      "invoice": {
+        "count": 1,
+        "fields": [
+          "booking.invoice"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 4,
+      "uniqueFields": 4
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1434.3076923076924,
+    "avgResponseTokens": 177.15384615384616,
+    "totalTokens": 20949
+  }
+}

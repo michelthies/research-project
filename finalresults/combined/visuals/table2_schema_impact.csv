@@ -1,0 +1,8 @@
+Base Strategy,Without Schema,With Schema,Improvement
+role-guided,15.5,98.9,+537.8
+chain-of-thought,25.7,97.9,+281.5
+self-verification,34.1,98.8,+189.2
+keyword-action,56.4,80.7,+43.0
+one-shot,79.3,98.6,+24.4
+few-shot,99.2,98.3,-0.9
+zero-shot,62.4,27.0,-56.8

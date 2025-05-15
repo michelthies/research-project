@@ -1,0 +1,1486 @@
+{
+  "chain-of-thought-context-error": {
+    "strategy": "chain-of-thought-context-error",
+    "schemaMetrics": {
+      "score": 0.6864727153188692,
+      "parseSuccessRate": 0.735975135975136,
+      "rawScore": 0.9413665038665039,
+      "effectiveScore": 0.6864727153188692,
+      "typeErrorRate": 0.0202991452991453,
+      "constraintViolationRate": 0.036324786324786335,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7726317661323788,
+      "fieldAccuracy": 0.672336965412946,
+      "contextLossRate": 0.24307859896095194,
+      "unexpectedFieldRate": 0.10832383166941989
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.1722229887936493,
+      "avgFeedbackEffectivenessScore": 0.14479445129925964
+    },
+    "averageScores": {
+      "overallScore": 0.8569991349994415,
+      "successRate": 0.735975135975136,
+      "jsonAdherenceRate": 0
+    },
+    "threadCount": 3
+  },
+  "chain-of-thought-context": {
+    "strategy": "chain-of-thought-context",
+    "schemaMetrics": {
+      "score": 0.4657208176438945,
+      "parseSuccessRate": 0.49137529137529135,
+      "rawScore": 0.9504985754985755,
+      "effectiveScore": 0.4657208176438945,
+      "typeErrorRate": 0.008547008547008548,
+      "constraintViolationRate": 0.06552706552706554,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7934457844866342,
+      "fieldAccuracy": 0.6818540996645571,
+      "contextLossRate": 0.2197297437493516,
+      "unexpectedFieldRate": 0.0784054362485735
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8719721799926049,
+      "successRate": 0.49137529137529135,
+      "jsonAdherenceRate": 0
+    },
+    "threadCount": 3
+  },
+  "chain-of-thought-error": {
+    "strategy": "chain-of-thought-error",
+    "schemaMetrics": {
+      "score": 0.7922643595720519,
+      "parseSuccessRate": 0.8295260295260295,
+      "rawScore": 0.9530303030303031,
+      "effectiveScore": 0.7922643595720519,
+      "typeErrorRate": 0.027156177156177155,
+      "constraintViolationRate": 0.031235431235431235,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.6772144406247347,
+      "fieldAccuracy": 0.4826415414650709,
+      "contextLossRate": 0.3730878108819285,
+      "unexpectedFieldRate": 0.07201426024955437
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.18307760141093476,
+      "avgFeedbackEffectivenessScore": 0.13941626600070228
+    },
+    "averageScores": {
+      "overallScore": 0.8151223718275188,
+      "successRate": 0.8295260295260295,
+      "jsonAdherenceRate": 0
+    },
+    "threadCount": 3
+  },
+  "chain-of-thought-schema-context-error": {
+    "strategy": "chain-of-thought-schema-context-error",
+    "schemaMetrics": {
+      "score": 0.928622019006634,
+      "parseSuccessRate": 0.9440559440559442,
+      "rawScore": 0.9834935897435896,
+      "effectiveScore": 0.928622019006634,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.002564102564102564,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.3449971055088701,
+      "fieldAccuracy": 0.1496171802054155,
+      "contextLossRate": 0.8401867413632119,
+      "unexpectedFieldRate": 0.26851851851851855
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.07142857142857144,
+      "avgFeedbackEffectivenessScore": 0.05139807692307693
+    },
+    "averageScores": {
+      "overallScore": 0.6642453476262299,
+      "successRate": 0.9440559440559442,
+      "jsonAdherenceRate": 0
+    },
+    "threadCount": 3
+  },
+  "chain-of-thought-schema-context": {
+    "strategy": "chain-of-thought-schema-context",
+    "schemaMetrics": {
+      "score": 0.9100890562429022,
+      "parseSuccessRate": 0.9252525252525253,
+      "rawScore": 0.9837278106508873,
+      "effectiveScore": 0.9100890562429022,
+      "typeErrorRate": 0.001282051282051282,
+      "constraintViolationRate": 0.002564102564102564,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.3880231990231989,
+      "fieldAccuracy": 0.20360195360195357,
+      "contextLossRate": 0.7809523809523808,
+      "unexpectedFieldRate": 0.252991452991453
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.6858755048370432,
+      "successRate": 0.9252525252525253,
+      "jsonAdherenceRate": 0
+    },
+    "threadCount": 3
+  },
+  "chain-of-thought-schema-error": {
+    "strategy": "chain-of-thought-schema-error",
+    "schemaMetrics": {
+      "score": 0.9916621839698762,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9916621839698762,
+      "effectiveScore": 0.9916621839698762,
+      "typeErrorRate": 0.0019723865877712033,
+      "constraintViolationRate": 0.010220548682087145,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7825334329795114,
+      "fieldAccuracy": 0.6359108121363023,
+      "contextLossRate": 0.2536649262139458,
+      "unexpectedFieldRate": 0.030202477261300792
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.05036933965505394,
+      "avgFeedbackEffectivenessScore": 0.029419579214747277
+    },
+    "averageScores": {
+      "overallScore": 0.8870978084746938,
+      "successRate": 1,
+      "jsonAdherenceRate": 0
+    },
+    "threadCount": 3
+  },
+  "chain-of-thought-schema": {
+    "strategy": "chain-of-thought-schema",
+    "schemaMetrics": {
+      "score": 0.979121092582631,
+      "parseSuccessRate": 1,
+      "rawScore": 0.979121092582631,
+      "effectiveScore": 0.979121092582631,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.02214452214452214,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7252461122211121,
+      "fieldAccuracy": 0.5712504162504163,
+      "contextLossRate": 0.3208881858881859,
+      "unexpectedFieldRate": 0.06995735745735747
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8521836024018716,
+      "successRate": 1,
+      "jsonAdherenceRate": 0
+    },
+    "threadCount": 3
+  },
+  "chain-of-thought": {
+    "strategy": "chain-of-thought",
+    "schemaMetrics": {
+      "score": 0.2566194489271412,
+      "parseSuccessRate": 0.27645687645687644,
+      "rawScore": 0.9511599511599512,
+      "effectiveScore": 0.2566194489271412,
+      "typeErrorRate": 0.016483516483516484,
+      "constraintViolationRate": 0.05128205128205129,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.804274487572807,
+      "fieldAccuracy": 0.656026855186519,
+      "contextLossRate": 0.20374816593303988,
+      "unexpectedFieldRate": 0.03496287403850429
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8777172193663789,
+      "successRate": 0.27645687645687644,
+      "jsonAdherenceRate": 0
+    },
+    "threadCount": 3
+  },
+  "few-shot-context-error": {
+    "strategy": "few-shot-context-error",
+    "schemaMetrics": {
+      "score": 0.8783396091088399,
+      "parseSuccessRate": 0.8974358974358975,
+      "rawScore": 0.9763014763014763,
+      "effectiveScore": 0.8783396091088399,
+      "typeErrorRate": 0.0157990157990158,
+      "constraintViolationRate": 0.0315980315980316,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7618552907271862,
+      "fieldAccuracy": 0.5924726193680443,
+      "contextLossRate": 0.3017739389634814,
+      "unexpectedFieldRate": 0
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.13286005000290715,
+      "avgFeedbackEffectivenessScore": 0.1102584265436944
+    },
+    "averageScores": {
+      "overallScore": 0.8690783835143311,
+      "successRate": 0.8974358974358975,
+      "jsonAdherenceRate": 0.2822066822066822
+    },
+    "threadCount": 3
+  },
+  "few-shot-context": {
+    "strategy": "few-shot-context",
+    "schemaMetrics": {
+      "score": 0.9749865519096287,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9749865519096287,
+      "effectiveScore": 0.9749865519096287,
+      "typeErrorRate": 0.01667563206024744,
+      "constraintViolationRate": 0.03335126412049488,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7543507109448288,
+      "fieldAccuracy": 0.5823687314863787,
+      "contextLossRate": 0.3106862200979848,
+      "unexpectedFieldRate": 0.003418803418803419
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8646686314272286,
+      "successRate": 1,
+      "jsonAdherenceRate": 0.3125097125097125
+    },
+    "threadCount": 3
+  },
+  "few-shot-error": {
+    "strategy": "few-shot-error",
+    "schemaMetrics": {
+      "score": 0.925871137409599,
+      "parseSuccessRate": 0.9299145299145298,
+      "rawScore": 0.9954388560157791,
+      "effectiveScore": 0.925871137409599,
+      "typeErrorRate": 0.003040762656147272,
+      "constraintViolationRate": 0.006081525312294544,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7710663411308678,
+      "fieldAccuracy": 0.5939831454018861,
+      "contextLossRate": 0.27171426085924577,
+      "unexpectedFieldRate": 0.003703703703703704
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.09243454957740671,
+      "avgFeedbackEffectivenessScore": 0.050529837077604944
+    },
+    "averageScores": {
+      "overallScore": 0.8832525985733234,
+      "successRate": 0.9299145299145298,
+      "jsonAdherenceRate": 0.8786324786324786
+    },
+    "threadCount": 3
+  },
+  "few-shot-schema-context-error": {
+    "strategy": "few-shot-schema-context-error",
+    "schemaMetrics": {
+      "score": 0.8233399079552925,
+      "parseSuccessRate": 0.8341880341880342,
+      "rawScore": 0.985897435897436,
+      "effectiveScore": 0.8233399079552925,
+      "typeErrorRate": 0.007692307692307693,
+      "constraintViolationRate": 0.020512820512820513,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8066363271260331,
+      "fieldAccuracy": 0.6521258534493829,
+      "contextLossRate": 0.2230902920608803,
+      "unexpectedFieldRate": 0.0044444444444444444
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.13095238095238096,
+      "avgFeedbackEffectivenessScore": 0.10730425824175822
+    },
+    "averageScores": {
+      "overallScore": 0.8962668815117345,
+      "successRate": 0.8341880341880342,
+      "jsonAdherenceRate": 0.22160062160062158
+    },
+    "threadCount": 3
+  },
+  "few-shot-schema-context": {
+    "strategy": "few-shot-schema-context",
+    "schemaMetrics": {
+      "score": 0.7799145299145298,
+      "parseSuccessRate": 0.7863247863247862,
+      "rawScore": 0.9907407407407408,
+      "effectiveScore": 0.7799145299145298,
+      "typeErrorRate": 0.0014245014245014246,
+      "constraintViolationRate": 0.017094017094017096,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7947166069648096,
+      "fieldAccuracy": 0.6297764841065494,
+      "contextLossRate": 0.23569020606602306,
+      "unexpectedFieldRate": 0.0049382716049382715
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.892728673852775,
+      "successRate": 0.7863247863247862,
+      "jsonAdherenceRate": 0.2519036519036519
+    },
+    "threadCount": 3
+  },
+  "few-shot-schema-error": {
+    "strategy": "few-shot-schema-error",
+    "schemaMetrics": {
+      "score": 0.9797830374753452,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9797830374753452,
+      "effectiveScore": 0.9797830374753452,
+      "typeErrorRate": 0.012820512820512822,
+      "constraintViolationRate": 0.027613412228796846,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7527479347449937,
+      "fieldAccuracy": 0.5462288691700455,
+      "contextLossRate": 0.27830810801399036,
+      "unexpectedFieldRate": 0.003418803418803419
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.0191242784992785,
+      "avgFeedbackEffectivenessScore": 0.010093729765604768
+    },
+    "averageScores": {
+      "overallScore": 0.8662654861101693,
+      "successRate": 1,
+      "jsonAdherenceRate": 0.5765345765345765
+    },
+    "threadCount": 3
+  },
+  "few-shot-schema": {
+    "strategy": "few-shot-schema",
+    "schemaMetrics": {
+      "score": 0.9827416173570018,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9827416173570018,
+      "effectiveScore": 0.9827416173570018,
+      "typeErrorRate": 0.014792899408284025,
+      "constraintViolationRate": 0.01972386587771203,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7342253726121374,
+      "fieldAccuracy": 0.5241376706082588,
+      "contextLossRate": 0.3114322551087257,
+      "unexpectedFieldRate": 0.0036630036630036626
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8584834949845696,
+      "successRate": 1,
+      "jsonAdherenceRate": 0.7863247863247862
+    },
+    "threadCount": 3
+  },
+  "few-shot": {
+    "strategy": "few-shot",
+    "schemaMetrics": {
+      "score": 0.991913214990138,
+      "parseSuccessRate": 1,
+      "rawScore": 0.991913214990138,
+      "effectiveScore": 0.991913214990138,
+      "typeErrorRate": 0.0053911900065746225,
+      "constraintViolationRate": 0.010782380013149245,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7609090701781879,
+      "fieldAccuracy": 0.5729454913278443,
+      "contextLossRate": 0.28110361134870937,
+      "unexpectedFieldRate": 0.003418803418803419
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8764111425841629,
+      "successRate": 1,
+      "jsonAdherenceRate": 0.9487179487179488
+    },
+    "threadCount": 3
+  },
+  "keyword-action-context-error": {
+    "strategy": "keyword-action-context-error",
+    "schemaMetrics": {
+      "score": 0.2200645508337816,
+      "parseSuccessRate": 0.2251748251748252,
+      "rawScore": 0.976923076923077,
+      "effectiveScore": 0.2200645508337816,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.03076923076923077,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8267714596949891,
+      "fieldAccuracy": 0.7400357920946156,
+      "contextLossRate": 0.2012807345160286,
+      "unexpectedFieldRate": 0.05581232492997199
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.13994708994708996,
+      "avgFeedbackEffectivenessScore": 0.09668487993487994
+    },
+    "averageScores": {
+      "overallScore": 0.9018472683090332,
+      "successRate": 0.2251748251748252,
+      "jsonAdherenceRate": 0.07816627816627818
+    },
+    "threadCount": 3
+  },
+  "keyword-action-context": {
+    "strategy": "keyword-action-context",
+    "schemaMetrics": {
+      "score": 0.21611977765823923,
+      "parseSuccessRate": 0.2251748251748252,
+      "rawScore": 0.9666666666666668,
+      "effectiveScore": 0.21611977765823923,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.046153846153846156,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8255593915343914,
+      "fieldAccuracy": 0.7351455026455026,
+      "contextLossRate": 0.18667989417989417,
+      "unexpectedFieldRate": 0.06904761904761904
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8961130291005291,
+      "successRate": 0.2251748251748252,
+      "jsonAdherenceRate": 0.1226107226107226
+    },
+    "threadCount": 3
+  },
+  "keyword-action-error": {
+    "strategy": "keyword-action-error",
+    "schemaMetrics": {
+      "score": 0.5420984997908074,
+      "parseSuccessRate": 0.5494949494949495,
+      "rawScore": 0.992603550295858,
+      "effectiveScore": 0.5420984997908074,
+      "typeErrorRate": 0.0009861932938856016,
+      "constraintViolationRate": 0.0039447731755424065,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7617402828652828,
+      "fieldAccuracy": 0.56749592999593,
+      "contextLossRate": 0.2423840048840049,
+      "unexpectedFieldRate": 0.03400488400488401
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.10896101662355534,
+      "avgFeedbackEffectivenessScore": 0.07562229838731387
+    },
+    "averageScores": {
+      "overallScore": 0.8771719165805704,
+      "successRate": 0.5494949494949495,
+      "jsonAdherenceRate": 0.47257187257187255
+    },
+    "threadCount": 3
+  },
+  "keyword-action-schema-context-error": {
+    "strategy": "keyword-action-schema-context-error",
+    "schemaMetrics": {
+      "score": 0.5889860139860139,
+      "parseSuccessRate": 0.5986013986013986,
+      "rawScore": 0.9895833333333334,
+      "effectiveScore": 0.5889860139860139,
+      "typeErrorRate": 0.004273504273504274,
+      "constraintViolationRate": 0.01495726495726496,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7779559634038801,
+      "fieldAccuracy": 0.6169918430335096,
+      "contextLossRate": 0.27130180776014107,
+      "unexpectedFieldRate": 0.006944444444444444
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.10987654320987654,
+      "avgFeedbackEffectivenessScore": 0.059289601926953116
+    },
+    "averageScores": {
+      "overallScore": 0.8837696483686067,
+      "successRate": 0.5986013986013986,
+      "jsonAdherenceRate": 0.25330225330225326
+    },
+    "threadCount": 3
+  },
+  "keyword-action-schema-context": {
+    "strategy": "keyword-action-schema-context",
+    "schemaMetrics": {
+      "score": 0.5845376845376845,
+      "parseSuccessRate": 0.5996891996891996,
+      "rawScore": 0.9729853479853481,
+      "effectiveScore": 0.5845376845376845,
+      "typeErrorRate": 0.022893772893772896,
+      "constraintViolationRate": 0.018315018315018316,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7756847433417812,
+      "fieldAccuracy": 0.6026154906407007,
+      "contextLossRate": 0.2703167378062336,
+      "unexpectedFieldRate": 0
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8743350456635645,
+      "successRate": 0.5996891996891996,
+      "jsonAdherenceRate": 0.4770784770784771
+    },
+    "threadCount": 3
+  },
+  "keyword-action-schema-error": {
+    "strategy": "keyword-action-schema-error",
+    "schemaMetrics": {
+      "score": 0.4918414918414918,
+      "parseSuccessRate": 0.4918414918414918,
+      "rawScore": 1,
+      "effectiveScore": 0.4918414918414918,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.6919835978835979,
+      "fieldAccuracy": 0.4972486772486773,
+      "contextLossRate": 0.4065079365079365,
+      "unexpectedFieldRate": 0.008888888888888889
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.09414210128495842,
+      "avgFeedbackEffectivenessScore": 0.050295332577475434
+    },
+    "averageScores": {
+      "overallScore": 0.8459917989417991,
+      "successRate": 0.4918414918414918,
+      "jsonAdherenceRate": 0.4405594405594406
+    },
+    "threadCount": 3
+  },
+  "keyword-action-schema": {
+    "strategy": "keyword-action-schema",
+    "schemaMetrics": {
+      "score": 0.8065268065268065,
+      "parseSuccessRate": 0.8065268065268065,
+      "rawScore": 1,
+      "effectiveScore": 0.8065268065268065,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7034934542181069,
+      "fieldAccuracy": 0.5048866475602587,
+      "contextLossRate": 0.3834496252204585,
+      "unexpectedFieldRate": 0.0049382716049382715
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8517467271090536,
+      "successRate": 0.8065268065268065,
+      "jsonAdherenceRate": 0.8065268065268065
+    },
+    "threadCount": 3
+  },
+  "keyword-action": {
+    "strategy": "keyword-action",
+    "schemaMetrics": {
+      "score": 0.5640532544378698,
+      "parseSuccessRate": 0.5762237762237762,
+      "rawScore": 0.981939356939357,
+      "effectiveScore": 0.5640532544378698,
+      "typeErrorRate": 0.007936507936507938,
+      "constraintViolationRate": 0.01221001221001221,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7045789871504157,
+      "fieldAccuracy": 0.5112433862433863,
+      "contextLossRate": 0.3506424792139078,
+      "unexpectedFieldRate": 0.04100529100529101
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8432591720448862,
+      "successRate": 0.5762237762237762,
+      "jsonAdherenceRate": 0.5762237762237762
+    },
+    "threadCount": 3
+  },
+  "one-shot-context-error": {
+    "strategy": "one-shot-context-error",
+    "schemaMetrics": {
+      "score": 0.31592851592851595,
+      "parseSuccessRate": 0.3275835275835276,
+      "rawScore": 0.9743589743589745,
+      "effectiveScore": 0.31592851592851595,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.05128205128205129,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8596094576719576,
+      "fieldAccuracy": 0.76005291005291,
+      "contextLossRate": 0.17820767195767195,
+      "unexpectedFieldRate": 0
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.08908730158730159,
+      "avgFeedbackEffectivenessScore": 0.052869658119658124
+    },
+    "averageScores": {
+      "overallScore": 0.9169842160154659,
+      "successRate": 0.3275835275835276,
+      "jsonAdherenceRate": 0.055944055944055944
+    },
+    "threadCount": 3
+  },
+  "one-shot-context": {
+    "strategy": "one-shot-context",
+    "schemaMetrics": {
+      "score": 0.6800968262506725,
+      "parseSuccessRate": 0.7081585081585082,
+      "rawScore": 0.966025641025641,
+      "effectiveScore": 0.6800968262506725,
+      "typeErrorRate": 0.002564102564102564,
+      "constraintViolationRate": 0.06538461538461539,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7884145723104057,
+      "fieldAccuracy": 0.6352402998236332,
+      "contextLossRate": 0.2597993827160494,
+      "unexpectedFieldRate": 0.005555555555555556
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8772201066680233,
+      "successRate": 0.7081585081585082,
+      "jsonAdherenceRate": 0.14685314685314685
+    },
+    "threadCount": 3
+  },
+  "one-shot-error": {
+    "strategy": "one-shot-error",
+    "schemaMetrics": {
+      "score": 0.61463152232383,
+      "parseSuccessRate": 0.6517482517482517,
+      "rawScore": 0.958041958041958,
+      "effectiveScore": 0.61463152232383,
+      "typeErrorRate": 0.016666666666666666,
+      "constraintViolationRate": 0.04592074592074593,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8014734447651114,
+      "fieldAccuracy": 0.6544211960878629,
+      "contextLossRate": 0.24150432900432905,
+      "unexpectedFieldRate": 0.00404040404040404
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.13849206349206347,
+      "avgFeedbackEffectivenessScore": 0.08187366452991453
+    },
+    "averageScores": {
+      "overallScore": 0.8797577014035348,
+      "successRate": 0.6517482517482517,
+      "jsonAdherenceRate": 0.18197358197358202
+    },
+    "threadCount": 3
+  },
+  "one-shot-schema-context-error": {
+    "strategy": "one-shot-schema-context-error",
+    "schemaMetrics": {
+      "score": 0.643655489809336,
+      "parseSuccessRate": 0.6495726495726496,
+      "rawScore": 0.9903846153846154,
+      "effectiveScore": 0.643655489809336,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.019230769230769232,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.763847846019721,
+      "fieldAccuracy": 0.5800276575276575,
+      "contextLossRate": 0.2829138107263107,
+      "unexpectedFieldRate": 0
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.08206349206349206,
+      "avgFeedbackEffectivenessScore": 0.045219047619047624
+    },
+    "averageScores": {
+      "overallScore": 0.8771162307021682,
+      "successRate": 0.6495726495726496,
+      "jsonAdherenceRate": 0.2902874902874903
+    },
+    "threadCount": 3
+  },
+  "one-shot-schema-context": {
+    "strategy": "one-shot-schema-context",
+    "schemaMetrics": {
+      "score": 0.8756081525312295,
+      "parseSuccessRate": 0.8854700854700855,
+      "rawScore": 0.9893162393162394,
+      "effectiveScore": 0.8756081525312295,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.021367521367521364,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.757449472980723,
+      "fieldAccuracy": 0.5647237022237023,
+      "contextLossRate": 0.28653510841010843,
+      "unexpectedFieldRate": 0
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.873382856148481,
+      "successRate": 0.8854700854700855,
+      "jsonAdherenceRate": 0.3205905205905206
+    },
+    "threadCount": 3
+  },
+  "one-shot-schema-error": {
+    "strategy": "one-shot-schema-error",
+    "schemaMetrics": {
+      "score": 0.9916173570019723,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9916173570019723,
+      "effectiveScore": 0.9916173570019723,
+      "typeErrorRate": 0.0009861932938856016,
+      "constraintViolationRate": 0.015779092702169626,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7645425694675696,
+      "fieldAccuracy": 0.5829291079291079,
+      "contextLossRate": 0.28037915787915785,
+      "unexpectedFieldRate": 0.003418803418803419
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.03286731786731787,
+      "avgFeedbackEffectivenessScore": 0.0155232498982499
+    },
+    "averageScores": {
+      "overallScore": 0.878079963234771,
+      "successRate": 1,
+      "jsonAdherenceRate": 0.747008547008547
+    },
+    "threadCount": 3
+  },
+  "one-shot-schema": {
+    "strategy": "one-shot-schema",
+    "schemaMetrics": {
+      "score": 0.9861932938856016,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9861932938856016,
+      "effectiveScore": 0.9861932938856016,
+      "typeErrorRate": 0.0019723865877712033,
+      "constraintViolationRate": 0.025641025641025644,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7558459373959375,
+      "fieldAccuracy": 0.5616022866022866,
+      "contextLossRate": 0.2847594997594997,
+      "unexpectedFieldRate": 0.003418803418803419
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8710196156407696,
+      "successRate": 1,
+      "jsonAdherenceRate": 0.8786324786324786
+    },
+    "threadCount": 3
+  },
+  "one-shot": {
+    "strategy": "one-shot",
+    "schemaMetrics": {
+      "score": 0.7927604446835215,
+      "parseSuccessRate": 0.8424242424242424,
+      "rawScore": 0.9420611439842208,
+      "effectiveScore": 0.7927604446835215,
+      "typeErrorRate": 0.016107823800131493,
+      "constraintViolationRate": 0.08349769888231427,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7884537206620541,
+      "fieldAccuracy": 0.6253883462216795,
+      "contextLossRate": 0.25166700583367246,
+      "unexpectedFieldRate": 0.003418803418803419
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8652574323231373,
+      "successRate": 0.8424242424242424,
+      "jsonAdherenceRate": 0.7466977466977468
+    },
+    "threadCount": 3
+  },
+  "role-guided-context-error": {
+    "strategy": "role-guided-context-error",
+    "schemaMetrics": {
+      "score": 0.44406042675273444,
+      "parseSuccessRate": 0.46107226107226107,
+      "rawScore": 0.9754273504273504,
+      "effectiveScore": 0.44406042675273444,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.0014245014245014246,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7398000440917109,
+      "fieldAccuracy": 0.638425925925926,
+      "contextLossRate": 0.23870517342739564,
+      "unexpectedFieldRate": 0.17724867724867724
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.10018244845831054,
+      "avgFeedbackEffectivenessScore": 0.06647327700237182
+    },
+    "averageScores": {
+      "overallScore": 0.8576136972595306,
+      "successRate": 0.46107226107226107,
+      "jsonAdherenceRate": 0.2815850815850816
+    },
+    "threadCount": 3
+  },
+  "role-guided-context": {
+    "strategy": "role-guided-context",
+    "schemaMetrics": {
+      "score": 0.4912557527942143,
+      "parseSuccessRate": 0.5131313131313131,
+      "rawScore": 0.9750164365548981,
+      "effectiveScore": 0.4912557527942143,
+      "typeErrorRate": 0.0039447731755424065,
+      "constraintViolationRate": 0.008547008547008548,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8224322813170853,
+      "fieldAccuracy": 0.7676325943482807,
+      "contextLossRate": 0.18089402427637724,
+      "unexpectedFieldRate": 0.11778112954583542
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8987243589359917,
+      "successRate": 0.5131313131313131,
+      "jsonAdherenceRate": 0.5131313131313131
+    },
+    "threadCount": 3
+  },
+  "role-guided-error": {
+    "strategy": "role-guided-error",
+    "schemaMetrics": {
+      "score": 0.10351592851592852,
+      "parseSuccessRate": 0.10380730380730381,
+      "rawScore": 0.9967948717948718,
+      "effectiveScore": 0.10351592851592852,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.860074074074074,
+      "fieldAccuracy": 0.7748677248677248,
+      "contextLossRate": 0.16825396825396824,
+      "unexpectedFieldRate": 0.023809523809523808
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.1126984126984127,
+      "avgFeedbackEffectivenessScore": 0.058796957671957674
+    },
+    "averageScores": {
+      "overallScore": 0.9284344729344728,
+      "successRate": 0.10380730380730381,
+      "jsonAdherenceRate": 0.10380730380730381
+    },
+    "threadCount": 3
+  },
+  "role-guided-schema-context-error": {
+    "strategy": "role-guided-schema-context-error",
+    "schemaMetrics": {
+      "score": 0.4688004303388919,
+      "parseSuccessRate": 0.4708624708624709,
+      "rawScore": 0.9903846153846154,
+      "effectiveScore": 0.4688004303388919,
+      "typeErrorRate": 0.010683760683760686,
+      "constraintViolationRate": 0,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8639624740636996,
+      "fieldAccuracy": 0.761435703911194,
+      "contextLossRate": 0.16644140989729225,
+      "unexpectedFieldRate": 0
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.07063492063492065,
+      "avgFeedbackEffectivenessScore": 0.028764285714285714
+    },
+    "averageScores": {
+      "overallScore": 0.9271735447241575,
+      "successRate": 0.4708624708624709,
+      "jsonAdherenceRate": 0.4486402486402487
+    },
+    "threadCount": 3
+  },
+  "role-guided-schema-context": {
+    "strategy": "role-guided-schema-context",
+    "schemaMetrics": {
+      "score": 0.8628294782140937,
+      "parseSuccessRate": 0.8717948717948718,
+      "rawScore": 0.9857954545454546,
+      "effectiveScore": 0.8628294782140937,
+      "typeErrorRate": 0.017191142191142192,
+      "constraintViolationRate": 0,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8213970955764461,
+      "fieldAccuracy": 0.6594266250271151,
+      "contextLossRate": 0.17643825333163568,
+      "unexpectedFieldRate": 0.013888888888888888
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.9035962750609503,
+      "successRate": 0.8717948717948718,
+      "jsonAdherenceRate": 0.8717948717948718
+    },
+    "threadCount": 3
+  },
+  "role-guided-schema-error": {
+    "strategy": "role-guided-schema-error",
+    "schemaMetrics": {
+      "score": 0.9644970414201183,
+      "parseSuccessRate": 0.9743589743589745,
+      "rawScore": 0.9893162393162394,
+      "effectiveScore": 0.9644970414201183,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.021367521367521364,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8888089516193682,
+      "fieldAccuracy": 0.7631802148468817,
+      "contextLossRate": 0.08924272486772485,
+      "unexpectedFieldRate": 0.003703703703703704
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.08665223665223665,
+      "avgFeedbackEffectivenessScore": 0.050773393934108214
+    },
+    "averageScores": {
+      "overallScore": 0.9390625954678038,
+      "successRate": 0.9743589743589745,
+      "jsonAdherenceRate": 0.8461538461538461
+    },
+    "threadCount": 3
+  },
+  "role-guided-schema": {
+    "strategy": "role-guided-schema",
+    "schemaMetrics": {
+      "score": 0.9891518737672585,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9891518737672585,
+      "effectiveScore": 0.9891518737672585,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.02169625246548323,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.9018340835090836,
+      "fieldAccuracy": 0.7873979723979726,
+      "contextLossRate": 0.0750091575091575,
+      "unexpectedFieldRate": 0.003418803418803419
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.9454929786381708,
+      "successRate": 1,
+      "jsonAdherenceRate": 1
+    },
+    "threadCount": 3
+  },
+  "role-guided": {
+    "strategy": "role-guided",
+    "schemaMetrics": {
+      "score": 0.1550893550893551,
+      "parseSuccessRate": 0.1550893550893551,
+      "rawScore": 1,
+      "effectiveScore": 0.1550893550893551,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8338386243386244,
+      "fieldAccuracy": 0.7267195767195767,
+      "contextLossRate": 0.21084656084656084,
+      "unexpectedFieldRate": 0.011111111111111112
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.9169193121693122,
+      "successRate": 0.1550893550893551,
+      "jsonAdherenceRate": 0.1550893550893551
+    },
+    "threadCount": 3
+  },
+  "self-verification-context-error": {
+    "strategy": "self-verification-context-error",
+    "schemaMetrics": {
+      "score": 0.3314162333393102,
+      "parseSuccessRate": 0.33923853923853925,
+      "rawScore": 0.9849358974358974,
+      "effectiveScore": 0.3314162333393102,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.015384615384615385,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8218424603174602,
+      "fieldAccuracy": 0.727936507936508,
+      "contextLossRate": 0.20777777777777776,
+      "unexpectedFieldRate": 0.051785714285714275
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.1307818156502367,
+      "avgFeedbackEffectivenessScore": 0.08061973175460017
+    },
+    "averageScores": {
+      "overallScore": 0.9033891788766789,
+      "successRate": 0.33923853923853925,
+      "jsonAdherenceRate": 0.15975135975135976
+    },
+    "threadCount": 3
+  },
+  "self-verification-context": {
+    "strategy": "self-verification-context",
+    "schemaMetrics": {
+      "score": 0.36510071125455745,
+      "parseSuccessRate": 0.37902097902097903,
+      "rawScore": 0.9704739704739705,
+      "effectiveScore": 0.36510071125455745,
+      "typeErrorRate": 0.004273504273504274,
+      "constraintViolationRate": 0.04895104895104895,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8372429453262787,
+      "fieldAccuracy": 0.7418871252204585,
+      "contextLossRate": 0.19517195767195764,
+      "unexpectedFieldRate": 0.03209676126342793
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.9038584579001245,
+      "successRate": 0.37902097902097903,
+      "jsonAdherenceRate": 0.37902097902097903
+    },
+    "threadCount": 3
+  },
+  "self-verification-error": {
+    "strategy": "self-verification-error",
+    "schemaMetrics": {
+      "score": 0.32627159165620706,
+      "parseSuccessRate": 0.33581973581973584,
+      "rawScore": 0.9814814814814815,
+      "effectiveScore": 0.32627159165620706,
+      "typeErrorRate": 0.004273504273504274,
+      "constraintViolationRate": 0.03276353276353277,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8387350001729086,
+      "fieldAccuracy": 0.7100364837292942,
+      "contextLossRate": 0.184993256561884,
+      "unexpectedFieldRate": 0.0049382716049382715
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.1753968253968254,
+      "avgFeedbackEffectivenessScore": 0.12716293303646245
+    },
+    "averageScores": {
+      "overallScore": 0.9101082408271951,
+      "successRate": 0.33581973581973584,
+      "jsonAdherenceRate": 0.33581973581973584
+    },
+    "threadCount": 3
+  },
+  "self-verification-schema-context-error": {
+    "strategy": "self-verification-schema-context-error",
+    "schemaMetrics": {
+      "score": 0.9088339011415933,
+      "parseSuccessRate": 0.923076923076923,
+      "rawScore": 0.984129759129759,
+      "effectiveScore": 0.9088339011415933,
+      "typeErrorRate": 0.008935508935508936,
+      "constraintViolationRate": 0.002564102564102564,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.5014594431712078,
+      "fieldAccuracy": 0.32622131680955213,
+      "contextLossRate": 0.6411118656216696,
+      "unexpectedFieldRate": 0.1754208754208754
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.03253968253968254,
+      "avgFeedbackEffectivenessScore": 0.014178930546577607
+    },
+    "averageScores": {
+      "overallScore": 0.7427946011504835,
+      "successRate": 0.923076923076923,
+      "jsonAdherenceRate": 0.37249417249417255
+    },
+    "threadCount": 3
+  },
+  "self-verification-schema-context": {
+    "strategy": "self-verification-schema-context",
+    "schemaMetrics": {
+      "score": 0.9867939752555136,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9867939752555136,
+      "effectiveScore": 0.9867939752555136,
+      "typeErrorRate": 0.004715797023489332,
+      "constraintViolationRate": 0.02169625246548323,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7951104154015919,
+      "fieldAccuracy": 0.6360361533890946,
+      "contextLossRate": 0.24588447500212204,
+      "unexpectedFieldRate": 0
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8909521953285529,
+      "successRate": 1,
+      "jsonAdherenceRate": 0.923076923076923
+    },
+    "threadCount": 3
+  },
+  "self-verification-schema-error": {
+    "strategy": "self-verification-schema-error",
+    "schemaMetrics": {
+      "score": 0.9985207100591715,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9985207100591715,
+      "effectiveScore": 0.9985207100591715,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.0019723865877712033,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8049718326335973,
+      "fieldAccuracy": 0.6546860764507821,
+      "contextLossRate": 0.228592533102337,
+      "unexpectedFieldRate": 0.006623931623931624
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.04023659321278369,
+      "avgFeedbackEffectivenessScore": 0.018558756383607575
+    },
+    "averageScores": {
+      "overallScore": 0.9017462713463846,
+      "successRate": 1,
+      "jsonAdherenceRate": 1
+    },
+    "threadCount": 3
+  },
+  "self-verification-schema": {
+    "strategy": "self-verification-schema",
+    "schemaMetrics": {
+      "score": 0.9876725838264301,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9876725838264301,
+      "effectiveScore": 0.9876725838264301,
+      "typeErrorRate": 0.0009861932938856016,
+      "constraintViolationRate": 0.023668639053254437,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8497418414918414,
+      "fieldAccuracy": 0.731992451992452,
+      "contextLossRate": 0.17577996077996075,
+      "unexpectedFieldRate": 0.003418803418803419
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.9187072126591356,
+      "successRate": 1,
+      "jsonAdherenceRate": 1
+    },
+    "threadCount": 3
+  },
+  "self-verification": {
+    "strategy": "self-verification",
+    "schemaMetrics": {
+      "score": 0.3414858645627876,
+      "parseSuccessRate": 0.3661227661227661,
+      "rawScore": 0.9398148148148149,
+      "effectiveScore": 0.3414858645627876,
+      "typeErrorRate": 0.023504273504273508,
+      "constraintViolationRate": 0.0925925925925926,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.8323164315108759,
+      "fieldAccuracy": 0.6841122868900648,
+      "contextLossRate": 0.16856261022927688,
+      "unexpectedFieldRate": 0.014109347442680775
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8860656231628455,
+      "successRate": 0.3661227661227661,
+      "jsonAdherenceRate": 0.3661227661227661
+    },
+    "threadCount": 3
+  },
+  "zero-shot-context-error": {
+    "strategy": "zero-shot-context-error",
+    "schemaMetrics": {
+      "score": 0.3574248401171478,
+      "parseSuccessRate": 0.37933177933177936,
+      "rawScore": 0.9431089743589745,
+      "effectiveScore": 0.3574248401171478,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.10256410256410257,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7642997782446311,
+      "fieldAccuracy": 0.6003326330532213,
+      "contextLossRate": 0.2643528244631186,
+      "unexpectedFieldRate": 0.03811177248677248
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.3424297924297924,
+      "avgFeedbackEffectivenessScore": 0.2619461228722258
+    },
+    "averageScores": {
+      "overallScore": 0.8537043763018027,
+      "successRate": 0.37933177933177936,
+      "jsonAdherenceRate": 0.28360528360528364
+    },
+    "threadCount": 3
+  },
+  "zero-shot-context": {
+    "strategy": "zero-shot-context",
+    "schemaMetrics": {
+      "score": 0.6220847528539837,
+      "parseSuccessRate": 0.6616938616938617,
+      "rawScore": 0.9403044871794872,
+      "effectiveScore": 0.6220847528539837,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.10256410256410257,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7258462796734856,
+      "fieldAccuracy": 0.5366944189291878,
+      "contextLossRate": 0.29770871100965635,
+      "unexpectedFieldRate": 0.05571499433106577
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8330753834264865,
+      "successRate": 0.6616938616938617,
+      "jsonAdherenceRate": 0.6616938616938617
+    },
+    "threadCount": 3
+  },
+  "zero-shot-error": {
+    "strategy": "zero-shot-error",
+    "schemaMetrics": {
+      "score": 0.5089295320064552,
+      "parseSuccessRate": 0.5498057498057497,
+      "rawScore": 0.9223581973581975,
+      "effectiveScore": 0.5089295320064552,
+      "typeErrorRate": 0.022804972804972807,
+      "constraintViolationRate": 0.1233877233877234,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7829981376648042,
+      "fieldAccuracy": 0.6312138478805145,
+      "contextLossRate": 0.24313217646550978,
+      "unexpectedFieldRate": 0.034487734487734484
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.18203601953601956,
+      "avgFeedbackEffectivenessScore": 0.1250014899122042
+    },
+    "averageScores": {
+      "overallScore": 0.8526781675115008,
+      "successRate": 0.5498057498057497,
+      "jsonAdherenceRate": 0.5498057498057497
+    },
+    "threadCount": 3
+  },
+  "zero-shot-schema-context-error": {
+    "strategy": "zero-shot-schema-context-error",
+    "schemaMetrics": {
+      "score": 0.8136244097782558,
+      "parseSuccessRate": 0.8424242424242424,
+      "rawScore": 0.9641683103221563,
+      "effectiveScore": 0.8136244097782558,
+      "typeErrorRate": 0.008547008547008548,
+      "constraintViolationRate": 0.04844674556213018,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.6536088845794726,
+      "fieldAccuracy": 0.5202515621633269,
+      "contextLossRate": 0.45028071057482816,
+      "unexpectedFieldRate": 0.10510306686777275
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.12324263038548754,
+      "avgFeedbackEffectivenessScore": 0.09779986943495346
+    },
+    "averageScores": {
+      "overallScore": 0.8088885974508147,
+      "successRate": 0.8424242424242424,
+      "jsonAdherenceRate": 0.18197358197358202
+    },
+    "threadCount": 3
+  },
+  "zero-shot-schema-context": {
+    "strategy": "zero-shot-schema-context",
+    "schemaMetrics": {
+      "score": 0.9678814774968622,
+      "parseSuccessRate": 1,
+      "rawScore": 0.9678814774968622,
+      "effectiveScore": 0.9678814774968622,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.06015779092702169,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7012251484061439,
+      "fieldAccuracy": 0.5376034322640657,
+      "contextLossRate": 0.405160229413623,
+      "unexpectedFieldRate": 0.023809523809523805
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8345533129515031,
+      "successRate": 1,
+      "jsonAdherenceRate": 0.9487179487179488
+    },
+    "threadCount": 3
+  },
+  "zero-shot-schema-error": {
+    "strategy": "zero-shot-schema-error",
+    "schemaMetrics": {
+      "score": 0.5827132269439961,
+      "parseSuccessRate": 0.6017094017094017,
+      "rawScore": 0.963994338994339,
+      "effectiveScore": 0.5827132269439961,
+      "typeErrorRate": 0.014652014652014654,
+      "constraintViolationRate": 0.056776556776556776,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7545523653906008,
+      "fieldAccuracy": 0.5767934951758481,
+      "contextLossRate": 0.3055852644087938,
+      "unexpectedFieldRate": 0.0021645021645021645
+    },
+    "errorFeedbackMetrics": {
+      "avgErrorCorrectionRate": 0.10978084415584416,
+      "avgFeedbackEffectivenessScore": 0.0714197816997817
+    },
+    "averageScores": {
+      "overallScore": 0.8592733521924698,
+      "successRate": 0.6017094017094017,
+      "jsonAdherenceRate": 0.18073038073038075
+    },
+    "threadCount": 3
+  },
+  "zero-shot-schema": {
+    "strategy": "zero-shot-schema",
+    "schemaMetrics": {
+      "score": 0.2695744426513657,
+      "parseSuccessRate": 0.2777000777000777,
+      "rawScore": 0.9698717948717949,
+      "effectiveScore": 0.2695744426513657,
+      "typeErrorRate": 0,
+      "constraintViolationRate": 0.05384615384615385,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.7168690943043886,
+      "fieldAccuracy": 0.5372455648926238,
+      "contextLossRate": 0.3581792717086834,
+      "unexpectedFieldRate": 0.023015873015873017
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.8433704445880917,
+      "successRate": 0.2777000777000777,
+      "jsonAdherenceRate": 0.2777000777000777
+    },
+    "threadCount": 3
+  },
+  "zero-shot": {
+    "strategy": "zero-shot",
+    "schemaMetrics": {
+      "score": 0.6244396629012013,
+      "parseSuccessRate": 0.6570318570318571,
+      "rawScore": 0.9485884485884486,
+      "effectiveScore": 0.6244396629012013,
+      "typeErrorRate": 0.020590520590520595,
+      "constraintViolationRate": 0.054649054649054646,
+      "requiredFieldCoverage": 1
+    },
+    "contextMetrics": {
+      "score": 0.6120342188675522,
+      "fieldAccuracy": 0.4645584353917687,
+      "contextLossRate": 0.396704838371505,
+      "unexpectedFieldRate": 0.22728197728197727
+    },
+    "errorFeedbackMetrics": null,
+    "averageScores": {
+      "overallScore": 0.7803113337280002,
+      "successRate": 0.6570318570318571,
+      "jsonAdherenceRate": 0.6570318570318571
+    },
+    "threadCount": 3
+  }
+}

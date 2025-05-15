@@ -1,0 +1,55 @@
+{
+  "strategy": "few-shot-schema",
+  "schemaMetrics": {
+    "score": 0.9482248520710057,
+    "rawScore": 0.9482248520710057,
+    "effectiveScore": 0.9482248520710057,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0.044378698224852076,
+    "constraintViolationRate": 0.0591715976331361,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.010989010989010988
+  },
+  "contextMetrics": {
+    "score": 0.6303853336206278,
+    "fieldAccuracy": 0.3696715865833512,
+    "contextLossRate": 0.4596261581555699,
+    "unexpectedFieldRate": 0.010989010989010988
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9482248520710057,
+    "contextualConsistency": 0.6303853336206278,
+    "overallScore": 0.7893050928458168,
+    "successRate": 1,
+    "jsonAdherenceRate": 0.6923076923076923
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 31,
+    "UNEXPECTED_FIELD": 2,
+    "OTHER": 4,
+    "_unexpectedFieldDetails": {
+      "invoice": {
+        "count": 1,
+        "fields": [
+          "booking.invoice"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 2,
+      "uniqueFields": 2
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1825.3076923076924,
+    "avgResponseTokens": 340.38461538461536,
+    "totalTokens": 28154
+  }
+}

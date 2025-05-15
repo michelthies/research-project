@@ -1,0 +1,734 @@
+{
+  "1": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T04:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 500,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": ["inquiry"]
+      },
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0400"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["500"]
+      }
+    }
+  },
+  "2": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      }
+    }
+  },
+  "3": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      }
+    }
+  },
+  "4": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      }
+    }
+  },
+  "5": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      }
+    }
+  },
+  "6": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      }
+    }
+  },
+  "7": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": ["confirmed"]
+      },
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": ["notsent", "not"]
+      },
+      "booking.contract.status": {
+        "acceptedValues": ["notsent", "not"]
+      }
+    }
+  },
+  "8": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": "Weber GmbH",
+        "address": "Minkstrasse 42, 23462 Hamburg"
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": ["confirmed"]
+      },
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": ["weber", "webergmbh"]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": ["minkstrasse42"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": ["notsent", "not"]
+      },
+      "booking.contract.status": {
+        "acceptedValues": ["notsent", "not"]
+      }
+    }
+  },
+  "9": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": "Weber GmbH",
+        "address": "Minkstrasse 42, 23462 Hamburg"
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": "sent"
+      },
+      "contract": {
+        "status": "sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": ["confirmed"]
+      },
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": ["weber", "webergmbh"]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": ["minkstrasse42"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": ["sent", "pending"]
+      },
+      "booking.contract.status": {
+        "acceptedValues": ["sent", "pending"]
+      }
+    }
+  },
+  "10": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": "Weber GmbH",
+        "address": "Minkstrasse 42, 23462 Hamburg"
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "signed"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": ["confirmed"]
+      },
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": ["weber", "webergmbh"]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": ["minkstrasse42"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": ["paid", "payed", "settled"]
+      },
+      "booking.contract.status": {
+        "acceptedValues": ["signed", "returned"]
+      }
+    }
+  },
+  "11": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Eclipse"
+      },
+      "promoter": {
+        "name": "Marcus Weber",
+        "company": "Weber GmbH",
+        "address": "Minkstrasse 42, 23462 Hamburg"
+      },
+      "event": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "cosigned"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": ["confirmed"]
+      },
+      "booking.artist.name": {
+        "acceptedValues": ["eclipse"]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["marcus", "weber"]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": ["weber", "webergmbh"]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": ["minkstrasse42"]
+      },
+      "booking.event.date": {
+        "acceptedValues": ["20251125", "25112025", "25nov"]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": ["2200"]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": ["0600"]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": ["0200"]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": ["0300"]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": ["1000", "1k"]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": ["paid", "payed", "settled"]
+      },
+      "booking.contract.status": {
+        "acceptedValues": ["cosigned", "co-signed"]
+      }
+    }
+  }
+}

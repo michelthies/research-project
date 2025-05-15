@@ -1,0 +1,72 @@
+{
+  "messageId": "2",
+  "score": 0.6657142857142857,
+  "timestamp": "2025-05-14T21:52:30.306Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": "Olivia Chen",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "2022-08-06",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Stockholm",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": null,
+        "status": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.lineUp",
+      "expected": "Not defined in ground truth",
+      "actual": [
+        "DJ Pulse",
+        "Sofia Nyberg",
+        "Novawave"
+      ],
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

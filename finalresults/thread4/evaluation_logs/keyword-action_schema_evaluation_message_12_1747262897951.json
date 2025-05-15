@@ -1,0 +1,13 @@
+{
+  "messageId": "12",
+  "score": 0.8846153846153846,
+  "timestamp": "2025-05-14T22:48:17.951Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: set_for_payment)",
+    "/booking/status must be null (actual: set_for_payment)",
+    "/booking/status must match exactly one schema in oneOf (actual: set_for_payment)",
+    "/booking/contract/status must be equal to one of the allowed values (actual: confirmed)",
+    "/booking/contract/status must be null (actual: confirmed)",
+    "/booking/contract/status must match exactly one schema in oneOf (actual: confirmed)"
+  ]
+}

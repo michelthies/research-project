@@ -1,0 +1,179 @@
+{
+  "messageId": "7",
+  "score": 0.21999999999999997,
+  "timestamp": "2025-05-15T01:54:13.512Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Horizon"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 2200,
+        "status": "not sent"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "not sent"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.type",
+      "expected": "Not defined in ground truth",
+      "actual": "object",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.properties",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "booking": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "confirmed"
+              ]
+            },
+            "artist": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "value": "DJ Horizon"
+                }
+              }
+            },
+            "promoter": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "value": "Stacey Summer"
+                },
+                "company": {
+                  "type": "string",
+                  "value": "Vibrancy Events GmbH"
+                },
+                "address": {
+                  "type": "string",
+                  "value": "Frankfurter Allee 77, 10247 Berlin, Germany"
+                }
+              }
+            },
+            "event": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "format": "date",
+                  "value": "2025-09-20"
+                },
+                "name": {
+                  "type": "string",
+                  "value": "Equinox Festival"
+                },
+                "city": {
+                  "type": "string",
+                  "value": "Berlin"
+                },
+                "venue": {
+                  "type": "string",
+                  "value": "Tempelhofer Feld"
+                },
+                "capacity": {
+                  "type": "number",
+                  "value": 3500
+                }
+              }
+            },
+            "invoice": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": "number",
+                  "value": 2200
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "not sent"
+                  ],
+                  "value": null
+                }
+              }
+            },
+            "contract": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "not sent"
+                  ],
+                  "value": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

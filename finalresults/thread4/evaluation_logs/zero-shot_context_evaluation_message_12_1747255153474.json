@@ -1,0 +1,101 @@
+{
+  "messageId": "12",
+  "score": 0.33333333333333326,
+  "timestamp": "2025-05-14T20:39:13.474Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "confirmed",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1500,
+        "status": "paid"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "cosigned"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.rider_request",
+      "expected": "Not defined in ground truth",
+      "actual": true,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.flight_request",
+      "expected": "Not defined in ground truth",
+      "actual": true,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.check_in_luggage",
+      "expected": "Not defined in ground truth",
+      "actual": false,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.hotel_request",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "bed_type": "double"
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

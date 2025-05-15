@@ -1,0 +1,8 @@
+{
+  "messageId": "14",
+  "score": 0.9807692307692307,
+  "timestamp": "2025-05-15T02:31:50.353Z",
+  "errors": [
+    "/booking/contract must be object (actual: null)"
+  ]
+}

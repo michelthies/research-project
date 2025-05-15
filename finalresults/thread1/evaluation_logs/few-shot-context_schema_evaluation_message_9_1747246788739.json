@@ -1,0 +1,10 @@
+{
+  "messageId": "9",
+  "score": 0.9423076923076923,
+  "timestamp": "2025-05-14T18:19:48.739Z",
+  "errors": [
+    "/booking/contract/status must be equal to one of the allowed values (actual: confirmed)",
+    "/booking/contract/status must be null (actual: confirmed)",
+    "/booking/contract/status must match exactly one schema in oneOf (actual: confirmed)"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "messageId": "8",
+  "score": 0.9230769230769231,
+  "timestamp": "2025-05-14T22:59:19.425Z",
+  "errors": [
+    "/booking/event/venue must be string,null (actual: {\"name\":\"Cosmic Garden\",\"address\":\"Hammarby Slussväg 2\"})",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+    "booking.event.venue.name: Field not defined in schema",
+    "booking.event.venue.address: Field not defined in schema"
+  ]
+}

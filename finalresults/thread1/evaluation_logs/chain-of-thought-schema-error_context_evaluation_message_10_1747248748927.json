@@ -1,0 +1,101 @@
+{
+  "messageId": "10",
+  "score": 0.10999999999999999,
+  "timestamp": "2025-05-14T18:52:28.927Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Eclipse"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Marcus Weber",
+        "company": "Weber GmbH",
+        "address": "Minkstrasse 42, 23462 Hamburg"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1000,
+        "status": "paid"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "signed"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.name",
+      "expected": "Not defined in ground truth",
+      "actual": "Marcus Weber",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.company",
+      "expected": "Not defined in ground truth",
+      "actual": "Weber GmbH",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.address",
+      "expected": "Not defined in ground truth",
+      "actual": "Minkstrasse 42, 23462 Hamburg",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.signatory",
+      "expected": "Not defined in ground truth",
+      "actual": "Marcus Weber",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

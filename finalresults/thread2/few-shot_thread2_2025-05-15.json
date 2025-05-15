@@ -1,0 +1,41 @@
+{
+  "strategy": "few-shot",
+  "schemaMetrics": {
+    "score": 0.9846153846153844,
+    "rawScore": 0.9846153846153844,
+    "effectiveScore": 0.9846153846153844,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0.010256410256410256,
+    "constraintViolationRate": 0.020512820512820513,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0
+  },
+  "contextMetrics": {
+    "score": 0.7376746103569634,
+    "fieldAccuracy": 0.5100050276520866,
+    "contextLossRate": 0.2900821183174125,
+    "unexpectedFieldRate": 0
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9846153846153844,
+    "contextualConsistency": 0.7376746103569634,
+    "overallScore": 0.8611449974861737,
+    "successRate": 1,
+    "jsonAdherenceRate": 1
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 8,
+    "OTHER": 4,
+    "_unexpectedFieldDetails": {},
+    "_unexpectedFieldSummary": {
+      "totalFields": 0,
+      "uniqueFields": 0
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1088.7333333333333,
+    "avgResponseTokens": 213.73333333333332,
+    "totalTokens": 19537
+  }
+}

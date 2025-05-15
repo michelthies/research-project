@@ -1,0 +1,179 @@
+{
+  "messageId": "11",
+  "score": 0.5786666666666667,
+  "timestamp": "2025-05-14T23:18:31.624Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "confirmed",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Nova Entertainment",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Hammarby Slussväg 2",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Cosmic Garden",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Stockholm",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Cosmic Garden",
+      "actual": "Cosmic Garden",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 1800,
+      "actual": 1800,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": 15,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2022-08-06T17:00:00Z",
+      "actual": "2022-08-06T17:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2022-08-07T03:00:00Z",
+      "actual": "2022-08-06T03:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2022-08-06T20:00:00Z",
+      "actual": "2022-08-06T20:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2022-08-06T22:00:00Z",
+      "actual": "2022-08-06T22:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.companyName",
+      "expected": "Not defined in ground truth",
+      "actual": "Nova Entertainment",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.promoter.representedBy",
+      "expected": "Not defined in ground truth",
+      "actual": "Club Stellar",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.promoter.fullAddress",
+      "expected": "Not defined in ground truth",
+      "actual": "Hammarby Slussväg 2",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.promoter.cellPhone",
+      "expected": "Not defined in ground truth",
+      "actual": "+46704058257",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.promoter.email",
+      "expected": "Not defined in ground truth",
+      "actual": "olivia@clubstellar.se",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.promoter.website",
+      "expected": "Not defined in ground truth",
+      "actual": "www.clubstellar.com",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.promoter.vatNumber",
+      "expected": "Not defined in ground truth",
+      "actual": "SE 556785-1901-01",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.promoter.orgNumber",
+      "expected": "Not defined in ground truth",
+      "actual": "556785-1901",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.lineUp",
+      "expected": "Not defined in ground truth",
+      "actual": [
+        "DJ Pulse",
+        "Sofia Nyberg",
+        "Novawave"
+      ],
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

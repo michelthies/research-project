@@ -1,0 +1,15 @@
+{
+  "messageId": "6",
+  "score": 0.8557692307692307,
+  "timestamp": "2025-05-14T17:44:28.560Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: pending)",
+    "/booking/status must be null (actual: pending)",
+    "/booking/status must match exactly one schema in oneOf (actual: pending)",
+    "/booking/event/date must match format \"date\" (actual: 25-11)",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 22.00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 06.00)",
+    "/booking/event/stageTime/start must match format \"date-time\" (actual: 2-4)",
+    "booking.event.stageCapacity: Field not defined in schema"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "messageId": "12",
+  "score": 0.8942307692307692,
+  "timestamp": "2025-05-14T21:05:57.573Z",
+  "errors": [
+    "/booking/promoter/address must be string,null (actual: {\"street\":\"Hammarby Slussväg 2\",\"phone\":\"+46704058257\",\"email\":\"olivia@clubstellar.se\"})",
+    "/booking/invoice/status must be equal to one of the allowed values (actual: set for payment)",
+    "/booking/invoice/status must be null (actual: set for payment)",
+    "/booking/invoice/status must match exactly one schema in oneOf (actual: set for payment)",
+    "booking.promoter.address.street: Field not defined in schema",
+    "booking.promoter.address.phone: Field not defined in schema",
+    "booking.promoter.address.email: Field not defined in schema"
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "messageId": "15",
+  "score": 0.37187499999999996,
+  "timestamp": "2025-05-15T01:51:43.235Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": {
+        "booking": "sufficient",
+        "invoice": "pending",
+        "contract": "pending"
+      },
+      "valid": false,
+      "reason": "Expected confirmed, got [object Object]"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Horizon",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Stacey Summer",
+      "actual": "Vibrancy Events GmbH",
+      "valid": false,
+      "reason": "Expected Stacey Summer, got Vibrancy Events GmbH"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Vibrancy Events GmbH",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2025-09-20",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Equinox Festival",
+      "actual": "Equinox Festival",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Berlin",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Tempelhofer Feld",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 3500,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": null,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": null,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": null,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.stageTime",
+      "expected": {
+        "start": "2025-09-21T00:30:00Z",
+        "end": "2025-09-21T02:00:00Z"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 2200,
+        "status": "paid"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "cosigned"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.start",
+      "expected": "Not defined in ground truth",
+      "actual": "2025-09-20T22:30:00Z",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.end",
+      "expected": "Not defined in ground truth",
+      "actual": "2025-09-20T02:00:00Z",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "messageId": "6",
+  "score": 0.9807692307692307,
+  "timestamp": "2025-05-14T22:38:01.545Z",
+  "errors": [
+    "booking.promoter.VAT Number: Field not defined in schema",
+    "booking.promoter.ORG NUMMER.: Field not defined in schema"
+  ]
+}

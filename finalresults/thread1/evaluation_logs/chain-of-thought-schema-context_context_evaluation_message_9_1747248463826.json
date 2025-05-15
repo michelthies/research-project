@@ -1,0 +1,254 @@
+{
+  "messageId": "9",
+  "score": 0.21999999999999997,
+  "timestamp": "2025-05-14T18:47:43.826Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Eclipse"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Marcus Weber",
+        "company": "Weber GmbH",
+        "address": "Minkstrasse 42, 23462 Hamburg"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1000,
+        "status": "sent"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "sent"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.type",
+      "expected": "Not defined in ground truth",
+      "actual": "object",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.properties",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "booking": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "confirmed"
+              ],
+              "value": "confirmed"
+            },
+            "artist": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "value": "DJ Eclipse"
+                }
+              }
+            },
+            "promoter": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "value": "Marcus Weber"
+                },
+                "company": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "value": "Weber GmbH"
+                },
+                "address": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "value": "Minkstrasse 42, 23462 Hamburg"
+                }
+              }
+            },
+            "event": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "format": "date",
+                  "value": "2025-11-25"
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "value": "Countdown"
+                },
+                "city": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "value": "Hamburg"
+                },
+                "venue": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "value": "Zenith"
+                },
+                "capacity": {
+                  "type": [
+                    "number",
+                    null
+                  ],
+                  "value": 450
+                },
+                "ticketPrice": {
+                  "type": [
+                    "number",
+                    null
+                  ],
+                  "value": 15
+                },
+                "openingTime": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "format": "date-time",
+                  "value": "2025-11-25T22:00:00Z"
+                },
+                "closingTime": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "format": "date-time",
+                  "value": "2025-11-26T06:00:00Z"
+                },
+                "stageTime": {
+                  "type": "object",
+                  "properties": {
+                    "start": {
+                      "type": [
+                        "string",
+                        null
+                      ],
+                      "format": "date-time",
+                      "value": "2025-11-25T02:00:00Z"
+                    },
+                    "end": {
+                      "type": [
+                        "string",
+                        null
+                      ],
+                      "format": "date-time",
+                      "value": "2025-11-25T04:00:00Z"
+                    }
+                  }
+                }
+              }
+            },
+            "invoice": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": [
+                    "number",
+                    null
+                  ],
+                  "value": 500
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "not sent"
+                  ],
+                  "value": "not sent"
+                }
+              }
+            },
+            "contract": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "not sent"
+                  ],
+                  "value": "not sent"
+                }
+              }
+            }
+          }
+        }
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

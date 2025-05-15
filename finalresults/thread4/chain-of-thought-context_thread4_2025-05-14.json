@@ -1,0 +1,54 @@
+{
+  "strategy": "chain-of-thought-context",
+  "schemaMetrics": {
+    "score": 0.6627218934911242,
+    "rawScore": 0.9572649572649572,
+    "effectiveScore": 0.6627218934911242,
+    "parseSuccessRate": 0.6923076923076923,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.06837606837606838,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.06746031746031746
+  },
+  "contextMetrics": {
+    "score": 0.7485436507936508,
+    "fieldAccuracy": 0.6305555555555555,
+    "contextLossRate": 0.3138888888888889,
+    "unexpectedFieldRate": 0.06746031746031746
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9572649572649572,
+    "contextualConsistency": 0.7485436507936508,
+    "overallScore": 0.8529043040293041,
+    "successRate": 0.6923076923076923,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "UNEXPECTED_FIELD": 16,
+    "CONSTRAINT_ERROR": 16,
+    "_unexpectedFieldDetails": {
+      "lineUp": {
+        "count": 1,
+        "fields": [
+          "booking.lineUp"
+        ]
+      },
+      "stageTime": {
+        "count": 7,
+        "fields": [
+          "booking.stageTime"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 8,
+      "uniqueFields": 2
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1811.1538461538462,
+    "avgResponseTokens": 218.30769230769232,
+    "totalTokens": 26383
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "messageId": "2",
+  "score": 0.9807692307692307,
+  "timestamp": "2025-05-14T22:34:16.981Z",
+  "errors": [
+    "/booking/promoter must be object (actual: null)"
+  ]
+}

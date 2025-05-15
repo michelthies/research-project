@@ -1,0 +1,76 @@
+{
+  "strategy": "one-shot-error",
+  "schemaMetrics": {
+    "score": 0.8047337278106508,
+    "rawScore": 0.9510489510489509,
+    "effectiveScore": 0.8047337278106508,
+    "parseSuccessRate": 0.8461538461538461,
+    "typeErrorRate": 0.038461538461538464,
+    "constraintViolationRate": 0.006993006993006993,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.012121212121212121
+  },
+  "contextMetrics": {
+    "score": 0.7007702020202019,
+    "fieldAccuracy": 0.5115440115440116,
+    "contextLossRate": 0.3913780663780665,
+    "unexpectedFieldRate": 0.012121212121212121
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.1726190476190476,
+    "avgFeedbackEffectivenessScore": 0.1120257554945055
+  },
+  "averageScores": {
+    "schemaConformity": 0.9510489510489509,
+    "contextualConsistency": 0.7007702020202019,
+    "overallScore": 0.8259095765345766,
+    "successRate": 0.8461538461538461,
+    "jsonAdherenceRate": 0.23076923076923078
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 12,
+    "UNEXPECTED_FIELD": 62,
+    "OTHER": 1,
+    "_unexpectedFieldDetails": {
+      "street": {
+        "count": 10,
+        "fields": [
+          "booking.promoter.address.street"
+        ]
+      },
+      "phone": {
+        "count": 10,
+        "fields": [
+          "booking.promoter.address.phone"
+        ]
+      },
+      "email": {
+        "count": 10,
+        "fields": [
+          "booking.promoter.address.email"
+        ]
+      },
+      "invoice": {
+        "count": 1,
+        "fields": [
+          "booking.invoice"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 32,
+      "uniqueFields": 5
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 999.6923076923077,
+    "avgResponseTokens": 321.0769230769231,
+    "totalTokens": 17170
+  }
+}

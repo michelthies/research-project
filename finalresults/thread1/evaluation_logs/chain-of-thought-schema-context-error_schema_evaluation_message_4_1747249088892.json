@@ -1,0 +1,9 @@
+{
+  "messageId": "4",
+  "score": 0.9807692307692307,
+  "timestamp": "2025-05-14T18:58:08.892Z",
+  "errors": [
+    "booking.type: Field not defined in schema",
+    "booking.properties: Field not defined in schema"
+  ]
+}

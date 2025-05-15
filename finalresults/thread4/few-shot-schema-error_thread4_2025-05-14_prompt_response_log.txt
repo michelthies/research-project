@@ -1,0 +1,5071 @@
+==================== PROMPT ====================
+
+
+
+
+Current Booking Object:
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": null
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": null,
+      "venue": null,
+      "capacity": null,
+      "ticketPrice": null,
+      "openingTime": null,
+      "closingTime": null,
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+New Message:
+From: Olivia Chen <olivia@clubstellar.se>
+Subject: DJ Meteor - Stockholm
+Date: 8. July 2022 at 11:36:20 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+HELLO!!
+
+Is she available for a daytime sessions in stockholm with DJ Pulse, Sofia Nyberg and Novawave the 6th of august? :)
+
+xx
+Olivia
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Olivia Chen",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2022-08-06",
+      "name": null,
+      "city": "Stockholm",
+      "venue": null,
+      "capacity": null,
+      "openingTime": null,
+      "closingTime": null,
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Olivia Chen","company":null,"address":null},"event":{"date":"2022-08-06","name":null,"city":"Stockholm","venue":null,"capacity":null,"openingTime":null,"closingTime":null,"stageTime":{"start":null,"end":null}},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: DJ Meteor - Stockholm
+Date: 12. July 2022 at 18:39:00 GMT+2
+To: Olivia Chen <olivia@clubstellar.se>
+
+hey olivia,
+
+could definitely work.
+
+do you have these infos?
+
+city:
+venue name: 
+event name: 
+date of event:
+doors open/close: 
+requested slot: 
+requested stage:
+number of rooms/stages:
+total capacity:
+stage capacity:
+ticket price: 
+sponsoring:
+line up: 
+offer:
+
+
+best
+Best,
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Olivia Chen",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2022-08-06",
+      "city": "Stockholm",
+      "venue": null,
+      "capacity": null,
+      "openingTime": null,
+      "closingTime": null,
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Olivia Chen","company":null,"address":null},"event":{"date":"2022-08-06","city":"Stockholm","venue":null,"capacity":null,"openingTime":null,"closingTime":null,"stageTime":{"start":null,"end":null}},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Olivia Chen <olivia@clubstellar.se>
+Subject: Re: DJ Meteor - Stockholm
+Date: 14. July 2022 at 12:05:44 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+With DJ Pulse, Novawave & Sofia Nyberg
+
+20-22
+
+offer 1000 ++++ 
+
+COSMIC GARDEN
+Venue Name: Cosmic Garden 
+Venue Full Address: Hammarby Slussväg 2
+Venue Phone Number: 0046 (0) 8 644 20 23
+Venue Email: info@clubstellar.se
+Capacity of the room where the artist would play: 500 
+Venue Capacity: 1800 
+Venue Doors Open: 17:00 
+Venue Doors Close: 03:00
+Soundsystem specification in this room: Function One + Custom made Sound roof (ask for specification) 
+
+
+Any sound restrictions: No (but curfew has to be held!!) 
+
+Past Guests in the last 6 months: Regis, DJ Bone, Taakaki Itoh, Exos, Tijana T, DJ Stingray, Matrixxman, Abdulla Rashim, Baba Stiltz, Janina and more....... Check website for more info please. 
+
+Average ticket price: around 15€, free before 22
+
+Olivia
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Olivia Chen"
+    },
+    "event": {
+      "date": "2022-08-06",
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Olivia Chen"},"event":{"date":"2022-08-06","city":"Stockholm","venue":"Cosmic Garden","capacity":500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: DJ Meteor - Stockholm
+Date: 18. July 2022 at 00:54:00 GMT+2
+To: Olivia Chen <olivia@clubstellar.se>
+
+hey olivia,
+
+thanks for the infos.
+
+we would be looking for at least 1500+++ here.
+can you make it work?
+
+best
+Best,
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+3. /booking/event/stageTime must be object (actual: null)
+
+Context Errors:
+1. booking.promoter.company: Missing field
+2. booking.promoter.address: Missing field
+3. booking.event.name: Missing field
+4. booking.event.capacity: Incorrect value: 500
+5. booking.event.ticketPrice: Missing field
+6. booking.event.stageTime.start: Missing field
+7. booking.event.stageTime.end: Missing field
+8. booking.invoice.amount: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object based on the new message:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Olivia Chen",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2022-08-06",
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Olivia Chen","company":null,"address":null},"event":{"date":"2022-08-06","city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: DJ Meteor - Stockholm
+Date: 18. July 2022 at 23:53:00 GMT+2
+To: Olivia Chen <olivia@clubstellar.se>
+
+hey olivia,
+
+sounds good, im sure we could make that work.
+
+
+best
+Best,
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+3. /booking/event/stageTime must be object (actual: null)
+
+Context Errors:
+1. booking.event.name: Missing field
+2. booking.event.capacity: Incorrect value: 1500
+3. booking.event.ticketPrice: Missing field
+4. booking.event.stageTime.start: Missing field
+5. booking.event.stageTime.end: Missing field
+6. booking.invoice.amount: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object based on the new message:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Olivia Chen"
+    },
+    "event": {
+      "date": "2022-08-06",
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+Note that the new message does not provide any additional information about the event, artist, or promoter. Therefore, the booking object remains unchanged from its current state.
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Olivia Chen"},"event":{"date":"2022-08-06","city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+
+From: Olivia Chen <olivia@clubstellar.se>
+Subject: Re: DJ Meteor - Stockholm
+Date: 19. July 2022 at 08:26:14 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+I need to announce this week :) 
+
+Looping in Luna on CC for logistics. 
+
+CONTACT
+Contact Name Person (You): Olivia Chen 
+Contact Email: olivia@clubstellar.se
+Contact Cell phone: +46704671462
+
+PROMOTER/COMPANY
+Promoter Company Name: Nova Entertainment
+Represented by: Club Stellar
+Company Full Address (City): Hammarby Slussväg 2
+Promoter Cell phone: +46704058257
+Promoter Email: olivia@clubstellar.se
+Company Website: www.clubstellar.com
+VAT Number (Important): SE 556785-1901-01
+ORG NUMMER. 556785-1901 
+
+Olivia
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+3. /booking/event/stageTime must be object (actual: null)
+
+Context Errors:
+1. booking.promoter.company: Missing field
+2. booking.promoter.address: Missing field
+3. booking.event.name: Missing field
+4. booking.event.capacity: Incorrect value: 1500
+5. booking.event.ticketPrice: Missing field
+6. booking.event.stageTime.start: Missing field
+7. booking.event.stageTime.end: Missing field
+8. booking.invoice.amount: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Olivia Chen",
+      "company": "Nova Entertainment",
+      "address": "Hammarby Slussväg 2, Stockholm"
+    },
+    "event": {
+      "date": "2022-08-06",
+      "name": null,
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Olivia Chen","company":"Nova Entertainment","address":"Hammarby Slussväg 2, Stockholm"},"event":{"date":"2022-08-06","name":null,"city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: DJ Meteor - Stockholm
+Date: 20. July 2022 at 21:15:00 GMT+2
+To: Olivia Chen <olivia@clubstellar.se>
+
+works for her, lets confirm :)
+
+Best,
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+3. /booking/event/stageTime must be object (actual: null)
+
+Context Errors:
+1. booking.promoter.address: Incorrect value: Hammarby Slussväg 2, Stockholm
+2. booking.event.name: Missing field
+3. booking.event.capacity: Incorrect value: 1500
+4. booking.event.ticketPrice: Missing field
+5. booking.event.stageTime.start: Missing field
+6. booking.event.stageTime.end: Missing field
+7. booking.invoice.amount: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object based on the new message:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Olivia Chen",
+      "company": "Nova Entertainment",
+      "address": "Hammarby Slussväg 2, Stockholm"
+    },
+    "event": {
+      "date": "2022-08-06",
+      "name": null,
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00"
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+Let me know if you need any further assistance!
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Olivia Chen","company":"Nova Entertainment","address":"Hammarby Slussväg 2, Stockholm"},"event":{"date":"2022-08-06","name":null,"city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00"},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Luna Garcia <luna@clubstellar.se>
+Subject: Re: DJ Meteor - Stockholm
+Date: 21. July 2022 at 12:07:27 GMT+2
+To: Olivia Chen <olivia@clubstellar.se>
+Cc: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Could you please send me:
+- Their most up to date hospitality and technical rider
+- Flight request (we will send you suggestions if you provide us with departure address and preferred timings) 
+- Check in luggage or not
+
+
+Best,
+Luna
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+
+Context Errors:
+1. booking.status: Incorrect value: inquiry
+2. booking.promoter.address: Incorrect value: Hammarby Slussväg 2, Stockholm
+3. booking.event.name: Missing field
+4. booking.event.capacity: Incorrect value: 1500
+5. booking.event.ticketPrice: Missing field
+6. booking.event.stageTime: Missing field
+7. booking.invoice.amount: Missing field
+8. booking.invoice.status: Missing field
+9. booking.contract.status: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object based on the new message:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Luna Garcia",
+      "company": "Club Stellar",
+      "address": "luna@clubstellar.se"
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Luna Garcia","company":"Club Stellar","address":"luna@clubstellar.se"},"event":{"date":null,"name":null,"city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: DJ Meteor - Stockholm
+Date: 23. July 2022 at 16:17:00 GMT+2
+To: Luna Garcia <luna@clubstellar.se>
+Cc: Olivia Chen <olivia@clubstellar.se>
+
+hey luna,
+
+please book hotel with double bed (kingsize)
+
+- Flight request:
+london - stockholm - berlin
+only handluggage
+
+Best,
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+3. /booking/event/stageTime must be object (actual: null)
+
+Context Errors:
+1. booking.status: Incorrect value: inquiry
+2. booking.promoter.name: Incorrect value: Luna Garcia
+3. booking.promoter.company: Incorrect value: Club Stellar
+4. booking.promoter.address: Incorrect value: luna@clubstellar.se
+5. booking.event.date: Missing field
+6. booking.event.name: Missing field
+7. booking.event.capacity: Incorrect value: 1500
+8. booking.event.ticketPrice: Missing field
+9. booking.event.stageTime.start: Missing field
+10. booking.event.stageTime.end: Missing field
+11. booking.invoice.amount: Missing field
+12. booking.invoice.status: Missing field
+13. booking.contract.status: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Luna Garcia",
+      "company": "Club Stellar",
+      "address": "luna@clubstellar.se"
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: DJ Meteor - Stockholm
+Date: 23. July 2022 at 16:17:00 GMT+2
+To: Luna Garcia <luna@clubstellar.se>
+Cc: Olivia Chen <olivia@clubstellar.se>
+
+hey luna,
+
+please book hotel with double bed (kingsize)
+
+- Flight request:
+london - stockholm - berlin
+only handluggage
+
+Best,
+Mike Muller
+Booking
+mobile: +491634523464
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Luna Garcia","company":"Club Stellar","address":"luna@clubstellar.se"},"event":{"date":null,"name":null,"city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Luna Garcia <luna@clubstellar.se>
+Subject: Re: DJ Meteor - Stockholm
+Date: 31. July 2022 at 21:02:16 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+Cc: Olivia Chen <olivia@clubstellar.se>
+
+Hi Mike, 
+
+Please see flight ticket attached and all updated info below:
+
+FLIGHTS
+6th Aug 
+FLIGHT NO: D84456 (14:10 London-Gatwick -17:45 Stockholm-Arlanda (2h35m)
+
+7th Aug
+FLIGHT NO: SK 2677 (Stockholm ARN- Berlin BER 13:00- 14:30 (1h 30m)
+
+ARTIST LIAISON 
+Olivia Chen +46 70-467 14 62
+Marco Rivera +46 70-330 51 44
+ 
+GROUND TRANSPORT
+NordTaxi (company) +46 855013188
+ 
+NAME: Emily Webb + +49176 32742979 
+DATE: 6 Aug
+TIME: 17.45
+WHERE: Arlanda - (Driver wait w sign by arrivals exit) 
+TO: Straight to venue/Hotel?
+FLIGHT NO: D84456 (14:10 London-Gatwick -17:45 Stockholm-Arlanda (2h35m)
+
+NAME: Emily Webb + +49176 32742979 
+DATE: 7 aug
+TIME: 09.45
+WHERE: Horizon Hotel, Ringvägen 98 (Driver wait w sign by hotel exit) 
+TO: Arlanda - 
+FLIGHT NO: SK 2677 (Stockholm ARN- Berlin BER 13:00- 14:30 (1h 30m)
+ 
+Nearest Airport: Stockholm Arlanda Airport
+Distance Airport - Hotel (km/h): around 45min - 1,15h depending on traffic
+Distance Airport - Venue (km/h): around 45min - 1,15h depending on traffic
+Distance Hotel - Venue (km/h): 5 min walk, or 5 min taxi
+ 
+HOTEL 
+Horizon Hotel Stockholm
+Ringvägen 98, 104 60 Stockholm, Sweden 
+TEL: +46 8 462 10 00
+WEBB: https://www.horizonhotels.com/hotels/sweden/stockholm/horizon-hotel-stockholm/
+BOOKING REF: 2059R008892 - Emily Webb
+ 
+RUNNING ORDER 
+DTS:
+14-17 SOFIA NYBERG
+17-19 DJ PULSE
+19-20 NOVAWAVE (LIVE)
+20-22 DJ METEOR
+NTS:
+22-03 COSMIC UNITY EVENT 
+ 
+DINNER 
+22.00 @ Greenspace, fine dining vegan restaurant at the venue
+
+FB: https://fb.me/e/2PYarQLHm
+RA: https://ra.co/events/1565693
+
+
+Best,
+Luna
+
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+3. /booking/event/stageTime must be object (actual: null)
+
+Context Errors:
+1. booking.status: Incorrect value: inquiry
+2. booking.promoter.name: Incorrect value: Luna Garcia
+3. booking.promoter.company: Incorrect value: Club Stellar
+4. booking.promoter.address: Incorrect value: luna@clubstellar.se
+5. booking.event.date: Missing field
+6. booking.event.name: Missing field
+7. booking.event.capacity: Incorrect value: 1500
+8. booking.event.ticketPrice: Missing field
+9. booking.event.stageTime.start: Missing field
+10. booking.event.stageTime.end: Missing field
+11. booking.invoice.amount: Missing field
+12. booking.invoice.status: Missing field
+13. booking.contract.status: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object based on the new message:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Luna Garcia",
+      "company": "Club Stellar",
+      "address": "luna@clubstellar.se"
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+Note that the new message does not provide information about the event date, name, or ticket price.
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Luna Garcia","company":"Club Stellar","address":"luna@clubstellar.se"},"event":{"date":null,"name":null,"city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":null,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: DJ Meteor - Stockholm
+Date: 8. August 2022 at 12:23:00 GMT+2
+To: Luna Garcia <luna@clubstellar.se>
+Cc: Olivia Chen <olivia@clubstellar.se>
+
+hey luna,
+
+hope all is well.
+
+find the artist fee invoice attached.
+the booking fee will follow.
+
+
+best
+
+
+Best,
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+3. /booking/event/stageTime must be object (actual: null)
+
+Context Errors:
+1. booking.status: Incorrect value: inquiry
+2. booking.promoter.name: Incorrect value: Luna Garcia
+3. booking.promoter.company: Incorrect value: Club Stellar
+4. booking.promoter.address: Incorrect value: luna@clubstellar.se
+5. booking.event.date: Missing field
+6. booking.event.name: Missing field
+7. booking.event.capacity: Incorrect value: 1500
+8. booking.event.ticketPrice: Missing field
+9. booking.event.stageTime.start: Missing field
+10. booking.event.stageTime.end: Missing field
+11. booking.invoice.amount: Missing field
+12. booking.invoice.status: Missing field
+13. booking.contract.status: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object based on the new message:
+
+{
+  "booking": {
+    "status": "inquiry",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Luna Garcia",
+      "company": "Club Stellar",
+      "address": "luna@clubstellar.se"
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+Note that the `event.date` and `event.name` fields are still missing, as well as the `invoice.amount` and `invoice.status` fields. The `stageTime` field is also still null.
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"inquiry","artist":{"name":"DJ Meteor"},"promoter":{"name":"Luna Garcia","company":"Club Stellar","address":"luna@clubstellar.se"},"event":{"date":null,"name":null,"city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Olivia Chen <olivia@clubstellar.se>
+Subject: Re: DJ Meteor - Stockholm
+Date: 8. August 2022 at 12:24:46 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+Cc: Luna Garcia <luna@clubstellar.se>
+
+Set for payment!
+
+Olivia
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+2. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+3. /booking/event/stageTime must be object (actual: null)
+
+Context Errors:
+1. booking.status: Incorrect value: inquiry
+2. booking.promoter.name: Incorrect value: Luna Garcia
+3. booking.promoter.company: Incorrect value: Club Stellar
+4. booking.promoter.address: Incorrect value: luna@clubstellar.se
+5. booking.event.date: Missing field
+6. booking.event.name: Missing field
+7. booking.event.capacity: Incorrect value: 1500
+8. booking.event.ticketPrice: Missing field
+9. booking.event.stageTime.start: Missing field
+10. booking.event.stageTime.end: Missing field
+11. booking.invoice: Value does not match expected format or requirements
+12. booking.contract: Value does not match expected format or requirements
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object based on the new message:
+
+{
+  "booking": {
+    "status": "set for payment",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Luna Garcia",
+      "company": "Club Stellar",
+      "address": "luna@clubstellar.se"
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": 500,
+      "status": "set for payment"
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"set for payment","artist":{"name":"DJ Meteor"},"promoter":{"name":"Luna Garcia","company":"Club Stellar","address":"luna@clubstellar.se"},"event":{"date":null,"name":null,"city":"Stockholm","venue":"Cosmic Garden","capacity":1500,"openingTime":"17:00","closingTime":"03:00","stageTime":null},"invoice":{"amount":500,"status":"set for payment"},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: DJ Meteor - Stockholm
+Date: 21. September 2022 at 18:13:12 GMT+2
+To: Luna Garcia <luna@clubstellar.se>
+Cc: Olivia Chen <olivia@clubstellar.se>
+
+hey luna,
+
+payment received.
+
+Best,
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+Use these examples to guide your extraction:
+
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": inquiry,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": "Marcus Weber",
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": null,
+      "stageTime": {
+        "start": "2025-11-25T20:00:00Z",
+        "end": "2025-11-26T06:00:00Z"
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+
+EXAMPLE INPUT:
+From: Sarah Johnson <sarah@events.com>
+Subject: RE: Contract signed
+The contract has been signed and payment has been made for DJ Eclipse's performance. Looking forward to the event!
+  
+EXAMPLE OUTPUT:
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": { "name": "DJ Eclipse" },
+    "promoter": { "name": "Sarah Johnson", "company": "Johnson Company", "address": "123 Main St, Anytown, USA" },
+    "event": {
+      "date": "2025-08-20",
+      "venue": "The Ground", 
+      "city": "New York City",
+      "capacity": 800,
+      "openingTime": "2025-08-20T19:00:00Z",
+      "closingTime": "2025-08-21T06:00:00Z",
+      "stageTime": {
+        "start": "2025-08-20T21:00:00Z",
+        "end": "2025-08-20T23:00:00Z"
+      }
+    },
+    "invoice": { "amount": 1500, "status": "paid" },
+    "contract": { "status": "signed" }
+  }
+}
+
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/status must be equal to one of the allowed values (actual: set for payment)
+2. /booking/status must be null (actual: set for payment)
+3. /booking/status must match exactly one schema in oneOf (actual: set for payment)
+4. /booking/event/openingTime must match format "date-time" (actual: 17:00)
+5. /booking/event/closingTime must match format "date-time" (actual: 03:00)
+6. /booking/event/stageTime must be object (actual: null)
+7. /booking/invoice/status must be equal to one of the allowed values (actual: set for payment)
+8. /booking/invoice/status must be null (actual: set for payment)
+9. /booking/invoice/status must match exactly one schema in oneOf (actual: set for payment)
+
+Context Errors:
+1. booking.status: Incorrect value: set for payment
+2. booking.promoter.name: Incorrect value: Luna Garcia
+3. booking.promoter.company: Incorrect value: Club Stellar
+4. booking.promoter.address: Incorrect value: luna@clubstellar.se
+5. booking.event.date: Missing field
+6. booking.event.name: Missing field
+7. booking.event.capacity: Incorrect value: 1500
+8. booking.event.ticketPrice: Missing field
+9. booking.event.stageTime.start: Missing field
+10. booking.event.stageTime.end: Missing field
+11. booking.invoice.amount: Incorrect value: 500
+12. booking.invoice.status: Incorrect value: set for payment
+13. booking.contract.status: Missing field
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object based on the new message:
+
+{
+  "booking": {
+    "status": "paid",
+    "artist": {
+      "name": "DJ Meteor"
+    },
+    "promoter": {
+      "name": "Luna Garcia",
+      "company": "Club Stellar",
+      "address": "luna@clubstellar.se"
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": "Stockholm",
+      "venue": "Cosmic Garden",
+      "capacity": 1500,
+      "openingTime": "17:00",
+      "closingTime": "03:00",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": 500,
+      "status": "paid"
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "messageId": "5",
+  "score": 0.9134615384615384,
+  "timestamp": "2025-05-14T20:55:37.346Z",
+  "errors": [
+    "/booking/promoter/address must be string,null (actual: {\"street\":\"Hammarby Slussväg 2\",\"phone\":\"+46 (0) 8 644 20 23\",\"email\":\"info@clubstellar.se\"})",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+    "booking.promoter.address.street: Field not defined in schema",
+    "booking.promoter.address.phone: Field not defined in schema",
+    "booking.promoter.address.email: Field not defined in schema"
+  ]
+}

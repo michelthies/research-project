@@ -1,0 +1,196 @@
+{
+  "messageId": "12",
+  "score": 0.21999999999999997,
+  "timestamp": "2025-05-14T20:54:17.508Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Meteor"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1500,
+        "status": "paid"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "cosigned"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.type",
+      "expected": "Not defined in ground truth",
+      "actual": "object",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.properties",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "booking": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "confirmed"
+              ]
+            },
+            "artist": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "enum": [
+                    "DJ Meteor"
+                  ]
+                }
+              }
+            },
+            "promoter": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "string",
+                    null
+                  ]
+                },
+                "company": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "enum": [
+                    "Nova Entertainment"
+                  ]
+                },
+                "address": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "enum": [
+                    "Hammarby Slussväg 2"
+                  ]
+                }
+              }
+            },
+            "event": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "format": "date",
+                  "enum": [
+                    "2022-08-06"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    null
+                  ]
+                },
+                "city": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "enum": [
+                    "Stockholm"
+                  ]
+                },
+                "venue": {
+                  "type": [
+                    "string",
+                    null
+                  ],
+                  "enum": [
+                    "Cosmic Garden"
+                  ]
+                },
+                "capacity": {
+                  "type": [
+                    "number",
+                    null
+                  ],
+                  "enum": [
+                    500
+                  ]
+                },
+                "ticketPrice": {
+                  "type": [
+                    "number",
+                    null
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

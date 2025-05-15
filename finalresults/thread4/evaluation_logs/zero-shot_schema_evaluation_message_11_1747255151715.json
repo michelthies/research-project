@@ -1,0 +1,11 @@
+{
+  "messageId": "11",
+  "score": 0.9615384615384616,
+  "timestamp": "2025-05-14T20:39:11.715Z",
+  "errors": [
+    "booking.rider_request: Field not defined in schema",
+    "booking.flight_request: Field not defined in schema",
+    "booking.check_in_luggage: Field not defined in schema",
+    "booking.hotel_request: Field not defined in schema"
+  ]
+}

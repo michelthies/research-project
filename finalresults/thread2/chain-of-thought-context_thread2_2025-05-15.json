@@ -1,0 +1,67 @@
+{
+  "strategy": "chain-of-thought-context",
+  "schemaMetrics": {
+    "score": 0.5596153846153846,
+    "rawScore": 0.9326923076923078,
+    "effectiveScore": 0.5596153846153846,
+    "parseSuccessRate": 0.6,
+    "typeErrorRate": 0.025641025641025644,
+    "constraintViolationRate": 0.05128205128205129,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.16775599128540306
+  },
+  "contextMetrics": {
+    "score": 0.7547302106027596,
+    "fieldAccuracy": 0.661038489469862,
+    "contextLossRate": 0.2262527233115469,
+    "unexpectedFieldRate": 0.16775599128540306
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9326923076923078,
+    "contextualConsistency": 0.7547302106027596,
+    "overallScore": 0.8437112591475338,
+    "successRate": 0.6,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "UNEXPECTED_FIELD": 54,
+    "CONSTRAINT_ERROR": 12,
+    "OTHER": 6,
+    "_unexpectedFieldDetails": {
+      "minimumSetLength": {
+        "count": 7,
+        "fields": [
+          "booking.contract.minimumSetLength"
+        ]
+      },
+      "travelAndAccommodation": {
+        "count": 7,
+        "fields": [
+          "booking.contract.travelAndAccommodation"
+        ]
+      },
+      "visualTechnician": {
+        "count": 7,
+        "fields": [
+          "booking.contract.visualTechnician"
+        ]
+      },
+      "dedicatedSoundEngineer": {
+        "count": 6,
+        "fields": [
+          "booking.contract.dedicatedSoundEngineer"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 27,
+      "uniqueFields": 4
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1985.3333333333333,
+    "avgResponseTokens": 245.53333333333333,
+    "totalTokens": 33463
+  }
+}

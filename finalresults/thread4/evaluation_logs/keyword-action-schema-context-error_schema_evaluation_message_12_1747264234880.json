@@ -1,0 +1,8 @@
+{
+  "messageId": "12",
+  "score": 0.9807692307692307,
+  "timestamp": "2025-05-14T23:10:34.880Z",
+  "errors": [
+    "/booking/artist must be object (actual: null)"
+  ]
+}

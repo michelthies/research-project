@@ -1,0 +1,8 @@
+Augmentation Combination,Overall Score,Schema Score,Field Accuracy,Success Rate
+Schema only (+S),87.7,85.7,60.3,86.9
+Context only (+C),87.8,54.5,66.9,56.8
+Error only (+E),87.8,54.5,63.1,56.4
+Schema + Context (+SC),85.1,85.3,54.8,86.7
+Schema + Error (+SE),88.3,85.7,60.8,86.7
+Context + Error (+CE),88.0,46.2,67.6,48.1
+All augmentations (+SCE),82.9,73.9,51.5,75.2

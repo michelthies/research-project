@@ -1,0 +1,8 @@
+{
+  "messageId": "12",
+  "score": 0.9807692307692307,
+  "timestamp": "2025-05-15T02:25:42.858Z",
+  "errors": [
+    "/booking/invoice must be object (actual: [{\"amount\":2200,\"status\":null},{\"amount\":700,\"status\":null}])"
+  ]
+}

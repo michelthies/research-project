@@ -1,0 +1,250 @@
+{
+  "messageId": "6",
+  "score": 0.21999999999999997,
+  "timestamp": "2025-05-14T22:18:47.059Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Meteor"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1500,
+        "status": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.type",
+      "expected": "Not defined in ground truth",
+      "actual": "object",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.properties",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "booking": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "inquiry"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "artist": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "value": "DJ Meteor"
+                }
+              }
+            },
+            "promoter": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "company": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "value": "Nova Entertainment"
+                },
+                "address": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "value": "Hammarby Slussväg 2"
+                }
+              }
+            },
+            "event": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "value": "2022-08-06"
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "city": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "value": "Stockholm"
+                },
+                "venue": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "value": "Cosmic Garden (Hammarby Slussväg 2)"
+                },
+                "capacity": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "value": 500
+                },
+                "ticketPrice": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "value": 15
+                },
+                "openingTime": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "value": "17:00"
+                },
+                "closingTime": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "value": "03:00"
+                }
+              }
+            },
+            "invoice": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "status": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "not sent",
+                        "sent",
+                        "paid"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            "contract": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "not sent",
+                        "sent",
+                        "signed",
+                        "cosigned"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

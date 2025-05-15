@@ -1,0 +1,82 @@
+{
+  "messageId": "11",
+  "score": 0.4966666666666666,
+  "timestamp": "2025-05-14T22:13:50.593Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "PENDING",
+      "valid": false,
+      "reason": "Expected confirmed, got PENDING"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Nova Entertainment",
+      "actual": {
+        "name": "Nova Entertainment",
+        "representedBy": "Club Stellar",
+        "fullAddress": "Hammarby Slussväg 2",
+        "cellPhone": "+46704058257",
+        "email": "olivia@clubstellar.se",
+        "website": "www.clubstellar.com",
+        "vatNumber": "SE 556785-1901-01",
+        "orgNummer": "556785-1901"
+      },
+      "valid": false,
+      "reason": "Expected Nova Entertainment, got [object Object]"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Hammarby Slussväg 2",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.contact",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "name": "Olivia Chen",
+        "email": "olivia@clubstellar.se",
+        "cellPhone": "+46704671462"
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

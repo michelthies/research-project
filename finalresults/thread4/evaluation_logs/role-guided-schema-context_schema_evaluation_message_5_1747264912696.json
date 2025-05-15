@@ -1,0 +1,11 @@
+{
+  "messageId": "5",
+  "score": 0.9423076923076923,
+  "timestamp": "2025-05-14T23:21:52.696Z",
+  "errors": [
+    "/booking/artist must be object (actual: null)",
+    "/booking/event/venue must be string,null (actual: {\"name\":\"Cosmic Garden\",\"fullAddress\":\"Hammarby Slussväg 2\"})",
+    "booking.event.venue.name: Field not defined in schema",
+    "booking.event.venue.fullAddress: Field not defined in schema"
+  ]
+}

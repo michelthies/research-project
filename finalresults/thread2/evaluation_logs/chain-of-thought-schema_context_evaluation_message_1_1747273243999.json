@@ -1,0 +1,91 @@
+{
+  "messageId": "1",
+  "score": 1,
+  "timestamp": "2025-05-15T01:40:43.999Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": "inquiry",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Horizon",
+      "actual": "DJ Horizon",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Stacey Summer",
+      "actual": "Stacey Summer",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Vibrancy Events",
+      "actual": "Vibrancy Events",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2025-09-20",
+      "actual": "2025-09-20",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Equinox Festival",
+      "actual": "Equinox Festival",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Berlin",
+      "actual": "Berlin",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Tempelhofer Feld",
+      "actual": "Tempelhofer Feld",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 3500,
+      "actual": 3500,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2025-09-20T22:30:00Z",
+      "actual": "2025-09-20T22:30:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2025-09-21T00:30:00Z",
+      "actual": "2025-09-20T00:30:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 1500,
+      "actual": 1500,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    }
+  ]
+}

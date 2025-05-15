@@ -1,0 +1,133 @@
+{
+  "messageId": "13",
+  "score": 0.7761111111111111,
+  "timestamp": "2025-05-14T22:10:31.435Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "confirmed",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor, DJ Pulse, Novawave & Sofia Nyberg",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Nova Entertainment",
+      "actual": "Club Stellar",
+      "valid": false,
+      "reason": "Expected Nova Entertainment, got Club Stellar"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Hammarby Slussväg 2",
+      "actual": "Hammarby Slussväg 2",
+      "valid": false,
+      "reason": "Expected Hammarby Slussväg 2, got Hammarby Slussväg 2"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "2022-08-06",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Cosmic Garden",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Stockholm",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Cosmic Garden",
+      "actual": "Cosmic Garden",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 1800,
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": 15,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2022-08-06T17:00:00Z",
+      "actual": "2022-08-06T17:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2022-08-07T03:00:00Z",
+      "actual": "2022-08-07T03:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2022-08-06T20:00:00Z",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2022-08-06T22:00:00Z",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 1500,
+      "actual": 15,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.invoice.status",
+      "expected": "paid",
+      "actual": "paid",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.contract.status",
+      "expected": "not sent",
+      "actual": "not sent",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    }
+  ]
+}

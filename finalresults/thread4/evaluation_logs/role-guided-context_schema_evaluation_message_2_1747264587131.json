@@ -1,0 +1,9 @@
+{
+  "messageId": "2",
+  "score": 0.9711538461538461,
+  "timestamp": "2025-05-14T23:16:27.131Z",
+  "errors": [
+    "/booking/promoter must be object (actual: null)",
+    "booking.lineUp: Field not defined in schema"
+  ]
+}

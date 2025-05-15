@@ -1,0 +1,11 @@
+{
+  "messageId": "10",
+  "score": 0.9326923076923077,
+  "timestamp": "2025-05-15T00:28:02.302Z",
+  "errors": [
+    "/booking/event/date must match format \"date\" (actual: 2025-09-20T00:00:00Z)",
+    "/booking/event/stageTime/start must match format \"date-time\" (actual: 22:30:00.000Z)",
+    "/booking/event/stageTime/end must match format \"date-time\" (actual: 00:30:00.000Z)",
+    "booking.event.soundEngineer: Field not defined in schema"
+  ]
+}

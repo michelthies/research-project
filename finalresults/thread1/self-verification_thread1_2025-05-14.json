@@ -1,0 +1,49 @@
+{
+  "strategy": "self-verification",
+  "schemaMetrics": {
+    "score": 0.24999999999999997,
+    "rawScore": 0.9166666666666666,
+    "effectiveScore": 0.24999999999999997,
+    "parseSuccessRate": 0.2727272727272727,
+    "typeErrorRate": 0.025641025641025644,
+    "constraintViolationRate": 0.12820512820512822,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.042328042328042326
+  },
+  "contextMetrics": {
+    "score": 0.8879365079365079,
+    "fieldAccuracy": 0.7936507936507936,
+    "contextLossRate": 0.08465608465608465,
+    "unexpectedFieldRate": 0.042328042328042326
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9166666666666666,
+    "contextualConsistency": 0.8879365079365079,
+    "overallScore": 0.9023015873015874,
+    "successRate": 0.2727272727272727,
+    "jsonAdherenceRate": 0.2727272727272727
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 10,
+    "UNEXPECTED_FIELD": 4,
+    "OTHER": 2,
+    "_unexpectedFieldDetails": {
+      "artistFee": {
+        "count": 2,
+        "fields": [
+          "booking.contract.artistFee"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 2,
+      "uniqueFields": 1
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 666,
+    "avgResponseTokens": 141.63636363636363,
+    "totalTokens": 8884
+  }
+}

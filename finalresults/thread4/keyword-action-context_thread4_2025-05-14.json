@@ -1,0 +1,66 @@
+{
+  "strategy": "keyword-action-context",
+  "schemaMetrics": {
+    "score": 0.3609467455621302,
+    "rawScore": 0.9384615384615385,
+    "effectiveScore": 0.3609467455621302,
+    "parseSuccessRate": 0.38461538461538464,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.06153846153846154,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.20714285714285713
+  },
+  "contextMetrics": {
+    "score": 0.7152892857142856,
+    "fieldAccuracy": 0.6260714285714286,
+    "contextLossRate": 0.27035714285714285,
+    "unexpectedFieldRate": 0.20714285714285713
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9384615384615385,
+    "contextualConsistency": 0.7152892857142856,
+    "overallScore": 0.8268754120879122,
+    "successRate": 0.38461538461538464,
+    "jsonAdherenceRate": 0.07692307692307693
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 8,
+    "UNEXPECTED_FIELD": 32,
+    "_unexpectedFieldDetails": {
+      "contact": {
+        "count": 4,
+        "fields": [
+          "booking.promoter.contact"
+        ]
+      },
+      "timeframe": {
+        "count": 4,
+        "fields": [
+          "booking.timeframe"
+        ]
+      },
+      "runningOrder": {
+        "count": 4,
+        "fields": [
+          "booking.runningOrder"
+        ]
+      },
+      "dinner": {
+        "count": 4,
+        "fields": [
+          "booking.dinner"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 16,
+      "uniqueFields": 4
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 2023.4615384615386,
+    "avgResponseTokens": 246.30769230769232,
+    "totalTokens": 29507
+  }
+}

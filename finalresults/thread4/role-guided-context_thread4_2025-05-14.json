@@ -1,0 +1,96 @@
+{
+  "strategy": "role-guided-context",
+  "schemaMetrics": {
+    "score": 0.937869822485207,
+    "rawScore": 0.937869822485207,
+    "effectiveScore": 0.937869822485207,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0.01183431952662722,
+    "constraintViolationRate": 0,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.35334338863750625
+  },
+  "contextMetrics": {
+    "score": 0.6210779286073406,
+    "fieldAccuracy": 0.6040221216691803,
+    "contextLossRate": 0.3869281045751634,
+    "unexpectedFieldRate": 0.35334338863750625
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.937869822485207,
+    "contextualConsistency": 0.6210779286073406,
+    "overallScore": 0.7794738755462737,
+    "successRate": 1,
+    "jsonAdherenceRate": 1
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 4,
+    "UNEXPECTED_FIELD": 152,
+    "_unexpectedFieldDetails": {
+      "lineUp": {
+        "count": 12,
+        "fields": [
+          "booking.lineUp"
+        ]
+      },
+      "companyName": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.companyName"
+        ]
+      },
+      "representedBy": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.representedBy"
+        ]
+      },
+      "fullAddress": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.fullAddress"
+        ]
+      },
+      "cellPhone": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.cellPhone"
+        ]
+      },
+      "email": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.email"
+        ]
+      },
+      "website": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.website"
+        ]
+      },
+      "vatNumber": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.vatNumber"
+        ]
+      },
+      "orgNumber": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.orgNumber"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 76,
+      "uniqueFields": 9
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1797.923076923077,
+    "avgResponseTokens": 251.3846153846154,
+    "totalTokens": 26641
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "strategy": "zero-shot-context",
+  "schemaMetrics": {
+    "score": 0.5939349112426037,
+    "rawScore": 0.9651442307692308,
+    "effectiveScore": 0.5939349112426037,
+    "parseSuccessRate": 0.6153846153846154,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.038461538461538464,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.10379464285714285
+  },
+  "contextMetrics": {
+    "score": 0.6271160714285713,
+    "fieldAccuracy": 0.37745535714285716,
+    "contextLossRate": 0.3847470238095238,
+    "unexpectedFieldRate": 0.10379464285714285
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9651442307692308,
+    "contextualConsistency": 0.6271160714285713,
+    "overallScore": 0.796130151098901,
+    "successRate": 0.6153846153846154,
+    "jsonAdherenceRate": 0.6153846153846154
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 8,
+    "UNEXPECTED_FIELD": 26,
+    "_unexpectedFieldDetails": {
+      "openingTime": {
+        "count": 6,
+        "fields": [
+          "booking.openingTime"
+        ]
+      },
+      "closingTime": {
+        "count": 6,
+        "fields": [
+          "booking.closingTime"
+        ]
+      },
+      "stageTime": {
+        "count": 1,
+        "fields": [
+          "booking.stageTime"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 13,
+      "uniqueFields": 3
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1472.2307692307693,
+    "avgResponseTokens": 111.92307692307692,
+    "totalTokens": 20594
+  }
+}

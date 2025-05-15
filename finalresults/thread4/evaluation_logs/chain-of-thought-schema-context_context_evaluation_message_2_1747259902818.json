@@ -1,0 +1,141 @@
+{
+  "messageId": "2",
+  "score": 0.21999999999999997,
+  "timestamp": "2025-05-14T21:58:22.818Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Meteor"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Olivia Chen",
+        "company": null,
+        "address": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2022-08-06",
+        "name": null,
+        "city": "Stockholm",
+        "venue": null,
+        "capacity": null,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": null,
+          "end": null
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": null,
+        "status": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.type",
+      "expected": "Not defined in ground truth",
+      "actual": "object",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.properties",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "booking": {
+          "type": "object",
+          "properties": {
+            "status": null,
+            "artist": {
+              "type": "object",
+              "properties": {
+                "name": "DJ Meteor"
+              }
+            },
+            "promoter": {
+              "type": "object",
+              "properties": {
+                "name": "Olivia Chen",
+                "company": "clubstellar.se",
+                "address": null
+              }
+            },
+            "event": {
+              "type": "object",
+              "properties": {
+                "date": "2022-08-06",
+                "name": "Stockholm",
+                "city": "Stockholm",
+                "venue": null,
+                "capacity": null,
+                "ticketPrice": null,
+                "openingTime": null,
+                "closingTime": null,
+                "stageTime": {
+                  "type": "object",
+                  "properties": {
+                    "start": null,
+                    "end": null
+                  }
+                }
+              }
+            },
+            "invoice": {
+              "type": "object",
+              "properties": {
+                "amount": null,
+                "status": null
+              }
+            },
+            "contract": {
+              "type": "object",
+              "properties": {
+                "status": null
+              }
+            }
+          }
+        }
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

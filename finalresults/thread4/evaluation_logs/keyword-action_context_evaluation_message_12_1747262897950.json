@@ -1,0 +1,71 @@
+{
+  "messageId": "12",
+  "score": 0.43999999999999995,
+  "timestamp": "2025-05-14T22:48:17.950Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "set_for_payment",
+      "valid": false,
+      "reason": "Expected confirmed, got set_for_payment"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Meteor"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1500,
+        "status": "paid"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract.status",
+      "expected": "cosigned",
+      "actual": "confirmed",
+      "valid": false,
+      "reason": "Expected cosigned, got confirmed"
+    }
+  ]
+}

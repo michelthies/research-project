@@ -1,0 +1,74 @@
+{
+  "strategy": "chain-of-thought-context-error",
+  "schemaMetrics": {
+    "score": 0.4551282051282051,
+    "rawScore": 0.9752747252747253,
+    "effectiveScore": 0.4551282051282051,
+    "parseSuccessRate": 0.4666666666666667,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.14676704014939307
+  },
+  "contextMetrics": {
+    "score": 0.7545842670401494,
+    "fieldAccuracy": 0.6688258636788049,
+    "contextLossRate": 0.2557072829131653,
+    "unexpectedFieldRate": 0.14676704014939307
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.16326530612244897,
+    "avgFeedbackEffectivenessScore": 0.13807352171637885
+  },
+  "averageScores": {
+    "schemaConformity": 0.9752747252747253,
+    "contextualConsistency": 0.7545842670401494,
+    "overallScore": 0.8649294961574375,
+    "successRate": 0.4666666666666667,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "UNEXPECTED_FIELD": 36,
+    "_unexpectedFieldDetails": {
+      "stageTime": {
+        "count": 4,
+        "fields": [
+          "booking.contract.stageTime"
+        ]
+      },
+      "travel": {
+        "count": 4,
+        "fields": [
+          "booking.contract.travel"
+        ]
+      },
+      "accommodation": {
+        "count": 4,
+        "fields": [
+          "booking.contract.accommodation"
+        ]
+      },
+      "contact": {
+        "count": 3,
+        "fields": [
+          "booking.promoter.contact"
+        ]
+      },
+      "email": {
+        "count": 3,
+        "fields": [
+          "booking.promoter.email"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 18,
+      "uniqueFields": 5
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 2048.4666666666667,
+    "avgResponseTokens": 316.4,
+    "totalTokens": 35473
+  }
+}

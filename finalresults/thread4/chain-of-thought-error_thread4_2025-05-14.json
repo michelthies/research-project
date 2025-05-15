@@ -1,0 +1,78 @@
+{
+  "strategy": "chain-of-thought-error",
+  "schemaMetrics": {
+    "score": 0.8106508875739644,
+    "rawScore": 0.9580419580419579,
+    "effectiveScore": 0.8106508875739644,
+    "parseSuccessRate": 0.8461538461538461,
+    "typeErrorRate": 0.017482517482517484,
+    "constraintViolationRate": 0.02097902097902098,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.08302139037433155
+  },
+  "contextMetrics": {
+    "score": 0.6537735548764959,
+    "fieldAccuracy": 0.4589731347084289,
+    "contextLossRate": 0.4087280366692132,
+    "unexpectedFieldRate": 0.08302139037433155
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.18373015873015874,
+    "avgFeedbackEffectivenessScore": 0.11558902535373124
+  },
+  "averageScores": {
+    "schemaConformity": 0.9580419580419579,
+    "contextualConsistency": 0.6537735548764959,
+    "overallScore": 0.8059077564592272,
+    "successRate": 0.8461538461538461,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 9,
+    "UNEXPECTED_FIELD": 53,
+    "OTHER": 2,
+    "_unexpectedFieldDetails": {
+      "name": {
+        "count": 3,
+        "fields": [
+          "booking.event.venue.name"
+        ]
+      },
+      "fullAddress": {
+        "count": 3,
+        "fields": [
+          "booking.event.venue.fullAddress"
+        ]
+      },
+      "phone": {
+        "count": 10,
+        "fields": [
+          "booking.event.venue.phone",
+          "booking.promoter.phone"
+        ]
+      },
+      "email": {
+        "count": 10,
+        "fields": [
+          "booking.event.venue.email",
+          "booking.promoter.email"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 27,
+      "uniqueFields": 5
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 850.8461538461538,
+    "avgResponseTokens": 305.38461538461536,
+    "totalTokens": 15031
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "strategy": "one-shot",
+  "schemaMetrics": {
+    "score": 0.9223372781065087,
+    "rawScore": 0.9223372781065087,
+    "effectiveScore": 0.9223372781065087,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0.03550295857988166,
+    "constraintViolationRate": 0.07100591715976332,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.010256410256410256
+  },
+  "contextMetrics": {
+    "score": 0.7239200244200246,
+    "fieldAccuracy": 0.5691544566544565,
+    "contextLossRate": 0.3824481074481074,
+    "unexpectedFieldRate": 0.010256410256410256
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9223372781065087,
+    "contextualConsistency": 0.7239200244200246,
+    "overallScore": 0.8231286512632665,
+    "successRate": 1,
+    "jsonAdherenceRate": 0.8461538461538461
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 35,
+    "UNEXPECTED_FIELD": 68,
+    "OTHER": 1,
+    "_unexpectedFieldDetails": {
+      "street": {
+        "count": 11,
+        "fields": [
+          "booking.promoter.address.street"
+        ]
+      },
+      "phone": {
+        "count": 11,
+        "fields": [
+          "booking.promoter.address.phone"
+        ]
+      },
+      "email": {
+        "count": 11,
+        "fields": [
+          "booking.promoter.address.email"
+        ]
+      },
+      "invoice": {
+        "count": 1,
+        "fields": [
+          "booking.invoice"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 35,
+      "uniqueFields": 5
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 831.6923076923077,
+    "avgResponseTokens": 261.38461538461536,
+    "totalTokens": 14210
+  }
+}

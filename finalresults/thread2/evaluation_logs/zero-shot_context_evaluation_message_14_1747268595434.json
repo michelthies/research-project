@@ -1,0 +1,104 @@
+{
+  "messageId": "14",
+  "score": 0.49749999999999994,
+  "timestamp": "2025-05-15T00:23:15.434Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "confirmed",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Horizon"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Stacey Summer",
+      "actual": "Vibrancy Events",
+      "valid": false,
+      "reason": "Expected Stacey Summer, got Vibrancy Events"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Vibrancy Events GmbH",
+      "actual": "Vibrancy Events",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Frankfurter Allee 77, 10247 Berlin, Germany",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 2200,
+        "status": "paid"
+      },
+      "actual": true,
+      "valid": false,
+      "reason": "Expected [object Object], got true"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "cosigned"
+      },
+      "actual": true,
+      "valid": false,
+      "reason": "Expected [object Object], got true"
+    },
+    {
+      "path": "booking.engineer",
+      "expected": "Not defined in ground truth",
+      "actual": false,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.press_interview",
+      "expected": "Not defined in ground truth",
+      "actual": true,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.artist_photo",
+      "expected": "Not defined in ground truth",
+      "actual": true,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

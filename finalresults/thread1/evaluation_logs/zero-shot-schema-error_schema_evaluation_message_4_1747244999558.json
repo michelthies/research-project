@@ -1,0 +1,8 @@
+{
+  "messageId": "4",
+  "score": 0.9807692307692307,
+  "timestamp": "2025-05-14T17:49:59.558Z",
+  "errors": [
+    "/booking/event/date must match format \"date\" (actual: 2025-11-25T00:00:00Z)"
+  ]
+}

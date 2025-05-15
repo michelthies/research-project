@@ -1,0 +1,84 @@
+{
+  "strategy": "zero-shot",
+  "schemaMetrics": {
+    "score": 0.6775147928994083,
+    "rawScore": 0.9786324786324787,
+    "effectiveScore": 0.6775147928994083,
+    "parseSuccessRate": 0.6923076923076923,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.004273504273504274,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.44483294483294483
+  },
+  "contextMetrics": {
+    "score": 0.427130795130795,
+    "fieldAccuracy": 0.3447034447034447,
+    "contextLossRate": 0.615980315980316,
+    "unexpectedFieldRate": 0.44483294483294483
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9786324786324787,
+    "contextualConsistency": 0.427130795130795,
+    "overallScore": 0.7028816368816369,
+    "successRate": 0.6923076923076923,
+    "jsonAdherenceRate": 0.6923076923076923
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 1,
+    "UNEXPECTED_FIELD": 43,
+    "_unexpectedFieldDetails": {
+      "sponsoring": {
+        "count": 2,
+        "fields": [
+          "booking.event.sponsoring"
+        ]
+      },
+      "lineUp": {
+        "count": 2,
+        "fields": [
+          "booking.event.lineUp"
+        ]
+      },
+      "offer": {
+        "count": 2,
+        "fields": [
+          "booking.event.offer"
+        ]
+      },
+      "rider_request": {
+        "count": 5,
+        "fields": [
+          "booking.rider_request"
+        ]
+      },
+      "flight_request": {
+        "count": 5,
+        "fields": [
+          "booking.flight_request"
+        ]
+      },
+      "check_in_luggage": {
+        "count": 5,
+        "fields": [
+          "booking.check_in_luggage"
+        ]
+      },
+      "hotel_request": {
+        "count": 4,
+        "fields": [
+          "booking.hotel_request"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 25,
+      "uniqueFields": 7
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 293.6923076923077,
+    "avgResponseTokens": 92.46153846153847,
+    "totalTokens": 5020
+  }
+}

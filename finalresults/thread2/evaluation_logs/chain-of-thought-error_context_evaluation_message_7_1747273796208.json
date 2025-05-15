@@ -1,0 +1,87 @@
+{
+  "messageId": "7",
+  "score": 0.385,
+  "timestamp": "2025-05-15T01:49:56.208Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Horizon"
+      },
+      "actual": "DJ Horizon",
+      "valid": false,
+      "reason": "Expected [object Object], got DJ Horizon"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "actual": "Vibrancy Events GmbH",
+      "valid": false,
+      "reason": "Expected [object Object], got Vibrancy Events GmbH"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "actual": "Equinox Festival",
+      "valid": false,
+      "reason": "Expected [object Object], got Equinox Festival"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 2200,
+        "status": "not sent"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "not sent"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.start",
+      "expected": "Not defined in ground truth",
+      "actual": "2025-09-20T22:30:00Z",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.end",
+      "expected": "Not defined in ground truth",
+      "actual": "2025-09-20T02:00:00Z",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

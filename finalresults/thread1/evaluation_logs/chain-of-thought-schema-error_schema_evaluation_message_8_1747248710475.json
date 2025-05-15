@@ -1,0 +1,8 @@
+{
+  "messageId": "8",
+  "score": 0.9903846153846154,
+  "timestamp": "2025-05-14T18:51:50.475Z",
+  "errors": [
+    "booking.promoter.signatory: Field not defined in schema"
+  ]
+}

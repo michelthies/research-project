@@ -1,0 +1,71 @@
+{
+  "strategy": "keyword-action-error",
+  "schemaMetrics": {
+    "score": 0.9778106508875737,
+    "rawScore": 0.9778106508875737,
+    "effectiveScore": 0.9778106508875737,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0.002958579881656805,
+    "constraintViolationRate": 0.01183431952662722,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.10201465201465203
+  },
+  "contextMetrics": {
+    "score": 0.639292277167277,
+    "fieldAccuracy": 0.4334401709401709,
+    "contextLossRate": 0.40731074481074486,
+    "unexpectedFieldRate": 0.10201465201465203
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.03759733558495169,
+    "avgFeedbackEffectivenessScore": 0.02000260944765589
+  },
+  "averageScores": {
+    "schemaConformity": 0.9778106508875737,
+    "contextualConsistency": 0.639292277167277,
+    "overallScore": 0.8085514640274254,
+    "successRate": 1,
+    "jsonAdherenceRate": 0.7692307692307693
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 4,
+    "UNEXPECTED_FIELD": 42,
+    "OTHER": 1,
+    "_unexpectedFieldDetails": {
+      "timeframe": {
+        "count": 12,
+        "fields": [
+          "booking.timeframe",
+          "booking.event.timeframe"
+        ]
+      },
+      "contact": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.contact"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      },
+      "invoice": {
+        "count": 1,
+        "fields": [
+          "booking.invoice"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 22,
+      "uniqueFields": 4
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1088.2307692307693,
+    "avgResponseTokens": 290.3076923076923,
+    "totalTokens": 17921
+  }
+}

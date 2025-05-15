@@ -1,0 +1,108 @@
+{
+  "messageId": "2",
+  "score": 0.3618181818181818,
+  "timestamp": "2025-05-14T20:38:36.643Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": "Olivia Chen",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": null,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": null,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": null,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": null,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": null,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.stageTime",
+      "expected": {
+        "start": null,
+        "end": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.sponsoring",
+      "expected": "Not defined in ground truth",
+      "actual": null,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.event.lineUp",
+      "expected": "Not defined in ground truth",
+      "actual": null,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.event.offer",
+      "expected": "Not defined in ground truth",
+      "actual": null,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

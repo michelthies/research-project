@@ -1,0 +1,122 @@
+{
+  "messageId": "4",
+  "score": 0.4076923076923077,
+  "timestamp": "2025-05-14T20:38:48.592Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": "Olivia Chen",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Cosmic Garden",
+      "actual": "Stockholm",
+      "valid": false,
+      "reason": "Expected Cosmic Garden, got Stockholm"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Cosmic Garden",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 1800,
+      "actual": 1500,
+      "valid": false,
+      "reason": "Expected 1800, got 1500"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2022-08-06T17:00:00Z",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2022-08-07T03:00:00Z",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.stageTime",
+      "expected": {
+        "start": "2022-08-06T20:00:00Z",
+        "end": "2022-08-06T22:00:00Z"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 1500,
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.sponsoring",
+      "expected": "Not defined in ground truth",
+      "actual": null,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.event.lineUp",
+      "expected": "Not defined in ground truth",
+      "actual": null,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.event.offer",
+      "expected": "Not defined in ground truth",
+      "actual": null,
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

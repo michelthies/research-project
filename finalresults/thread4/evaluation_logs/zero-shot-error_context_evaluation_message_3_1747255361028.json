@@ -1,0 +1,105 @@
+{
+  "messageId": "3",
+  "score": 0.7842857142857143,
+  "timestamp": "2025-05-14T20:42:41.028Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": "Olivia Chen",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Cosmic Garden",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Stockholm",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Cosmic Garden",
+      "actual": "Cosmic Garden",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 1800,
+      "actual": 500,
+      "valid": false,
+      "reason": "Expected 1800, got 500"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": 15,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2022-08-06T17:00:00Z",
+      "actual": 17,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2022-08-07T03:00:00Z",
+      "actual": 3,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2022-08-06T20:00:00Z",
+      "actual": 20,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2022-08-06T22:00:00Z",
+      "actual": 22,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 1000,
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    }
+  ]
+}

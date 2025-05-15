@@ -1,0 +1,177 @@
+{
+  "messageId": "12",
+  "score": 0.7075,
+  "timestamp": "2025-05-14T23:06:31.402Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "confirmed",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Nova Entertainment",
+      "actual": "Nova Entertainment",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Hammarby Slussväg 2",
+      "actual": "Hammarby Slussväg 2",
+      "valid": false,
+      "reason": "Expected Hammarby Slussväg 2, got Hammarby Slussväg 2"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "2022-08-06",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Cosmic Garden",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Stockholm",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Cosmic Garden",
+      "actual": "Cosmic Garden, Hammarby Slussväg 2",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 1800,
+      "actual": 1800,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": 15,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2022-08-06T17:00:00Z",
+      "actual": "2022-08-06T17:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2022-08-07T03:00:00Z",
+      "actual": "2022-08-06T03:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime",
+      "expected": {
+        "start": "2022-08-06T20:00:00Z",
+        "end": "2022-08-06T22:00:00Z"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1500,
+        "status": "paid"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "cosigned"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.contact",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "email": "olivia@clubstellar.se",
+        "phone": "+46 70-467 14 62"
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.timeframe",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "runningOrder": [
+          {
+            "artist": "SOFIA NYBERG",
+            "startTime": "14-17"
+          },
+          {
+            "artist": "DJ PULSE",
+            "startTime": "17-19"
+          },
+          {
+            "artist": "NOVAWAVE (LIVE)",
+            "startTime": "19-20"
+          },
+          {
+            "artist": "DJ METEOR",
+            "startTime": "20-22"
+          },
+          {
+            "event": "COSMIC UNITY EVENT",
+            "startTime": "22-03"
+          }
+        ]
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.financial",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "feeAmount": null,
+        "paymentTerms": null
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

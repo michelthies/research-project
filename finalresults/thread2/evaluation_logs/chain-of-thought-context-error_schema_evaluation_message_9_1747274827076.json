@@ -1,0 +1,10 @@
+{
+  "messageId": "9",
+  "score": 0.9711538461538461,
+  "timestamp": "2025-05-15T02:07:07.076Z",
+  "errors": [
+    "booking.contract.stageTime: Field not defined in schema",
+    "booking.contract.travel: Field not defined in schema",
+    "booking.contract.accommodation: Field not defined in schema"
+  ]
+}

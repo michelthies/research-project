@@ -1,0 +1,181 @@
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

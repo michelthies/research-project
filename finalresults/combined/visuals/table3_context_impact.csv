@@ -1,0 +1,8 @@
+Base Strategy,Without Context,With Context,Improvement
+keyword-action,51.1,73.5,+43.8
+zero-shot,46.5,53.7,+15.5
+self-verification,68.4,74.2,+8.4
+role-guided,72.7,76.8,+5.6
+chain-of-thought,65.6,68.2,+3.9
+few-shot,57.3,58.2,+1.6
+one-shot,62.5,63.5,+1.6

@@ -1,0 +1,13 @@
+{
+  "messageId": "11",
+  "score": 0.9326923076923077,
+  "timestamp": "2025-05-14T21:47:38.499Z",
+  "errors": [
+    "/booking/event/venue must be string,null (actual: {\"name\":\"Cosmic Garden\",\"fullAddress\":\"Hammarby Slussväg 2\",\"phoneNumber\":\"+46 (0) 8 644 20 23\",\"email\":\"info@clubstellar.se\"})",
+    "booking.event.venue.name: Field not defined in schema",
+    "booking.event.venue.fullAddress: Field not defined in schema",
+    "booking.event.venue.phoneNumber: Field not defined in schema",
+    "booking.event.venue.email: Field not defined in schema",
+    "booking.booking: Field not defined in schema"
+  ]
+}

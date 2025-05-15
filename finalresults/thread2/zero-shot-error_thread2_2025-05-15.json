@@ -1,0 +1,58 @@
+{
+  "strategy": "zero-shot-error",
+  "schemaMetrics": {
+    "score": 0.6903846153846155,
+    "rawScore": 0.9414335664335666,
+    "effectiveScore": 0.6903846153846155,
+    "parseSuccessRate": 0.7333333333333333,
+    "typeErrorRate": 0.02097902097902098,
+    "constraintViolationRate": 0.08041958041958043,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.060606060606060594
+  },
+  "contextMetrics": {
+    "score": 0.6891716616716616,
+    "fieldAccuracy": 0.47485847485847477,
+    "contextLossRate": 0.34024309024309024,
+    "unexpectedFieldRate": 0.060606060606060594
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.2252747252747253,
+    "avgFeedbackEffectivenessScore": 0.19991228414442702
+  },
+  "averageScores": {
+    "schemaConformity": 0.9414335664335666,
+    "contextualConsistency": 0.6891716616716616,
+    "overallScore": 0.8153026140526141,
+    "successRate": 0.7333333333333333,
+    "jsonAdherenceRate": 0.7333333333333333
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 27,
+    "OTHER": 2,
+    "UNEXPECTED_FIELD": 18,
+    "_unexpectedFieldDetails": {
+      "terms": {
+        "count": 2,
+        "fields": [
+          "booking.contract.terms"
+        ]
+      },
+      "soundEngineer": {
+        "count": 7,
+        "fields": [
+          "booking.event.soundEngineer"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 9,
+      "uniqueFields": 2
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 467.2,
+    "avgResponseTokens": 128.46666666666667,
+    "totalTokens": 8935
+  }
+}

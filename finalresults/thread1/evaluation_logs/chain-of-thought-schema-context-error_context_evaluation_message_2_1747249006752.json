@@ -1,0 +1,257 @@
+{
+  "messageId": "2",
+  "score": 0.21999999999999997,
+  "timestamp": "2025-05-14T18:56:46.752Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist",
+      "expected": {
+        "name": "DJ Eclipse"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter",
+      "expected": {
+        "name": "Marcus Weber",
+        "company": null,
+        "address": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1000,
+        "status": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": null
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.type",
+      "expected": "Not defined in ground truth",
+      "actual": "object",
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.properties",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "booking": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "inquiry"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "artist": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "promoter": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "company": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "address": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "event": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date"
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "city": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "venue": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "capacity": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "ticketPrice": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "openingTime": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "closingTime": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "stageTime": {
+                  "type": "object",
+                  "properties": {
+                    "start": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date-time"
+                    },
+                    "end": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            },
+            "invoice": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "status": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "not sent"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            },
+            "contract": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "not sent"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

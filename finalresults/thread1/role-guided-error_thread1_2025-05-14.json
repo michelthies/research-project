@@ -1,0 +1,50 @@
+{
+  "strategy": "role-guided-error",
+  "schemaMetrics": {
+    "score": 0.09003496503496504,
+    "rawScore": 0.9903846153846154,
+    "effectiveScore": 0.09003496503496504,
+    "parseSuccessRate": 0.09090909090909091,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.07142857142857142
+  },
+  "contextMetrics": {
+    "score": 0.88,
+    "fieldAccuracy": 0.7857142857142857,
+    "contextLossRate": 0.07142857142857142,
+    "unexpectedFieldRate": 0.07142857142857142
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.1,
+    "avgFeedbackEffectivenessScore": 0.04
+  },
+  "averageScores": {
+    "schemaConformity": 0.9903846153846154,
+    "contextualConsistency": 0.88,
+    "overallScore": 0.9351923076923077,
+    "successRate": 0.09090909090909091,
+    "jsonAdherenceRate": 0.09090909090909091
+  },
+  "errorAnalysis": {
+    "UNEXPECTED_FIELD": 2,
+    "_unexpectedFieldDetails": {
+      "stageCapacity": {
+        "count": 1,
+        "fields": [
+          "booking.event.stageCapacity"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 1,
+      "uniqueFields": 1
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 585.5454545454545,
+    "avgResponseTokens": 170.27272727272728,
+    "totalTokens": 8314
+  }
+}

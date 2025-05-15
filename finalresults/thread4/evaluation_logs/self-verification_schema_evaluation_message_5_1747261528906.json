@@ -1,0 +1,12 @@
+{
+  "messageId": "5",
+  "score": 0.9038461538461539,
+  "timestamp": "2025-05-14T22:25:28.906Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: pending)",
+    "/booking/status must be null (actual: pending)",
+    "/booking/status must match exactly one schema in oneOf (actual: pending)",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "messageId": "5",
+  "score": 0.9326923076923077,
+  "timestamp": "2025-05-14T22:11:32.994Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: CONFIRMED)",
+    "/booking/status must be null (actual: CONFIRMED)",
+    "/booking/status must match exactly one schema in oneOf (actual: CONFIRMED)",
+    "booking.stageTime: Field not defined in schema"
+  ]
+}

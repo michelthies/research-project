@@ -1,0 +1,85 @@
+{
+  "strategy": "chain-of-thought",
+  "schemaMetrics": {
+    "score": 0.48372781065088755,
+    "rawScore": 0.8983516483516484,
+    "effectiveScore": 0.48372781065088755,
+    "parseSuccessRate": 0.5384615384615384,
+    "typeErrorRate": 0.049450549450549455,
+    "constraintViolationRate": 0.07692307692307694,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.05488862211551287
+  },
+  "contextMetrics": {
+    "score": 0.6491964785914366,
+    "fieldAccuracy": 0.4268107242897159,
+    "contextLossRate": 0.417593704148326,
+    "unexpectedFieldRate": 0.05488862211551287
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.8983516483516484,
+    "contextualConsistency": 0.6491964785914366,
+    "overallScore": 0.7737740634715424,
+    "successRate": 0.5384615384615384,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 20,
+    "OTHER": 3,
+    "UNEXPECTED_FIELD": 58,
+    "_unexpectedFieldDetails": {
+      "name": {
+        "count": 6,
+        "fields": [
+          "booking.event.venue.name"
+        ]
+      },
+      "fullAddress": {
+        "count": 6,
+        "fields": [
+          "booking.event.venue.fullAddress"
+        ]
+      },
+      "phoneNumber": {
+        "count": 6,
+        "fields": [
+          "booking.event.venue.phoneNumber"
+        ]
+      },
+      "email": {
+        "count": 6,
+        "fields": [
+          "booking.event.venue.email"
+        ]
+      },
+      "booking": {
+        "count": 4,
+        "fields": [
+          "booking.booking"
+        ]
+      },
+      "invoice": {
+        "count": 1,
+        "fields": [
+          "booking.invoice"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 30,
+      "uniqueFields": 7
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 685.1538461538462,
+    "avgResponseTokens": 210.92307692307693,
+    "totalTokens": 11649
+  }
+}

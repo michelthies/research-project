@@ -1,0 +1,4985 @@
+==================== PROMPT ====================
+
+
+
+
+Current Booking Object:
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": null
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": null,
+      "venue": null,
+      "capacity": null,
+      "ticketPrice": null,
+      "openingTime": null,
+      "closingTime": null,
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "ticketPrice": 15.0,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": "2025-11-26T06:00:00Z",
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": 500.0,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":null},"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":{"start":null,"end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "ticketPrice": 15.0,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": "2025-11-26T06:00:00Z",
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": 500.0,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":null},"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":{"start":null,"end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "ticketPrice": 15.0,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": "2025-11-26T06:00:00Z",
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": 500.0,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":null},"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":{"start":null,"end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "ticketPrice": 15.0,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": "2025-11-26T06:00:00Z",
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": 500.0,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":null},"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":{"start":null,"end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object in JSON format:
+
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "ticketPrice": 15.0,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": "2025-11-26T06:00:00Z",
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": 500.0,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":null},"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":{"start":null,"end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "ticketPrice": 15.0,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": "2025-11-26T06:00:00Z",
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": 500.0,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":null},"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":{"start":null,"end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": null,
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "ticketPrice": 15.0,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": "2025-11-26T06:00:00Z",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": 500.0,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Eclipse"},"promoter":null,"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":null},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": "confirmed",
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": null,
+    "event": {
+      "date": "2025-11-25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "ticketPrice": 15.0,
+      "openingTime": "2025-11-25T22:00:00Z",
+      "closingTime": "2025-11-26T06:00:00Z",
+      "stageTime": null
+    },
+    "invoice": {
+      "amount": 500.0,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 16:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+great, find the contract, invoice and rider attached.
+
+
+best
+
+<Invoice_Emma_Thompson_Zenith.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+<Rider_Emma_Thompson.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Eclipse"},"promoter":null,"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":null},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 16:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+great, find the contract, invoice and rider attached.
+
+
+best
+
+<Invoice_Emma_Thompson_Zenith.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+<Rider_Emma_Thompson.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+Here is the extracted booking data in JSON format:
+
+{
+"booking": {
+"status": "confirmed",
+"artist": {
+"name": "DJ Eclipse"
+},
+"promoter": null,
+"event": {
+"date": "2025-11-25",
+"name": "countdown",
+"city": "hamburg",
+"venue": "Zenith",
+"capacity": 450,
+"ticketPrice": 15.0,
+"openingTime": "2025-11-25T22:00:00Z",
+"closingTime": "2025-11-26T06:00:00Z",
+"stageTime": null
+},
+"invoice": {
+"amount": 500.0,
+"status": null
+},
+"contract": {
+"status": null
+}
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 16:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+great, find the contract, invoice and rider attached.
+
+
+best
+
+<Invoice_Emma_Thompson_Zenith.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+<Rider_Emma_Thompson.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 13:50:03 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+hey mike, 
+
+here are the signed contract and proof of payment.
+
+best
+
+<Pop.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Eclipse"},"promoter":null,"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":null},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 13:50:03 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+hey mike, 
+
+here are the signed contract and proof of payment.
+
+best
+
+<Pop.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+Here is the extracted booking data in JSON format:
+
+{
+"booking": {
+"status": "confirmed",
+"artist": {
+"name": "DJ Eclipse"
+},
+"event": {
+"date": "2025-11-25",
+"name": "countdown",
+"city": "hamburg",
+"venue": "Zenith",
+"capacity": 450,
+"ticketPrice": 15.0,
+"openingTime": "2025-11-25T22:00:00Z",
+"closingTime": "2025-11-26T06:00:00Z"
+},
+"invoice": {
+"amount": 500.0,
+"status": null
+},
+"contract": {
+"status": "signed"
+}
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 16:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+great, find the contract, invoice and rider attached.
+
+
+best
+
+<Invoice_Emma_Thompson_Zenith.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+<Rider_Emma_Thompson.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 13:50:03 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+hey mike, 
+
+here are the signed contract and proof of payment.
+
+best
+
+<Pop.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: 
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 14:44:20 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+payment received, co-signed contract attached.
+
+<Contract_Emma_Thompson_Zenith.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Eclipse"},"promoter":null,"event":{"date":"2025-11-25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"ticketPrice":15,"openingTime":"2025-11-25T22:00:00Z","closingTime":"2025-11-26T06:00:00Z","stageTime":null},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 14:44:20 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+payment received, co-signed contract attached.
+
+<Contract_Emma_Thompson_Zenith.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+## CLASSIFICATION TAXONOMY
+- BOOKING: Status indicators including "inquiry", "confirmed", "cancelled"
+- ARTIST: Performance names, artist identifiers, talent references, band names, DJ monikers
+- PROMOTER: Organization names, company identifiers, agency references, contact details, addresses
+- EVENT: 
+  * VENUE: Establishment names, club references, hall identifiers, location markers
+  * TEMPORAL: Dates in various formats (DD.MM.YYYY, MM/DD/YYYY, YYYY-MM-DD)
+  * DESCRIPTORS: Festival names, concert titles, performance identifiers
+  * METRICS: Capacity figures, attendance projections, audience size
+  * PRICING: Ticket costs, entry fees, admission prices
+- TIMEFRAME: Opening/closing times, stage times, performance slots
+- FINANCIAL: Fee amounts, payment terms
+- CONTRACT: Document status terms like "not sent", "sent", "signed", "cosigned"
+- INVOICE: Payment status terms like "not sent", "sent", "paid"
+
+## ACTION PROTOCOL
+ANALYZE: Parse email content for booking-related information and updates
+IDENTIFY: Find all relevant entities in the email that match schema properties
+EXTRACT: Pull out the associated values and context for each entity
+TRANSFORM: 
+  - Standardize dates to ISO format: YYYY-MM-DD (example: 2025-11-25)
+  - Standardize times to ISO format: YYYY-MM-DDThh:mm:ssZ (example: 2025-11-25T20:00:00Z)
+  - Normalize status values to schema-compliant enumerations only
+  - Convert numerical values appropriately (capacity and ticketPrice as numbers)
+
+CONTEXTUALIZE:
+  - PRESERVE existing data from previous extraction when not contradicted
+  - UPDATE values explicitly mentioned in current email
+  - RESOLVE conflicts by prioritizing most recent information
+  - MAINTAIN relational integrity between entities
+
+VERIFY:
+  - Ensure all values match expected data types per schema
+  - Verify enum values match ONLY allowed options in schema
+  - Validate date and time formats to ISO standards
+  - Set missing or invalid values to null rather than omitting them
+
+CONSTRUCT:
+  - Build JSON structure exactly according to schema specification
+  - Include all properties defined in the schema, using null for missing values
+  - Ensure proper JSON syntax with quotes around keys and string values
+  - Format numbers without quotes
+
+
+Schema:
+{
+  "type": "object",
+  "properties": {
+    "booking": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "inquiry",
+                "confirmed",
+                "cancelled"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artist": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "promoter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "address": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "venue": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "ticketPrice": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "openingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "closingTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "stageTime": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "end": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        },
+        "invoice": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "paid"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "not sent",
+                    "sent",
+                    "signed",
+                    "cosigned"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+==================== RESPONSE ====================
+
+Here is the extracted booking data in JSON format:
+
+{
+"booking": {
+"status": "confirmed",
+"artist": {
+"name": "DJ Eclipse"
+},
+"event": {
+"date": "2025-11-25",
+"name": "countdown",
+"city": "hamburg",
+"venue": "Zenith",
+"capacity": 450,
+"ticketPrice": 15,
+"openingTime": "2025-11-25T22:00:00Z",
+"closingTime": "2025-11-26T06:00:00Z"
+},
+"invoice": {
+"amount": 500,
+"status": null
+},
+"contract": {
+"status": "cosigned"
+}
+}

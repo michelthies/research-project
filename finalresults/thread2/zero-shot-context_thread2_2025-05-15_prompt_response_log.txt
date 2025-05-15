@@ -1,0 +1,3753 @@
+==================== PROMPT ====================
+
+
+Current Booking Object:
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": null
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": null,
+      "venue": null,
+      "capacity": null,
+      "ticketPrice": null,
+      "openingTime": null,
+      "closingTime": null,
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+New Message:
+From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": "DJ Horizon"
+    },
+    "promoter": {
+      "name": "Stacey Summer",
+      "company": "Vibrancy Events",
+      "address": "+49 176 55443322, stacey@vibrancyevents.com"
+    },
+    "event": {
+      "date": "September 20, 2025",
+      "name": "Equinox Festival",
+      "city": "Berlin",
+      "venue": "Tempelhofer Feld",
+      "capacity": 3500,
+      "ticketPrice": null,
+      "openingTime": null,
+      "closingTime": null,
+      "stageTime": {
+        "start": "22:30",
+        "end": "00:30"
+      }
+    },
+    "invoice": {
+      "amount": 1500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"ticketPrice":null,"openingTime":null,"closingTime":null,"stageTime":{"start":"22:30","end":"00:30"}},"invoice":{"amount":1500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"22:30","end":"00:30"}},"invoice":{"amount":2500},"contract":{"status":null}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"ticketPrice":null,"openingTime":null,"closingTime":null,"stageTime":{"start":"22:30","end":"00:30"}},"invoice":{"amount":1500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}},"invoice":{"amount":1500,"status":null},"contract":{"status":null}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"ticketPrice":null,"openingTime":null,"closingTime":null,"stageTime":{"start":"22:30","end":"00:30"}},"invoice":{"amount":1500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}},"invoice":{"amount":2200,"status":null},"contract":{"status":null}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"ticketPrice":null,"openingTime":null,"closingTime":null,"stageTime":{"start":"22:30","end":"00:30"}},"invoice":{"amount":1500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}},"invoice":{"amount":3200,"status":"pending"},"contract":{"status":"sent"}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"ticketPrice":null,"openingTime":null,"closingTime":null,"stageTime":{"start":"22:30","end":"00:30"}},"invoice":{"amount":1500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"22:30","end":"00:30"}},"invoice":{"amount":2200,"status":null},"contract":{"status":null}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"22:30","end":"00:30"}},"invoice":{"amount":2200,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}},"invoice":{"amount":2200,"status":null},"contract":{"status":null}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}},"invoice":{"amount":2200,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}},"invoice":{"amount":2200,"status":null},"contract":{"status":null}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 14:32:48 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for sending these over. I've reviewed both documents and everything looks mostly good, but I have one question about the contract.
+
+It mentions that we must provide a dedicated sound engineer for DJ Horizon's set. 
+We have one festival sound engineer who handles all main stage performances. 
+Would this be sufficient?
+
+Apart from this, everything else is fine. I'll process the payment once we clarify this point.
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}},"invoice":{"amount":2200,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 14:32:48 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for sending these over. I've reviewed both documents and everything looks mostly good, but I have one question about the contract.
+
+It mentions that we must provide a dedicated sound engineer for DJ Horizon's set. 
+We have one festival sound engineer who handles all main stage performances. 
+Would this be sufficient?
+
+Apart from this, everything else is fine. I'll process the payment once we clarify this point.
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 14:32:48 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for sending these over. I've reviewed both documents and everything looks mostly good, but I have one question about the contract.
+
+It mentions that we must provide a dedicated sound engineer for DJ Horizon's set. 
+We have one festival sound engineer who handles all main stage performances. 
+Would this be sufficient?
+
+Apart from this, everything else is fine. I'll process the payment once we clarify this point.
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 16:05:11 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+ 
+Your festival sound engineer will be sufficient.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 16:05:11 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+ 
+Your festival sound engineer will be sufficient.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 14:32:48 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for sending these over. I've reviewed both documents and everything looks mostly good, but I have one question about the contract.
+
+It mentions that we must provide a dedicated sound engineer for DJ Horizon's set. 
+We have one festival sound engineer who handles all main stage performances. 
+Would this be sufficient?
+
+Apart from this, everything else is fine. I'll process the payment once we clarify this point.
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 16:05:11 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+ 
+Your festival sound engineer will be sufficient.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 20. May 2025 at 11:18:36 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Perfect, thank you.
+
+I've attached the signed contract and proof of payment.
+Also, is DJ Horizon available for a short (15-min) press interview via Zoom during the week before the festival? 
+This would be part of our promotional activities.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Signed.pdf>
+<screenshot.png>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+New Message:
+From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 20. May 2025 at 11:18:36 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Perfect, thank you.
+
+I've attached the signed contract and proof of payment.
+Also, is DJ Horizon available for a short (15-min) press interview via Zoom during the week before the festival? 
+This would be part of our promotional activities.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Signed.pdf>
+<screenshot.png>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 14:32:48 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for sending these over. I've reviewed both documents and everything looks mostly good, but I have one question about the contract.
+
+It mentions that we must provide a dedicated sound engineer for DJ Horizon's set. 
+We have one festival sound engineer who handles all main stage performances. 
+Would this be sufficient?
+
+Apart from this, everything else is fine. I'll process the payment once we clarify this point.
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 16:05:11 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+ 
+Your festival sound engineer will be sufficient.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 20. May 2025 at 11:18:36 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Perfect, thank you.
+
+I've attached the signed contract and proof of payment.
+Also, is DJ Horizon available for a short (15-min) press interview via Zoom during the week before the festival? 
+This would be part of our promotional activities.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Signed.pdf>
+<screenshot.png>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 21. May 2025 at 09:43:20 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+We've received the deposit.
+
+Regarding the interview request, DJ Horizon is happy to do the Zoom interview. 
+Please contact our press coordinator emma@stellarbookings.com to arrange this closer to the date.
+
+Counter-signed contract attached.
+We'll be in touch again for the logistical details.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Countersigned.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 21. May 2025 at 09:43:20 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+We've received the deposit.
+
+Regarding the interview request, DJ Horizon is happy to do the Zoom interview. 
+Please contact our press coordinator emma@stellarbookings.com to arrange this closer to the date.
+
+Counter-signed contract attached.
+We'll be in touch again for the logistical details.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Countersigned.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 14:32:48 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for sending these over. I've reviewed both documents and everything looks mostly good, but I have one question about the contract.
+
+It mentions that we must provide a dedicated sound engineer for DJ Horizon's set. 
+We have one festival sound engineer who handles all main stage performances. 
+Would this be sufficient?
+
+Apart from this, everything else is fine. I'll process the payment once we clarify this point.
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 16:05:11 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+ 
+Your festival sound engineer will be sufficient.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 20. May 2025 at 11:18:36 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Perfect, thank you.
+
+I've attached the signed contract and proof of payment.
+Also, is DJ Horizon available for a short (15-min) press interview via Zoom during the week before the festival? 
+This would be part of our promotional activities.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Signed.pdf>
+<screenshot.png>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 21. May 2025 at 09:43:20 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+We've received the deposit.
+
+Regarding the interview request, DJ Horizon is happy to do the Zoom interview. 
+Please contact our press coordinator emma@stellarbookings.com to arrange this closer to the date.
+
+Counter-signed contract attached.
+We'll be in touch again for the logistical details.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Countersigned.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 10. June 2025 at 13:25:42 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+I hope this email finds you well. 
+
+Here are two options for the artwork (attached).
+Could you please review and let us know which one you prefer? 
+We can make any adjustments needed.
+
+Looking forward to your feedback!
+
+Best regards,
+
+<Equinox_DJHorizon_Option1.jpg>
+<Equinox_DJHorizon_Option2.jpg>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+New Message:
+From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 10. June 2025 at 13:25:42 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+I hope this email finds you well. 
+
+Here are two options for the artwork (attached).
+Could you please review and let us know which one you prefer? 
+We can make any adjustments needed.
+
+Looking forward to your feedback!
+
+Best regards,
+
+<Equinox_DJHorizon_Option1.jpg>
+<Equinox_DJHorizon_Option2.jpg>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 14:32:48 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for sending these over. I've reviewed both documents and everything looks mostly good, but I have one question about the contract.
+
+It mentions that we must provide a dedicated sound engineer for DJ Horizon's set. 
+We have one festival sound engineer who handles all main stage performances. 
+Would this be sufficient?
+
+Apart from this, everything else is fine. I'll process the payment once we clarify this point.
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 16:05:11 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+ 
+Your festival sound engineer will be sufficient.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 20. May 2025 at 11:18:36 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Perfect, thank you.
+
+I've attached the signed contract and proof of payment.
+Also, is DJ Horizon available for a short (15-min) press interview via Zoom during the week before the festival? 
+This would be part of our promotional activities.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Signed.pdf>
+<screenshot.png>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 21. May 2025 at 09:43:20 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+We've received the deposit.
+
+Regarding the interview request, DJ Horizon is happy to do the Zoom interview. 
+Please contact our press coordinator emma@stellarbookings.com to arrange this closer to the date.
+
+Counter-signed contract attached.
+We'll be in touch again for the logistical details.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Countersigned.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 10. June 2025 at 13:25:42 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+I hope this email finds you well. 
+
+Here are two options for the artwork (attached).
+Could you please review and let us know which one you prefer? 
+We can make any adjustments needed.
+
+Looking forward to your feedback!
+
+Best regards,
+
+<Equinox_DJHorizon_Option1.jpg>
+<Equinox_DJHorizon_Option2.jpg>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 10. June 2025 at 17:09:53 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Two small requests:
+
+1. Use the attached artist photo instead
+2. Adjust the font size to match the other headliners
+
+
+Best regards,
+
+<DJ_Horizon_Press_Photo_2025.jpg>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 10. June 2025 at 17:09:53 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Two small requests:
+
+1. Use the attached artist photo instead
+2. Adjust the font size to match the other headliners
+
+
+Best regards,
+
+<DJ_Horizon_Press_Photo_2025.jpg>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+==================== PROMPT ====================
+
+
+Conversation History:
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 09:12:33 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hello Mike,
+
+My name is Stacey Summer from Vibrancy Events.
+We are organizing the Equinox Festival in Berlin and would like to book DJ Horizon for the main stage.
+
+Here are the details:
+Festival name: Equinox
+Date: September 20, 2025
+Location: Tempelhofer Feld, Berlin
+Capacity: 3500
+Stage time request: 22:30-00:30
+Budget: €1,500
+
+We've heard great things about DJ Horizon's recent sets and believe they would be a perfect fit for our crowd.
+
+Looking forward to your response!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322
+stacey@vibrancyevents.com 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 15. May 2025 at 15:48:22 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Thanks for reaching out.
+
+The date looks available currently, but DJ Horizons standard fee for festivals of this size is €2,500 plus travel and accommodation for 2 people (the artist travels with their visual technician). 
+They would require a minimum 90-minute set.
+
+Let me know if these terms work for you.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 10:27:05 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for your quick response. 
+
+The €2,500 fee is a bit much for us, but we can potentially make it work. For the 90-minute set, we could do 00:30-02:00 if that works.
+Regarding accommodation, we can provide two hotel rooms at the Moxy Berlin. For travel, would €500 cover the costs, or do you have specific requirements?
+Also, could you share technical rider details so our production team can review them?
+
+Looking forward to making this work!
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 16. May 2025 at 16:52:41 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+After discussing with DJ Horizon, we can meet you halfway at €2,200 for the artist fee. The 00:30-02:00 slot works well.
+
+Moxy Berlin is fine, please include late checkout. 
+Regarding travel, we'll need €700 total as they'll be flying in from Amsterdam.
+
+I've attached the technical rider.
+
+Best,
+
+<DJ_Horizon_Technical_Rider.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 11:03:17 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Happy to agree on €2,200 fee plus €700 for travel costs.
+
+Our production team has confirmed we can meet all the technical requirements.
+Can we confirm? 
+If so, please send over the contract and payment details. 
+
+
+Thanks again,
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 14:40:05 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+The booking is confirmed.
+
+To prepare the contract, I'll need your company's full details:
+Company name
+Address
+Signatory name
+
+I will get the contract to you as soon as I receive the details.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 17. May 2025 at 16:15:29 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Here are our company details:
+
+Vibrancy Events GmbH
+Frankfurter Allee 77, 10247 Berlin, Germany
+Stacey Summer
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 10:08:33 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Please find attached the performance contract and the invoice.
+
+Please review, sign the contract, and return it along with proof of payment. Our bank details are included in the invoice.
+Let me know if you have any questions.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract.pdf>
+<Invoice_DJ_Horizon_Equinox_Deposit.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 14:32:48 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for sending these over. I've reviewed both documents and everything looks mostly good, but I have one question about the contract.
+
+It mentions that we must provide a dedicated sound engineer for DJ Horizon's set. 
+We have one festival sound engineer who handles all main stage performances. 
+Would this be sufficient?
+
+Apart from this, everything else is fine. I'll process the payment once we clarify this point.
+
+Best regards,
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 19. May 2025 at 16:05:11 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+ 
+Your festival sound engineer will be sufficient.
+
+Best regards,
+
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 20. May 2025 at 11:18:36 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Perfect, thank you.
+
+I've attached the signed contract and proof of payment.
+Also, is DJ Horizon available for a short (15-min) press interview via Zoom during the week before the festival? 
+This would be part of our promotional activities.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Signed.pdf>
+<screenshot.png>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 21. May 2025 at 09:43:20 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+We've received the deposit.
+
+Regarding the interview request, DJ Horizon is happy to do the Zoom interview. 
+Please contact our press coordinator emma@stellarbookings.com to arrange this closer to the date.
+
+Counter-signed contract attached.
+We'll be in touch again for the logistical details.
+
+Best regards,
+
+<DJ_Horizon_Equinox_Contract_Countersigned.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 10. June 2025 at 13:25:42 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+I hope this email finds you well. 
+
+Here are two options for the artwork (attached).
+Could you please review and let us know which one you prefer? 
+We can make any adjustments needed.
+
+Looking forward to your feedback!
+
+Best regards,
+
+<Equinox_DJHorizon_Option1.jpg>
+<Equinox_DJHorizon_Option2.jpg>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 10. June 2025 at 17:09:53 GMT+2
+To: Stacey Summer <stacey@vibrancyevents.com>
+
+Hi Sarah,
+
+Two small requests:
+
+1. Use the attached artist photo instead
+2. Adjust the font size to match the other headliners
+
+
+Best regards,
+
+<DJ_Horizon_Press_Photo_2025.jpg>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464 
+
+
+
+--- Next Message ---
+
+Message: From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 11. June 2025 at 10:22:18 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for the quick feedback, i have attached the revised artwork.
+Next time im sure we can double the artist fee.
+
+Thanks again!
+
+Best regards,
+
+<Equinox_DJHorizon_Final.jpg>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+
+
+
+Current Booking Object:
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}
+
+New Message:
+From: Stacey Summer <stacey@vibrancyevents.com>
+Subject: Re: Booking Request - DJ Horizon for Equinox Festival
+Date: 11. June 2025 at 10:22:18 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hi Mike,
+
+Thanks for the quick feedback, i have attached the revised artwork.
+Next time im sure we can double the artist fee.
+
+Thanks again!
+
+Best regards,
+
+<Equinox_DJHorizon_Final.jpg>
+
+Stacey Summer
+Vibrancy Events
++49 176 55443322 
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":"confirmed","artist":{"name":"DJ Horizon"},"promoter":{"name":"Stacey Summer","company":"Vibrancy Events GmbH","address":"+49 176 55443322, stacey@vibrancyevents.com"},"event":{"date":"September 20, 2025","name":"Equinox Festival","city":"Berlin","venue":"Tempelhofer Feld","capacity":3500,"stageTime":{"start":"00:30","end":"02:00"}}}}

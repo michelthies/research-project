@@ -1,0 +1,81 @@
+{
+  "messageId": "8",
+  "score": 0.70625,
+  "timestamp": "2025-05-14T17:44:34.902Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "pending",
+      "valid": false,
+      "reason": "Expected confirmed, got pending"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Eclipse",
+      "actual": "DJ Eclipse",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Marcus Weber",
+      "actual": "Marcus Weber",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Weber GmbH",
+      "actual": "Weber GmbH",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Minkstrasse 42, 23462 Hamburg",
+      "actual": "Minkstrasse 42, 23462 Hamburg",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event",
+      "expected": {
+        "date": "2025-11-25",
+        "name": "Countdown",
+        "city": "Hamburg",
+        "venue": "Zenith",
+        "capacity": 450,
+        "ticketPrice": 15,
+        "openingTime": "2025-11-25T22:00:00Z",
+        "closingTime": "2025-11-26T06:00:00Z",
+        "stageTime": {
+          "start": "2025-11-26T02:00:00Z",
+          "end": "2025-11-26T03:00:00Z"
+        }
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": {
+        "amount": 1000,
+        "status": "not sent"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.contract",
+      "expected": {
+        "status": "not sent"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    }
+  ]
+}

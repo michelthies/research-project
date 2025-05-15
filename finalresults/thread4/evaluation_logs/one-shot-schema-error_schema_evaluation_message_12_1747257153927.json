@@ -1,0 +1,10 @@
+{
+  "messageId": "12",
+  "score": 0.9423076923076923,
+  "timestamp": "2025-05-14T21:12:33.927Z",
+  "errors": [
+    "/booking/invoice/status must be equal to one of the allowed values (actual: set for payment)",
+    "/booking/invoice/status must be null (actual: set for payment)",
+    "/booking/invoice/status must match exactly one schema in oneOf (actual: set for payment)"
+  ]
+}

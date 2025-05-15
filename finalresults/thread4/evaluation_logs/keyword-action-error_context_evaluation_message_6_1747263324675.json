@@ -1,0 +1,149 @@
+{
+  "messageId": "6",
+  "score": 0.5812499999999999,
+  "timestamp": "2025-05-14T22:55:24.675Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": "inquiry",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Nova Entertainment",
+      "actual": "Nova Entertainment",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Hammarby Slussväg 2",
+      "actual": "Hammarby Slussväg 2, Stockholm",
+      "valid": false,
+      "reason": "Expected Hammarby Slussväg 2, got Hammarby Slussväg 2, Stockholm"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "2022-07-20",
+      "valid": false,
+      "reason": "Expected 2022-08-06, got 2022-07-20"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Cosmic Garden",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Stockholm",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Cosmic Garden",
+      "actual": "Cosmic Garden",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 1800,
+      "actual": 1500,
+      "valid": false,
+      "reason": "Expected 1800, got 1500"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": 15,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2022-08-06T17:00:00Z",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2022-08-07T03:00:00Z",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2022-08-06T20:00:00Z",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2022-08-06T22:00:00Z",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 1500,
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.promoter.contact",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "email": "olivia@clubstellar.se",
+        "cellphone": "+46704671462"
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.event.timeframe",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "openingTime": "2022-07-20T17:00:00Z",
+        "closingTime": "2022-07-20T03:00:00Z"
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.timeframe",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "openingTime": "2022-07-20T17:00:00Z",
+        "closingTime": "2022-07-20T03:00:00Z"
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

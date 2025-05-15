@@ -1,0 +1,289 @@
+{
+  "topStrategies": [
+    {
+      "strategy": "role-guided-schema",
+      "overallScore": 0.9454929786381708,
+      "schemaScore": 0.9891518737672585,
+      "fieldAccuracy": 0.7873979723979726,
+      "successRate": 1
+    },
+    {
+      "strategy": "role-guided-schema-error",
+      "overallScore": 0.9390625954678038,
+      "schemaScore": 0.9644970414201183,
+      "fieldAccuracy": 0.7631802148468817,
+      "successRate": 0.9743589743589745
+    },
+    {
+      "strategy": "role-guided-error",
+      "overallScore": 0.9284344729344728,
+      "schemaScore": 0.10351592851592852,
+      "fieldAccuracy": 0.7748677248677248,
+      "successRate": 0.10380730380730381
+    },
+    {
+      "strategy": "role-guided-schema-context-error",
+      "overallScore": 0.9271735447241575,
+      "schemaScore": 0.4688004303388919,
+      "fieldAccuracy": 0.761435703911194,
+      "successRate": 0.4708624708624709
+    },
+    {
+      "strategy": "self-verification-schema",
+      "overallScore": 0.9187072126591356,
+      "schemaScore": 0.9876725838264301,
+      "fieldAccuracy": 0.731992451992452,
+      "successRate": 1
+    },
+    {
+      "strategy": "one-shot-context-error",
+      "overallScore": 0.9169842160154659,
+      "schemaScore": 0.31592851592851595,
+      "fieldAccuracy": 0.76005291005291,
+      "successRate": 0.3275835275835276
+    },
+    {
+      "strategy": "role-guided",
+      "overallScore": 0.9169193121693122,
+      "schemaScore": 0.1550893550893551,
+      "fieldAccuracy": 0.7267195767195767,
+      "successRate": 0.1550893550893551
+    },
+    {
+      "strategy": "self-verification-error",
+      "overallScore": 0.9101082408271951,
+      "schemaScore": 0.32627159165620706,
+      "fieldAccuracy": 0.7100364837292942,
+      "successRate": 0.33581973581973584
+    },
+    {
+      "strategy": "self-verification-context",
+      "overallScore": 0.9038584579001245,
+      "schemaScore": 0.36510071125455745,
+      "fieldAccuracy": 0.7418871252204585,
+      "successRate": 0.37902097902097903
+    },
+    {
+      "strategy": "role-guided-schema-context",
+      "overallScore": 0.9035962750609503,
+      "schemaScore": 0.8628294782140937,
+      "fieldAccuracy": 0.6594266250271151,
+      "successRate": 0.8717948717948718
+    },
+    {
+      "strategy": "self-verification-context-error",
+      "overallScore": 0.9033891788766789,
+      "schemaScore": 0.3314162333393102,
+      "fieldAccuracy": 0.727936507936508,
+      "successRate": 0.33923853923853925
+    },
+    {
+      "strategy": "keyword-action-context-error",
+      "overallScore": 0.9018472683090332,
+      "schemaScore": 0.2200645508337816,
+      "fieldAccuracy": 0.7400357920946156,
+      "successRate": 0.2251748251748252
+    },
+    {
+      "strategy": "self-verification-schema-error",
+      "overallScore": 0.9017462713463846,
+      "schemaScore": 0.9985207100591715,
+      "fieldAccuracy": 0.6546860764507821,
+      "successRate": 1
+    },
+    {
+      "strategy": "role-guided-context",
+      "overallScore": 0.8987243589359917,
+      "schemaScore": 0.4912557527942143,
+      "fieldAccuracy": 0.7676325943482807,
+      "successRate": 0.5131313131313131
+    },
+    {
+      "strategy": "few-shot-schema-context-error",
+      "overallScore": 0.8962668815117345,
+      "schemaScore": 0.8233399079552925,
+      "fieldAccuracy": 0.6521258534493829,
+      "successRate": 0.8341880341880342
+    }
+  ],
+  "schemaImpact": [
+    {
+      "strategy": "role-guided",
+      "withoutSchema": 0.1550893550893551,
+      "withSchema": 0.9891518737672585,
+      "improvement": 537.794820410051,
+      "absoluteImprovement": 0.8340625186779035
+    },
+    {
+      "strategy": "chain-of-thought",
+      "withoutSchema": 0.2566194489271412,
+      "withSchema": 0.979121092582631,
+      "improvement": 281.54594153953656,
+      "absoluteImprovement": 0.7225016436554899
+    },
+    {
+      "strategy": "self-verification",
+      "withoutSchema": 0.3414858645627876,
+      "withSchema": 0.9876725838264301,
+      "improvement": 189.2279553330767,
+      "absoluteImprovement": 0.6461867192636425
+    },
+    {
+      "strategy": "keyword-action",
+      "withoutSchema": 0.5640532544378698,
+      "withSchema": 0.8065268065268065,
+      "improvement": 42.987705536879425,
+      "absoluteImprovement": 0.24247355208893673
+    },
+    {
+      "strategy": "one-shot",
+      "withoutSchema": 0.7927604446835215,
+      "withSchema": 0.9861932938856016,
+      "improvement": 24.399911789153485,
+      "absoluteImprovement": 0.19343284920208015
+    },
+    {
+      "strategy": "few-shot",
+      "withoutSchema": 0.991913214990138,
+      "withSchema": 0.9827416173570018,
+      "improvement": -0.924637104792209,
+      "absoluteImprovement": -0.00917159763313613
+    },
+    {
+      "strategy": "zero-shot",
+      "withoutSchema": 0.6244396629012013,
+      "withSchema": 0.2695744426513657,
+      "improvement": -56.82938502033979,
+      "absoluteImprovement": -0.35486522024983563
+    }
+  ],
+  "contextImpact": [
+    {
+      "strategy": "keyword-action",
+      "withoutContext": 0.5112433862433863,
+      "withContext": 0.7351455026455026,
+      "improvement": 43.79560155239325
+    },
+    {
+      "strategy": "zero-shot",
+      "withoutContext": 0.4645584353917687,
+      "withContext": 0.5366944189291878,
+      "improvement": 15.52786001541136
+    },
+    {
+      "strategy": "self-verification",
+      "withoutContext": 0.6841122868900648,
+      "withContext": 0.7418871252204585,
+      "improvement": 8.445227404558814
+    },
+    {
+      "strategy": "role-guided",
+      "withoutContext": 0.7267195767195767,
+      "withContext": 0.7676325943482807,
+      "improvement": 5.629821865180242
+    },
+    {
+      "strategy": "chain-of-thought",
+      "withoutContext": 0.656026855186519,
+      "withContext": 0.6818540996645571,
+      "improvement": 3.936918782188418
+    },
+    {
+      "strategy": "few-shot",
+      "withoutContext": 0.5729454913278443,
+      "withContext": 0.5823687314863787,
+      "improvement": 1.6447009883427626
+    },
+    {
+      "strategy": "one-shot",
+      "withoutContext": 0.6253883462216795,
+      "withContext": 0.6352402998236332,
+      "improvement": 1.5753337364654836
+    }
+  ],
+  "errorStrategies": [
+    {
+      "strategy": "zero-shot-context-error",
+      "errorCorrectionRate": 0.3424297924297924,
+      "feedbackEffectiveness": 0.2619461228722258
+    },
+    {
+      "strategy": "chain-of-thought-error",
+      "errorCorrectionRate": 0.18307760141093476,
+      "feedbackEffectiveness": 0.13941626600070228
+    },
+    {
+      "strategy": "zero-shot-error",
+      "errorCorrectionRate": 0.18203601953601956,
+      "feedbackEffectiveness": 0.1250014899122042
+    },
+    {
+      "strategy": "self-verification-error",
+      "errorCorrectionRate": 0.1753968253968254,
+      "feedbackEffectiveness": 0.12716293303646245
+    },
+    {
+      "strategy": "chain-of-thought-context-error",
+      "errorCorrectionRate": 0.1722229887936493,
+      "feedbackEffectiveness": 0.14479445129925964
+    }
+  ],
+  "augmentationGroups": [
+    {
+      "name": "Base (no augmentation)",
+      "avgOverallScore": null,
+      "avgSchemaScore": null,
+      "avgFieldAccuracy": null,
+      "avgSuccessRate": null
+    },
+    {
+      "name": "Schema only (+S)",
+      "avgOverallScore": 0.8772862965745233,
+      "avgSchemaScore": 0.8572831015138708,
+      "avgFieldAccuracy": 0.6026447157577527,
+      "avgSuccessRate": 0.8691752691752691
+    },
+    {
+      "name": "Context only (+C)",
+      "avgOverallScore": 0.8779474496358555,
+      "avgSchemaScore": 0.54505217005217,
+      "avgFieldAccuracy": 0.6686889674454284,
+      "avgSuccessRate": 0.5683649683649683
+    },
+    {
+      "name": "Error only (+E)",
+      "avgOverallScore": 0.8780750670940165,
+      "avgSchemaScore": 0.5447975101821255,
+      "avgFieldAccuracy": 0.6306656956326119,
+      "avgSuccessRate": 0.5643023643023642
+    },
+    {
+      "name": "Schema + Context (+SC)",
+      "avgOverallScore": 0.8507748376918387,
+      "avgSchemaScore": 0.8525220505989735,
+      "avgFieldAccuracy": 0.5476834058933117,
+      "avgSuccessRate": 0.8669330669330668
+    },
+    {
+      "name": "Schema + Error (+SE)",
+      "avgOverallScore": 0.8825024679668703,
+      "avgSchemaScore": 0.8572335783874244,
+      "avgFieldAccuracy": 0.6081396075653779,
+      "avgSuccessRate": 0.8668442668442669
+    },
+    {
+      "name": "Context + Error (+CE)",
+      "avgOverallScore": 0.8799451793251833,
+      "avgSchemaScore": 0.46195812734274266,
+      "avgFieldAccuracy": 0.6759419076920244,
+      "avgSuccessRate": 0.4808302808302808
+    },
+    {
+      "name": "All augmentations (+SCE)",
+      "avgOverallScore": 0.8286078359334563,
+      "avgSchemaScore": 0.7394088817165738,
+      "avgFieldAccuracy": 0.5152387310142912,
+      "avgSuccessRate": 0.7518259518259519
+    }
+  ]
+}

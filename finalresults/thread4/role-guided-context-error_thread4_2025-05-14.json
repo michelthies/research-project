@@ -1,0 +1,111 @@
+{
+  "strategy": "role-guided-context-error",
+  "schemaMetrics": {
+    "score": 0.6412721893491125,
+    "rawScore": 0.9262820512820513,
+    "effectiveScore": 0.6412721893491125,
+    "parseSuccessRate": 0.6923076923076923,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.004273504273504274,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.5317460317460317
+  },
+  "contextMetrics": {
+    "score": 0.48795833333333327,
+    "fieldAccuracy": 0.43511904761904757,
+    "contextLossRate": 0.4378968253968254,
+    "unexpectedFieldRate": 0.5317460317460317
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.12911877394636018,
+    "avgFeedbackEffectivenessScore": 0.09199125957854404
+  },
+  "averageScores": {
+    "schemaConformity": 0.9262820512820513,
+    "contextualConsistency": 0.48795833333333327,
+    "overallScore": 0.7071201923076923,
+    "successRate": 0.6923076923076923,
+    "jsonAdherenceRate": 0.15384615384615385
+  },
+  "errorAnalysis": {
+    "UNEXPECTED_FIELD": 142,
+    "CONSTRAINT_ERROR": 1,
+    "_unexpectedFieldDetails": {
+      "cell phone": {
+        "count": 6,
+        "fields": [
+          "booking.promoter.cell phone"
+        ]
+      },
+      "email": {
+        "count": 8,
+        "fields": [
+          "booking.promoter.email"
+        ]
+      },
+      "website": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.website"
+        ]
+      },
+      "VAT Number": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.VAT Number"
+        ]
+      },
+      "": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.ORG NUMMER."
+        ]
+      },
+      "stage capacity": {
+        "count": 8,
+        "fields": [
+          "booking.event.stage capacity"
+        ]
+      },
+      "ticket price": {
+        "count": 7,
+        "fields": [
+          "booking.event.ticket price"
+        ]
+      },
+      "opening time": {
+        "count": 7,
+        "fields": [
+          "booking.event.opening time"
+        ]
+      },
+      "closing time": {
+        "count": 7,
+        "fields": [
+          "booking.event.closing time"
+        ]
+      },
+      "stage time": {
+        "count": 8,
+        "fields": [
+          "booking.stage time"
+        ]
+      },
+      "time": {
+        "count": 3,
+        "fields": [
+          "booking.event.time"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 75,
+      "uniqueFields": 11
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 2010.7692307692307,
+    "avgResponseTokens": 233.46153846153845,
+    "totalTokens": 29175
+  }
+}

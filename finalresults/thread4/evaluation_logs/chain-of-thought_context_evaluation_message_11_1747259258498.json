@@ -1,0 +1,141 @@
+{
+  "messageId": "11",
+  "score": 0.4978571428571429,
+  "timestamp": "2025-05-14T21:47:38.498Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": "Olivia Chen",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Nova Entertainment",
+      "actual": "clubstellar.se",
+      "valid": false,
+      "reason": "Expected Nova Entertainment, got clubstellar.se"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Hammarby Slussväg 2",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "2022-08-06",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Cosmic Garden",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Stockholm",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Cosmic Garden",
+      "actual": {
+        "name": "Cosmic Garden",
+        "fullAddress": "Hammarby Slussväg 2",
+        "phoneNumber": "+46 (0) 8 644 20 23",
+        "email": "info@clubstellar.se"
+      },
+      "valid": false,
+      "reason": "Expected Cosmic Garden, got [object Object]"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 1800,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2022-08-06T17:00:00Z",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2022-08-07T03:00:00Z",
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.stageTime",
+      "expected": {
+        "start": "2022-08-06T20:00:00Z",
+        "end": "2022-08-06T22:00:00Z"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.booking",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "artistFeeInvoice": true
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.invoice",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "amount": null,
+        "status": null
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.contract",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "status": null
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

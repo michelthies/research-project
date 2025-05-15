@@ -1,0 +1,47 @@
+{
+  "strategy": "chain-of-thought",
+  "schemaMetrics": {
+    "score": 0.19871794871794873,
+    "rawScore": 0.9935897435897436,
+    "effectiveScore": 0.19871794871794873,
+    "parseSuccessRate": 0.2,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.049999999999999996
+  },
+  "contextMetrics": {
+    "score": 0.8600555555555557,
+    "fieldAccuracy": 0.7555555555555555,
+    "contextLossRate": 0.12222222222222223,
+    "unexpectedFieldRate": 0.049999999999999996
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9935897435897436,
+    "contextualConsistency": 0.8600555555555557,
+    "overallScore": 0.9268226495726496,
+    "successRate": 0.2,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "UNEXPECTED_FIELD": 4,
+    "_unexpectedFieldDetails": {
+      "booking": {
+        "count": 2,
+        "fields": [
+          "booking.booking"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 2,
+      "uniqueFields": 1
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 685.1333333333333,
+    "avgResponseTokens": 207.33333333333334,
+    "totalTokens": 13387
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "messageId": "11",
+  "score": 0.9519230769230769,
+  "timestamp": "2025-05-14T21:05:45.962Z",
+  "errors": [
+    "/booking/promoter/address must be string,null (actual: {\"street\":\"Hammarby Slussväg 2\",\"phone\":\"+46704058257\",\"email\":\"olivia@clubstellar.se\"})",
+    "booking.promoter.address.street: Field not defined in schema",
+    "booking.promoter.address.phone: Field not defined in schema",
+    "booking.promoter.address.email: Field not defined in schema"
+  ]
+}

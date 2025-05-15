@@ -1,0 +1,6 @@
+Strategy,Error Correction Rate,Feedback Effectiveness
+zero-shot-context-error,34.2,26.2
+chain-of-thought-error,18.3,13.9
+zero-shot-error,18.2,12.5
+self-verification-error,17.5,12.7
+chain-of-thought-context-error,17.2,14.5

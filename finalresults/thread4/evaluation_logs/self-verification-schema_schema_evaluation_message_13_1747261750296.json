@@ -1,0 +1,12 @@
+{
+  "messageId": "13",
+  "score": 0.9038461538461539,
+  "timestamp": "2025-05-14T22:29:10.296Z",
+  "errors": [
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+    "/booking/contract/status must be equal to one of the allowed values (actual: confirmed)",
+    "/booking/contract/status must be null (actual: confirmed)",
+    "/booking/contract/status must match exactly one schema in oneOf (actual: confirmed)"
+  ]
+}

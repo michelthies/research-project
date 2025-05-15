@@ -1,0 +1,1657 @@
+{
+  "1": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-20T22:30:00Z",
+          "end": "2025-09-21T00:30:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+    
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2230"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500"
+        ]
+      }
+    }
+  },
+  "2": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-20T22:30:00Z",
+          "end": "2025-09-21T00:30:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2500,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+    
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2230"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2500", "2.5k", "2,5k"
+        ]
+      }
+    }
+  },
+  "3": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2500,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+    
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2500", "2.5k", "2,5k"
+        ]
+      }
+    }
+  },
+  "4": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+    
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      }
+    }
+  },
+  "5": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+    
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      }
+    }
+  },
+  "6": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events",
+        "address": null
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  },
+  "7": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  },
+  "8": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "sent"
+      },
+      "contract": {
+        "status": "sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
+      }
+    }
+  },
+  "9": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "sent"
+      },
+      "contract": {
+        "status": "sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
+      }
+    }
+  },
+  "10": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "sent"
+      },
+      "contract": {
+        "status": "sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
+      }
+    }
+  },
+  "11": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "signed"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "paid"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "signed",
+          "returned"
+        ]
+      }
+    }
+  },
+  "12": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "cosigned"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "paid"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "cosigned",
+          "co-signed"
+        ]
+      }
+    }
+  },
+  "13": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "cosigned"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "paid"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "cosigned",
+          "co-signed"
+        ]
+      }
+    }
+  },
+  "14": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "cosigned"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "paid"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "cosigned",
+          "co-signed"
+        ]
+      }
+    }
+  },
+  "15": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Horizon"
+      },
+      "promoter": {
+        "name": "Stacey Summer",
+        "company": "Vibrancy Events GmbH",
+        "address": "Frankfurter Allee 77, 10247 Berlin, Germany"
+      },
+      "event": {
+        "date": "2025-09-20",
+        "name": "Equinox Festival",
+        "city": "Berlin",
+        "venue": "Tempelhofer Feld",
+        "capacity": 3500,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": "2025-09-21T00:30:00Z",
+          "end": "2025-09-21T02:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 2200,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "cosigned"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "horizon"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "stacey",
+          "summer"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "vibrancy",
+          "vibrancyevents"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+          "frankfurterallee77"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20250920",
+          "20sept"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "equinox",
+          "equinoxfestival"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "berlin"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "tempelhofer",
+          "tempelhoferfeld"
+        ]
+      },
+     "booking.event.capacity": {
+        "acceptedValues": [
+          "3500", "3.5k", "3,5k"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "0030"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "0200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "paid"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "cosigned",
+          "co-signed"
+        ]
+      }
+    }
+  }
+}

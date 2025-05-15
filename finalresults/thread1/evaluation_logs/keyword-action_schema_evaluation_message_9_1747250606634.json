@@ -1,0 +1,10 @@
+{
+  "messageId": "9",
+  "score": 0.9615384615384616,
+  "timestamp": "2025-05-14T19:23:26.634Z",
+  "errors": [
+    "/booking/promoter/address must be string,null (actual: {\"street\":null,\"city\":\"Hamburg\",\"zip\":23462})",
+    "booking.promoter.address.city: Field not defined in schema",
+    "booking.promoter.address.zip: Field not defined in schema"
+  ]
+}

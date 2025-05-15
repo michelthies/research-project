@@ -1,0 +1,20 @@
+{
+  "messageId": "6",
+  "score": 0.8365384615384616,
+  "timestamp": "2025-05-14T22:11:49.214Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: CONFIRMED)",
+    "/booking/status must be null (actual: CONFIRMED)",
+    "/booking/status must match exactly one schema in oneOf (actual: CONFIRMED)",
+    "/booking/promoter/company must be string,null (actual: {\"name\":\"Nova Entertainment\",\"representedBy\":\"Club Stellar\",\"fullAddress\":\"Hammarby Slussväg 2\",\"cellPhone\":\"+46704058257\",\"email\":\"olivia@clubstellar.se\",\"website\":\"www.clubstellar.com\",\"vatNumber\":\"SE 556785-1901-01\",\"orgNummer\":\"556785-1901\"})",
+    "booking.promoter.company.name: Field not defined in schema",
+    "booking.promoter.company.representedBy: Field not defined in schema",
+    "booking.promoter.company.fullAddress: Field not defined in schema",
+    "booking.promoter.company.cellPhone: Field not defined in schema",
+    "booking.promoter.company.email: Field not defined in schema",
+    "booking.promoter.company.website: Field not defined in schema",
+    "booking.promoter.company.vatNumber: Field not defined in schema",
+    "booking.promoter.company.orgNummer: Field not defined in schema",
+    "booking.promoter.contact: Field not defined in schema"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "messageId": "10",
+  "score": 0.9326923076923077,
+  "timestamp": "2025-05-14T17:52:19.137Z",
+  "errors": [
+    "/booking/event/date must match format \"date\" (actual: 25 Nov 25)",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 22.00-06.00)",
+    "/booking/event/stageTime/start must match format \"date-time\" (actual: 2-4)",
+    "booking.event.stageCapacity: Field not defined in schema"
+  ]
+}

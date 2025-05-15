@@ -1,0 +1,10 @@
+{
+  "messageId": "5",
+  "score": 0.9423076923076923,
+  "timestamp": "2025-05-14T18:41:10.160Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: pending)",
+    "/booking/status must be null (actual: pending)",
+    "/booking/status must match exactly one schema in oneOf (actual: pending)"
+  ]
+}

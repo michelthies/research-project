@@ -1,0 +1,72 @@
+{
+  "strategy": "chain-of-thought-schema",
+  "schemaMetrics": {
+    "score": 0.9563609467455619,
+    "rawScore": 0.9563609467455619,
+    "effectiveScore": 0.9563609467455619,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.03846153846153845,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.16643772893772896
+  },
+  "contextMetrics": {
+    "score": 0.593560703185703,
+    "fieldAccuracy": 0.39503552003552017,
+    "contextLossRate": 0.44189976689976695,
+    "unexpectedFieldRate": 0.16643772893772896
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9563609467455619,
+    "contextualConsistency": 0.593560703185703,
+    "overallScore": 0.7749608249656326,
+    "successRate": 1,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 13,
+    "UNEXPECTED_FIELD": 68,
+    "_unexpectedFieldDetails": {
+      "address": {
+        "count": 11,
+        "fields": [
+          "booking.event.address"
+        ]
+      },
+      "phone": {
+        "count": 11,
+        "fields": [
+          "booking.event.phone"
+        ]
+      },
+      "email": {
+        "count": 11,
+        "fields": [
+          "booking.event.email"
+        ]
+      },
+      "invoice": {
+        "count": 1,
+        "fields": [
+          "booking.invoice"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 35,
+      "uniqueFields": 5
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1408.076923076923,
+    "avgResponseTokens": 367,
+    "totalTokens": 23076
+  }
+}

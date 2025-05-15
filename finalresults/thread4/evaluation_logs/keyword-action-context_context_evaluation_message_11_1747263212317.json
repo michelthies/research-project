@@ -1,0 +1,164 @@
+{
+  "messageId": "11",
+  "score": 0.7135714285714285,
+  "timestamp": "2025-05-14T22:53:32.317Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "confirmed",
+      "actual": "confirmed",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Meteor",
+      "actual": "DJ Meteor",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Olivia Chen",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.promoter.company",
+      "expected": "Nova Entertainment",
+      "actual": "Nova Entertainment",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.address",
+      "expected": "Hammarby Slussväg 2",
+      "actual": "Hammarby Slussväg 2",
+      "valid": false,
+      "reason": "Expected Hammarby Slussväg 2, got Hammarby Slussväg 2"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2022-08-06",
+      "actual": "2022-08-06",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Cosmic Garden",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Stockholm",
+      "actual": "Stockholm",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Cosmic Garden",
+      "actual": "Cosmic Garden",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 1800,
+      "actual": 500,
+      "valid": false,
+      "reason": "Expected 1800, got 500"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": 15,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2022-08-06T17:00:00Z",
+      "actual": "17:00",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2022-08-07T03:00:00Z",
+      "actual": "03:00",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.stageTime",
+      "expected": {
+        "start": "2022-08-06T20:00:00Z",
+        "end": "2022-08-06T22:00:00Z"
+      },
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.promoter.contact",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "email": "olivia@clubstellar.se",
+        "phone": "+46 70-467 14 62"
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.timeframe",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "stageTime": {
+          "start": "20-22",
+          "end": null
+        }
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.runningOrder",
+      "expected": "Not defined in ground truth",
+      "actual": [
+        {
+          "name": "SOFIA NYBERG",
+          "start": "14-17"
+        },
+        {
+          "name": "DJ PULSE",
+          "start": "17-19"
+        },
+        {
+          "name": "NOVAWAVE (LIVE)",
+          "start": "19-20"
+        },
+        {
+          "name": "DJ METEOR",
+          "start": "20-22"
+        }
+      ],
+      "valid": false,
+      "reason": "Field not in ground truth"
+    },
+    {
+      "path": "booking.dinner",
+      "expected": "Not defined in ground truth",
+      "actual": {
+        "time": "22:00",
+        "location": "Greenspace, fine dining vegan restaurant at the venue"
+      },
+      "valid": false,
+      "reason": "Field not in ground truth"
+    }
+  ]
+}

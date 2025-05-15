@@ -1,0 +1,25 @@
+{
+  "strategy": "role-guided",
+  "schemaMetrics": {
+    "score": 0.1550893550893551,
+    "parseSuccessRate": 0.1550893550893551,
+    "rawScore": 1,
+    "effectiveScore": 0.1550893550893551,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0,
+    "requiredFieldCoverage": 1
+  },
+  "contextMetrics": {
+    "score": 0.8338386243386244,
+    "fieldAccuracy": 0.7267195767195767,
+    "contextLossRate": 0.21084656084656084,
+    "unexpectedFieldRate": 0.011111111111111112
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "overallScore": 0.9169193121693122,
+    "successRate": 0.1550893550893551,
+    "jsonAdherenceRate": 0.1550893550893551
+  },
+  "threadCount": 3
+}

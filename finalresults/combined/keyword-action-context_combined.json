@@ -1,0 +1,25 @@
+{
+  "strategy": "keyword-action-context",
+  "schemaMetrics": {
+    "score": 0.21611977765823923,
+    "parseSuccessRate": 0.2251748251748252,
+    "rawScore": 0.9666666666666668,
+    "effectiveScore": 0.21611977765823923,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.046153846153846156,
+    "requiredFieldCoverage": 1
+  },
+  "contextMetrics": {
+    "score": 0.8255593915343914,
+    "fieldAccuracy": 0.7351455026455026,
+    "contextLossRate": 0.18667989417989417,
+    "unexpectedFieldRate": 0.06904761904761904
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "overallScore": 0.8961130291005291,
+    "successRate": 0.2251748251748252,
+    "jsonAdherenceRate": 0.1226107226107226
+  },
+  "threadCount": 3
+}

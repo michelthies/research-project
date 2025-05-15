@@ -1,0 +1,13 @@
+{
+  "messageId": "13",
+  "score": 0.8846153846153846,
+  "timestamp": "2025-05-14T21:38:53.537Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: paid)",
+    "/booking/status must be null (actual: paid)",
+    "/booking/status must match exactly one schema in oneOf (actual: paid)",
+    "/booking/event/openingTime must match format \"date-time\" (actual: 17:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 03:00)",
+    "/booking/event/stageTime must be object (actual: null)"
+  ]
+}

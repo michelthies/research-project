@@ -1,0 +1,73 @@
+{
+  "strategy": "keyword-action",
+  "schemaMetrics": {
+    "score": 0.6671597633136095,
+    "rawScore": 0.9636752136752137,
+    "effectiveScore": 0.6671597633136095,
+    "parseSuccessRate": 0.6923076923076923,
+    "typeErrorRate": 0.012820512820512822,
+    "constraintViolationRate": 0.025641025641025644,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.12301587301587302
+  },
+  "contextMetrics": {
+    "score": 0.543922619047619,
+    "fieldAccuracy": 0.29583333333333334,
+    "contextLossRate": 0.533531746031746,
+    "unexpectedFieldRate": 0.12301587301587302
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "schemaConformity": 0.9636752136752137,
+    "contextualConsistency": 0.543922619047619,
+    "overallScore": 0.7537989163614163,
+    "successRate": 0.6923076923076923,
+    "jsonAdherenceRate": 0.6923076923076923
+  },
+  "errorAnalysis": {
+    "UNEXPECTED_FIELD": 33,
+    "CONSTRAINT_ERROR": 6,
+    "OTHER": 3,
+    "_unexpectedFieldDetails": {
+      "email": {
+        "count": 4,
+        "fields": [
+          "booking.promoter.email"
+        ]
+      },
+      "cellPhone": {
+        "count": 4,
+        "fields": [
+          "booking.promoter.cellPhone"
+        ]
+      },
+      "website": {
+        "count": 4,
+        "fields": [
+          "booking.promoter.website"
+        ]
+      },
+      "vatNumber": {
+        "count": 4,
+        "fields": [
+          "booking.promoter.vatNumber"
+        ]
+      },
+      "contract": {
+        "count": 1,
+        "fields": [
+          "booking.contract"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 17,
+      "uniqueFields": 5
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 840.5384615384615,
+    "avgResponseTokens": 111.3076923076923,
+    "totalTokens": 12374
+  }
+}

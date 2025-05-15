@@ -1,0 +1,57 @@
+{
+  "strategy": "one-shot-error",
+  "schemaMetrics": {
+    "score": 0.8391608391608392,
+    "rawScore": 0.9230769230769231,
+    "effectiveScore": 0.8391608391608392,
+    "parseSuccessRate": 0.9090909090909091,
+    "typeErrorRate": 0.011538461538461539,
+    "constraintViolationRate": 0.13076923076923078,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0
+  },
+  "contextMetrics": {
+    "score": 0.8814464285714287,
+    "fieldAccuracy": 0.7535714285714287,
+    "contextLossRate": 0.10535714285714284,
+    "unexpectedFieldRate": 0
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.1,
+    "avgFeedbackEffectivenessScore": 0.04
+  },
+  "averageScores": {
+    "schemaConformity": 0.9230769230769231,
+    "contextualConsistency": 0.8814464285714287,
+    "overallScore": 0.9022616758241758,
+    "successRate": 0.9090909090909091,
+    "jsonAdherenceRate": 0.18181818181818182
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 37,
+    "UNEXPECTED_FIELD": 12,
+    "_unexpectedFieldDetails": {
+      "street": {
+        "count": 3,
+        "fields": [
+          "booking.promoter.address.street"
+        ]
+      },
+      "city": {
+        "count": 3,
+        "fields": [
+          "booking.promoter.address.city"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 6,
+      "uniqueFields": 2
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 922.1818181818181,
+    "avgResponseTokens": 215.9090909090909,
+    "totalTokens": 12519
+  }
+}

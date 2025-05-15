@@ -1,0 +1,12 @@
+{
+  "messageId": "7",
+  "score": 0.9230769230769231,
+  "timestamp": "2025-05-15T01:49:56.209Z",
+  "errors": [
+    "/booking/artist must be object (actual: DJ Horizon)",
+    "/booking/promoter must be object (actual: Vibrancy Events GmbH)",
+    "/booking/event must be object (actual: Equinox Festival)",
+    "booking.start: Field not defined in schema",
+    "booking.end: Field not defined in schema"
+  ]
+}

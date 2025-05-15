@@ -1,0 +1,14 @@
+{
+  "messageId": "12",
+  "score": 0.8653846153846154,
+  "timestamp": "2025-05-14T21:26:13.482Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: set for payment)",
+    "/booking/status must be null (actual: set for payment)",
+    "/booking/status must match exactly one schema in oneOf (actual: set for payment)",
+    "/booking/event must be object (actual: null)",
+    "/booking/invoice/status must be equal to one of the allowed values (actual: set for payment)",
+    "/booking/invoice/status must be null (actual: set for payment)",
+    "/booking/invoice/status must match exactly one schema in oneOf (actual: set for payment)"
+  ]
+}

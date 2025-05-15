@@ -1,0 +1,16 @@
+{
+  "messageId": "10",
+  "score": 0.875,
+  "timestamp": "2025-05-15T01:50:40.996Z",
+  "errors": [
+    "/booking/status must be string (actual: {\"booking\":\"sufficient\",\"invoice\":\"pending\",\"contract\":\"pending\"})",
+    "/booking/status must be equal to one of the allowed values (actual: {\"booking\":\"sufficient\",\"invoice\":\"pending\",\"contract\":\"pending\"})",
+    "/booking/status must be null (actual: {\"booking\":\"sufficient\",\"invoice\":\"pending\",\"contract\":\"pending\"})",
+    "/booking/status must match exactly one schema in oneOf (actual: {\"booking\":\"sufficient\",\"invoice\":\"pending\",\"contract\":\"pending\"})",
+    "booking.start: Field not defined in schema",
+    "booking.end: Field not defined in schema",
+    "booking.status.booking: Field not defined in schema",
+    "booking.status.invoice: Field not defined in schema",
+    "booking.status.contract: Field not defined in schema"
+  ]
+}

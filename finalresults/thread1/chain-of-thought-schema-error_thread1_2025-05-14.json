@@ -1,0 +1,70 @@
+{
+  "strategy": "chain-of-thought-schema-error",
+  "schemaMetrics": {
+    "score": 0.9912587412587412,
+    "rawScore": 0.9912587412587412,
+    "effectiveScore": 0.9912587412587412,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.006993006993006993,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.07130124777183601
+  },
+  "contextMetrics": {
+    "score": 0.7533471267294797,
+    "fieldAccuracy": 0.643886342415754,
+    "contextLossRate": 0.3092267209914269,
+    "unexpectedFieldRate": 0.07130124777183601
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.06071428571428571,
+    "avgFeedbackEffectivenessScore": 0.044539485024779134
+  },
+  "averageScores": {
+    "schemaConformity": 0.9912587412587412,
+    "contextualConsistency": 0.7533471267294797,
+    "overallScore": 0.8723029339941104,
+    "successRate": 1,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 2,
+    "UNEXPECTED_FIELD": 12,
+    "_unexpectedFieldDetails": {
+      "signatory": {
+        "count": 3,
+        "fields": [
+          "booking.promoter.signatory",
+          "booking.signatory"
+        ]
+      },
+      "name": {
+        "count": 1,
+        "fields": [
+          "booking.name"
+        ]
+      },
+      "company": {
+        "count": 1,
+        "fields": [
+          "booking.company"
+        ]
+      },
+      "address": {
+        "count": 1,
+        "fields": [
+          "booking.address"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 6,
+      "uniqueFields": 4
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1350.7272727272727,
+    "avgResponseTokens": 326.54545454545456,
+    "totalTokens": 18450
+  }
+}

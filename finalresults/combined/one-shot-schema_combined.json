@@ -1,0 +1,25 @@
+{
+  "strategy": "one-shot-schema",
+  "schemaMetrics": {
+    "score": 0.9861932938856016,
+    "parseSuccessRate": 1,
+    "rawScore": 0.9861932938856016,
+    "effectiveScore": 0.9861932938856016,
+    "typeErrorRate": 0.0019723865877712033,
+    "constraintViolationRate": 0.025641025641025644,
+    "requiredFieldCoverage": 1
+  },
+  "contextMetrics": {
+    "score": 0.7558459373959375,
+    "fieldAccuracy": 0.5616022866022866,
+    "contextLossRate": 0.2847594997594997,
+    "unexpectedFieldRate": 0.003418803418803419
+  },
+  "errorFeedbackMetrics": null,
+  "averageScores": {
+    "overallScore": 0.8710196156407696,
+    "successRate": 1,
+    "jsonAdherenceRate": 0.8786324786324786
+  },
+  "threadCount": 3
+}

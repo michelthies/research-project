@@ -1,0 +1,12 @@
+{
+  "messageId": "14",
+  "score": 0.9326923076923077,
+  "timestamp": "2025-05-15T00:23:15.435Z",
+  "errors": [
+    "/booking/invoice must be object (actual: true)",
+    "/booking/contract must be object (actual: true)",
+    "booking.engineer: Field not defined in schema",
+    "booking.press_interview: Field not defined in schema",
+    "booking.artist_photo: Field not defined in schema"
+  ]
+}

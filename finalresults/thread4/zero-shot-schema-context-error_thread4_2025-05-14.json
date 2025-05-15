@@ -1,0 +1,57 @@
+{
+  "strategy": "zero-shot-schema-context-error",
+  "schemaMetrics": {
+    "score": 0.982248520710059,
+    "rawScore": 0.982248520710059,
+    "effectiveScore": 0.982248520710059,
+    "parseSuccessRate": 1,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.00591715976331361,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.2692307692307692
+  },
+  "contextMetrics": {
+    "score": 0.3375787545787544,
+    "fieldAccuracy": 0.1413919413919414,
+    "contextLossRate": 0.8534798534798534,
+    "unexpectedFieldRate": 0.2692307692307692
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.016666666666666666,
+    "avgFeedbackEffectivenessScore": 0.008522435897435898
+  },
+  "averageScores": {
+    "schemaConformity": 0.982248520710059,
+    "contextualConsistency": 0.3375787545787544,
+    "overallScore": 0.6599136376444068,
+    "successRate": 1,
+    "jsonAdherenceRate": 0.23076923076923078
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 2,
+    "UNEXPECTED_FIELD": 40,
+    "_unexpectedFieldDetails": {
+      "type": {
+        "count": 10,
+        "fields": [
+          "booking.type"
+        ]
+      },
+      "properties": {
+        "count": 10,
+        "fields": [
+          "booking.properties"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 20,
+      "uniqueFields": 2
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 2365.5384615384614,
+    "avgResponseTokens": 358.15384615384613,
+    "totalTokens": 35408
+  }
+}

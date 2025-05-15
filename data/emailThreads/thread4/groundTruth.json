@@ -1,0 +1,1502 @@
+{
+  "1": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": null,
+        "city": "Stockholm",
+        "venue": null,
+        "capacity": null,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": null,
+          "end": null
+        }
+      },
+      "invoice": {
+        "amount": null,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": ["olivia", "chen"]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      }
+    }
+  },
+  "2": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": null,
+        "city": "Stockholm",
+        "venue": null,
+        "capacity": null,
+        "ticketPrice": null,
+        "openingTime": null,
+        "closingTime": null,
+        "stageTime": {
+          "start": null,
+          "end": null
+        }
+      },
+      "invoice": {
+        "amount": null,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      }
+    }
+  },
+  "3": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1000,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1000",
+          "1k"
+        ]
+      }
+    }
+  },
+  "4": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      }
+    }
+  },
+  "5": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": null,
+        "address": null
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      }
+    }
+  },
+  "6": {
+    "booking": {
+      "status": "inquiry",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": null
+      },
+      "contract": {
+        "status": null
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "inquiry"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "novaentertainment"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      }
+    }
+  },
+  "7": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "novaentertainment"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  },
+  "8": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "novaentertainment"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  },
+  "9": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "novaentertainment"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  },
+  "10": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "not sent"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "novaentertainment"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  },
+  "11": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "novaentertainment"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  },
+  "12": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "cosigned"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "novaentertainment"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "sent",
+          "pending"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  },
+  "13": {
+    "booking": {
+      "status": "confirmed",
+      "artist": {
+        "name": "DJ Meteor"
+      },
+      "promoter": {
+        "name": "Olivia Chen",
+        "company": "Nova Entertainment",
+        "address": "Hammarby Slussväg 2"
+      },
+      "event": {
+        "date": "2022-08-06",
+        "name": "Cosmic Garden",
+        "city": "Stockholm",
+        "venue": "Cosmic Garden",
+        "capacity": 1800,
+        "ticketPrice": 15,
+        "openingTime": "2022-08-06T17:00:00Z",
+        "closingTime": "2022-08-07T03:00:00Z",
+        "stageTime": {
+          "start": "2022-08-06T20:00:00Z",
+          "end": "2022-08-06T22:00:00Z"
+        }
+      },
+      "invoice": {
+        "amount": 1500,
+        "status": "paid"
+      },
+      "contract": {
+        "status": "not sent"
+      }
+    },
+    "normalizationConfig": {
+      "booking.status": {
+        "acceptedValues": [
+          "confirmed"
+        ]
+      },
+      "booking.artist.name": {
+        "acceptedValues": [
+          "meteor"
+        ]
+      },
+      "booking.promoter.name": {
+        "acceptedValues": [
+          "olivia",
+          "chen"
+        ]
+      },
+      "booking.promoter.company": {
+        "acceptedValues": [
+          "novaentertainment"
+        ]
+      },
+      "booking.promoter.address": {
+        "acceptedValues": [
+           "hammarbyslussväg2", "hammarbyslussväg2stockholm"
+        ]
+      },
+      "booking.event.date": {
+        "acceptedValues": [
+          "20220806",
+          "6august"
+        ]
+      },
+      "booking.event.name": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.city": {
+        "acceptedValues": [
+          "stockholm"
+        ]
+      },
+      "booking.event.venue": {
+        "acceptedValues": [
+          "cosmicgarden",
+          "cosmic"
+        ]
+      },
+      "booking.event.capacity": {
+        "acceptedValues": [
+          "1800"
+        ]
+      },
+      "booking.event.ticketPrice": {
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "booking.event.openingTime": {
+        "acceptedValues": [
+          "1700"
+        ]
+      },
+      "booking.event.closingTime": {
+        "acceptedValues": [
+          "0300"
+        ]
+      },
+      "booking.event.stageTime.start": {
+        "acceptedValues": [
+          "2000"
+        ]
+      },
+      "booking.event.stageTime.end": {
+        "acceptedValues": [
+          "2200"
+        ]
+      },
+      "booking.invoice.amount": {
+        "acceptedValues": [
+          "1500",
+          "1.5k"
+        ]
+      },
+      "booking.invoice.status": {
+        "acceptedValues": [
+          "paid",
+          "payed",
+          "settled"
+        ]
+      },
+      "booking.contract.status": {
+        "acceptedValues": [
+          "notsent",
+          "not"
+        ]
+      }
+    }
+  }
+}

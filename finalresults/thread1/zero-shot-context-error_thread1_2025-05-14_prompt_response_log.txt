@@ -1,0 +1,2413 @@
+==================== PROMPT ====================
+
+
+Current Booking Object:
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": null
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": null
+    },
+    "event": {
+      "date": null,
+      "name": null,
+      "city": null,
+      "venue": null,
+      "capacity": null,
+      "ticketPrice": null,
+      "openingTime": null,
+      "closingTime": null,
+      "stageTime": {
+        "start": null,
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": null,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+==================== RESPONSE ====================
+
+{
+  "booking": {
+    "status": null,
+    "artist": {
+      "name": "DJ Eclipse"
+    },
+    "promoter": {
+      "name": null,
+      "company": null,
+      "address": "Zenith Hamburg"
+    },
+    "event": {
+      "date": "25 nov 25",
+      "name": "countdown",
+      "city": "hamburg",
+      "venue": "Zenith",
+      "capacity": 450,
+      "stageCapacity": 150,
+      "ticketPrice": 15,
+      "openingTime": "22.00",
+      "closingTime": "06.00",
+      "stageTime": {
+        "start": "2-4",
+        "end": null
+      }
+    },
+    "invoice": {
+      "amount": 500,
+      "status": null
+    },
+    "contract": {
+      "status": null
+    }
+  }
+}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00","closingTime":"06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/date must match format "date" (actual: 25 nov 25)
+2. /booking/event/openingTime must match format "date-time" (actual: 22.00)
+3. /booking/event/closingTime must match format "date-time" (actual: 06.00)
+4. /booking/event/stageTime/start must match format "date-time" (actual: 2-4)
+5. booking.event.stageCapacity: Field not defined in schema
+
+Context Errors:
+1. booking.status: Missing field
+2. booking.promoter.name: Missing field
+3. booking.event.stageTime.start: Incorrect value: 2-4
+4. booking.event.stageTime.end: Missing field
+5. booking.event.stageCapacity: Value does not match expected format or requirements
+
+
+
+==================== RESPONSE ====================
+
+{
+"booking": {
+"status": null,
+"artist": {
+"name": "DJ Eclipse"
+},
+"promoter": {
+"name": "Marcus Weber",
+"company": null,
+"address": "Zenith Hamburg"
+},
+"event": {
+"date": "2025-11-25T00:00:00.000Z",
+"name": "countdown",
+"city": "hamburg",
+"venue": "Zenith",
+"capacity": 450,
+"stageCapacity": null,
+"ticketPrice": 15,
+"openingTime": "22:00:00",
+"closingTime": "06:00:00",
+"stageTime": {
+"start": "02:00:00",
+"end": "03:00:00"
+}
+},
+"invoice": {
+"amount": 500,
+"status": null
+},
+"contract": {
+"status": null
+}
+}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00","closingTime":"06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Parsing Error: Failed to evaluate
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00","closingTime":"06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":1000,"status":null},"contract":{"status":null}}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00","closingTime":"06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Parsing Error: Failed to evaluate
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}}, "invoice":{"amount":1000,"status":null},"contract":{"status":null}}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00","closingTime":"06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":500,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Parsing Error: Failed to evaluate
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/date must match format "date" (actual: 25 Nov 25)
+2. /booking/event/openingTime must match format "date-time" (actual: 22.00-06.00)
+3. /booking/event/stageTime/start must match format "date-time" (actual: 2-4)
+4. booking.event.stageCapacity: Field not defined in schema
+
+Context Errors:
+1. booking.status: Missing field
+2. booking.promoter.name: Missing field
+3. booking.event.closingTime: Missing field
+4. booking.event.stageTime.start: Incorrect value: 2-4
+5. booking.event.stageTime.end: Missing field
+6. booking.invoice.amount: Incorrect value: 2000
+7. booking.event.stageCapacity: Value does not match expected format or requirements
+
+
+
+==================== RESPONSE ====================
+
+{
+"booking": {
+"status": null,
+"artist": {
+"name": "DJ Eclipse"
+},
+"promoter": {
+"name": "Marcus Weber",
+"company": null,
+"address": "Zenith Hamburg"
+},
+"event": {
+"date": "2025-11-25T00:00:00Z",
+"name": "countdown",
+"city": "hamburg",
+"venue": "Zenith",
+"capacity": 450,
+"stageCapacity": null,
+"ticketPrice": 15,
+"openingTime": "22:00-06:00",
+"closingTime": null,
+"stageTime": {
+"start": "02:00-04:00",
+"end": null
+}
+},
+"invoice": {
+"amount": 1000,
+"status": null
+},
+"contract": {
+"status": null
+}
+}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Parsing Error: Failed to evaluate
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/date must match format "date" (actual: 25 Nov 25)
+2. /booking/event/openingTime must match format "date-time" (actual: 22.00-06.00)
+3. /booking/event/stageTime/start must match format "date-time" (actual: 2-4)
+4. booking.event.stageCapacity: Field not defined in schema
+
+Context Errors:
+1. booking.status: Missing field
+2. booking.promoter.name: Missing field
+3. booking.event.closingTime: Missing field
+4. booking.event.stageTime.start: Incorrect value: 2-4
+5. booking.event.stageTime.end: Missing field
+6. booking.invoice.amount: Incorrect value: 2000
+7. booking.invoice.status: Missing field
+8. booking.contract.status: Missing field
+9. booking.event.stageCapacity: Value does not match expected format or requirements
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object in JSON format:
+
+{
+"booking": {
+"status": null,
+"artist": {
+"name": "DJ Eclipse"
+},
+"promoter": {
+"name": "Marcus Weber",
+"company": "Weber GmbH",
+"address": "Minkstrasse 42, 23462 Hamburg"
+},
+"event": {
+"date": "2025-11-25T00:00:00.000Z",
+"name": "countdown",
+"city": "hamburg",
+"venue": "Zenith",
+"capacity": 450,
+"stageCapacity": null,
+"ticketPrice": 15,
+"openingTime": "22:00-06:00",
+"closingTime": null,
+"stageTime": {
+"start": "02:00-04:00",
+"end": null
+}
+},
+"invoice": {
+"amount": 1000,
+"status": null
+},
+"contract": {
+"status": null
+}
+}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 16:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+great, find the contract, invoice and rider attached.
+
+
+best
+
+<Invoice_Emma_Thompson_Zenith.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+<Rider_Emma_Thompson.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 16:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+great, find the contract, invoice and rider attached.
+
+
+best
+
+<Invoice_Emma_Thompson_Zenith.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+<Rider_Emma_Thompson.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Parsing Error: Failed to evaluate
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":"Marcus Weber","company":"Weber GmbH","address":"Minkstrasse 42, 23462 Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 16:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+great, find the contract, invoice and rider attached.
+
+
+best
+
+<Invoice_Emma_Thompson_Zenith.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+<Rider_Emma_Thompson.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 13:50:03 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+hey mike, 
+
+here are the signed contract and proof of payment.
+
+best
+
+<Pop.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+New Message:
+From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 13:50:03 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+hey mike, 
+
+here are the signed contract and proof of payment.
+
+best
+
+<Pop.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Parsing Error: Failed to evaluate
+
+
+
+==================== RESPONSE ====================
+
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+==================== PROMPT ====================
+
+
+
+Conversation History:
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:01:00 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Heyyyy Mike,
+
+
+all good? 
+
+we would like to invite DJ Eclipse to come play at the following event:
+
+
+city: hamburg
+venue name: Zenith
+event name: countdown
+date of event: 25 nov 25
+doors open/close: 22.00 - 06.00
+requested slot: 2-4
+requested stage: Room2
+number of rooms/stages: 2
+total capacity: 450
+stage capacity: 150
+ticket price: 15
+offer: 500 + Travel / Hotel / Dinner
+
+
+
+Best,
+Marcus 
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 22. April 2025 at 16:50:51 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+im doing well, thanks.
+
+this could work, however there are some things to point out.
+
+the playtime is always 1 hour for dj eclipse and he travels +1 (1 hotelroom with a double bed is needed)
+
+the artist fee is 1000+++
+
+does that work for you?
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 24. April 2025 at 13:20:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey,
+
+Got it. Let me check.
++1 travel expenses must be covered by us as well?
+
+Marcus 
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 15:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+yes that would be required.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 25. April 2025 at 18:43:04 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Okay. 
+
+Cool! 
+
+Going to calculate this and get back to you asap :)
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 10:30:51 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Works for us!! 
+
+Can we confirm?
+
+1000€ + Travel / Hotel +1 
+
+
+
+all the best, 
+Marcus
+
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 26. April 2025 at 11:11:21 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+confirmed!
+please send me the invoice/contract details.
+
+
+best
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 14:23:40 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+Hey Mike, 
+
+Here you go:
+
+Weber GmbH,
+Minkstrasse 42
+23462 Hamburg
+
+Signatory: Marcus Weber
+
+
+Thanks a lot,
+Marcus
+
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 27. April 2025 at 16:30:00 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+hey marcus,
+
+great, find the contract, invoice and rider attached.
+
+
+best
+
+<Invoice_Emma_Thompson_Zenith.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+<Rider_Emma_Thompson.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+--- Next Message ---
+
+Message: From: Marcus Weber <mw@gmail.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 13:50:03 GMT+2
+To: Mike Muller <mike@stellarbookings.com>
+
+hey mike, 
+
+here are the signed contract and proof of payment.
+
+best
+
+<Pop.pdf>
+<Contract_Emma_Thompson_Zenith.pdf>
+
+Marcus Weber 
++4912045980455
+mw@gmail.com
+
+
+
+--- Next Message ---
+
+Message: 
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 14:44:20 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+payment received, co-signed contract attached.
+
+<Contract_Emma_Thompson_Zenith.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+
+
+
+Current Booking Object:
+{"booking":{"status":null,"artist":{"name":"DJ Eclipse"},"promoter":{"name":null,"company":null,"address":"Zenith Hamburg"},"event":{"date":"25 Nov 25","name":"countdown","city":"hamburg","venue":"Zenith","capacity":450,"stageCapacity":150,"ticketPrice":15,"openingTime":"22.00-06.00","stageTime":{"start":"2-4","end":null}},"invoice":{"amount":2000,"status":null},"contract":{"status":null}}}
+
+New Message:
+
+From: Mike Muller <mike@stellarbookings.com>
+Subject: DJ Eclipse - 25Nov // Zenith Hamburg
+Date: 28. April 2025 at 14:44:20 GMT+2
+To: Marcus Weber <mw@gmail.com>
+
+payment received, co-signed contract attached.
+
+<Contract_Emma_Thompson_Zenith.pdf>
+________________________
+
+Mike Muller
+Booking
+mobile: +491634523464
+
+Extract the relevant booking data from the message and return the updated booking object accordingly.
+Your response must contain ONLY a valid JSON object.
+DO NOT include any comments, explanations, introductions, conclusions, prefix, suffix, or anything else.
+
+
+
+Current Booking Object Evaluation Errors:
+Schema Errors:
+1. /booking/event/date must match format "date" (actual: 25 Nov 25)
+2. /booking/event/openingTime must match format "date-time" (actual: 22.00-06.00)
+3. /booking/event/stageTime/start must match format "date-time" (actual: 2-4)
+4. booking.event.stageCapacity: Field not defined in schema
+
+Context Errors:
+1. booking.status: Missing field
+2. booking.promoter.name: Missing field
+3. booking.promoter.company: Missing field
+4. booking.promoter.address: Incorrect value: Zenith Hamburg
+5. booking.event.closingTime: Missing field
+6. booking.event.stageTime.start: Incorrect value: 2-4
+7. booking.event.stageTime.end: Missing field
+8. booking.invoice.amount: Incorrect value: 2000
+9. booking.invoice.status: Missing field
+10. booking.contract.status: Missing field
+11. booking.event.stageCapacity: Value does not match expected format or requirements
+
+
+
+==================== RESPONSE ====================
+
+Here is the updated booking object in JSON format:
+
+{
+"booking": {
+"status": "confirmed",
+"artist": {
+"name": "DJ Eclipse"
+},
+"promoter": {
+"name": null,
+"company": null,
+"address": "Minkstrasse 42, 23462 Hamburg"
+},
+"event": {
+"date": "2025-11-25T00:00:00.000Z",
+"name": "countdown",
+"city": "hamburg",
+"venue": "Zenith",
+"capacity": 450,
+"stageCapacity": null,
+"ticketPrice": 15,
+"openingTime": "22:00-06:00",
+"closingTime": null,
+"stageTime": {
+"start": "02:00-04:00",
+"end": null
+}
+},
+"invoice": {
+"amount": 1000,
+"status": "paid"
+},
+"contract": {
+"status": "signed"
+}
+}

@@ -1,0 +1,10 @@
+{
+  "messageId": "8",
+  "score": 0.9423076923076923,
+  "timestamp": "2025-05-15T00:38:13.560Z",
+  "errors": [
+    "/booking/event/stageTime/start must match format \"date-time\" (actual: 22:30:00)",
+    "/booking/event/stageTime/end must match format \"date-time\" (actual: 02:00:00)",
+    "/booking/contract must be object (actual: null)"
+  ]
+}

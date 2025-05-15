@@ -1,0 +1,105 @@
+{
+  "messageId": "3",
+  "score": 0.8314285714285714,
+  "timestamp": "2025-05-14T17:57:08.512Z",
+  "evaluationLog": [
+    {
+      "path": "booking.status",
+      "expected": "inquiry",
+      "actual": "inquiry",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.artist.name",
+      "expected": "DJ Eclipse",
+      "actual": "DJ Eclipse",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.promoter.name",
+      "expected": "Marcus Weber",
+      "actual": "Marcus Weber",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.date",
+      "expected": "2025-11-25",
+      "actual": "2025-11-25",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.name",
+      "expected": "Countdown",
+      "actual": "countdown",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.city",
+      "expected": "Hamburg",
+      "actual": "hamburg",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.venue",
+      "expected": "Zenith",
+      "actual": "Zenith",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.capacity",
+      "expected": 450,
+      "actual": 450,
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.ticketPrice",
+      "expected": 15,
+      "actual": "Missing",
+      "valid": false,
+      "reason": "Field is missing"
+    },
+    {
+      "path": "booking.event.openingTime",
+      "expected": "2025-11-25T22:00:00Z",
+      "actual": "2025-11-25T22:00:00Z",
+      "valid": true,
+      "reason": "Field value matches expected value"
+    },
+    {
+      "path": "booking.event.closingTime",
+      "expected": "2025-11-26T06:00:00Z",
+      "actual": null,
+      "valid": false,
+      "reason": "Missing field"
+    },
+    {
+      "path": "booking.event.stageTime.start",
+      "expected": "2025-11-26T02:00:00Z",
+      "actual": "2025-11-25T20:00:00Z",
+      "valid": false,
+      "reason": "Expected 2025-11-26T02:00:00Z, got 2025-11-25T20:00:00Z"
+    },
+    {
+      "path": "booking.event.stageTime.end",
+      "expected": "2025-11-26T03:00:00Z",
+      "actual": "2025-11-26T06:00:00Z",
+      "valid": false,
+      "reason": "Expected 2025-11-26T03:00:00Z, got 2025-11-26T06:00:00Z"
+    },
+    {
+      "path": "booking.invoice.amount",
+      "expected": 1000,
+      "actual": 500,
+      "valid": false,
+      "reason": "Expected 1000, got 500"
+    }
+  ]
+}

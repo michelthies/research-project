@@ -1,0 +1,57 @@
+{
+  "strategy": "chain-of-thought-context-error",
+  "schemaMetrics": {
+    "score": 0.7980769230769231,
+    "rawScore": 0.9754273504273504,
+    "effectiveScore": 0.7980769230769231,
+    "parseSuccessRate": 0.8181818181818182,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.025641025641025644,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.07997557997557997
+  },
+  "contextMetrics": {
+    "score": 0.8379708994708994,
+    "fieldAccuracy": 0.7746235246235246,
+    "contextLossRate": 0.17881562881562882,
+    "unexpectedFieldRate": 0.07997557997557997
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.2375,
+    "avgFeedbackEffectivenessScore": 0.20353572802197806
+  },
+  "averageScores": {
+    "schemaConformity": 0.9754273504273504,
+    "contextualConsistency": 0.8379708994708994,
+    "overallScore": 0.906699124949125,
+    "successRate": 0.8181818181818182,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 6,
+    "UNEXPECTED_FIELD": 22,
+    "_unexpectedFieldDetails": {
+      "stageTime": {
+        "count": 7,
+        "fields": [
+          "booking.stageTime"
+        ]
+      },
+      "signatory": {
+        "count": 4,
+        "fields": [
+          "booking.promoter.signatory"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 11,
+      "uniqueFields": 2
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1435.090909090909,
+    "avgResponseTokens": 331.27272727272725,
+    "totalTokens": 19430
+  }
+}

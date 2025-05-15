@@ -1,0 +1,10 @@
+{
+  "messageId": "13",
+  "score": 0.9615384615384616,
+  "timestamp": "2025-05-14T20:42:22.388Z",
+  "errors": [
+    "/booking/event/date must match format \"date\" (actual: 6th of August)",
+    "booking.openingTime: Field not defined in schema",
+    "booking.closingTime: Field not defined in schema"
+  ]
+}

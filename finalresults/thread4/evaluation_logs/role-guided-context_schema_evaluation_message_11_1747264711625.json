@@ -1,0 +1,16 @@
+{
+  "messageId": "11",
+  "score": 0.9134615384615384,
+  "timestamp": "2025-05-14T23:18:31.625Z",
+  "errors": [
+    "booking.promoter.companyName: Field not defined in schema",
+    "booking.promoter.representedBy: Field not defined in schema",
+    "booking.promoter.fullAddress: Field not defined in schema",
+    "booking.promoter.cellPhone: Field not defined in schema",
+    "booking.promoter.email: Field not defined in schema",
+    "booking.promoter.website: Field not defined in schema",
+    "booking.promoter.vatNumber: Field not defined in schema",
+    "booking.promoter.orgNumber: Field not defined in schema",
+    "booking.lineUp: Field not defined in schema"
+  ]
+}

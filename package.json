@@ -1,0 +1,29 @@
+{
+  "name": "prototype",
+  "version": "1.0.0",
+  "main": "dist/src/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/app.js",
+    "dev": "ts-node src/app.ts"
+  },
+  "dependencies": {
+    "@types/chart.js": "^4.0.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "chart.js": "^4.4.9",
+    "chartjs-node-canvas": "^5.0.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "d3": "^7.9.0",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^20.17.47",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "author": "Michel Thies",
+  "license": "MIT"
+}

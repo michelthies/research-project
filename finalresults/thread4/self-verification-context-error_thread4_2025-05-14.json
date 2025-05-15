@@ -1,0 +1,87 @@
+{
+  "strategy": "self-verification-context-error",
+  "schemaMetrics": {
+    "score": 0.7492603550295857,
+    "rawScore": 0.9740384615384613,
+    "effectiveScore": 0.7492603550295857,
+    "parseSuccessRate": 0.7692307692307693,
+    "typeErrorRate": 0,
+    "constraintViolationRate": 0.007692307692307693,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.15535714285714283
+  },
+  "contextMetrics": {
+    "score": 0.5935035714285712,
+    "fieldAccuracy": 0.41,
+    "contextLossRate": 0.4685714285714285,
+    "unexpectedFieldRate": 0.15535714285714283
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.22091687552213868,
+    "avgFeedbackEffectivenessScore": 0.1721339205385258
+  },
+  "averageScores": {
+    "schemaConformity": 0.9740384615384613,
+    "contextualConsistency": 0.5935035714285712,
+    "overallScore": 0.7837710164835163,
+    "successRate": 0.7692307692307693,
+    "jsonAdherenceRate": 0.23076923076923078
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 2,
+    "UNEXPECTED_FIELD": 47,
+    "_unexpectedFieldDetails": {
+      "stage capacity": {
+        "count": 2,
+        "fields": [
+          "booking.event.stage capacity"
+        ]
+      },
+      "stageTime": {
+        "count": 9,
+        "fields": [
+          "booking.stageTime"
+        ]
+      },
+      "cell phone": {
+        "count": 2,
+        "fields": [
+          "booking.promoter.cell phone"
+        ]
+      },
+      "email": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.email"
+        ]
+      },
+      "website": {
+        "count": 1,
+        "fields": [
+          "booking.promoter.website"
+        ]
+      },
+      "VAT Number": {
+        "count": 2,
+        "fields": [
+          "booking.promoter.VAT Number"
+        ]
+      },
+      "": {
+        "count": 1,
+        "fields": [
+          "booking.promoter.ORG NUMMER."
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 24,
+      "uniqueFields": 7
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 1982.3076923076924,
+    "avgResponseTokens": 174.15384615384616,
+    "totalTokens": 28034
+  }
+}

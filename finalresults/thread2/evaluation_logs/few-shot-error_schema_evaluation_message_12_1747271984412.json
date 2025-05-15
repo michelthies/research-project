@@ -1,0 +1,10 @@
+{
+  "messageId": "12",
+  "score": 0.9423076923076923,
+  "timestamp": "2025-05-15T01:19:44.412Z",
+  "errors": [
+    "/booking/contract/status must be equal to one of the allowed values (actual: countersigned)",
+    "/booking/contract/status must be null (actual: countersigned)",
+    "/booking/contract/status must match exactly one schema in oneOf (actual: countersigned)"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "messageId": "10",
+  "score": 0.9038461538461539,
+  "timestamp": "2025-05-15T01:47:08.016Z",
+  "errors": [
+    "/booking/contract/status must be equal to one of the allowed values (actual: pending)",
+    "/booking/contract/status must be null (actual: pending)",
+    "/booking/contract/status must match exactly one schema in oneOf (actual: pending)",
+    "booking.contract.minimumSetLength: Field not defined in schema",
+    "booking.contract.travelAndAccommodation: Field not defined in schema",
+    "booking.contract.visualTechnician: Field not defined in schema",
+    "booking.contract.dedicatedSoundEngineer: Field not defined in schema"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "strategy": "chain-of-thought-context-error",
+  "schemaMetrics": {
+    "score": 0.8062130177514795,
+    "rawScore": 0.873397435897436,
+    "effectiveScore": 0.8062130177514795,
+    "parseSuccessRate": 0.9230769230769231,
+    "typeErrorRate": 0.0608974358974359,
+    "constraintViolationRate": 0.08333333333333336,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0.09822887488328665
+  },
+  "contextMetrics": {
+    "score": 0.7253401318860876,
+    "fieldAccuracy": 0.573561507936508,
+    "contextLossRate": 0.29471288515406163,
+    "unexpectedFieldRate": 0.09822887488328665
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.11590366025849896,
+    "avgFeedbackEffectivenessScore": 0.092774104159422
+  },
+  "averageScores": {
+    "schemaConformity": 0.873397435897436,
+    "contextualConsistency": 0.7253401318860876,
+    "overallScore": 0.799368783891762,
+    "successRate": 0.9230769230769231,
+    "jsonAdherenceRate": 0
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 33,
+    "UNEXPECTED_FIELD": 141,
+    "OTHER": 12,
+    "_unexpectedFieldDetails": {
+      "stageTime": {
+        "count": 9,
+        "fields": [
+          "booking.stageTime"
+        ]
+      },
+      "name": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.company.name"
+        ]
+      },
+      "representedBy": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.company.representedBy"
+        ]
+      },
+      "fullAddress": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.company.fullAddress"
+        ]
+      },
+      "cellPhone": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.company.cellPhone"
+        ]
+      },
+      "email": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.company.email"
+        ]
+      },
+      "website": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.company.website"
+        ]
+      },
+      "vatNumber": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.company.vatNumber"
+        ]
+      },
+      "orgNummer": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.company.orgNummer"
+        ]
+      },
+      "contact": {
+        "count": 7,
+        "fields": [
+          "booking.promoter.contact"
+        ]
+      },
+      "address": {
+        "count": 1,
+        "fields": [
+          "booking.address"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 73,
+      "uniqueFields": 11
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 2080.6153846153848,
+    "avgResponseTokens": 366,
+    "totalTokens": 31806
+  }
+}

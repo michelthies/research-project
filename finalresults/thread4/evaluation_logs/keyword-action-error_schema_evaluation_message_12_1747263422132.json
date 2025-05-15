@@ -1,0 +1,12 @@
+{
+  "messageId": "12",
+  "score": 0.9230769230769231,
+  "timestamp": "2025-05-14T22:57:02.132Z",
+  "errors": [
+    "/booking/status must be equal to one of the allowed values (actual: set for payment)",
+    "/booking/status must be null (actual: set for payment)",
+    "/booking/status must match exactly one schema in oneOf (actual: set for payment)",
+    "booking.promoter.contact: Field not defined in schema",
+    "booking.event.timeframe: Field not defined in schema"
+  ]
+}

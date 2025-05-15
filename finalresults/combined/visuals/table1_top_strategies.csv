@@ -1,0 +1,16 @@
+Strategy,Overall Score,Schema Score,Field Accuracy,Success Rate
+role-guided-schema,94.5,98.9,78.7,100.0
+role-guided-schema-error,93.9,96.4,76.3,97.4
+role-guided-error,92.8,10.4,77.5,10.4
+role-guided-schema-context-error,92.7,46.9,76.1,47.1
+self-verification-schema,91.9,98.8,73.2,100.0
+one-shot-context-error,91.7,31.6,76.0,32.8
+role-guided,91.7,15.5,72.7,15.5
+self-verification-error,91.0,32.6,71.0,33.6
+self-verification-context,90.4,36.5,74.2,37.9
+role-guided-schema-context,90.4,86.3,65.9,87.2
+self-verification-context-error,90.3,33.1,72.8,33.9
+keyword-action-context-error,90.2,22.0,74.0,22.5
+self-verification-schema-error,90.2,99.9,65.5,100.0
+role-guided-context,89.9,49.1,76.8,51.3
+few-shot-schema-context-error,89.6,82.3,65.2,83.4

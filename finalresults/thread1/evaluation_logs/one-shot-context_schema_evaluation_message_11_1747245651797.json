@@ -1,0 +1,15 @@
+{
+  "messageId": "11",
+  "score": 0.8461538461538461,
+  "timestamp": "2025-05-14T18:00:51.797Z",
+  "errors": [
+    "/booking/event/openingTime must match format \"date-time\" (actual: 22:00)",
+    "/booking/event/closingTime must match format \"date-time\" (actual: 06:00)",
+    "/booking/invoice/status must be equal to one of the allowed values (actual: received)",
+    "/booking/invoice/status must be null (actual: received)",
+    "/booking/invoice/status must match exactly one schema in oneOf (actual: received)",
+    "/booking/contract/status must be equal to one of the allowed values (actual: co-signed)",
+    "/booking/contract/status must be null (actual: co-signed)",
+    "/booking/contract/status must match exactly one schema in oneOf (actual: co-signed)"
+  ]
+}

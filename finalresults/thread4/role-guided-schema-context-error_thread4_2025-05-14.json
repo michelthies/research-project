@@ -1,0 +1,69 @@
+{
+  "strategy": "role-guided-schema-context-error",
+  "schemaMetrics": {
+    "score": 0.22633136094674558,
+    "rawScore": 0.9807692307692308,
+    "effectiveScore": 0.22633136094674558,
+    "parseSuccessRate": 0.23076923076923078,
+    "typeErrorRate": 0.012820512820512822,
+    "constraintViolationRate": 0,
+    "requiredFieldCoverage": 1,
+    "unexpectedFieldRate": 0
+  },
+  "contextMetrics": {
+    "score": 0.8385238095238096,
+    "fieldAccuracy": 0.7238095238095239,
+    "contextLossRate": 0.20476190476190478,
+    "unexpectedFieldRate": 0
+  },
+  "errorFeedbackMetrics": {
+    "avgErrorCorrectionRate": 0.08333333333333333,
+    "avgFeedbackEffectivenessScore": 0.03333333333333333
+  },
+  "averageScores": {
+    "schemaConformity": 0.9807692307692308,
+    "contextualConsistency": 0.8385238095238096,
+    "overallScore": 0.9096465201465201,
+    "successRate": 0.23076923076923078,
+    "jsonAdherenceRate": 0.23076923076923078
+  },
+  "errorAnalysis": {
+    "CONSTRAINT_ERROR": 1,
+    "UNEXPECTED_FIELD": 8,
+    "_unexpectedFieldDetails": {
+      "name": {
+        "count": 1,
+        "fields": [
+          "booking.event.venue.name"
+        ]
+      },
+      "fullAddress": {
+        "count": 1,
+        "fields": [
+          "booking.event.venue.fullAddress"
+        ]
+      },
+      "phone": {
+        "count": 1,
+        "fields": [
+          "booking.event.venue.phone"
+        ]
+      },
+      "email": {
+        "count": 1,
+        "fields": [
+          "booking.event.venue.email"
+        ]
+      }
+    },
+    "_unexpectedFieldSummary": {
+      "totalFields": 4,
+      "uniqueFields": 4
+    }
+  },
+  "performanceSummary": {
+    "avgPromptTokens": 2534.230769230769,
+    "avgResponseTokens": 298.2307692307692,
+    "totalTokens": 36822
+  }
+}
